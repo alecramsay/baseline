@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for (( i = 0; i < 29; i++ ))
+do
+  grep "^$i[^0-9]" log | awk '{ print $2 "\t" $3; }' > "nydist$i"
+done

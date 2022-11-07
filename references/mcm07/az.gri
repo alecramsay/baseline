@@ -1,0 +1,39 @@
+set x name "Longitude"
+set y name "Latitude"
+set x size 6
+set y size 7
+set y axis 31 37 1
+set x axis -115 -109 1
+set symbol size .1
+open azdist0
+read columns x y
+draw symbol 0 color hue 0
+close
+open azdist1
+read columns x y
+draw symbol 1 color hue .12500000000000000000
+close
+open azdist2
+read columns x y
+draw symbol 2 color hue .25000000000000000000
+close
+open azdist3
+read columns x y
+draw symbol 3 color hue .37500000000000000000
+close
+open azdist4
+read columns x y
+draw symbol 4 color hue .50000000000000000000
+close
+open azdist5
+read columns x y
+draw symbol 5 color hue .62500000000000000000
+close
+open azdist6
+read columns x y
+draw symbol 6 color hue .75000000000000000000
+close
+open azdist7
+read columns x y
+draw symbol 7 color hue .87500000000000000000
+close

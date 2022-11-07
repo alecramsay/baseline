@@ -1,0 +1,6 @@
+
+Total population: 1,455,271
+Max tract population: 11,046 # of tracts: 461
+Max BG population: 6,147 # of BGs: 1,083
+Max block population: 3,472 # of blocks: 14,732
+

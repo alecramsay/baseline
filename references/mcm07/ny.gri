@@ -1,0 +1,123 @@
+set x name "Longitude"
+set y name "Latitude"
+set x size 6.6
+set y size 5
+set y axis 40 45 1
+set x axis -80 -71 1
+set symbol size .02
+open nydist0
+read columns x y
+draw symbol 0 color hue 0
+close
+open nydist1
+read columns x y
+draw symbol 1 color hue .03448275862068965517
+close
+open nydist2
+read columns x y
+draw symbol 2 color hue .06896551724137931034
+close
+open nydist3
+read columns x y
+draw symbol 3 color hue .10344827586206896551
+close
+open nydist4
+read columns x y
+draw symbol 4 color hue .13793103448275862068
+close
+open nydist5
+read columns x y
+draw symbol 5 color hue .17241379310344827586
+close
+open nydist6
+read columns x y
+draw symbol 6 color hue .20689655172413793103
+close
+open nydist7
+read columns x y
+draw symbol 7 color hue .24137931034482758620
+close
+open nydist8
+read columns x y
+draw symbol 8 color hue .27586206896551724137
+close
+open nydist9
+read columns x y
+draw symbol 9 color hue .31034482758620689655
+close
+open nydist10
+read columns x y
+draw symbol 10 color hue .34482758620689655172
+close
+open nydist11
+read columns x y
+draw symbol 11 color hue .37931034482758620689
+close
+open nydist12
+read columns x y
+draw symbol 12 color hue .41379310344827586206
+close
+open nydist13
+read columns x y
+draw symbol 13 color hue .44827586206896551724
+close
+open nydist14
+read columns x y
+draw symbol 14 color hue .48275862068965517241
+close
+open nydist15
+read columns x y
+draw symbol 15 color hue .51724137931034482758
+close
+open nydist16
+read columns x y
+draw symbol 16 color hue .55172413793103448275
+close
+open nydist17
+read columns x y
+draw symbol 17 color hue .58620689655172413793
+close
+open nydist18
+read columns x y
+draw symbol 0 color hue .62068965517241379310
+close
+open nydist19
+read columns x y
+draw symbol 1 color hue .65517241379310344827
+close
+open nydist20
+read columns x y
+draw symbol 2 color hue .68965517241379310344
+close
+open nydist21
+read columns x y
+draw symbol 3 color hue .72413793103448275862
+close
+open nydist22
+read columns x y
+draw symbol 4 color hue .75862068965517241379
+close
+open nydist23
+read columns x y
+draw symbol 5 color hue .79310344827586206896
+close
+open nydist24
+read columns x y
+draw symbol 6 color hue .82758620689655172413
+close
+open nydist25
+read columns x y
+draw symbol 7 color hue .86206896551724137931
+close
+open nydist26
+read columns x y
+draw symbol 8 color hue .89655172413793103448
+close
+open nydist27
+read columns x y
+draw symbol 9 color hue .93103448275862068965
+close
+open nydist28
+read columns x y
+draw symbol 10 color hue .96551724137931034482
+close

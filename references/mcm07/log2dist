@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for (( i = 0; i < $2; i++ ))
+do
+  grep "^$i[^0-9]" "$1log" | awk '{ print $2 "\t" $3; }' > "$1dist$i"
+done

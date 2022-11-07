@@ -1,0 +1,7 @@
+#!/bin/bash
+for (( i = 0 ; i < $1 ; i++ )) ; do
+  echo "open dhdata$i"
+  echo "read columns x y"
+  echo "draw symbol `expr $i % 18` color hue `echo "5*$i/$1" | bc -l | sed "s/[0-9]*//"`"
+echo "close";
+done >> dh.gri

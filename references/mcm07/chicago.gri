@@ -1,0 +1,83 @@
+set x name "Longitude"
+set y name "Latitude"
+set x size 4.66
+set y size 6
+set y axis 41.5 42.5 .5
+set x axis -88.5 -87.5 .5
+set symbol size .05
+open chicagodist0
+read columns x y
+draw symbol 0 color hue 0
+close
+open chicagodist1
+read columns x y
+draw symbol 1 color hue .05263157894736842105
+close
+open chicagodist2
+read columns x y
+draw symbol 2 color hue .10526315789473684210
+close
+open chicagodist3
+read columns x y
+draw symbol 3 color hue .15789473684210526315
+close
+open chicagodist4
+read columns x y
+draw symbol 4 color hue .21052631578947368421
+close
+open chicagodist5
+read columns x y
+draw symbol 5 color hue .26315789473684210526
+close
+open chicagodist6
+read columns x y
+draw symbol 6 color hue .31578947368421052631
+close
+open chicagodist7
+read columns x y
+draw symbol 7 color hue .36842105263157894736
+close
+open chicagodist8
+read columns x y
+draw symbol 8 color hue .42105263157894736842
+close
+open chicagodist9
+read columns x y
+draw symbol 9 color hue .47368421052631578947
+close
+open chicagodist10
+read columns x y
+draw symbol 10 color hue .52631578947368421052
+close
+open chicagodist11
+read columns x y
+draw symbol 11 color hue .57894736842105263157
+close
+open chicagodist12
+read columns x y
+draw symbol 12 color hue .63157894736842105263
+close
+open chicagodist13
+read columns x y
+draw symbol 13 color hue .68421052631578947368
+close
+open chicagodist14
+read columns x y
+draw symbol 14 color hue .73684210526315789473
+close
+open chicagodist15
+read columns x y
+draw symbol 15 color hue .78947368421052631578
+close
+open chicagodist16
+read columns x y
+draw symbol 16 color hue .84210526315789473684
+close
+open chicagodist17
+read columns x y
+draw symbol 17 color hue .89473684210526315789
+close
+open chicagodist18
+read columns x y
+draw symbol 0 color hue .94736842105263157894
+close

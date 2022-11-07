@@ -1,0 +1,18 @@
+{
+  "state": "TX",
+  "cycle": "2020",
+  "plan_type": "congress",
+  "districts": 38,
+  "fips": "48",
+  "units": "bg",
+  "thresholds": [
+    0.20000,
+    0.10000,
+    0.05000,
+    0.02500,
+    0.01250,
+    0.00625
+  ],
+  "max_step": 1048576,
+  "stretchiness": 0.20
+}

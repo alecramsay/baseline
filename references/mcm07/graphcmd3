@@ -1,0 +1,7 @@
+#!/bin/bash
+for (( i = 0 ; i < $1 ; i++ )); do
+    echo "open $2dist$i"
+    echo "read columns x y"
+    echo "draw symbol `expr $i % 18` color hue `echo "$i/$1" | bc -l`"
+    echo "close"
+done >> $2.gri
