@@ -31,10 +31,16 @@ from baseline import *
 ### PARSE ARGS ###
 
 parser: ArgumentParser = argparse.ArgumentParser(
-    description="Find population compact districts."
+    description="Extract census population data from DRA block data JSON."
 )
 
 parser.add_argument("state", help="The two-character state code (e.g., MD)", type=str)
+parser.add_argument(
+    "-t", "--tract", dest="tract", action="store_true", help="Generate tract-level data"
+)
+parser.add_argument(
+    "-g", "--bg", dest="bg", action="store_true", help="Generate BG-level data"
+)
 parser.add_argument(
     "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
 )
@@ -45,12 +51,14 @@ fips_map: dict[str, str] = make_state_codes()
 xx: str = args.state
 cycle: str = "2020"
 fips: str = fips_map[xx]
+tracts: bool = args.tract
+bgs: bool = args.bg
 verbose: bool = args.verbose
 
 
 ### CONSTRUCT PATHS ###
 
-root_dir: str = "../../work/Political Geography/baseline/data/"
+root_dir: str = "../../../local/pg/rawdata/"
 block_data: str = cycle + "vt_Census_block_" + fips + "_data2.json"
 data_dir: str = "data/"
 state_dir: str = xx + "/"
@@ -64,10 +72,6 @@ rel_path: str = root_dir + state_dir + block_data
 pop_by_block: defaultdict[str, int] = read_census_json(rel_path)
 pop_by_tract: defaultdict[str, int] = defaultdict(int)
 pop_by_bg: defaultdict[str, int] = defaultdict(int)
-
-# Tract & BG to block mapping files
-# tract_bgs: defaultdict[str, set[str]] = defaultdict(set)
-# bg_blocks: defaultdict[str, set[str]] = defaultdict(set)
 
 total_pop: int = 0
 max_block_pop: int = 0
@@ -85,9 +89,6 @@ for block, pop in pop_by_block.items():
     if pop > max_block_pop:
         max_block_pop = pop
 
-    # tract_bgs[tract].add(bg)
-    # bg_blocks[bg].add(block)
-
 rel_path: str = temp_dir + file_name(xx, cycle, "block", "pop", "pickle")
 write_pickle(rel_path, pop_by_block)
 
@@ -103,11 +104,9 @@ for tract, pop in pop_by_tract.items():
     if pop > max_tract_pop:
         max_tract_pop = pop
 
-rel_path: str = temp_dir + file_name(xx, cycle, "tract", "pop", "pickle")
-write_pickle(rel_path, pop_by_tract)
-
-# rel_path: str = data_dir + state_dir + file_name(xx, cycle, "tract", "map", "pickle")
-# write_pickle(rel_path, tract_bgs)
+if tracts:
+    rel_path: str = temp_dir + file_name(xx, cycle, "tract", "pop", "pickle")
+    write_pickle(rel_path, pop_by_tract)
 
 ntracts: int = len(pop_by_tract)
 del pop_by_tract
@@ -120,11 +119,9 @@ for bg, pop in pop_by_bg.items():
     if pop > max_bg_pop:
         max_bg_pop = pop
 
-rel_path: str = temp_dir + file_name(xx, cycle, "bg", "pop", "pickle")
-write_pickle(rel_path, pop_by_bg)
-
-# rel_path: str = data_dir + state_dir + file_name(xx, cycle, "bg", "map", "pickle")
-# write_pickle(rel_path, bg_blocks)
+if bgs:
+    rel_path: str = temp_dir + file_name(xx, cycle, "bg", "pop", "pickle")
+    write_pickle(rel_path, pop_by_bg)
 
 nbgs: int = len(pop_by_bg)
 del pop_by_bg
