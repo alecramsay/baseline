@@ -31,15 +31,21 @@ results_dir: str = "results" + "/"
 state_dir: str = xx + "/"
 
 tract_features: str = (
-    data_dir + state_dir + file_name(xx, cycle, "tract", "data", "pickle")
+    data_dir + state_dir + file_name([xx, cycle, "tract", "data"], "_", "pickle")
 )
-bg_features: str = data_dir + state_dir + file_name(xx, cycle, "bg", "data", "pickle")
+bg_features: str = (
+    data_dir + state_dir + file_name([xx, cycle, "bg", "data"], "_", "pickle")
+)
 # tract_graph: str = (
-#     data_dir + state_dir + file_name(xx, cycle, "tract", "graph", "pickle")
+#     data_dir + state_dir + file_name([xx, cycle, "tract", "graph"], "_", "pickle")
 # )
-# bg_graph: str = data_dir + state_dir + file_name(xx, cycle, "bg", "graph", "pickle")
-state_feature: str = data_dir + state_dir + file_name("tl", cycle, fips, "state20")
-plan_path: str = results_dir + state_dir + file_name(xx, cycle, plan_type, units, "csv")
+# bg_graph: str = data_dir + state_dir + file_name([xx, cycle, "bg", "graph"], "_", "pickle")
+state_feature: str = (
+    data_dir + state_dir + file_name(["tl", cycle, fips, "state20"], "_")
+)
+plan_path: str = (
+    results_dir + state_dir + file_name([xx, cycle, plan_type, units], "_", "csv")
+)
 
 settings["features_paths"] = [tract_features, bg_features]
 settings["state_path"] = state_feature

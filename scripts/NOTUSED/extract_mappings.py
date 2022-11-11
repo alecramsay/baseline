@@ -76,8 +76,12 @@ for block, _ in pop_by_block.items():
     tract_bgs[tract].add(bg)
     bg_blocks[bg].add(block)
 
-rel_path: str = data_dir + state_dir + file_name(xx, cycle, "tract", "map", "pickle")
+rel_path: str = (
+    data_dir + state_dir + file_name([xx, cycle, "tract", "map"], "_", "pickle")
+)
 write_pickle(rel_path, tract_bgs)
 
-rel_path: str = data_dir + state_dir + file_name(xx, cycle, "bg", "map", "pickle")
+rel_path: str = (
+    data_dir + state_dir + file_name([xx, cycle, "bg", "map"], "_", "pickle")
+)
 write_pickle(rel_path, bg_blocks)

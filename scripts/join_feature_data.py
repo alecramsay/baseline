@@ -66,8 +66,8 @@ if bgs:
     units.append("bg")
 
 for unit in units:
-    pop_path: str = temp_dir + file_name(xx, cycle, unit, "pop", "pickle")
-    xy_path: str = temp_dir + file_name(xx, cycle, unit, "xy", "pickle")
+    pop_path: str = temp_dir + file_name([xx, cycle, unit, "pop"], "_", "pickle")
+    xy_path: str = temp_dir + file_name([xx, cycle, unit, "xy"], "_", "pickle")
 
     pop: bytes | None = read_pickle(pop_path)
     xy: bytes | None = read_pickle(xy_path)
@@ -77,5 +77,7 @@ for unit in units:
     for geoid, pop in pop.items():
         features.append({"geoid": geoid, "pop": pop, "xy": xy[geoid], "district": 0})
 
-    join_path: str = data_dir + state_dir + file_name(xx, cycle, unit, "data", "pickle")
+    join_path: str = (
+        data_dir + state_dir + file_name([xx, cycle, unit, "data"], "_", "pickle")
+    )
     write_pickle(join_path, features)

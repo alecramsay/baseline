@@ -40,12 +40,29 @@ class GeoID:
         self.block: str = id  # id[12:15]
 
 
-def file_name(prefix: str, first: str, second: str, third: str, ext: str = None) -> str:
-    name: str = prefix + "_" + first + "_" + second + "_" + third
-    if ext:
-        name = name + "." + ext
+# FILE NAMES & PATHS
+
+
+def file_name(parts: list[str], delim: str = "_", ext: str = None) -> str:
+    """
+    Construct a file name with parts separated by the delimeter and ending with the extension.
+    """
+    name: str = delim.join(parts) + "." + ext if ext else delim.join(parts)
 
     return name
+
+
+def path_to_file(parts: list[str], naked: bool = False) -> str:
+    """
+    Return the directory path to a file (but not the file).
+    """
+
+    rel_path: str = "/".join(parts)
+
+    if not naked:
+        rel_path = rel_path + "/"
+
+    return rel_path
 
 
 # TIMER DECORATORS

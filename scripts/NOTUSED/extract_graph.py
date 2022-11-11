@@ -58,9 +58,9 @@ tract_file: str = "tl_2020_" + fips + "_tract" + ".shp"
 bg_file: str = "tl_2020_" + fips + "_bg" + ".shp"
 block_file: str = "tl_2020_" + fips + "_tabblock20" + ".shp"
 
-tract_graph: str = file_name(xx, cycle, "tract", "graph", "pickle")
-bg_graph: str = file_name(xx, cycle, "bg", "graph", "pickle")
-block_graph: str = file_name(xx, cycle, "block", "graph", "pickle")
+tract_graph: str = file_name([xx, cycle, "tract", "graph"], "_", "pickle")
+bg_graph: str = file_name([xx, cycle, "bg", "graph"], "_", "pickle")
+block_graph: str = file_name([xx, cycle, "block", "graph"], "_", "pickle")
 
 data_dir: str = "data/"
 state_dir: str = xx + "/"

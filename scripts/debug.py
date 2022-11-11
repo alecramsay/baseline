@@ -24,10 +24,6 @@ block_data: str = cycle + "vt_Census_block_" + fips + "_data2.json"
 state_dir: str = xx + "/"
 
 
-def pop_file_name(geo: str) -> str:
-    return xx + "_" + cycle + "_pop_" + geo + ".csv"
-
-
 ### READ THE CENSUS DATA, PIVOT IT, AND WRITE CSVS ###
 
 rel_path: str = root_dir + state_dir + block_data

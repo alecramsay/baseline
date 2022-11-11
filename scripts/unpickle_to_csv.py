@@ -52,7 +52,9 @@ state_dir: str = xx + "/"
 
 ### LOAD DATA ###
 
-rel_path: str = data_dir + state_dir + file_name(xx, cycle, units, "data", "pickle")
+rel_path: str = (
+    data_dir + state_dir + file_name([xx, cycle, units, "data"], "_", "pickle")
+)
 collection: FeatureCollection = FeatureCollection(rel_path)
 
 ### WRITE DATA AS A CSV ###
@@ -68,7 +70,7 @@ for f in collection.features:
     l.append(row)
 
 
-rel_path: str = data_dir + state_dir + file_name(xx, cycle, units, "data", "csv")
+rel_path: str = data_dir + state_dir + file_name([xx, cycle, units, "data"], "_", "csv")
 write_csv(rel_path, l, ["GEOID", "POP", "X", "Y"], "{:.14f}")
 
 pass

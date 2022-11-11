@@ -64,10 +64,12 @@ results_dir: str = "results" + "/"
 state_dir: str = xx + "/"
 
 features_path: str = (
-    data_dir + state_dir + file_name(xx, cycle, units, "data", "pickle")
+    data_dir + state_dir + file_name([xx, cycle, units, "data"], "_", "pickle")
 )
-state_path: str = data_dir + state_dir + file_name("tl", cycle, fips, "state20")
-plan_path: str = results_dir + state_dir + file_name(xx, cycle, plan_type, units, "csv")
+state_path: str = data_dir + state_dir + file_name(["tl", cycle, fips, "state20"], "_")
+plan_path: str = (
+    results_dir + state_dir + file_name([xx, cycle, plan_type, units], "_", "csv")
+)
 
 
 ### FIND DISTRICTS ###

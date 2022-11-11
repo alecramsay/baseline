@@ -109,7 +109,7 @@ if tracts:
 
     del feature_shps
 
-    rel_path: str = temp_dir + file_name(xx, cycle, "tract", "xy", "pickle")
+    rel_path: str = temp_dir + file_name([xx, cycle, "tract", "xy"], "_", "pickle")
     write_pickle(rel_path, feature_xy)
 
     del feature_xy
@@ -123,7 +123,7 @@ if bgs:
 
     del feature_shps
 
-    rel_path: str = temp_dir + file_name(xx, cycle, "bg", "xy", "pickle")
+    rel_path: str = temp_dir + file_name([xx, cycle, "bg", "xy"], "_", "pickle")
     write_pickle(rel_path, feature_xy)
 
     del feature_xy
@@ -136,7 +136,7 @@ feature_xy: dict[str, Coordinate] = find_centers(feature_shps)
 
 del feature_shps
 
-rel_path: str = temp_dir + file_name(xx, cycle, "block", "xy", "pickle")
+rel_path: str = temp_dir + file_name([xx, cycle, "block", "xy"], "_", "pickle")
 write_pickle(rel_path, feature_xy)
 
 del feature_xy

@@ -89,7 +89,7 @@ for block, pop in pop_by_block.items():
     if pop > max_block_pop:
         max_block_pop = pop
 
-rel_path: str = temp_dir + file_name(xx, cycle, "block", "pop", "pickle")
+rel_path: str = temp_dir + file_name([xx, cycle, "block", "pop"], "_", "pickle")
 write_pickle(rel_path, pop_by_block)
 
 nblocks: int = len(pop_by_block)
@@ -105,7 +105,7 @@ for tract, pop in pop_by_tract.items():
         max_tract_pop = pop
 
 if tracts:
-    rel_path: str = temp_dir + file_name(xx, cycle, "tract", "pop", "pickle")
+    rel_path: str = temp_dir + file_name([xx, cycle, "tract", "pop"], "_", "pickle")
     write_pickle(rel_path, pop_by_tract)
 
 ntracts: int = len(pop_by_tract)
@@ -120,7 +120,7 @@ for bg, pop in pop_by_bg.items():
         max_bg_pop = pop
 
 if bgs:
-    rel_path: str = temp_dir + file_name(xx, cycle, "bg", "pop", "pickle")
+    rel_path: str = temp_dir + file_name([xx, cycle, "bg", "pop"], "_", "pickle")
     write_pickle(rel_path, pop_by_bg)
 
 nbgs: int = len(pop_by_bg)

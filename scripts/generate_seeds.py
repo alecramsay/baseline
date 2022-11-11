@@ -53,7 +53,7 @@ data_dir: str = "data" + "/"
 results_dir: str = "results" + "/"
 state_dir: str = xx + "/"
 
-state_path: str = data_dir + state_dir + file_name("tl", cycle, fips, "state20")
+state_path: str = data_dir + state_dir + file_name(["tl", cycle, fips, "state20"], "_")
 
 
 ### GENERATE SEEDS ###
