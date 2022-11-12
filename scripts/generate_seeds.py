@@ -39,7 +39,6 @@ args: Namespace = parser.parse_args()
 fips_map: dict[str, str] = make_state_codes()
 
 xx: str = args.state
-cycle: str = "2020"
 fips: str = fips_map[xx]
 plan_type: str = args.type
 n: int = districts_by_state[xx][plan_type]
@@ -49,16 +48,16 @@ verbose: bool = args.verbose
 
 ### CONSTRUCT PATHS ###
 
-data_dir: str = "data" + "/"
-results_dir: str = "results" + "/"
-state_dir: str = xx + "/"
+state_dir: str = xx
 
-state_path: str = data_dir + state_dir + file_name(["tl", cycle, fips, "state20"], "_")
+state_path: str = path_to_file([data_dir, state_dir]) + file_name(
+    ["tl", cycle, fips, "state20"], "_"
+)
 
 
 ### GENERATE SEEDS ###
 
-state_shp: Polygon | MultiPolygon = load_state_shape(state_path, "GEOID20")
+state_shp: Polygon | MultiPolygon = load_state_shape(state_path, unit_id("state"))
 seeder: PlasticCoordinates = PlasticCoordinates(n, state_shp)
 seeder.echo()
 

@@ -39,23 +39,18 @@ parser.add_argument(
 args: Namespace = parser.parse_args()
 
 xx: str = args.state
-cycle: str = "2020"
 units: str = args.units
 
-
-### SPECIFY PATH INFO ###
-
-data_dir: str = "data" + "/"
-temp_dir: str = "temp" + "/"
-state_dir: str = xx + "/"
+state_dir: str = xx
 
 
 ### LOAD DATA ###
 
-rel_path: str = (
-    data_dir + state_dir + file_name([xx, cycle, units, "data"], "_", "pickle")
+rel_path: str = path_to_file([data_dir, state_dir]) + file_name(
+    [xx, cycle, units, "data"], "_", "pickle"
 )
 collection: FeatureCollection = FeatureCollection(rel_path)
+
 
 ### WRITE DATA AS A CSV ###
 
@@ -70,7 +65,11 @@ for f in collection.features:
     l.append(row)
 
 
-rel_path: str = data_dir + state_dir + file_name([xx, cycle, units, "data"], "_", "csv")
+rel_path: str = path_to_file([data_dir, state_dir]) + file_name(
+    [xx, cycle, units, "data"], "_", "csv"
+)
 write_csv(rel_path, l, ["GEOID", "POP", "X", "Y"], "{:.14f}")
 
 pass
+
+#

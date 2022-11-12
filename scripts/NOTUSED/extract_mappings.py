@@ -40,23 +40,17 @@ args: Namespace = parser.parse_args()
 fips_map: dict[str, str] = make_state_codes()
 
 xx: str = args.state
-cycle: str = "2020"
 fips: str = fips_map[xx]
 verbose: bool = args.verbose
 
-
-### CONSTRUCT PATHS ###
-
-root_dir: str = "../../../local/pg/rawdata/"
-block_data: str = cycle + "vt_Census_block_" + fips + "_data2.json"
-data_dir: str = "data/"
-state_dir: str = xx + "/"
-# temp_dir: str = "temp/"
+state_dir: str = xx
 
 
 ### READ THE CENSUS DATA FOR THE BLOCK GEOIDS ###
 
-rel_path: str = root_dir + state_dir + block_data
+rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
+    [cycle, "vt_Census_block", fips, "data2"], "_", "json"
+)
 pop_by_block: defaultdict[str, int] = read_census_json(rel_path)
 
 
@@ -76,12 +70,14 @@ for block, _ in pop_by_block.items():
     tract_bgs[tract].add(bg)
     bg_blocks[bg].add(block)
 
-rel_path: str = (
-    data_dir + state_dir + file_name([xx, cycle, "tract", "map"], "_", "pickle")
+rel_path: str = path_to_file([data_dir, state_dir]) + file_name(
+    [xx, cycle, "tract", "map"], "_", "pickle"
 )
 write_pickle(rel_path, tract_bgs)
 
-rel_path: str = (
-    data_dir + state_dir + file_name([xx, cycle, "bg", "map"], "_", "pickle")
+rel_path: str = path_to_file([data_dir, state_dir]) + file_name(
+    [xx, cycle, "bg", "map"], "_", "pickle"
 )
 write_pickle(rel_path, bg_blocks)
+
+#

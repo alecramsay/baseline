@@ -41,45 +41,39 @@ args: Namespace = parser.parse_args()
 fips_map: dict[str, str] = make_state_codes()
 
 xx: str = args.state
-cycle: str = "2020"
 fips: str = fips_map[xx]
 verbose: bool = args.verbose
 
 
 ### CONSTRUCT PATHS ###
 
-root_dir: str = "../../work/DRA2020/analytics/baseline/data/"
+state_dir: str = xx
 
-tract_dir: str = "tl_2020_" + fips + "_tract/"
-bg_dir: str = "tl_2020_" + fips + "_bg/"
-block_dir: str = "tl_2020_" + fips + "_tabblock20/"
-
-tract_file: str = "tl_2020_" + fips + "_tract" + ".shp"
-bg_file: str = "tl_2020_" + fips + "_bg" + ".shp"
-block_file: str = "tl_2020_" + fips + "_tabblock20" + ".shp"
-
-tract_graph: str = file_name([xx, cycle, "tract", "graph"], "_", "pickle")
-bg_graph: str = file_name([xx, cycle, "bg", "graph"], "_", "pickle")
-block_graph: str = file_name([xx, cycle, "block", "graph"], "_", "pickle")
-
-data_dir: str = "data/"
-state_dir: str = xx + "/"
-temp_dir: str = "temp/"
+tract_dir: str = file_name(["tl_2020", fips, "tract"], "_")
+bg_dir: str = file_name(["tl_2020", fips, "bg"], "_")
+block_dir: str = file_name(["tl_2020", fips, "tabblock20"], "_")
 
 units: list[str] = ["tract", "bg", "block"]
 shp_paths: list[str] = [
-    root_dir + state_dir + tract_dir + tract_file,
-    root_dir + state_dir + bg_dir + bg_file,
-    root_dir + state_dir + block_dir + block_file,
+    path_to_file([rawdata_dir, state_dir, tract_dir])
+    + file_name(["tl_2020", fips, "tract"], "_", "shp"),
+    path_to_file([rawdata_dir, state_dir, bg_dir])
+    + file_name(["tl_2020", fips, "bg"], "_", "shp"),
+    path_to_file([rawdata_dir, state_dir, block_dir])
+    + file_name(["tl_2020", fips, "tabblock20"], "_", "shp"),
 ]
 
 ids: list[str] = ["GEOID", "GEOID", "GEOID20"]
 
 graph_paths: list[str] = [
-    data_dir + state_dir + tract_graph,
-    data_dir + state_dir + bg_graph,
-    data_dir + state_dir + block_graph,
+    path_to_file([data_dir, state_dir])
+    + file_name([xx, cycle, "tract", "graph"], "_", "pickle"),
+    path_to_file([data_dir, state_dir])
+    + file_name([xx, cycle, "bg", "graph"], "_", "pickle"),
+    path_to_file([data_dir, state_dir])
+    + file_name([xx, cycle, "block", "graph"], "_", "pickle"),
 ]
+
 
 ### HELPERS ###
 
@@ -120,7 +114,7 @@ def check_graph(graph) -> bool:
 x: str = shp_paths[0]
 
 for unit, shp_path, id, graph_path in zip(units, shp_paths, ids, graph_paths):
-    print("Extracting", unit, "graph...")
+    print("Extracting", unit, "graph ...")
     graph: Rook = graph_shapes(shp_path, id)
     write_pickle(graph_path, graph)
 

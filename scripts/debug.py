@@ -11,22 +11,19 @@ from baseline import *
 
 ### ARGS ###
 
-cycle: str = "2020"
 xx: str = "NC"
 fips: str = "37"
 verbose: bool = True
 
-
-### CONSTRUCT PATHS ###
-
-root_dir: str = "../../work/DRA2020/analytics/baseline/data/"
-block_data: str = cycle + "vt_Census_block_" + fips + "_data2.json"
-state_dir: str = xx + "/"
+state_dir: str = xx
 
 
 ### READ THE CENSUS DATA, PIVOT IT, AND WRITE CSVS ###
 
-rel_path: str = root_dir + state_dir + block_data
+rel_path: str = path_to_file(
+    [rawdata_dir, state_dir]
+    + file_name([cycle, "vt_Census_block", fips, "data2"], "_", "json")
+)
 
 pop_by_block: defaultdict[str, int] = read_census_json(rel_path)
 pop_by_tract: defaultdict[str, int] = defaultdict(int)
@@ -58,3 +55,5 @@ for block, pop in pop_by_block.items():
     bg_blocks[bg].add(block)
 
 pass
+
+#

@@ -45,24 +45,12 @@ args: Namespace = parser.parse_args()
 fips_map: dict[str, str] = make_state_codes()
 
 xx: str = args.state
-cycle: str = "2020"
 fips: str = fips_map[xx]
 tracts: bool = args.tract
 bgs: bool = args.bg
 verbose: bool = args.verbose
 
-
-### CONSTRUCT PATHS ###
-
-root_dir: str = "../../../local/pg/rawdata/"
-
-tract_shps: str = "tl_2020_" + fips + "_tract"
-bg_shps: str = "tl_2020_" + fips + "_bg"
-block_shps: str = "tl_2020_" + fips + "_tabblock20"
-
-# data_dir: str = "data/"
-state_dir: str = xx + "/"
-temp_dir: str = "temp/"
+state_dir: str = xx
 
 
 ### HELPERS ###
@@ -96,20 +84,20 @@ def find_centers(feature_shps) -> dict[str, Coordinate]:
 
 ### READ THE SHAPEFILES, EXTRACT THE CENTROIDS, AND PICKLE THEM ###
 
-tract_id: str = "GEOID"
-bg_id: str = "GEOID"
-block_id: str = "GEOID20"
-
 # Tracts
 
 if tracts:
-    rel_path: str = root_dir + state_dir + tract_shps
-    feature_shps: tuple[dict, dict[str, Any]] = load_shapes(rel_path, tract_id)
+    rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
+        ["tl_2020" + fips + "tract"], "_"
+    )
+    feature_shps: tuple[dict, dict[str, Any]] = load_shapes(rel_path, unit_id("tract"))
     feature_xy: dict[str, Coordinate] = find_centers(feature_shps)
 
     del feature_shps
 
-    rel_path: str = temp_dir + file_name([xx, cycle, "tract", "xy"], "_", "pickle")
+    rel_path: str = path_to_file([temp_dir]) + file_name(
+        [xx, cycle, "tract", "xy"], "_", "pickle"
+    )
     write_pickle(rel_path, feature_xy)
 
     del feature_xy
@@ -117,26 +105,36 @@ if tracts:
 # Blockgroups
 
 if bgs:
-    rel_path: str = root_dir + state_dir + bg_shps
-    feature_shps: tuple[dict, dict[str, Any]] = load_shapes(rel_path, bg_id)
+    rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
+        ["tl_2020" + fips + "bg"], "_"
+    )
+    feature_shps: tuple[dict, dict[str, Any]] = load_shapes(rel_path, unit_id("bg"))
     feature_xy: dict[str, Coordinate] = find_centers(feature_shps)
 
     del feature_shps
 
-    rel_path: str = temp_dir + file_name([xx, cycle, "bg", "xy"], "_", "pickle")
+    rel_path: str = path_to_file([temp_dir]) + file_name(
+        [xx, cycle, "bg", "xy"], "_", "pickle"
+    )
     write_pickle(rel_path, feature_xy)
 
     del feature_xy
 
 # Blocks
 
-rel_path: str = root_dir + state_dir + block_shps
-feature_shps: tuple[dict, dict[str, Any]] = load_shapes(rel_path, block_id)
+rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
+    ["tl_2020" + fips + "tabblock20"], "_"
+)
+feature_shps: tuple[dict, dict[str, Any]] = load_shapes(rel_path, unit_id("block"))
 feature_xy: dict[str, Coordinate] = find_centers(feature_shps)
 
 del feature_shps
 
-rel_path: str = temp_dir + file_name([xx, cycle, "block", "xy"], "_", "pickle")
+rel_path: str = path_to_file([temp_dir]) + file_name(
+    [xx, cycle, "block", "xy"], "_", "pickle"
+)
 write_pickle(rel_path, feature_xy)
 
 del feature_xy
+
+#

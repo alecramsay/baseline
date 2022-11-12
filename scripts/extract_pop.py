@@ -49,25 +49,19 @@ args: Namespace = parser.parse_args()
 fips_map: dict[str, str] = make_state_codes()
 
 xx: str = args.state
-cycle: str = "2020"
 fips: str = fips_map[xx]
 tracts: bool = args.tract
 bgs: bool = args.bg
 verbose: bool = args.verbose
 
-
-### CONSTRUCT PATHS ###
-
-root_dir: str = "../../../local/pg/rawdata/"
-block_data: str = cycle + "vt_Census_block_" + fips + "_data2.json"
-data_dir: str = "data/"
-state_dir: str = xx + "/"
-temp_dir: str = "temp/"
+state_dir: str = xx
 
 
 ### READ THE CENSUS DATA, PIVOT IT BY LEVEL, AND PICKLE IT ###
 
-rel_path: str = root_dir + state_dir + block_data
+rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
+    [cycle, "vt_Census_block", fips, "data2"], "_", "json"
+)
 
 pop_by_block: defaultdict[str, int] = read_census_json(rel_path)
 pop_by_tract: defaultdict[str, int] = defaultdict(int)
@@ -89,7 +83,9 @@ for block, pop in pop_by_block.items():
     if pop > max_block_pop:
         max_block_pop = pop
 
-rel_path: str = temp_dir + file_name([xx, cycle, "block", "pop"], "_", "pickle")
+rel_path: str = path_to_file([temp_dir]) + file_name(
+    [xx, cycle, "block", "pop"], "_", "pickle"
+)
 write_pickle(rel_path, pop_by_block)
 
 nblocks: int = len(pop_by_block)
@@ -105,7 +101,9 @@ for tract, pop in pop_by_tract.items():
         max_tract_pop = pop
 
 if tracts:
-    rel_path: str = temp_dir + file_name([xx, cycle, "tract", "pop"], "_", "pickle")
+    rel_path: str = path_to_file([temp_dir]) + file_name(
+        [xx, cycle, "tract", "pop"], "_", "pickle"
+    )
     write_pickle(rel_path, pop_by_tract)
 
 ntracts: int = len(pop_by_tract)
@@ -120,7 +118,9 @@ for bg, pop in pop_by_bg.items():
         max_bg_pop = pop
 
 if bgs:
-    rel_path: str = temp_dir + file_name([xx, cycle, "bg", "pop"], "_", "pickle")
+    rel_path: str = path_to_file([temp_dir]) + file_name(
+        [xx, cycle, "bg", "pop"], "_", "pickle"
+    )
     write_pickle(rel_path, pop_by_bg)
 
 nbgs: int = len(pop_by_bg)

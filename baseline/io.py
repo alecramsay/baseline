@@ -162,7 +162,7 @@ def read_pickle(rel_path) -> Optional[bytes]:
         return None
 
 
-### FILE NAMES ###
+### FILE NAMES & PATHS ###
 
 
 class FileSpec:
@@ -175,6 +175,28 @@ class FileSpec:
         self.abs_path: str = os.path.abspath(path)
         self.name: str = name.lower() if (name) else os.path.basename(file_name).lower()
         self.extension: str = file_extension
+
+
+def file_name(parts: list[str], delim: str = "_", ext: str = None) -> str:
+    """
+    Construct a file name with parts separated by the delimeter and ending with the extension.
+    """
+    name: str = delim.join(parts) + "." + ext if ext else delim.join(parts)
+
+    return name
+
+
+def path_to_file(parts: list[str], naked: bool = False) -> str:
+    """
+    Return the directory path to a file (but not the file).
+    """
+
+    rel_path: str = "/".join(parts)
+
+    if not naked:
+        rel_path = rel_path + "/"
+
+    return rel_path
 
 
 ### NOTUSED ###

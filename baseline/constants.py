@@ -6,6 +6,33 @@
 from typing import Any
 
 
+### PROJECT CONSTANTS ###
+
+cycle: str = "2020"
+yyyy: str = "2022"
+yy: str = "22"
+plan_type: str = "Congress"
+
+
+def unit_id(units: str) -> str:
+    if units in ["block", "state"]:
+        return "GEOID20"
+    if units in ["bg", "tract"]:
+        return "GEOID"
+    raise ValueError(f"Invalid units: {units}")
+
+
+### ENVIRONMENT CONSTANTS ###
+
+rawdata_dir: str = "../../../local/pg/rawdata"
+data_dir: str = "data"
+temp_dir: str = "temp"
+results_dir: str = "results"
+content_dir: str = "content"
+
+
+### STATE META DATA ###
+
 # State code helpers copied from dra2020/data_tools/
 
 
@@ -367,3 +394,5 @@ study_states: list[str] = [
     "WA",
     "WI",
 ]
+
+#
