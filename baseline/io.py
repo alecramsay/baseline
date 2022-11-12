@@ -4,9 +4,7 @@
 #
 
 import os
-import sys
 import json
-import csv
 from csv import DictReader, DictWriter
 import pickle
 from collections import defaultdict
