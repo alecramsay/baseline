@@ -3,10 +3,8 @@
 # DATA STRUCTURES
 #
 
-import random
-from collections import namedtuple
+# from collections import namedtuple
 from shapely.geometry import Point, Polygon, MultiPolygon
-from typing import NamedTuple, TypedDict
 
 from .settings import *
 from .io import *
