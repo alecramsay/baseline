@@ -9,7 +9,7 @@ import math
 from shapely.geometry import Point, Polygon, MultiPolygon
 from typing import Generator
 
-from .types import Coordinate
+from .projtypes import Coordinate
 
 
 class PlasticCoordinates:

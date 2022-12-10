@@ -7,7 +7,7 @@ import math
 import itertools
 
 from .settings import *
-from .io import *
+from .readwrite import *
 from .data import *
 from .utils import *
 from .helpers import *

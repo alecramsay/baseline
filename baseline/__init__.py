@@ -2,10 +2,10 @@
 
 from .settings import *
 from .constants import *
-from .io import *
+from .readwrite import *
 from .utils import *
 from .helpers import *
-from .types import *
+from .projtypes import *
 from .data import *
 from .plastic import *
 from .solver import *
