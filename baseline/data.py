@@ -8,7 +8,7 @@ from shapely.geometry import Point, Polygon, MultiPolygon
 
 from .settings import *
 from .readwrite import *
-from .projtypes import *
+from .datatypes import *
 from .plastic import *
 
 

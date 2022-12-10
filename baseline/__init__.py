@@ -5,7 +5,7 @@ from .constants import *
 from .readwrite import *
 from .utils import *
 from .helpers import *
-from .projtypes import *
+from .datatypes import *
 from .data import *
 from .plastic import *
 from .solver import *
