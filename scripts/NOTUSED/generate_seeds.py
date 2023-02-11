@@ -12,6 +12,8 @@ For documentation, type:
 
 $ scripts/generate_seeds.py -h
 
+
+NOTE - To use this script, you must first download the appropriate state shapefiles locally.
 """
 
 import argparse
@@ -50,7 +52,7 @@ verbose: bool = args.verbose
 
 state_dir: str = xx
 
-state_path: str = path_to_file([data_dir, state_dir]) + file_name(
+state_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
     ["tl", cycle, fips, "state20"], "_"
 )
 
