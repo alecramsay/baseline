@@ -46,7 +46,7 @@ state_dir: str = xx
 
 ### LOAD DATA ###
 
-rel_path: str = path_to_file([data_dir, state_dir]) + file_name(
+rel_path: str = path_to_file([temp_dir]) + file_name(
     [xx, cycle, units, "data"], "_", "pickle"
 )
 collection: FeatureCollection = FeatureCollection(rel_path)

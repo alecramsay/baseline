@@ -75,7 +75,7 @@ for unit in units:
     for geoid, pop in pop.items():
         features.append({"geoid": geoid, "pop": pop, "xy": xy[geoid], "district": 0})
 
-    join_path: str = path_to_file([data_dir, state_dir]) + file_name(
+    join_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, unit, "data"], "_", "pickle"
     )
     write_pickle(join_path, features)
