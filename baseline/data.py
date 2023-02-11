@@ -120,3 +120,6 @@ class DistrictCollection:
 
             seed: Coordinate = seeds[j]
             self.districts[i]["xy"] = seed
+
+
+### END ###
