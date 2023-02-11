@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-#
-# PLASTIC SEQUENCE
-# - http://extremelearning.com.au/unreasonable-effectiveness-of-quasirandom-sequences/
-# - https://observablehq.com/@jrus/plastic-sequence
-#
+
+"""
+PLASTIC SEQUENCE GENERATOR
+- http://extremelearning.com.au/unreasonable-effectiveness-of-quasirandom-sequences/
+- https://observablehq.com/@jrus/plastic-sequence
+"""
 
 import math
 from shapely.geometry import Point, Polygon, MultiPolygon
@@ -177,3 +178,6 @@ pass
 
 
 __all__: list[str] = ["PlasticCoordinates"]
+
+
+### END ###

@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-#
-# DATA STRUCTURES
-#
 
-# from collections import namedtuple
+"""
+DATA STRUCTURES
+"""
+
 from shapely.geometry import Point, Polygon, MultiPolygon
 
-from .settings import *
 from .readwrite import *
 from .datatypes import *
 from .plastic import *
@@ -71,55 +70,6 @@ class FeatureCollection:
                 self.nreps -= fullreps
                 self.feature_pop[geoID] -= fullreps * self.target_pop
         """
-
-
-class State:
-    def __init__(self, rel_path) -> None:
-        self.shape: Polygon | MultiPolygon = load_state_shape(rel_path, "GEOID20")
-
-        self.xmin: float
-        self.ymin: float
-        self.xmax: float
-        self.ymax: float
-        self.xmin, self.ymin, self.xmax, self.ymax = self.shape.bounds
-
-    def contains(self, pt: Point) -> bool:
-        return self.shape.contains(pt)
-
-
-class DistrictCollection:
-    """
-    A collection of districts.
-    """
-
-    def __init__(self, n: int, max_step: int) -> None:
-        self.n: int = n
-        d: District = {
-            "xy": Coordinate(0, 0),
-            "pop": 0,
-            "over_under": 0,
-            "stretch": 0,
-            "steps": max_step,
-            "sum_xy": Coordinate(0, 0),
-        }
-        # Districts are referenced by their index in the list.
-        # The extra '0' district is 'unassigned'.
-        self.districts: list[District] = [dict(d) for i in range(n + 1)]
-
-    def seed_districts(self, state: State, verbose=False) -> None:
-        """
-        Use a plastic sequence to seed the district centers.
-        """
-
-        seeds: list[Coordinate] = PlasticCoordinates(self.n, state.shape).coordinates
-        # seeder: PlasticCoordinates = PlasticCoordinates(self.n, state.shape)
-        # seeds: list[Coordinate] = seeder.coordinates
-
-        for i in range(1, self.n + 1):  # Skip the '0' district.
-            j: int = i - 1
-
-            seed: Coordinate = seeds[j]
-            self.districts[i]["xy"] = seed
 
 
 ### END ###

@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-#
-# I/O HELPERS
-#
+
+"""
+READ/WRITE helpers
+"""
 
 import os
 import json
@@ -197,38 +198,4 @@ def path_to_file(parts: list[str], naked: bool = False) -> str:
     return rel_path
 
 
-### NOTUSED ###
-
-"""
-LEGACY
-
-def load_census(c_csv, id: str, pop: str) -> defaultdict[str, int]:
-    try:
-        # READ STANDARD CENSUS DATA FROM A .CSV FILE
-        census_by_geoID: defaultdict[str, int] = read_census_csv(c_csv, id, pop)
-    except Exception as e:
-        sys.exit(e)
-
-    return census_by_geoID
-	
-def read_census_csv(census_csv: str, id: str, pop: str) -> defaultdict[str, int]:
-    # Get the full path to the .csv
-    census_csv: str = os.path.expanduser(census_csv)
-
-    # Initialize an index of Census data by geo
-    census_by_geoID: defaultdict[str, int] = defaultdict(int)
-
-    with open(census_csv) as f_input:
-        csv_file: DictReader[str] = DictReader(f_input)
-
-        # Process each row in the .csv file
-        for row in csv_file:
-            # Subset the row to the desired columns
-            geoID: str = row[id]
-            total: int = int(row[pop])
-
-            # and write the values out into a dictionary
-            census_by_geoID[geoID] = total
-
-    return census_by_geoID
-"""
+### END ###

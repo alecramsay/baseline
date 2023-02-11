@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-#
-# TYPES
-#
+
+"""
+TYPES
+"""
 
 
 from typing import NamedTuple, TypedDict
-
-from .settings import *
 
 
 class Coordinate(NamedTuple):
@@ -24,18 +23,4 @@ class Feature(TypedDict):
     district: int
 
 
-class District(TypedDict):
-    # id: int
-    xy: Coordinate
-    pop: int
-    over_under: int  # over = -, under = +
-    stretch: int
-    steps: int
-
-    # For intermediate calculations
-    sum_xy: Coordinate
-
-
-class Assignment(TypedDict):
-    GEOID: str
-    DISTRICT: int
+### END ###
