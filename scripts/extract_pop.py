@@ -60,7 +60,7 @@ state_dir: str = xx
 ### READ THE CENSUS DATA, PIVOT IT BY LEVEL, AND PICKLE IT ###
 
 rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
-    [cycle, "vt_Census_block", fips, "data2"], "_", "json"
+    [f"{cycle}vt_Census_block", fips, "data2"], "_", "json"
 )
 
 pop_by_block: defaultdict[str, int] = read_census_json(rel_path)

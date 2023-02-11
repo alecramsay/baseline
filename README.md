@@ -1,6 +1,6 @@
 # Baseline Districts
 
-Baseline legislatives districts derived only using a state's "population geography:" how many people live where.
+Baseline legislatives districts derived only using a state's "population geography:" how many people live where in a state.
 
 The purpose of this repository is to generate baseline districts for a state and type of map (congressional or upper or lower state house).
 The process only uses census population data by feature location, where a feature is a census tract, block group, VTD, or block.
@@ -11,7 +11,9 @@ I introduced the concept of "baseline" districts in
 but I did not describe how to generate them.
 Truth be told, while I had worked out a rough procedure that I used by hand at that time, I had not yet automated it.
 I'm not sure it *could* be automated.
-This repository provides an automated solution.
+
+Todd Proebsting developed an automated solution based on Balzer's work.
+The baseline districts in this repository were generated using his tool.
 
 In contrast to other automated redistricting approaches, the purpose of baseline districts is *not* to suggest what
 final district maps should be. They are intended as the *starting point* for drawing plans.
@@ -26,5 +28,3 @@ Daniel Gulotta wrote a C++ implementation in the references/mcm07/ directory to
 support their "Electoral Redistricting with Moment of Inertia and Diminishing Halves Models" winning paper at MCM 07.
 
 The resulting districts are convex (and not oddly shaped like other simple geometric approaches).
-
-TODO - UPDATE: Balzer, Todd
