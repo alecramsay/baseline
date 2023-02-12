@@ -9,9 +9,6 @@ from typing import Any
 ### PROJECT CONSTANTS ###
 
 cycle: str = "2020"
-yyyy: str = "2022"
-yy: str = "22"
-plan_type: str = "Congress"
 
 study_states: list[str] = [
     "AL",

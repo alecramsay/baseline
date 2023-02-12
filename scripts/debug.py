@@ -1,59 +1,57 @@
 #!/usr/bin/env python3
-#
-# SAMPLE CODE
-#
 
-from collections import defaultdict
-from typing import Any
+"""
+DEBUG
+"""
 
 from baseline import *
 
 
-### ARGS ###
+### HARDCODE ARGS ###
 
+fips_map: dict[str, str] = make_state_codes()
 xx: str = "NC"
-fips: str = "37"
+fips: str = fips_map[xx]
+plan_type: str = "congress"
+n: int = districts_by_state[xx][plan_type]
+
 verbose: bool = True
+
+
+### CONSTRUCT PATHS ###
 
 state_dir: str = xx
 
-
-### READ THE CENSUS DATA, PIVOT IT, AND WRITE CSVS ###
-
-rel_path: str = path_to_file(
-    [rawdata_dir, state_dir]
-    + file_name([cycle, "vt_Census_block", fips, "data2"], "_", "json")
+bg_path: str = path_to_file([data_dir, state_dir]) + file_name(
+    [xx, cycle, "bg", "data"], "_", "csv"
+)
+block_path: str = path_to_file([data_dir, state_dir]) + file_name(
+    [xx, cycle, "block", "data"], "_", "csv"
+)
+plan_path: str = path_to_file([data_dir, state_dir]) + file_name(
+    [xx, cycle, plan_type], "_", "csv"
 )
 
-pop_by_block: defaultdict[str, int] = read_census_json(rel_path)
-pop_by_tract: defaultdict[str, int] = defaultdict(int)
-pop_by_bg: defaultdict[str, int] = defaultdict(int)
+# abs_path: str = FileSpec(bg_path).abs_path
+# with open(abs_path, "r", encoding="utf-8-sig") as file:
+#     print("BG CSV opened")
 
-tract_bgs: defaultdict[str, set[str]] = defaultdict(set)
-bg_blocks: defaultdict[str, set[str]] = defaultdict(set)
+# abs_path: str = FileSpec(block_path).abs_path
+# with open(abs_path, "r", encoding="utf-8-sig") as file:
+#     print("Block CSV opened")
 
-blocks: list[dict] = []
-total_pop: int = 0
-max_block_pop: int = 0
 
-for block, pop in pop_by_block.items():
-    blocks.append({"GEOID": block, "POP": pop})
+### FIND BASLINE DISTRICTS ###
 
-    g: GeoID = GeoID(block)
-    tract: str = g.tract
-    bg: str = g.bg
+# TODO -- Integrate Todd's Balzer district solver here.
+# solver: DistrictSolver = DistrictSolver(settings, args.verbose)
+# success: bool = solver.minimize_district_moi()
+# plan: list[Assignment] = None
+# #
 
-    pop_by_tract[tract] += pop
-    pop_by_bg[bg] += pop
+# if plan:
+#     print("Success!")
+#     if not noplan:
+#         write_csv(plan_path, plan)
 
-    total_pop += pop
-
-    if pop > max_block_pop:
-        max_block_pop = pop
-
-    tract_bgs[tract].add(bg)
-    bg_blocks[bg].add(block)
-
-pass
-
-#
+### END ###
