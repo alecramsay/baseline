@@ -56,8 +56,10 @@ study_states: list[str] = [
 rawdata_dir: str = "../../../local/pg/rawdata"
 data_dir: str = "data"
 temp_dir: str = "temp"
-results_dir: str = "results"
-content_dir: str = "content"
+intermediate_dir: str = "intermediate"
+maps_dir: str = "maps"
+dccvt_py: str = "../dccvt/examples/redistricting"
+dccvt_go: str = "../dccvt/bin"
 
 
 def unit_id(units: str) -> str:
