@@ -16,7 +16,7 @@ def baseline_with_bgs(xx: str, plan_type: str, verbose: bool = False) -> None:
     """Find baseline districts for a state"""
 
     map_label: str = label_map(xx, plan_type)
-    print(f"Generating baseline map: {map_label} ...")
+    print(f"Generating baseline map for {map_label}:")
 
     input_csv: str
     points_csv: str
@@ -75,7 +75,7 @@ def baseline_with_bgs(xx: str, plan_type: str, verbose: bool = False) -> None:
         [intermediate_dir, xx], [map_label, "characteristic", "points"]
     )
     sites_csv = full_path(
-        [intermediate_dir, xx], [map_label, "characteristic", iter_label, "sites"]
+        [intermediate_dir, xx], [map_label, "characteristic", "sites"]
     )
     initial_csv = full_path(
         [intermediate_dir, xx], [map_label, "characteristic", "initial"]
