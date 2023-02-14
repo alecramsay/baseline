@@ -7,43 +7,75 @@ BASELINE DISTRICTS
 import os
 
 from .constants import *
+from .utils import *
 from .readwrite import *
 
 
+@time_function
 def baseline_state(xx: str, plan_type: str, verbose: bool = False) -> None:
-    """Find baseline districts for a state.
+    """Find baseline districts for a state"""
 
-    Find characteristic sites, using blockgroups: <<< TODO: Compare using sample blocks
-    - Convert BG data to X_points.csv
-    - For each of 100 iterations:
-        - Create X_sites.csv using X_points.csv & a random seed
-        - Create X_initial.csv using X_sites.csv
-        - Run dccvt to create X_assignments.csv
-        - Create district X_sites.csv
-    - Use all the X_centroids.csv to find characteristic sites
-    - Fin
-    """
+    input_csv: str
+    points_csv: str
+    sites_csv: str
+    initial_csv: str
+    balzer_csv: str
+    consolidated_csv: str
+    centroids_csv: str
+    output_csv: str
 
-    # Do one end-to-end run
+    # Find characteristic sites (district centroids) for a state, by doing
+    # repeat runs using blockgroups.
 
     input_csv: str = full_path([data_dir, xx], [xx, cycle, "bg", "data"])
-    points_csv: str = full_path([intermediate_dir, xx], [xx, cycle, "points"])
-    sites_csv: str = full_path([intermediate_dir, xx], [xx, cycle, "sites"])
-    initial_csv: str = full_path([intermediate_dir, xx], [xx, cycle, "initial"])
-    balzer_csv: str = full_path([intermediate_dir, xx], [xx, cycle, "balzer"])
-    consolidated_csv: str = full_path(
-        [intermediate_dir, xx], [xx, cycle, "consolidated"]
-    )
-    centroids_csv: str = full_path([intermediate_dir, xx], [xx, cycle, "centroids"])
-    output_csv: str = full_path([maps_dir], [xx, cycle, plan_type])
-
+    points_csv = full_path([intermediate_dir, xx], [xx, cycle, "points"])
     make_points(input_csv, points_csv)
-    make_sites(points_csv, sites_csv, 31415, 14)
-    make_initial(sites_csv, points_csv, initial_csv)
-    run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
-    consolidate_balzer(balzer_csv, consolidated_csv)
-    make_baf(input_csv, consolidated_csv, output_csv)
-    get_sites(points_csv, balzer_csv, centroids_csv)
+
+    N: int = districts_by_state[xx][plan_type]
+    K: int = 1  # TODO: make this a parameter
+
+    fips_map: dict[str, str] = make_state_codes()
+    fips: str = fips_map[xx]
+    offset: int = int(fips)
+
+    start: int = (K * N) + offset
+    iterations: int = 100
+
+    # TODO: Modify file names to include K and N
+    for i, seed in enumerate(range(start, start + iterations)):
+        print(f"Iteration: {i+1}/{iterations}, seed: {seed}")
+
+        sites_csv = full_path([intermediate_dir, xx], [xx, cycle, "sites"])
+        initial_csv = full_path([intermediate_dir, xx], [xx, cycle, "initial"])
+        balzer_csv = full_path([intermediate_dir, xx], [xx, cycle, "balzer"])
+        centroids_csv: str = full_path([intermediate_dir, xx], [xx, cycle, "centroids"])
+
+        make_sites(points_csv, sites_csv, seed, K * N)
+        make_initial(sites_csv, points_csv, initial_csv)
+        run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
+        get_sites(points_csv, balzer_csv, centroids_csv)
+
+    # TODO: Concatenate all the centroids files into one file.
+
+    # TODO: Cluster the centroids to find the characteristic sites
+
+    # TODO: Use the characteristic sites to finalize baseline districts,
+    # using blocks instead of blockgroups. Snap each block one and only
+    # one district. Generate a block-assignment file.
+
+    # consolidated_csv: str = full_path(
+    #     [intermediate_dir, xx], [xx, cycle, "consolidated"]
+    # )
+    # centroids_csv: str = full_path([intermediate_dir, xx], [xx, cycle, "centroids"])
+    # output_csv: str = full_path([maps_dir], [xx, cycle, plan_type])
+
+    # make_points(input_csv, points_csv)
+    # make_sites(points_csv, sites_csv, 31415, 14)
+    # make_initial(sites_csv, points_csv, initial_csv)
+    # run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
+    # consolidate_balzer(balzer_csv, consolidated_csv)
+    # make_baf(input_csv, consolidated_csv, output_csv)
+    # get_sites(points_csv, balzer_csv, centroids_csv)
 
     pass  # TODO
 

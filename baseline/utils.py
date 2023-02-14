@@ -21,7 +21,7 @@ def time_function(func) -> Callable[..., Any]:
 
         end_counter: float = time.process_time()
         counter_time: float = end_counter - start_counter
-        print("...", func.__name__, "=", "{:.10f}".format(counter_time), "seconds")
+        print(func.__name__, "=", "{:.10f}".format(counter_time), "seconds")
 
         return result
 
