@@ -19,6 +19,6 @@ verbose: bool = True
 
 ### DEBUG ###
 
-baseline_state(xx, plan_type, verbose)
+baseline_with_bgs(xx, plan_type, verbose)
 
 ### END ###

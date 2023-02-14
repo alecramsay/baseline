@@ -12,7 +12,7 @@ from .readwrite import *
 
 
 @time_function
-def baseline_state(xx: str, plan_type: str, verbose: bool = False) -> None:
+def baseline_with_bgs(xx: str, plan_type: str, verbose: bool = False) -> None:
     """Find baseline districts for a state"""
 
     input_csv: str
@@ -24,42 +24,53 @@ def baseline_state(xx: str, plan_type: str, verbose: bool = False) -> None:
     centroids_csv: str
     output_csv: str
 
-    # Find characteristic sites (district centroids) for a state, by doing
-    # repeat runs using blockgroups.
+    # 1 - Run repeated runs using blockgroups & random seeds.
 
     input_csv: str = full_path([data_dir, xx], [xx, cycle, "bg", "data"])
-    points_csv = full_path([intermediate_dir, xx], [xx, cycle, "points"])
+
+    map_label: str = label_map(xx, plan_type)
+    points_csv = full_path([intermediate_dir, xx], [map_label, "bg", "points"])
     make_points(input_csv, points_csv)
 
     N: int = districts_by_state[xx][plan_type]
     K: int = 1  # TODO: make this a parameter
-
     fips_map: dict[str, str] = make_state_codes()
     fips: str = fips_map[xx]
-    offset: int = int(fips)
 
-    start: int = (K * N) + offset
-    iterations: int = 100
+    start: int = K * N * int(fips)
+    iterations: int = 10  # TODO
 
-    # TODO: Modify file names to include K and N
     for i, seed in enumerate(range(start, start + iterations)):
-        print(f"Iteration: {i+1}/{iterations}, seed: {seed}")
+        iter_label: str = label_iteration(i, K, N)
+        print(f"Map: {map_label}, Iteration: {iter_label}, seed: {seed} ...")
 
-        sites_csv = full_path([intermediate_dir, xx], [xx, cycle, "sites"])
-        initial_csv = full_path([intermediate_dir, xx], [xx, cycle, "initial"])
-        balzer_csv = full_path([intermediate_dir, xx], [xx, cycle, "balzer"])
-        centroids_csv: str = full_path([intermediate_dir, xx], [xx, cycle, "centroids"])
+        sites_csv = full_path(
+            [intermediate_dir, xx], [map_label, "bg", iter_label, "sites"]
+        )
+        initial_csv = full_path(
+            [intermediate_dir, xx], [map_label, "bg", iter_label, "initial"]
+        )
+        balzer_csv = full_path(
+            [intermediate_dir, xx], [map_label, "bg", iter_label, "balzer"]
+        )
+        centroids_csv = full_path(
+            [intermediate_dir, xx], [map_label, "bg", iter_label, "centroids"]
+        )
 
         make_sites(points_csv, sites_csv, seed, K * N)
         make_initial(sites_csv, points_csv, initial_csv)
         run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
         get_sites(points_csv, balzer_csv, centroids_csv)
 
-    # TODO: Concatenate all the centroids files into one file.
+        # 2 - Find characteristic sites (district centroids) for the many runs.
 
-    # TODO: Cluster the centroids to find the characteristic sites
+        centroids: str = full_path(
+            [intermediate_dir, xx], [map_label, "bg", "*", "centroids"]
+        )
+        sites_csv = full_path([intermediate_dir, xx], [map_label, "block", "sites"])
+        get_block_sites(centroids, sites_csv)
 
-    # TODO: Use the characteristic sites to finalize baseline districts,
+    # TODO: 3 - Use the characteristic sites to finalize baseline districts,
     # using blocks instead of blockgroups. Snap each block one and only
     # one district. Generate a block-assignment file.
 
@@ -155,6 +166,16 @@ def get_sites(points_csv: str, baf_csv: str, centroids_csv: str) -> None:
     os.system(command)
 
 
+def get_block_sites(inputs: str, output: str) -> None:
+    """Concatenate all BG centroids.csv into one sites.csv for blocks
+
+    cat NC20C_bg_*_centroids.csv > NC20C_block_sites.csv
+    """
+
+    command: str = f"cat {inputs} > {output}"
+    os.system(command)
+
+
 ### HELPER FUNCTIONS ###
 
 
@@ -163,6 +184,14 @@ def full_path(dirs: list[str], file_parts: list[str]) -> str:
 
     rel_path: str = path_to_file(dirs) + file_name(file_parts, "_", "csv")
     return FileSpec(rel_path).abs_path
+
+
+def label_map(xx: str, plan_type: str) -> str:
+    return f"{xx}{cycle[2:]}{plan_type.upper()[0]}"
+
+
+def label_iteration(I: int, K: int, N: int) -> str:
+    return f"I{I:02d}K{K:02d}N{N:02d}"
 
 
 ### END ###
