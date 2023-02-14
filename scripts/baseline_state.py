@@ -6,7 +6,7 @@ Find districts that minimize population compactness (moment of inertia).
 
 For example:
 
-$ scripts/baseline_state.py NC congress -v > maps/NC_2020_congress_log.txt
+$ scripts/baseline_state.py NC congress -v > maps/NC20C_log.txt
 
 For documentation, type:
 

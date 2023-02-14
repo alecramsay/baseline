@@ -40,7 +40,7 @@ def baseline_with_bgs(xx: str, plan_type: str, verbose: bool = False) -> None:
     fips: str = fips_map[xx]
 
     start: int = K * N * int(fips)
-    iterations: int = 10  # TODO
+    iterations: int = 100
 
     for i, seed in enumerate(range(start, start + iterations)):
         iter_label: str = label_iteration(i, K, N)
