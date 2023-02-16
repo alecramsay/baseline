@@ -9,6 +9,7 @@ cligj==0.7.2
 Fiona==1.8.22
 idna==3.4
 Jinja2==3.1.2
+joblib==1.2.0
 libpysal==4.7.0
 MarkupSafe==2.1.2
 munch==2.5.0
@@ -18,12 +19,16 @@ packaging==23.0
 pandas==1.5.3
 pathspec==0.10.1
 platformdirs==2.5.3
+pyproj==3.4.1
 python-dateutil==2.8.2
 pytz==2022.7.1
 requests==2.28.2
+scikit-learn==1.2.1
 scipy==1.10.0
 Shapely==1.8.5.post1
 six==1.16.0
+sklearn==0.0.post1
 soupsieve==2.4
+threadpoolctl==3.1.0
 tomli==2.0.1
 urllib3==1.26.14
