@@ -52,6 +52,14 @@ def parse_args() -> Namespace:
     return args
 
 
+class Pair(NamedTuple):
+    one: int
+    two: int
+
+    def __repr__(self) -> str:
+        return f"{self.one},{self.two}"
+
+
 def main() -> None:
     """Find three nearest neighbors for each point
 
@@ -82,19 +90,30 @@ def main() -> None:
     # NOTE: k=4 because the first match is the point itself
     distances, indices = tree.query(np.deg2rad(np.c_[query_lats, query_lons]), k=4)
 
-    neighbors: dict[str, list[str]] = {}
+    graph: dict[str, list[str]] = {}
+    neighbors: list[str, str] = list()
 
     r_km: int = 6371  # multiplier to convert to km (from unit distance)
     for geoid, d, ind in zip(df["GEOID"], distances, indices):
-        neighbors[geoid] = []
+        graph[geoid] = []
         for i, index in enumerate(ind):
             if i == 0:
                 # Skip the first match, which is the point itself
                 continue
-            neighbors[geoid].append(df["GEOID"][index])
+            graph[geoid].append(df["GEOID"][index])
+            neighbors.append(Pair(geoid, df["GEOID"][index]))
 
-    # TODO - Save the neighbors
-    print(f"nodes: {len(neighbors)}")
+    # Save the neighbors
+
+    rel_path: str = path_to_file(["data", xx]) + file_name(
+        [xx, str(cycle), unit, "pairs"], "_", "csv"
+    )
+    abs_path: str = FileSpec(rel_path).abs_path
+
+    with open(abs_path, "w") as f:
+        for i, pair in enumerate(neighbors):
+            print(pair, file=f)
+
     pass
 
 
