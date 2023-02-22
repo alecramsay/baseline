@@ -63,7 +63,7 @@ dccvt_go: str = "../dccvt/bin"
 
 
 def unit_id(units: str) -> str:
-    if units in ["block", "state"]:
+    if units in ["block", "state", "vtd"]:
         return "GEOID20"
     if units in ["bg", "tract"]:
         return "GEOID"
