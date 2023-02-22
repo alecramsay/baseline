@@ -13,7 +13,7 @@ $ scripts/baseline_state.py VA congress -v > maps/VA20C_vtd_log.txt
 
 For documentation, type:
 
-$ scripts/find_base_districts.py -h
+$ scripts/baseline_state.py -h
 
 """
 

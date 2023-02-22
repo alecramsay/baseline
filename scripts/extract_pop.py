@@ -23,9 +23,6 @@ from collections import defaultdict
 from baseline import *
 
 
-### PARSE ARGS ###
-
-
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
         description="Extract census population data from DRA block data JSON."
