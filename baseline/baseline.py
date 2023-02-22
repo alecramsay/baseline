@@ -108,6 +108,9 @@ def baseline_with_bgs(xx: str, plan_type: str, verbose: bool = False) -> None:
     consolidated_csv = full_path(
         [intermediate_dir, xx], [map_label, "block", "consolidated"]
     )
+    complete_csv: str = full_path(
+        [intermediate_dir, xx], [map_label, "block", "complete"]
+    )
     output_csv: str = full_path([maps_dir], [map_label, "baf"])
 
     make_points(input_csv, points_csv)
@@ -115,9 +118,10 @@ def baseline_with_bgs(xx: str, plan_type: str, verbose: bool = False) -> None:
     make_initial(centroids_csv, points_csv, initial_csv)
     run_dccvt(centroids_csv, points_csv, initial_csv, balzer_csv)
     consolidate_balzer(balzer_csv, consolidated_csv)
-    make_baf(input_csv, consolidated_csv, output_csv)
+    handle_unassigned(consolidated_csv, points_csv, balzer_csv, complete_csv)
+    make_baf(input_csv, complete_csv, output_csv)
 
-    pass  # TODO
+    pass
 
 
 ### DCCVT WRAPPERS ###
@@ -175,13 +179,13 @@ def consolidate_balzer(balzer_csv: str, consolidated_csv: str) -> None:
     os.system(command)
 
 
-def make_baf(input_csv: str, consolidated_csv: str, baf_csv: str) -> None:
+def make_baf(input_csv: str, complete_csv: str, baf_csv: str) -> None:
     """Make a block-assignment file from a file of unique assignments of blocks to districts (sites)
 
     python3 redistricting.py postprocess --redistricting_input redistricting.csv --input consolidated.csv --output output.csv
     """
 
-    command: str = f"python3 {dccvt_py}/redistricting.py postprocess --redistricting_input {input_csv} --input {consolidated_csv} --output {baf_csv}"
+    command: str = f"python3 {dccvt_py}/redistricting.py postprocess --redistricting_input {input_csv} --input {complete_csv} --output {baf_csv}"
     os.system(command)
 
 
@@ -202,6 +206,18 @@ def combine_centroids(inputs: str, output: str) -> None:
     """
 
     command: str = f"cat {inputs} > {output}"
+    os.system(command)
+
+
+def handle_unassigned(
+    consolidated_csv: str, points_csv: str, balzer_csv: str, complete_csv: str
+) -> None:
+    """Handle unassigned zero-population blocks
+
+    python3 redistricting.py complete --assignment consolidated.csv --points points.csv --balzer balzer.csv --output complete.csv
+    """
+
+    command: str = f"python3 {dccvt_py}/redistricting.py complete --assignment {consolidated_csv} --points {points_csv} --balzer {balzer_csv} --output {complete_csv}"
     os.system(command)
 
 
