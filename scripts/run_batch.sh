@@ -7,10 +7,10 @@
 # scripts/run_batch.sh
 #
 
-echo "Processing data for NC ..."
-scripts/extract_pop.py -s NC -p -i 3 > data/NC/NC_census_log.txt
-scripts/extract_xy.py -s NC -p
-scripts/join_feature_data.py -s NC -p
-scripts/unpickle_to_csv.py -s NC -u vtd
-# scripts/unpickle_to_csv.py NC block
-# scripts/unpickle_to_csv.py NC bg
+echo "Processing data for MD ..."
+scripts/extract_pop.py -s MD -p -i 3 > data/MD/MD_census_log.txt
+scripts/extract_xy.py -s MD -p
+scripts/join_feature_data.py -s MD -p
+scripts/unpickle_to_csv.py -s MD -u vtd
+# scripts/unpickle_to_csv.py MD block
+# scripts/unpickle_to_csv.py MD bg

@@ -177,9 +177,15 @@ def main() -> None:
         rel_path: str = path_to_file([vtd_dir, state_dir]) + file_name(
             [f"{cycle}", "census", xx + iteration], "_", "csv"
         )
-        print(f"Reading {rel_path} ...")
 
-        types: list = [str] + [int] * 79
+        # Figure out the number of columns in the file
+        ncols: int = 80
+        abs_path: str = FileSpec(rel_path).abs_path
+        with open(abs_path, "r", encoding="utf-8-sig") as f:
+            first_line: str = f.readline()
+            ncols = len(first_line.split(","))
+
+        types: list = [str] + [int] * (ncols - 1)
         census: list = read_typed_csv(rel_path, types)
 
         id: str = unit_id("vtd")
