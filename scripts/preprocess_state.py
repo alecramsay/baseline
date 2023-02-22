@@ -6,10 +6,10 @@ Find districts that minimize population compactness (moment of inertia).
 
 For example:
 
-$ scripts/preprocess_state.py -s NC -t congress
-$ scripts/preprocess_state.py -s MD -t congress
-$ scripts/preprocess_state.py -s PA -t congress
-$ scripts/preprocess_state.py -s VA -t congress
+$ scripts/preprocess_state.py -s NC
+$ scripts/preprocess_state.py -s MD
+$ scripts/preprocess_state.py -s PA
+$ scripts/preprocess_state.py -s VA
 
 For documentation, type:
 
@@ -36,13 +36,6 @@ def parse_args() -> Namespace:
         help="The two-character state code (e.g., NC)",
         type=str,
     )
-    parser.add_argument(
-        "-t",
-        "--type",
-        default="congress",
-        help="The type of map: { congress | upper | lower }.",
-        type=str,
-    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -57,11 +50,22 @@ def main() -> None:
 
     args: Namespace = parse_args()
     xx: str = args.state
-    plan_type: str = args.type
 
     verbose: bool = args.verbose
 
-    print(f"Preprocessing data for {xx} {plan_type} ...")
+    print(f"Preprocessing data for {xx} ...")
+
+    commands: list[str] = [
+        "scripts/extract_pop.py -s {xx} -p -i 3 > data/{xx}/{xx}_census_log.txt",
+        "scripts/extract_xy.py -s {xx} -p",
+        "scripts/join_feature_data.py -s {xx} -p",
+        "scripts/unpickle_to_csv.py -s {xx} -u vtd",
+        # "scripts/unpickle_to_csv.py {xx} block",
+        # "scripts/unpickle_to_csv.py {xx} bg",
+    ]
+    for command in commands:
+        command: str = command.format(xx=xx)
+        os.system(command)
 
 
 if __name__ == "__main__":

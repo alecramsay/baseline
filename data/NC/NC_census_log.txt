@@ -1,4 +1,3 @@
-Reading ../vtd_data/2020_vtd/NC/2020_census_NC-3.csv ...
 
 Max precinct (VTD) population: 37,964 # of blocks: 2,666
 
