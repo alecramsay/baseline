@@ -69,6 +69,7 @@ def parse_args() -> Namespace:
 
 
 def main() -> None:
+    """Join feature population and xy data by geoid."""
 
     args: Namespace = parse_args()
 
