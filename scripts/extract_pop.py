@@ -7,8 +7,8 @@ aggregate it by track and blockgroup (BG).
 
 For example:
 
-$ scripts/extract_pop.py -s NC
-$ scripts/extract_pop.py -s NC > data/NC/NC_census_log.txt
+$ scripts/extract_pop.py -s NC -p
+$ scripts/extract_pop.py -s NC -p > data/NC/NC_census_log.txt
 
 For documentation, type:
 
