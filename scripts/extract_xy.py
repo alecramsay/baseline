@@ -59,6 +59,7 @@ def parse_args() -> Namespace:
         action="store_true",
         help="Generate precinct-level data",
     )
+
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
     )
