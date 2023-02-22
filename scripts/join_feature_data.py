@@ -81,7 +81,7 @@ def main() -> None:
     precincts: bool = args.precinct
 
     # TODO - Remove this
-    precincts = True
+    # precincts = True
 
     verbose: bool = args.verbose
 
