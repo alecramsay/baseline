@@ -1,6 +1,4 @@
+Reading ../vtd_data/2020_vtd/NC/2020_census_NC-3.csv ...
 
-Total population: 10,439,388
-Max tract population: 14,610 # of tracts: 2,672
-Max BG population: 8,962 # of BGs: 7,111
-Max block population: 3,419 # of blocks: 236,638
+Max precinct (VTD) population: 37,964 # of blocks: 2,666
 

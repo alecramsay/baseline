@@ -8,7 +8,7 @@ Convert pickled data to CSV format.
 
 For example:
 
-$ scripts/unpickle_to_csv.py NC vtd
+$ scripts/unpickle_to_csv.py -s NC -u vtd
 
 For documentation, type:
 
