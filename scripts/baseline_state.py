@@ -8,6 +8,8 @@ For example:
 
 $ scripts/baseline_state.py NC congress -v > maps/NC20C_vtd_log.txt
 $ scripts/baseline_state.py MD congress -v > maps/MD20C_vtd_log.txt
+$ scripts/baseline_state.py PA congress -v > maps/PA20C_vtd_log.txt
+$ scripts/baseline_state.py VA congress -v > maps/VA20C_vtd_log.txt
 
 For documentation, type:
 
