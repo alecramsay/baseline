@@ -1,6 +1,3 @@
 
-Total population: 2,961,279
-Max tract population: 10,178 # of tracts: 878
-Max BG population: 5,617 # of BGs: 2,445
-Max block population: 3,907 # of blocks: 112,241
+Max precinct (VTD) population: 14,258 # of blocks: 1,834
 

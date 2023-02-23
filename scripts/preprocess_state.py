@@ -46,14 +46,12 @@ def parse_args() -> Namespace:
 
 
 def main() -> None:
-    """Preprocess data for a state."""
+    """Preprocess VTD (precinct) data for a state."""
 
     args: Namespace = parse_args()
     xx: str = args.state
 
     verbose: bool = args.verbose
-
-    print(f"Preprocessing data for {xx} ...")
 
     commands: list[str] = [
         "scripts/extract_pop.py -s {xx} -p -i 3 > data/{xx}/{xx}_census_log.txt",

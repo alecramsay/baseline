@@ -85,8 +85,6 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
-    state_dir: str = xx
-
     ### JOIN THE POPULATION & COORDINATE DATA BY GEOID ###
 
     units: list[str] = list()

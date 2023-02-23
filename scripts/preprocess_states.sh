@@ -4,118 +4,125 @@
 #
 # For example:
 #
-# scripts/baseline_states.sh
+# scripts/preprocess_states.sh
 #
 
-echo "Generating baseline districts for AL / 2020 / congress..."
-scripts/baseline_state.py AL congress -v > logs/AL_2020_congress_log.txt
+echo "Preprocessing data for AL ..."
+scripts/preprocess_state.py -s AL
 
-echo "Generating baseline districts for AZ / 2020 / congress..."
-scripts/baseline_state.py AZ congress -v > logs/AZ_2020_congress_log.txt
+echo "Preprocessing data for AZ ..."
+scripts/preprocess_state.py -s AZ
 
-echo "Generating baseline districts for AR / 2020 / congress..."
-scripts/baseline_state.py AR congress -v > logs/AR_2020_congress_log.txt
+echo "Preprocessing data for AR ..."
+scripts/preprocess_state.py -s AR
 
-echo "Generating baseline districts for CA / 2020 / congress..."
-scripts/baseline_state.py CA congress -v > logs/CA_2020_congress_log.txt
+# CA uses BG's instead of VTD's
+echo "Preprocessing data for CA ..."
+scripts/extract_pop.py -s CA -g -i 3 > data/CA/CA_census_log.txt
+scripts/extract_xy.py -s CA -g
+scripts/join_feature_data.py -s CA -g
+scripts/unpickle_to_csv.py -s CA -u bg
 
-echo "Generating baseline districts for CO / 2020 / congress..."
-scripts/baseline_state.py CO congress -v > logs/CO_2020_congress_log.txt
+echo "Preprocessing data for CO ..."
+scripts/preprocess_state.py -s CO
 
-echo "Generating baseline districts for CT / 2020 / congress..."
-scripts/baseline_state.py CT congress -v > logs/CT_2020_congress_log.txt
+echo "Preprocessing data for CT ..."
+scripts/preprocess_state.py -s CT
 
-echo "Generating baseline districts for FL / 2020 / congress..."
-scripts/baseline_state.py FL congress -v > logs/FL_2020_congress_log.txt
+echo "Preprocessing data for FL ..."
+# scripts/preprocess_state.py -s FL
 
-echo "Generating baseline districts for GA / 2020 / congress..."
-scripts/baseline_state.py GA congress -v > logs/GA_2020_congress_log.txt
+echo "Preprocessing data for GA ..."
+scripts/preprocess_state.py -s GA
 
-echo "Generating baseline districts for IL / 2020 / congress..."
-scripts/baseline_state.py IL congress -v > logs/IL_2020_congress_log.txt
+echo "Preprocessing data for IL ..."
+scripts/preprocess_state.py -s IL
 
-echo "Generating baseline districts for IN / 2020 / congress..."
-scripts/baseline_state.py IN congress -v > logs/IN_2020_congress_log.txt
+echo "Preprocessing data for IN ..."
+scripts/preprocess_state.py -s IN
 
-echo "Generating baseline districts for IA / 2020 / congress..."
-scripts/baseline_state.py IA congress -v > logs/IA_2020_congress_log.txt
+echo "Preprocessing data for IA ..."
+scripts/preprocess_state.py -s IA
 
-echo "Generating baseline districts for KS / 2020 / congress..."
-scripts/baseline_state.py KS congress -v > logs/KS_2020_congress_log.txt
+echo "Preprocessing data for KS ..."
+scripts/preprocess_state.py -s KS
 
-echo "Generating baseline districts for KY / 2020 / congress..."
-scripts/baseline_state.py KY congress -v > logs/KY_2020_congress_log.txt
+echo "Preprocessing data for KY ..."
+scripts/preprocess_state.py -s KY
 
-echo "Generating baseline districts for LA / 2020 / congress..."
-scripts/baseline_state.py LA congress -v > logs/LA_2020_congress_log.txt
+echo "Preprocessing data for LA ..."
+scripts/preprocess_state.py -s LA
 
-# echo "Generating baseline districts for MD / 2020 / congress..."
-# scripts/baseline_state.py MD congress -v > logs/MD_2020_congress_log.txt
+echo "Preprocessing data for MD ..."
+scripts/preprocess_state.py -s MD
 
-echo "Generating baseline districts for MA / 2020 / congress..."
-scripts/baseline_state.py MA congress -v > logs/MA_2020_congress_log.txt
+echo "Preprocessing data for MA ..."
+scripts/preprocess_state.py -s MA
 
-echo "Generating baseline districts for MI / 2020 / congress..."
-scripts/baseline_state.py MI congress -v > logs/MI_2020_congress_log.txt
+echo "Preprocessing data for MI ..."
+scripts/preprocess_state.py -s MI
 
-echo "Generating baseline districts for MN / 2020 / congress..."
-scripts/baseline_state.py MN congress -v > logs/MN_2020_congress_log.txt
+echo "Preprocessing data for MN ..."
+scripts/preprocess_state.py -s MN
 
-echo "Generating baseline districts for MS / 2020 / congress..."
-scripts/baseline_state.py MS congress -v > logs/MS_2020_congress_log.txt
+echo "Preprocessing data for MS ..."
+scripts/preprocess_state.py -s MS
 
-echo "Generating baseline districts for MO / 2020 / congress..."
-scripts/baseline_state.py MO congress -v > logs/MO_2020_congress_log.txt
+echo "Preprocessing data for MO ..."
+scripts/preprocess_state.py -s MO
 
-echo "Generating baseline districts for NE / 2020 / congress..."
-scripts/baseline_state.py NE congress -v > logs/NE_2020_congress_log.txt
+echo "Preprocessing data for NE ..."
+scripts/preprocess_state.py -s NE
 
-echo "Generating baseline districts for NV / 2020 / congress..."
-scripts/baseline_state.py NV congress -v > logs/NV_2020_congress_log.txt
+echo "Preprocessing data for NV ..."
+scripts/preprocess_state.py -s NV
 
-echo "Generating baseline districts for NJ / 2020 / congress..."
-scripts/baseline_state.py NJ congress -v > logs/NJ_2020_congress_log.txt
+echo "Preprocessing data for NJ ..."
+scripts/preprocess_state.py -s NJ
 
-echo "Generating baseline districts for NM / 2020 / congress..."
-scripts/baseline_state.py NM congress -v > logs/NM_2020_congress_log.txt
+echo "Preprocessing data for NM ..."
+scripts/preprocess_state.py -s NM
 
-echo "Generating baseline districts for NY / 2020 / congress..."
-scripts/baseline_state.py NY congress -v > logs/NY_2020_congress_log.txt
+echo "Preprocessing data for NY ..."
+scripts/preprocess_state.py -s NY
 
-# echo "Generating baseline districts for NC / 2020 / congress..."
-# scripts/baseline_state.py NC congress -v > logs/NC_2020_congress_log.txt
+echo "Preprocessing data for NC ..."
+scripts/preprocess_state.py -s NC
 
-echo "Generating baseline districts for OH / 2020 / congress..."
-scripts/baseline_state.py OH congress -v > logs/OH_2020_congress_log.txt
+echo "Preprocessing data for OH ..."
+scripts/preprocess_state.py -s OH
 
-echo "Generating baseline districts for OK / 2020 / congress..."
-scripts/baseline_state.py OK congress -v > logs/OK_2020_congress_log.txt
+echo "Preprocessing data for OK ..."
+scripts/preprocess_state.py -s OK
 
-echo "Generating baseline districts for OR / 2020 / congress..."
-scripts/baseline_state.py OR congress -v > logs/OR_2020_congress_log.txt
+echo "Preprocessing data for OR ..."
+scripts/extract_pop.py -s OR -g -i 3 > data/OR/OR_census_log.txt
+scripts/extract_xy.py -s OR -g
+scripts/join_feature_data.py -s OR -g
+scripts/unpickle_to_csv.py -s OR -u bg
 
-# echo "Generating baseline districts for PA / 2020 / congress..."
-# scripts/baseline_state.py PA congress -v > logs/PA_2020_congress_log.txt
+echo "Preprocessing data for PA ..."
+scripts/preprocess_state.py -s PA
 
-echo "Generating baseline districts for SC / 2020 / congress..."
-scripts/baseline_state.py SC congress -v > logs/SC_2020_congress_log.txt
+echo "Preprocessing data for SC ..."
+scripts/preprocess_state.py -s SC
 
-echo "Generating baseline districts for TN / 2020 / congress..."
-scripts/baseline_state.py TN congress -v > logs/TN_2020_congress_log.txt
+echo "Preprocessing data for TN ..."
+scripts/preprocess_state.py -s TN
 
-echo "Generating baseline districts for TX / 2020 / congress..."
-scripts/baseline_state.py TX congress -v > logs/TX_2020_congress_log.txt
+echo "Preprocessing data for TX ..."
+scripts/preprocess_state.py -s TX
 
-echo "Generating baseline districts for UT / 2020 / congress..."
-scripts/baseline_state.py UT congress -v > logs/UT_2020_congress_log.txt
+echo "Preprocessing data for UT ..."
+scripts/preprocess_state.py -s UT
 
-# echo "Generating baseline districts for VA / 2020 / congress..."
-# scripts/baseline_state.py VA congress -v > logs/VA_2020_congress_log.txt
+echo "Preprocessing data for VA ..."
+scripts/preprocess_state.py -s VA
 
-echo "Generating baseline districts for WA / 2020 / congress..."
-scripts/baseline_state.py WA congress -v > logs/WA_2020_congress_log.txt
+echo "Preprocessing data for WA ..."
+scripts/preprocess_state.py -s WA
 
-echo "Generating baseline districts for WI / 2020 / congress..."
-scripts/baseline_state.py WI congress -v > logs/WI_2020_congress_log.txt
+echo "Preprocessing data for WI ..."
+scripts/preprocess_state.py -s WI
 
 echo "... done."
