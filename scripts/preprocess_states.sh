@@ -29,8 +29,9 @@ scripts/preprocess_state.py -s CO
 echo "Preprocessing data for CT ..."
 scripts/preprocess_state.py -s CT
 
-echo "Preprocessing data for FL ..."
-scripts/preprocess_state.py -s FL
+# Use preprocess_FL.py instead
+# echo "Preprocessing data for FL ..."
+# scripts/preprocess_state.py -s FL
 
 echo "Preprocessing data for GA ..."
 scripts/preprocess_state.py -s GA

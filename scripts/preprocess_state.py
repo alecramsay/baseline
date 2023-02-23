@@ -2,7 +2,7 @@
 #
 
 """
-Find districts that minimize population compactness (moment of inertia).
+Preprocess data for a state.
 
 For example:
 

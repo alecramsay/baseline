@@ -209,8 +209,6 @@ def main() -> None:
         nvtds: int = len(pop_by_vtd)
         del pop_by_vtd
 
-        pass  # TODO
-
     ### PRINT STATISTICS ###
 
     print()
