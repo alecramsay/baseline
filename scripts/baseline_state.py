@@ -6,10 +6,10 @@ Find districts that minimize population compactness (moment of inertia).
 
 For example:
 
-$ scripts/baseline_state.py NC congress -v > maps/NC20C_vtd_log.txt
-$ scripts/baseline_state.py MD congress -v > maps/MD20C_vtd_log.txt
-$ scripts/baseline_state.py PA congress -v > maps/PA20C_vtd_log.txt
-$ scripts/baseline_state.py VA congress -v > maps/VA20C_vtd_log.txt
+$ scripts/baseline_state.py NC congress -v > logs/NC_2020_congress_log.txt
+$ scripts/baseline_state.py MD congress -v > logs/MD_2020_congress_log.txt
+$ scripts/baseline_state.py PA congress -v > logs/PA_2020_congress_log.txt
+$ scripts/baseline_state.py VA congress -v > logs/VA_2020_congress_log.txt
 
 For documentation, type:
 
@@ -32,7 +32,18 @@ parser.add_argument(
     "type", help="The type of map: { congress | upper | lower }.", type=str
 )
 parser.add_argument(
-    "-g", "--bg", dest="bg", action="store_true", help="Generate BG-level data"
+    "-g",
+    "--bg",
+    dest="bg",
+    action="store_true",
+    help="Use block groups instead of VTDs.",
+)
+parser.add_argument(
+    "-t",
+    "--tract",
+    dest="tract",
+    action="store_true",
+    help="Use tracts to iterate, BGs to finish.",
 )
 parser.add_argument(
     "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -43,12 +54,21 @@ args: Namespace = parser.parse_args()
 xx: str = args.state
 plan_type: str = args.type
 bg: bool = args.bg
+tract: bool = args.tract
 
 verbose: bool = args.verbose
 
 if bg:
-    baseline_with_bgs(xx, plan_type, verbose)
+    baseline_state(xx, plan_type, "bg", "bg", verbose)
+elif tract:  # CA
+    baseline_state(xx, plan_type, "tract", "bg", verbose)
 else:
-    baseline_with_vtds(xx, plan_type, verbose)
+    baseline_state(xx, plan_type, "vtd", "vtd", verbose)
+
+# TODO - DELETE
+# if bg:
+#     baseline_with_bgs(xx, plan_type, verbose)
+# else:
+#     baseline_with_vtds(xx, plan_type, verbose)
 
 ### END ###

@@ -18,9 +18,10 @@ scripts/preprocess_state.py -s AR
 
 # CA uses BG's instead of VTD's
 echo "Preprocessing data for CA ..."
-scripts/extract_pop.py -s CA -g -i 3 > data/CA/CA_census_log.txt
-scripts/extract_xy.py -s CA -g
-scripts/join_feature_data.py -s CA -g
+scripts/extract_pop.py -s CA -t -g -i 3 > data/CA/CA_census_log.txt
+scripts/extract_xy.py -s CA -t -g
+scripts/join_feature_data.py -s CA -t -g
+scripts/unpickle_to_csv.py -s CA -u tract
 scripts/unpickle_to_csv.py -s CA -u bg
 
 echo "Preprocessing data for CO ..."

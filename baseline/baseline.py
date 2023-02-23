@@ -12,8 +12,10 @@ from .readwrite import *
 
 
 @time_function
-def baseline_with_vtds(xx: str, plan_type: str, verbose: bool = False) -> None:
-    """Find baseline districts for a state using VTDs (precincts)."""
+def baseline_state(
+    xx: str, plan_type: str, iter_unit: str, finish_unit: str, verbose: bool = False
+) -> None:
+    """Find baseline districts for a state using iter_unit x 100 and finish_unit once."""
 
     map_label: str = label_map(xx, plan_type)
     print(f"Generating baseline map for {map_label}:")
@@ -29,9 +31,9 @@ def baseline_with_vtds(xx: str, plan_type: str, verbose: bool = False) -> None:
 
     # 1 - Run repeated runs using VTDs & random seeds.
 
-    input_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
+    input_csv: str = full_path([data_dir, xx], [xx, cycle, iter_unit, "data"])
 
-    points_csv = full_path([intermediate_dir, xx], [map_label, "vtd", "points"])
+    points_csv = full_path([intermediate_dir, xx], [map_label, iter_unit, "points"])
     make_points(input_csv, points_csv)
 
     N: int = districts_by_state[xx][plan_type]
@@ -47,16 +49,16 @@ def baseline_with_vtds(xx: str, plan_type: str, verbose: bool = False) -> None:
         print(f"... Iteration: {iter_label}, seed: {seed} ...")
 
         sites_csv = full_path(
-            [intermediate_dir, xx], [map_label, "vtd", iter_label, "sites"]
+            [intermediate_dir, xx], [map_label, iter_unit, iter_label, "sites"]
         )
         initial_csv = full_path(
-            [intermediate_dir, xx], [map_label, "vtd", iter_label, "initial"]
+            [intermediate_dir, xx], [map_label, iter_unit, iter_label, "initial"]
         )
         balzer_csv = full_path(
-            [intermediate_dir, xx], [map_label, "vtd", iter_label, "balzer"]
+            [intermediate_dir, xx], [map_label, iter_unit, iter_label, "balzer"]
         )
         centroids_csv = full_path(
-            [intermediate_dir, xx], [map_label, "vtd", iter_label, "centroids"]
+            [intermediate_dir, xx], [map_label, iter_unit, iter_label, "centroids"]
         )
 
         make_sites(points_csv, sites_csv, seed, K * N)
@@ -69,7 +71,7 @@ def baseline_with_vtds(xx: str, plan_type: str, verbose: bool = False) -> None:
     print(f"... Finding characteristic sites ...")
 
     centroids_pattern: str = full_path(
-        [intermediate_dir, xx], [map_label, "vtd", "*", "centroids"]
+        [intermediate_dir, xx], [map_label, iter_unit, "*", "centroids"]
     )
     points_csv = full_path(
         [intermediate_dir, xx], [map_label, "characteristic", "points"]
@@ -101,17 +103,17 @@ def baseline_with_vtds(xx: str, plan_type: str, verbose: bool = False) -> None:
 
     print(f"... Final clean up run ...")
 
-    input_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
-    points_csv = full_path([intermediate_dir, xx], [map_label, "vtd", "points"])
-    initial_csv = full_path([intermediate_dir, xx], [map_label, "vtd", "initial"])
-    balzer_csv = full_path([intermediate_dir, xx], [map_label, "vtd", "balzer"])
+    input_csv: str = full_path([data_dir, xx], [xx, cycle, finish_unit, "data"])
+    points_csv = full_path([intermediate_dir, xx], [map_label, finish_unit, "points"])
+    initial_csv = full_path([intermediate_dir, xx], [map_label, finish_unit, "initial"])
+    balzer_csv = full_path([intermediate_dir, xx], [map_label, finish_unit, "balzer"])
     consolidated_csv = full_path(
-        [intermediate_dir, xx], [map_label, "vtd", "consolidated"]
+        [intermediate_dir, xx], [map_label, finish_unit, "consolidated"]
     )
     complete_csv: str = full_path(
-        [intermediate_dir, xx], [map_label, "vtd", "complete"]
+        [intermediate_dir, xx], [map_label, finish_unit, "complete"]
     )
-    output_csv: str = full_path([maps_dir], [map_label, "vtd", "baf"])
+    output_csv: str = full_path([maps_dir], [map_label, finish_unit, "baf"])
 
     make_points(input_csv, points_csv)
     # sites_csv = centroids_csv from previous step
@@ -124,228 +126,344 @@ def baseline_with_vtds(xx: str, plan_type: str, verbose: bool = False) -> None:
     pass
 
 
-@time_function
-def baseline_with_bgs(xx: str, plan_type: str, verbose: bool = False) -> None:
-    """Find baseline districts for a state using blockgroups (only)."""
+# # TODO - DELETE
+# @time_function
+# def baseline_with_vtds(xx: str, plan_type: str, verbose: bool = False) -> None:
+#     """Find baseline districts for a state using VTDs (precincts)."""
 
-    map_label: str = label_map(xx, plan_type)
-    print(f"Generating baseline map for {map_label}:")
+#     map_label: str = label_map(xx, plan_type)
+#     print(f"Generating baseline map for {map_label}:")
 
-    input_csv: str
-    points_csv: str
-    sites_csv: str
-    initial_csv: str
-    balzer_csv: str
-    consolidated_csv: str
-    centroids_csv: str
-    output_csv: str
+#     input_csv: str
+#     points_csv: str
+#     sites_csv: str
+#     initial_csv: str
+#     balzer_csv: str
+#     consolidated_csv: str
+#     centroids_csv: str
+#     output_csv: str
 
-    # 1 - Run repeated runs using blockgroups & random seeds.
+#     # 1 - Run repeated runs using VTDs & random seeds.
 
-    input_csv: str = full_path([data_dir, xx], [xx, cycle, "bg", "data"])
+#     input_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
 
-    points_csv = full_path([intermediate_dir, xx], [map_label, "bg", "points"])
-    make_points(input_csv, points_csv)
+#     points_csv = full_path([intermediate_dir, xx], [map_label, "vtd", "points"])
+#     make_points(input_csv, points_csv)
 
-    N: int = districts_by_state[xx][plan_type]
-    K: int = 1  # TODO: make this a parameter
-    fips_map: dict[str, str] = make_state_codes()
-    fips: str = fips_map[xx]
+#     N: int = districts_by_state[xx][plan_type]
+#     K: int = 1  # TODO: make this a parameter
+#     fips_map: dict[str, str] = make_state_codes()
+#     fips: str = fips_map[xx]
 
-    start: int = K * N * int(fips)
-    iterations: int = 100
+#     start: int = K * N * int(fips)
+#     iterations: int = 100
 
-    for i, seed in enumerate(range(start, start + iterations)):
-        iter_label: str = label_iteration(i, K, N)
-        print(f"... Iteration: {iter_label}, seed: {seed} ...")
+#     for i, seed in enumerate(range(start, start + iterations)):
+#         iter_label: str = label_iteration(i, K, N)
+#         print(f"... Iteration: {iter_label}, seed: {seed} ...")
 
-        sites_csv = full_path(
-            [intermediate_dir, xx], [map_label, "bg", iter_label, "sites"]
-        )
-        initial_csv = full_path(
-            [intermediate_dir, xx], [map_label, "bg", iter_label, "initial"]
-        )
-        balzer_csv = full_path(
-            [intermediate_dir, xx], [map_label, "bg", iter_label, "balzer"]
-        )
-        centroids_csv = full_path(
-            [intermediate_dir, xx], [map_label, "bg", iter_label, "centroids"]
-        )
+#         sites_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "vtd", iter_label, "sites"]
+#         )
+#         initial_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "vtd", iter_label, "initial"]
+#         )
+#         balzer_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "vtd", iter_label, "balzer"]
+#         )
+#         centroids_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "vtd", iter_label, "centroids"]
+#         )
 
-        make_sites(points_csv, sites_csv, seed, K * N)
-        make_initial(sites_csv, points_csv, initial_csv)
-        run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
-        get_sites(points_csv, balzer_csv, centroids_csv)
+#         make_sites(points_csv, sites_csv, seed, K * N)
+#         make_initial(sites_csv, points_csv, initial_csv)
+#         run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
+#         get_sites(points_csv, balzer_csv, centroids_csv)
 
-    # 2 - Find characteristic sites (district centroids) resulting from the BG runs.
+#     # 2 - Find characteristic sites (district centroids) resulting from the random-seed runs.
 
-    print(f"... Finding characteristic sites ...")
+#     print(f"... Finding characteristic sites ...")
 
-    centroids_pattern: str = full_path(
-        [intermediate_dir, xx], [map_label, "bg", "*", "centroids"]
-    )
-    points_csv = full_path(
-        [intermediate_dir, xx], [map_label, "characteristic", "points"]
-    )
-    sites_csv = full_path(
-        [intermediate_dir, xx], [map_label, "characteristic", "sites"]
-    )
-    initial_csv = full_path(
-        [intermediate_dir, xx], [map_label, "characteristic", "initial"]
-    )
-    balzer_csv = full_path(
-        [intermediate_dir, xx], [map_label, "characteristic", "balzer"]
-    )
-    centroids_csv = full_path(
-        [intermediate_dir, xx], [map_label, "characteristic", "centroids"]
-    )
+#     centroids_pattern: str = full_path(
+#         [intermediate_dir, xx], [map_label, "vtd", "*", "centroids"]
+#     )
+#     points_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "points"]
+#     )
+#     sites_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "sites"]
+#     )
+#     initial_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "initial"]
+#     )
+#     balzer_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "balzer"]
+#     )
+#     centroids_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "centroids"]
+#     )
 
-    combine_centroids(centroids_pattern, points_csv)
-    make_sites(points_csv, sites_csv, start + iterations + 1, K * N)
-    make_initial(sites_csv, points_csv, initial_csv)
-    run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
-    get_sites(points_csv, balzer_csv, centroids_csv)
+#     combine_centroids(centroids_pattern, points_csv)
+#     make_sites(points_csv, sites_csv, start + iterations + 1, K * N)
+#     make_initial(sites_csv, points_csv, initial_csv)
+#     run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
+#     get_sites(points_csv, balzer_csv, centroids_csv)
 
-    # 3 - Do a final clean up run:
-    # * Use blockgroups.
-    # * Use the characteristic sites instead of random ones
-    # * Snap each block one and only one district.
-    # * Generate a block-assignment file.
+#     # 3 - Do a final clean up run:
+#     # * Use VTDs again, but
+#     # * Use the characteristic sites instead of random ones
+#     # * Snap each VTD to one and only one district.
+#     # * Generate a VTD-assignment file.
 
-    print(f"... Final clean up run ...")
+#     print(f"... Final clean up run ...")
 
-    input_csv: str = full_path([data_dir, xx], [xx, cycle, "bg", "data"])
-    points_csv = full_path([intermediate_dir, xx], [map_label, "bg", "points"])
-    initial_csv = full_path([intermediate_dir, xx], [map_label, "bg", "initial"])
-    balzer_csv = full_path([intermediate_dir, xx], [map_label, "bg", "balzer"])
-    consolidated_csv = full_path(
-        [intermediate_dir, xx], [map_label, "bg", "consolidated"]
-    )
-    complete_csv: str = full_path([intermediate_dir, xx], [map_label, "bg", "complete"])
-    output_csv: str = full_path([maps_dir], [map_label, "bg", "baf"])
+#     input_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
+#     points_csv = full_path([intermediate_dir, xx], [map_label, "vtd", "points"])
+#     initial_csv = full_path([intermediate_dir, xx], [map_label, "vtd", "initial"])
+#     balzer_csv = full_path([intermediate_dir, xx], [map_label, "vtd", "balzer"])
+#     consolidated_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "vtd", "consolidated"]
+#     )
+#     complete_csv: str = full_path(
+#         [intermediate_dir, xx], [map_label, "vtd", "complete"]
+#     )
+#     output_csv: str = full_path([maps_dir], [map_label, "vtd", "baf"])
 
-    make_points(input_csv, points_csv)
-    # sites_csv = centroids_csv from previous step
-    make_initial(centroids_csv, points_csv, initial_csv)
-    run_dccvt(centroids_csv, points_csv, initial_csv, balzer_csv)
-    consolidate_balzer(balzer_csv, consolidated_csv)
-    handle_unassigned(consolidated_csv, points_csv, balzer_csv, complete_csv)
-    make_baf(input_csv, complete_csv, output_csv)
+#     make_points(input_csv, points_csv)
+#     # sites_csv = centroids_csv from previous step
+#     make_initial(centroids_csv, points_csv, initial_csv)
+#     run_dccvt(centroids_csv, points_csv, initial_csv, balzer_csv)
+#     consolidate_balzer(balzer_csv, consolidated_csv)
+#     handle_unassigned(consolidated_csv, points_csv, balzer_csv, complete_csv)
+#     make_baf(input_csv, complete_csv, output_csv)
 
-    pass
+#     pass
 
 
-@time_function
-def baseline_with_blocks(xx: str, plan_type: str, verbose: bool = False) -> None:
-    """Find baseline districts for a state using blockgroups & blocks."""
+# # TODO - DELETE
+# @time_function
+# def baseline_with_bgs(xx: str, plan_type: str, verbose: bool = False) -> None:
+#     """Find baseline districts for a state using blockgroups (only)."""
 
-    map_label: str = label_map(xx, plan_type)
-    print(f"Generating baseline map for {map_label}:")
+#     map_label: str = label_map(xx, plan_type)
+#     print(f"Generating baseline map for {map_label}:")
 
-    input_csv: str
-    points_csv: str
-    sites_csv: str
-    initial_csv: str
-    balzer_csv: str
-    consolidated_csv: str
-    centroids_csv: str
-    output_csv: str
+#     input_csv: str
+#     points_csv: str
+#     sites_csv: str
+#     initial_csv: str
+#     balzer_csv: str
+#     consolidated_csv: str
+#     centroids_csv: str
+#     output_csv: str
 
-    # 1 - Run repeated runs using blockgroups & random seeds.
+#     # 1 - Run repeated runs using blockgroups & random seeds.
 
-    input_csv: str = full_path([data_dir, xx], [xx, cycle, "bg", "data"])
+#     input_csv: str = full_path([data_dir, xx], [xx, cycle, "bg", "data"])
 
-    points_csv = full_path([intermediate_dir, xx], [map_label, "bg", "points"])
-    make_points(input_csv, points_csv)
+#     points_csv = full_path([intermediate_dir, xx], [map_label, "bg", "points"])
+#     make_points(input_csv, points_csv)
 
-    N: int = districts_by_state[xx][plan_type]
-    K: int = 1  # TODO: make this a parameter
-    fips_map: dict[str, str] = make_state_codes()
-    fips: str = fips_map[xx]
+#     N: int = districts_by_state[xx][plan_type]
+#     K: int = 1  # TODO: make this a parameter
+#     fips_map: dict[str, str] = make_state_codes()
+#     fips: str = fips_map[xx]
 
-    start: int = K * N * int(fips)
-    iterations: int = 100
+#     start: int = K * N * int(fips)
+#     iterations: int = 100
 
-    for i, seed in enumerate(range(start, start + iterations)):
-        iter_label: str = label_iteration(i, K, N)
-        print(f"... Iteration: {iter_label}, seed: {seed} ...")
+#     for i, seed in enumerate(range(start, start + iterations)):
+#         iter_label: str = label_iteration(i, K, N)
+#         print(f"... Iteration: {iter_label}, seed: {seed} ...")
 
-        sites_csv = full_path(
-            [intermediate_dir, xx], [map_label, "bg", iter_label, "sites"]
-        )
-        initial_csv = full_path(
-            [intermediate_dir, xx], [map_label, "bg", iter_label, "initial"]
-        )
-        balzer_csv = full_path(
-            [intermediate_dir, xx], [map_label, "bg", iter_label, "balzer"]
-        )
-        centroids_csv = full_path(
-            [intermediate_dir, xx], [map_label, "bg", iter_label, "centroids"]
-        )
+#         sites_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "bg", iter_label, "sites"]
+#         )
+#         initial_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "bg", iter_label, "initial"]
+#         )
+#         balzer_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "bg", iter_label, "balzer"]
+#         )
+#         centroids_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "bg", iter_label, "centroids"]
+#         )
 
-        make_sites(points_csv, sites_csv, seed, K * N)
-        make_initial(sites_csv, points_csv, initial_csv)
-        run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
-        get_sites(points_csv, balzer_csv, centroids_csv)
+#         make_sites(points_csv, sites_csv, seed, K * N)
+#         make_initial(sites_csv, points_csv, initial_csv)
+#         run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
+#         get_sites(points_csv, balzer_csv, centroids_csv)
 
-    # 2 - Find characteristic sites (district centroids) resulting from the BG runs.
+#     # 2 - Find characteristic sites (district centroids) resulting from the BG runs.
 
-    print(f"... Finding characteristic sites ...")
+#     print(f"... Finding characteristic sites ...")
 
-    centroids_pattern: str = full_path(
-        [intermediate_dir, xx], [map_label, "bg", "*", "centroids"]
-    )
-    points_csv = full_path(
-        [intermediate_dir, xx], [map_label, "characteristic", "points"]
-    )
-    sites_csv = full_path(
-        [intermediate_dir, xx], [map_label, "characteristic", "sites"]
-    )
-    initial_csv = full_path(
-        [intermediate_dir, xx], [map_label, "characteristic", "initial"]
-    )
-    balzer_csv = full_path(
-        [intermediate_dir, xx], [map_label, "characteristic", "balzer"]
-    )
-    centroids_csv = full_path(
-        [intermediate_dir, xx], [map_label, "characteristic", "centroids"]
-    )
+#     centroids_pattern: str = full_path(
+#         [intermediate_dir, xx], [map_label, "bg", "*", "centroids"]
+#     )
+#     points_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "points"]
+#     )
+#     sites_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "sites"]
+#     )
+#     initial_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "initial"]
+#     )
+#     balzer_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "balzer"]
+#     )
+#     centroids_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "centroids"]
+#     )
 
-    combine_centroids(centroids_pattern, points_csv)
-    make_sites(points_csv, sites_csv, start + iterations + 1, K * N)
-    make_initial(sites_csv, points_csv, initial_csv)
-    run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
-    get_sites(points_csv, balzer_csv, centroids_csv)
+#     combine_centroids(centroids_pattern, points_csv)
+#     make_sites(points_csv, sites_csv, start + iterations + 1, K * N)
+#     make_initial(sites_csv, points_csv, initial_csv)
+#     run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
+#     get_sites(points_csv, balzer_csv, centroids_csv)
 
-    # 3 - Do a final clean up run:
-    # * Use blocks instead of blockgroups.
-    # * Use the characteristic sites instead of random ones
-    # * Snap each block one and only one district.
-    # * Generate a block-assignment file.
+#     # 3 - Do a final clean up run:
+#     # * Use blockgroups.
+#     # * Use the characteristic sites instead of random ones
+#     # * Snap each block one and only one district.
+#     # * Generate a block-assignment file.
 
-    print(f"... Final clean up run ...")
+#     print(f"... Final clean up run ...")
 
-    input_csv: str = full_path([data_dir, xx], [xx, cycle, "block", "data"])
-    points_csv = full_path([intermediate_dir, xx], [map_label, "block", "points"])
-    initial_csv = full_path([intermediate_dir, xx], [map_label, "block", "initial"])
-    balzer_csv = full_path([intermediate_dir, xx], [map_label, "block", "balzer"])
-    consolidated_csv = full_path(
-        [intermediate_dir, xx], [map_label, "block", "consolidated"]
-    )
-    complete_csv: str = full_path(
-        [intermediate_dir, xx], [map_label, "block", "complete"]
-    )
-    output_csv: str = full_path([maps_dir], [map_label, "bg", "baf"])
+#     input_csv: str = full_path([data_dir, xx], [xx, cycle, "bg", "data"])
+#     points_csv = full_path([intermediate_dir, xx], [map_label, "bg", "points"])
+#     initial_csv = full_path([intermediate_dir, xx], [map_label, "bg", "initial"])
+#     balzer_csv = full_path([intermediate_dir, xx], [map_label, "bg", "balzer"])
+#     consolidated_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "bg", "consolidated"]
+#     )
+#     complete_csv: str = full_path([intermediate_dir, xx], [map_label, "bg", "complete"])
+#     output_csv: str = full_path([maps_dir], [map_label, "bg", "baf"])
 
-    make_points(input_csv, points_csv)
-    # sites_csv = centroids_csv from previous step
-    make_initial(centroids_csv, points_csv, initial_csv)
-    run_dccvt(centroids_csv, points_csv, initial_csv, balzer_csv)
-    consolidate_balzer(balzer_csv, consolidated_csv)
-    handle_unassigned(consolidated_csv, points_csv, balzer_csv, complete_csv)
-    make_baf(input_csv, complete_csv, output_csv)
+#     make_points(input_csv, points_csv)
+#     # sites_csv = centroids_csv from previous step
+#     make_initial(centroids_csv, points_csv, initial_csv)
+#     run_dccvt(centroids_csv, points_csv, initial_csv, balzer_csv)
+#     consolidate_balzer(balzer_csv, consolidated_csv)
+#     handle_unassigned(consolidated_csv, points_csv, balzer_csv, complete_csv)
+#     make_baf(input_csv, complete_csv, output_csv)
 
-    pass
+#     pass
+
+
+# # TODO - DELETE
+# @time_function
+# def baseline_with_blocks(xx: str, plan_type: str, verbose: bool = False) -> None:
+#     """Find baseline districts for a state using blockgroups & blocks."""
+
+#     map_label: str = label_map(xx, plan_type)
+#     print(f"Generating baseline map for {map_label}:")
+
+#     input_csv: str
+#     points_csv: str
+#     sites_csv: str
+#     initial_csv: str
+#     balzer_csv: str
+#     consolidated_csv: str
+#     centroids_csv: str
+#     output_csv: str
+
+#     # 1 - Run repeated runs using blockgroups & random seeds.
+
+#     input_csv: str = full_path([data_dir, xx], [xx, cycle, "bg", "data"])
+
+#     points_csv = full_path([intermediate_dir, xx], [map_label, "bg", "points"])
+#     make_points(input_csv, points_csv)
+
+#     N: int = districts_by_state[xx][plan_type]
+#     K: int = 1  # TODO: make this a parameter
+#     fips_map: dict[str, str] = make_state_codes()
+#     fips: str = fips_map[xx]
+
+#     start: int = K * N * int(fips)
+#     iterations: int = 100
+
+#     for i, seed in enumerate(range(start, start + iterations)):
+#         iter_label: str = label_iteration(i, K, N)
+#         print(f"... Iteration: {iter_label}, seed: {seed} ...")
+
+#         sites_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "bg", iter_label, "sites"]
+#         )
+#         initial_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "bg", iter_label, "initial"]
+#         )
+#         balzer_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "bg", iter_label, "balzer"]
+#         )
+#         centroids_csv = full_path(
+#             [intermediate_dir, xx], [map_label, "bg", iter_label, "centroids"]
+#         )
+
+#         make_sites(points_csv, sites_csv, seed, K * N)
+#         make_initial(sites_csv, points_csv, initial_csv)
+#         run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
+#         get_sites(points_csv, balzer_csv, centroids_csv)
+
+#     # 2 - Find characteristic sites (district centroids) resulting from the BG runs.
+
+#     print(f"... Finding characteristic sites ...")
+
+#     centroids_pattern: str = full_path(
+#         [intermediate_dir, xx], [map_label, "bg", "*", "centroids"]
+#     )
+#     points_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "points"]
+#     )
+#     sites_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "sites"]
+#     )
+#     initial_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "initial"]
+#     )
+#     balzer_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "balzer"]
+#     )
+#     centroids_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "characteristic", "centroids"]
+#     )
+
+#     combine_centroids(centroids_pattern, points_csv)
+#     make_sites(points_csv, sites_csv, start + iterations + 1, K * N)
+#     make_initial(sites_csv, points_csv, initial_csv)
+#     run_dccvt(sites_csv, points_csv, initial_csv, balzer_csv)
+#     get_sites(points_csv, balzer_csv, centroids_csv)
+
+#     # 3 - Do a final clean up run:
+#     # * Use blocks instead of blockgroups.
+#     # * Use the characteristic sites instead of random ones
+#     # * Snap each block one and only one district.
+#     # * Generate a block-assignment file.
+
+#     print(f"... Final clean up run ...")
+
+#     input_csv: str = full_path([data_dir, xx], [xx, cycle, "block", "data"])
+#     points_csv = full_path([intermediate_dir, xx], [map_label, "block", "points"])
+#     initial_csv = full_path([intermediate_dir, xx], [map_label, "block", "initial"])
+#     balzer_csv = full_path([intermediate_dir, xx], [map_label, "block", "balzer"])
+#     consolidated_csv = full_path(
+#         [intermediate_dir, xx], [map_label, "block", "consolidated"]
+#     )
+#     complete_csv: str = full_path(
+#         [intermediate_dir, xx], [map_label, "block", "complete"]
+#     )
+#     output_csv: str = full_path([maps_dir], [map_label, "bg", "baf"])
+
+#     make_points(input_csv, points_csv)
+#     # sites_csv = centroids_csv from previous step
+#     make_initial(centroids_csv, points_csv, initial_csv)
+#     run_dccvt(centroids_csv, points_csv, initial_csv, balzer_csv)
+#     consolidate_balzer(balzer_csv, consolidated_csv)
+#     handle_unassigned(consolidated_csv, points_csv, balzer_csv, complete_csv)
+#     make_baf(input_csv, complete_csv, output_csv)
+
+#     pass
 
 
 ### DCCVT WRAPPERS ###
