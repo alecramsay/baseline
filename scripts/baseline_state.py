@@ -32,6 +32,9 @@ parser.add_argument(
     "type", help="The type of map: { congress | upper | lower }.", type=str
 )
 parser.add_argument(
+    "-g", "--bg", dest="bg", action="store_true", help="Generate BG-level data"
+)
+parser.add_argument(
     "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
 )
 
@@ -39,10 +42,13 @@ args: Namespace = parser.parse_args()
 
 xx: str = args.state
 plan_type: str = args.type
+bg: bool = args.bg
 
 verbose: bool = args.verbose
 
-baseline_with_vtds(xx, plan_type, verbose)
-# baseline_with_bgs(xx, plan_type, verbose)
+if bg:
+    baseline_with_bgs(xx, plan_type, verbose)
+else:
+    baseline_with_vtds(xx, plan_type, verbose)
 
 ### END ###

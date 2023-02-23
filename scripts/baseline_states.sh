@@ -16,8 +16,9 @@ scripts/baseline_state.py AZ congress -v > logs/AZ_2020_congress_log.txt
 echo "Generating baseline districts for AR / 2020 / congress..."
 scripts/baseline_state.py AR congress -v > logs/AR_2020_congress_log.txt
 
-echo "Generating baseline districts for CA / 2020 / congress..."
-scripts/baseline_state.py CA congress -v > logs/CA_2020_congress_log.txt
+# TODO - Modify BG strategy
+# echo "Generating baseline districts for CA / 2020 / congress..."
+# scripts/baseline_state.py CA congress -g -v > logs/CA_2020_congress_log.txt
 
 echo "Generating baseline districts for CO / 2020 / congress..."
 scripts/baseline_state.py CO congress -v > logs/CO_2020_congress_log.txt
@@ -91,8 +92,9 @@ scripts/baseline_state.py OH congress -v > logs/OH_2020_congress_log.txt
 echo "Generating baseline districts for OK / 2020 / congress..."
 scripts/baseline_state.py OK congress -v > logs/OK_2020_congress_log.txt
 
-echo "Generating baseline districts for OR / 2020 / congress..."
-scripts/baseline_state.py OR congress -v > logs/OR_2020_congress_log.txt
+# TODO - Modify BG strategy
+# echo "Generating baseline districts for OR / 2020 / congress..."
+# scripts/baseline_state.py OR congress -g -v > logs/OR_2020_congress_log.txt
 
 # echo "Generating baseline districts for PA / 2020 / congress..."
 # scripts/baseline_state.py PA congress -v > logs/PA_2020_congress_log.txt
