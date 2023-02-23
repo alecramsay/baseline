@@ -17,7 +17,6 @@ verbose: bool = True
 
 ### DEBUG ###
 
-baseline_with_vtds(xx, plan_type, verbose)
-# baseline_with_bgs(xx, plan_type, verbose)
+baseline_state(xx, plan_type, verbose)
 
 ### END ###

@@ -11,6 +11,9 @@ $ scripts/baseline_state.py MD congress -v > logs/MD_2020_congress_log.txt
 $ scripts/baseline_state.py PA congress -v > logs/PA_2020_congress_log.txt
 $ scripts/baseline_state.py VA congress -v > logs/VA_2020_congress_log.txt
 
+$ scripts/baseline_state.py OR congress -g -v > logs/OR_2020_congress_log.txt
+$ scripts/baseline_state.py CA congress -t -v > logs/CA_2020_congress_log.txt
+
 For documentation, type:
 
 $ scripts/baseline_state.py -h
@@ -64,11 +67,5 @@ elif tract:  # CA
     baseline_state(xx, plan_type, "tract", "bg", verbose)
 else:
     baseline_state(xx, plan_type, "vtd", "vtd", verbose)
-
-# TODO - DELETE
-# if bg:
-#     baseline_with_bgs(xx, plan_type, verbose)
-# else:
-#     baseline_with_vtds(xx, plan_type, verbose)
 
 ### END ###
