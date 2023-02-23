@@ -110,7 +110,7 @@ def main() -> None:
 
         for geoid, pop in pop.items():
             if geoid not in xy:
-                print(f"Missing xy data for {geoid}")
+                print(f"Missing xy data for {geoid} (pop: {pop}))")
                 continue
             features.append(
                 {"geoid": geoid, "pop": pop, "xy": xy[geoid], "district": 0}
