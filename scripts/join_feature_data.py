@@ -20,9 +20,6 @@ from argparse import ArgumentParser, Namespace
 from baseline import *
 
 
-### PARSE ARGS ###
-
-
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
         description="Join feature population and xy data by geoid."
@@ -80,7 +77,8 @@ def main() -> None:
     blocks: bool = args.block
     precincts: bool = args.precinct
 
-    # TODO - Remove this
+    # HACK - Remove this
+    # xx = "FL"
     # precincts = True
 
     verbose: bool = args.verbose
@@ -111,6 +109,9 @@ def main() -> None:
         features: list[Feature] = list()
 
         for geoid, pop in pop.items():
+            if geoid not in xy:
+                print(f"Missing xy data for {geoid}")
+                continue
             features.append(
                 {"geoid": geoid, "pop": pop, "xy": xy[geoid], "district": 0}
             )

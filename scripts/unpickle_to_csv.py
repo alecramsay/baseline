@@ -23,10 +23,6 @@ from typing import Any
 
 from baseline import *
 
-# TODO - Revise this to allow multiple unit granularities per call
-
-### PARSE ARGS ###
-
 
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(

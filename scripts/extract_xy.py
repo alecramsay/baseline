@@ -20,9 +20,6 @@ from argparse import ArgumentParser, Namespace
 from baseline import *
 
 
-### PARSE ARGS ###
-
-
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
         description="Extract x,y coordinates from TIGER/Line shapefiles."

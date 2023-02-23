@@ -91,7 +91,7 @@ def main() -> None:
     precincts: bool = args.precinct
     iteration: str = "" if args.iteration == 0 else f"-{args.iteration}"
 
-    # TODO - Remove this
+    # HACK - Remove this
     # precincts = True
     # iteration = "-3"
 
