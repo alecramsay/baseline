@@ -11,6 +11,13 @@ $ scripts/baseline_state.py MD congress -v > logs/MD_2020_congress_log.txt
 $ scripts/baseline_state.py PA congress -v > logs/PA_2020_congress_log.txt
 $ scripts/baseline_state.py VA congress -v > logs/VA_2020_congress_log.txt
 
+$ scripts/baseline_state.py MN congress -v > logs/MN_2020_congress_log.txt
+$ scripts/baseline_state.py NV congress -v > logs/NV_2020_congress_log.txt
+$ scripts/baseline_state.py NM congress -v > logs/NM_2020_congress_log.txt
+$ scripts/baseline_state.py NY congress -v > logs/NY_2020_congress_log.txt
+$ scripts/baseline_state.py TN congress -v > logs/TN_2020_congress_log.txt
+$ scripts/baseline_state.py WA congress -v > logs/WA_2020_congress_log.txt
+
 $ scripts/baseline_state.py OR congress -g -v > logs/OR_2020_congress_log.txt
 $ scripts/baseline_state.py CA congress -t -v > logs/CA_2020_congress_log.txt
 

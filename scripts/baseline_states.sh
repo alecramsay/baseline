@@ -6,10 +6,6 @@
 #
 # scripts/baseline_states.sh
 #
-# TODO
-# - BGs: OR
-# - Fail: MN, NV, NY, TN, WA
-#
 
 echo "Generating baseline districts for AL / 2020 / congress..."
 scripts/baseline_state.py AL congress -v > logs/AL_2020_congress_log.txt
