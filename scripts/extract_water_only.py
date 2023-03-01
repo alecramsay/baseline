@@ -61,16 +61,16 @@ def main() -> None:
 
     ### READ THE SHAPEFILES ###
 
-    # Precincts (VTDs)
+    unit: str = "bg" if xx in ["CA", "OR"] else "vtd"
+    unit_label: str = "vtd20" if unit == "vtd" else "bg"
 
     if precincts:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
-            ["tl_2020", fips, "vtd20"], "_"
+            ["tl_2020", fips, unit_label], "_"
         )
-        id: str = unit_id("vtd")
+        id: str = unit_id(unit)
 
         shp_file: str = os.path.expanduser(rel_path)
-        rows: list = list()
         water_only: bool = False
 
         with fiona.Env():
@@ -78,19 +78,21 @@ def main() -> None:
                 meta: dict[str, Any] = source.meta
                 for item in source:
                     geoid: str = item["properties"][id]
-                    aland: int = item["properties"]["ALAND20"]
-                    awater: int = item["properties"]["AWATER20"]
-
-                    # if awater > 0:
-                    #     print(f"{geoid}: {aland} {awater}")
+                    land_key: str = "ALAND20" if unit == "vtd" else "ALAND"
+                    water_key: str = "AWATER20" if unit == "vtd" else "AWATER"
+                    aland: int = item["properties"][land_key]
+                    awater: int = item["properties"][water_key]
 
                     if awater > 0 and aland == 0:
                         if not water_only:
-                            print()
-                            print(f"Water-only precincts for {xx}")
                             water_only = True
-                        row: dict = {"GEOID": geoid, "ALAND": aland, "AWATER": awater}
-                        rows.append(row)
+
+                            print()
+                            print(f"Water-only precincts for {xx}:")
+                            print()
+                            print(f"GEOID,ALAND,AWATER")
+                            print(f"{geoid},{aland},{awater}")
+
         if not water_only:
             print()
             print(f"No water-only precincts for {xx}")
