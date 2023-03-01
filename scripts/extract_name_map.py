@@ -6,11 +6,11 @@ Create a mapping of GEOIDs to friendly names.
 
 For example:
 
-$ scripts/map_geoids_to_names.py -s NC > data/NC/NC_NAMES.txt
+$ scripts/extract_name_map.py -s NC > data/NC/NC_NAMES.txt
 
 For documentation, type:
 
-$ scripts/map_geoids_to_names.py -h
+$ scripts/extract_name_map.py -h
 
 """
 
