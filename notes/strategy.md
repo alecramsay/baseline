@@ -8,7 +8,7 @@ List water-only precincts, so they can be removed from the precinct-assignment f
 
 Create contiguous, population-balanced precinct assignment file:
 
-* Create a precinct-assignment file w/o any splits
+* Create a precinct-assignment file w/o any splits -- take a real map & run the [Combine Split Precincts] tool, and export the precinct-assignment file
 * Remove water-only precinct assignments
 * Equalize the district populations
 
