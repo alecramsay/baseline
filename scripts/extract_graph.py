@@ -2,6 +2,7 @@
 #
 
 """
+TODO
 Extract contiguity graphs for a state's tracts, blockgroups, and blocks.
 
 For example:
@@ -26,56 +27,33 @@ from baseline import *
 from libpysal.weights import Rook
 
 
-### PARSE ARGS ###
+def parse_args() -> Namespace:
+    parser: ArgumentParser = argparse.ArgumentParser(
+        description="Extract an adjacency graph from a shapefile."
+    )
 
-parser: ArgumentParser = argparse.ArgumentParser(
-    description="Find population compact districts."
-)
+    parser.add_argument(
+        "-s",
+        "--state",
+        default="NC",
+        help="The two-character state code (e.g., NC)",
+        type=str,
+    )
+    parser.add_argument(
+        "-u",
+        "--unit",
+        default="vtd",
+        help="The geographic unit (e.g., vtd)",
+        type=str,
+    )
 
-parser.add_argument("state", help="The two-character state code (e.g., MD)", type=str)
-parser.add_argument(
-    "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
-)
+    parser.add_argument(
+        "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
+    )
 
-args: Namespace = parser.parse_args()
-fips_map: dict[str, str] = make_state_codes()
+    args: Namespace = parser.parse_args()
 
-xx: str = args.state
-fips: str = fips_map[xx]
-verbose: bool = args.verbose
-
-
-### CONSTRUCT PATHS ###
-
-state_dir: str = xx
-
-tract_dir: str = file_name(["tl_2020", fips, "tract"], "_")
-bg_dir: str = file_name(["tl_2020", fips, "bg"], "_")
-block_dir: str = file_name(["tl_2020", fips, "tabblock20"], "_")
-
-units: list[str] = ["tract", "bg", "block"]
-shp_paths: list[str] = [
-    path_to_file([rawdata_dir, state_dir, tract_dir])
-    + file_name(["tl_2020", fips, "tract"], "_", "shp"),
-    path_to_file([rawdata_dir, state_dir, bg_dir])
-    + file_name(["tl_2020", fips, "bg"], "_", "shp"),
-    path_to_file([rawdata_dir, state_dir, block_dir])
-    + file_name(["tl_2020", fips, "tabblock20"], "_", "shp"),
-]
-
-ids: list[str] = ["GEOID", "GEOID", "GEOID20"]
-
-graph_paths: list[str] = [
-    path_to_file([data_dir, state_dir])
-    + file_name([xx, cycle, "tract", "graph"], "_", "pickle"),
-    path_to_file([data_dir, state_dir])
-    + file_name([xx, cycle, "bg", "graph"], "_", "pickle"),
-    path_to_file([data_dir, state_dir])
-    + file_name([xx, cycle, "block", "graph"], "_", "pickle"),
-]
-
-
-### HELPERS ###
+    return args
 
 
 def graph_shapes(rel_path: str, id_field: str) -> Rook:
@@ -109,13 +87,74 @@ def check_graph(graph) -> bool:
     return consistent
 
 
-### READ THE SHAPEFILES, EXTRACT THE GRAPHS, AND PICKLE THEM ###
+def main() -> None:
+    """Extract an adjacency graph from a shapefile."""
 
-x: str = shp_paths[0]
+    args: Namespace = parse_args()
 
-for unit, shp_path, id, graph_path in zip(units, shp_paths, ids, graph_paths):
-    print("Extracting", unit, "graph ...")
+    fips_map: dict[str, str] = make_state_codes()
+
+    xx: str = args.state
+    fips: str = fips_map[xx]
+    unit: str = args.unit
+    if unit == "vtd":
+        if xx in ["CA", "OR"]:
+            unit = "bg"
+        unit_label: str = "vtd20" if unit == "vtd" else "bg"
+    else:
+        raise ValueError(f"Unit {unit} not recognized.")
+
+    verbose: bool = args.verbose
+
+    ### CONSTRUCT PATHS ###
+
+    state_dir: str = xx
+
+    # tract_dir: str = file_name(["tl_2020", fips, "tract"], "_")
+    # bg_dir: str = file_name(["tl_2020", fips, "bg"], "_")
+    # block_dir: str = file_name(["tl_2020", fips, "tabblock20"], "_")
+    precinct_dir: str = file_name(["tl_2020", fips, unit_label], "_")
+
+    id: str = unit_id(unit)
+    shp_path: str = path_to_file([rawdata_dir, state_dir, precinct_dir]) + file_name(
+        ["tl_2020", fips, unit_label], "_", "shp"
+    )
+
+    # units: list[str] = ["tract", "bg", "block", unit]
+    # shp_paths: list[str] = [
+    #     path_to_file([rawdata_dir, state_dir, tract_dir])
+    #     + file_name(["tl_2020", fips, "tract"], "_", "shp"),
+    #     path_to_file([rawdata_dir, state_dir, bg_dir])
+    #     + file_name(["tl_2020", fips, "bg"], "_", "shp"),
+    #     path_to_file([rawdata_dir, state_dir, block_dir])
+    #     + file_name(["tl_2020", fips, "tabblock20"], "_", "shp"),
+    #     path_to_file([rawdata_dir, state_dir, precinct_dir])
+    #     + file_name(["tl_2020", fips, unit_label], "_", "shp"),
+    # ]
+
+    # ids: list[str] = [unit_id(x) for x in units]
+    # ids: list[str] = ["GEOID", "GEOID", "GEOID20"]
+
+    # graph_paths: list[str] = [
+    #     path_to_file([data_dir, state_dir])
+    #     + file_name([xx, cycle, "tract", "graph"], "_", "pickle"),
+    #     path_to_file([data_dir, state_dir])
+    #     + file_name([xx, cycle, "bg", "graph"], "_", "pickle"),
+    #     path_to_file([data_dir, state_dir])
+    #     + file_name([xx, cycle, "block", "graph"], "_", "pickle"),
+    # ]
+
+    ### TODO - READ THE SHAPEFILES, EXTRACT THE GRAPHS, AND PICKLE THEM ###
+
+    # for unit, shp_path, id, graph_path in zip(units, shp_paths, ids, graph_paths):
+    print("Extracting", unit, "graph for {xx} ...")
+
     graph: Rook = graph_shapes(shp_path, id)
-    write_pickle(graph_path, graph)
+    # write_pickle(graph_path, graph)
+    pass  # TODO
 
-pass
+
+if __name__ == "__main__":
+    main()
+
+### END ###
