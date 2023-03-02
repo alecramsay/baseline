@@ -88,4 +88,23 @@ def read_mods(mods_csv) -> list:
     return mods
 
 
+def id_border_units(
+    id: int,
+    units: list[str],
+    unit_graph: dict[str, list[str]],
+    district_by_geoid: dict[str, int],
+) -> list[str]:
+    """Return a list of *interior* border units for a district, i.e., not including units on the state boundary."""
+
+    border: list[str] = list()
+
+    for unit in units:
+        for neighbor in unit_graph[unit]:
+            if district_by_geoid[neighbor] != id:
+                border.append(unit)
+                break
+
+    return border
+
+
 ### END ###

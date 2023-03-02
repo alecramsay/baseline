@@ -85,7 +85,7 @@ def main() -> None:
     for row in assignments:
         district_by_geoid[row["GEOID20"]] = row["District"]
         if row["District"] not in districts:
-            districts[row["District"]] = {"geoids": [], "population": 0}
+            districts[row["District"]] = {"geoids": [], "population": 0, "border": []}
         districts[row["District"]]["geoids"].append(row["GEOID20"])
 
     del assignments
@@ -103,6 +103,12 @@ def main() -> None:
                     neighbors.add(other)
 
         district_graph[current] = list(neighbors)
+
+    for id, data in districts.items():
+        border: list[str] = id_border_units(
+            id, data["geoids"], unit_graph, district_by_geoid
+        )
+        districts[id]["border"] = border
 
     # Compute the population balance point
 
