@@ -153,10 +153,10 @@ def main() -> None:
         mods: list = list()
         deviations: dict[int, list] = {k: v["deviation"] for k, v in districts.items()}
 
-        options: int = max([len(x) for x in split_graph.values()])
-        for fan_out in range(1, options + 1):  # Start w/ the fewest options
+        fan_out: int = max([len(x) for x in split_graph.values()])
+        for j in range(1, fan_out + 1):  # Start w/ the fewest options
             for from_id, neighbors in split_graph.items():  # Ignore equalized districts
-                if from_id not in equalized and len(neighbors) == fan_out:
+                if from_id not in equalized and len(neighbors) == j:
                     to_id: int = neighbors[
                         random.randint(0, len(neighbors) - 1)
                     ]  # Randomly pick a neighbor
