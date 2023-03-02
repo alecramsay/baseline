@@ -94,11 +94,7 @@ def main() -> None:
 
     # Read the shapefile & extract the graph
 
-    graph: Rook = graph_shapes(shp_path, id)
-
-    consistent: bool = check_graph(graph)
-    if not consistent:
-        raise ValueError("Graph is not internally consistent!")
+    graph: Graph = Graph(shp_path, id)
 
     # TODO - Remove water-only precincts <<< N/A for NC
 
@@ -109,13 +105,14 @@ def main() -> None:
 
     # TODO - If not, find & report "islands"
 
-    # Pickle the graph & save it as pairs in a CSV file
+    # Pickle the graph
 
     graph_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, cycle, unit, "graph"], "_", "pickle"
     )
+    write_pickle(graph_path, graph.data())
 
-    write_pickle(graph_path, graph)
+    # Also save it as pairs in a CSV file, but ignore OUT_OF_STATE connections
 
     pairs_path: str = path_to_file(["data", xx]) + file_name(
         [xx, str(cycle), unit, "pairs"], "_", "csv"
@@ -123,8 +120,12 @@ def main() -> None:
     abs_path: str = FileSpec(pairs_path).abs_path
 
     with open(abs_path, "w") as f:
-        for geoid, neighbor_geoids in graph.items():
+        for geoid, neighbor_geoids in graph.data().items():
+            if geoid == OUT_OF_STATE:
+                continue
             for neighbor in neighbor_geoids:
+                if neighbor == OUT_OF_STATE:
+                    continue
                 print(Pair(geoid, neighbor), file=f)
 
     pass

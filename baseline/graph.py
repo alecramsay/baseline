@@ -89,6 +89,11 @@ class Graph:
 
         return new_graph
 
+    def data(self) -> dict:
+        """Return the graph data."""
+
+        return self._data
+
     def neighbors(self, node: str) -> list[str]:
         """Return the neighbors of a node."""
 
