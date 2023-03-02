@@ -54,35 +54,6 @@ def parse_args() -> Namespace:
     return args
 
 
-def graph_shapes(rel_path: str, id_field: str) -> Rook:
-    abs_path: str = FileSpec(rel_path).abs_path
-
-    g: Rook = Rook.from_shapefile(abs_path, id_field)
-    g = g.neighbors  # Get rid of all the extraneous PySAL stuff
-
-    return g
-
-
-def check_graph(graph) -> bool:
-    """
-    Make sure each node is in every neighbor's neighbor list
-    """
-    consistent: bool = True
-
-    for from_geo, neighbor_geos in graph.items():
-        for to_geo in neighbor_geos:
-            neighbors_neighbors = graph[to_geo]
-            if from_geo in neighbors_neighbors:
-                pass
-            else:
-                consistent = False
-
-    # if not consistent:
-    #     print("> WARNING: This graph is not internally consistent! <")
-
-    return consistent
-
-
 class Pair(NamedTuple):
     one: int
     two: int
@@ -150,7 +121,7 @@ def main() -> None:
             for neighbor in neighbor_geoids:
                 print(Pair(geoid, neighbor), file=f)
 
-    pass  # TODO
+    pass
 
 
 if __name__ == "__main__":

@@ -6,6 +6,7 @@ from .utils import *
 from .datatypes import *
 from .data import *
 from .plastic import *
+from .graph import *
 from .baseline import *
 
 name: str = "baseline"
