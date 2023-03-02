@@ -17,7 +17,7 @@ $ scripts/equalize_districts.py -h
 import argparse
 from argparse import ArgumentParser, Namespace
 from libpysal.weights import Rook
-from collections import OrderedDict
+import random
 
 from baseline import *
 
@@ -81,11 +81,16 @@ def main() -> None:
     assignments: list = read_typed_csv(uaf_path, types)
 
     district_by_geoid: dict[str, int] = dict()
-    districts: defaultdict[int, list] = dict()
+    districts: dict[int, list] = dict()
     for row in assignments:
         district_by_geoid[row["GEOID20"]] = row["District"]
         if row["District"] not in districts:
-            districts[row["District"]] = {"geoids": [], "population": 0, "border": []}
+            districts[row["District"]] = {
+                "geoids": [],
+                "population": 0,
+                "border": [],
+                "deviation": 0,
+            }
         districts[row["District"]]["geoids"].append(row["GEOID20"])
 
     del assignments
@@ -122,11 +127,55 @@ def main() -> None:
         district: int = district_by_geoid[geoid]
         districts[district]["population"] += pop
 
-    # TODO - Split precincts to equalize district populations
+    # Split precincts to equalize district populations
 
-    print(f"Target district population: {balance_point}")
-    for i in range(1, n + 1):
-        print(f"District {i}: {districts[i]['population'] - balance_point}")
+    for id in range(1, n + 1):
+        districts[id]["deviation"] = districts[id]["population"] - balance_point
+
+    split_graph: dict[
+        int, list[int]
+    ] = dict()  # Districts that can be equalized w/ each other
+    for id, neighbors in district_graph.items():
+        split_graph[id] = list()
+        for neighbor in neighbors:
+            x: int = districts[id]["deviation"]
+            y: int = districts[neighbor]["deviation"]
+            if abs(x) + abs(y) != abs(x + y):
+                split_graph[id].append(neighbor)
+
+    ## TODO - Figure out district-to-district splits
+
+    i: int = 1
+    while True:
+        print(f"Attempt {i}")
+
+        equalized: set(int) = set()
+        mods: list = list()
+        deviations: dict[int, list] = {k: v["deviation"] for k, v in districts.items()}
+
+        options: int = max([len(x) for x in split_graph.values()])
+        for fan_out in range(1, options + 1):  # Start w/ the fewest options
+            for from_id, neighbors in split_graph.items():  # Ignore equalized districts
+                if from_id not in equalized and len(neighbors) == fan_out:
+                    to_id: int = neighbors[
+                        random.randint(0, len(neighbors) - 1)
+                    ]  # Randomly pick a neighbor
+
+                    adjustment: int = deviations[from_id] * -1
+                    deviations[from_id] += adjustment
+                    deviations[to_id] -= adjustment
+
+                    mod: dict = {"from": from_id, "to": to_id, "adjustment": adjustment}
+                    mods.append(mod)
+
+                    equalized.add(id)
+
+        if sum(deviations.values()) == 0:
+            break
+
+        i += 1
+
+    ## TODO - Translate district splits into precinct splits
 
     pass  # TODO
 
