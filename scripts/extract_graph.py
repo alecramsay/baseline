@@ -2,16 +2,11 @@
 #
 
 """
-TODO
-Extract contiguity graphs for a state's tracts, blockgroups, and blocks.
+Extract a contiguity graphs for a state's tracts, blockgroups, and blocks.
 
 For example:
 
-$ scripts/extract_graph.py MD
-$ scripts/extract_graph.py NC
-$ scripts/extract_graph.py PA
-$ scripts/extract_graph.py VA
-$ scripts/extract_graph.py NY
+$ scripts/extract_graph.py -s NC -u vtd
 
 For documentation, type:
 
@@ -62,8 +57,6 @@ def graph_shapes(rel_path: str, id_field: str) -> Rook:
     g: Rook = Rook.from_shapefile(abs_path, id_field)
     g = g.neighbors  # Get rid of all the extraneous PySAL stuff
 
-    check_graph(g)
-
     return g
 
 
@@ -81,10 +74,18 @@ def check_graph(graph) -> bool:
             else:
                 consistent = False
 
-    if not consistent:
-        print("> WARNING: This graph is not internally consistent! <")
+    # if not consistent:
+    #     print("> WARNING: This graph is not internally consistent! <")
 
     return consistent
+
+
+class Pair(NamedTuple):
+    one: int
+    two: int
+
+    def __repr__(self) -> str:
+        return f"{self.one},{self.two}"
 
 
 def main() -> None:
@@ -96,61 +97,56 @@ def main() -> None:
 
     xx: str = args.state
     fips: str = fips_map[xx]
+
     unit: str = args.unit
-    if unit == "vtd":
-        if xx in ["CA", "OR"]:
-            unit = "bg"
-        unit_label: str = "vtd20" if unit == "vtd" else "bg"
-    else:
+    if unit != "vtd":
         raise ValueError(f"Unit {unit} not recognized.")
+
+    if xx in ["CA", "OR"]:
+        unit = "bg"
+
+    unit_label: str = "vtd20" if unit == "vtd" else "bg"
+    # "tract", "bg", "tabblock20"
 
     verbose: bool = args.verbose
 
-    ### CONSTRUCT PATHS ###
-
-    state_dir: str = xx
-
-    # tract_dir: str = file_name(["tl_2020", fips, "tract"], "_")
-    # bg_dir: str = file_name(["tl_2020", fips, "bg"], "_")
-    # block_dir: str = file_name(["tl_2020", fips, "tabblock20"], "_")
-    precinct_dir: str = file_name(["tl_2020", fips, unit_label], "_")
+    #
 
     id: str = unit_id(unit)
-    shp_path: str = path_to_file([rawdata_dir, state_dir, precinct_dir]) + file_name(
+    shp_dir: str = file_name(["tl_2020", fips, unit_label], "_")
+    shp_path: str = path_to_file([rawdata_dir, xx, shp_dir]) + file_name(
         ["tl_2020", fips, unit_label], "_", "shp"
     )
 
-    # units: list[str] = ["tract", "bg", "block", unit]
-    # shp_paths: list[str] = [
-    #     path_to_file([rawdata_dir, state_dir, tract_dir])
-    #     + file_name(["tl_2020", fips, "tract"], "_", "shp"),
-    #     path_to_file([rawdata_dir, state_dir, bg_dir])
-    #     + file_name(["tl_2020", fips, "bg"], "_", "shp"),
-    #     path_to_file([rawdata_dir, state_dir, block_dir])
-    #     + file_name(["tl_2020", fips, "tabblock20"], "_", "shp"),
-    #     path_to_file([rawdata_dir, state_dir, precinct_dir])
-    #     + file_name(["tl_2020", fips, unit_label], "_", "shp"),
-    # ]
-
-    # ids: list[str] = [unit_id(x) for x in units]
-    # ids: list[str] = ["GEOID", "GEOID", "GEOID20"]
-
-    # graph_paths: list[str] = [
-    #     path_to_file([data_dir, state_dir])
-    #     + file_name([xx, cycle, "tract", "graph"], "_", "pickle"),
-    #     path_to_file([data_dir, state_dir])
-    #     + file_name([xx, cycle, "bg", "graph"], "_", "pickle"),
-    #     path_to_file([data_dir, state_dir])
-    #     + file_name([xx, cycle, "block", "graph"], "_", "pickle"),
-    # ]
-
-    ### TODO - READ THE SHAPEFILES, EXTRACT THE GRAPHS, AND PICKLE THEM ###
-
-    # for unit, shp_path, id, graph_path in zip(units, shp_paths, ids, graph_paths):
-    print("Extracting", unit, "graph for {xx} ...")
+    # Read the shapefile & extract the graph
 
     graph: Rook = graph_shapes(shp_path, id)
-    # write_pickle(graph_path, graph)
+
+    consistent: bool = check_graph(graph)
+    if not consistent:
+        raise ValueError("Graph is not internally consistent!")
+
+    # TODO - Remove water-only precincts <<< N/A for NC
+
+    # TODO - Add connections <<< N/A for NC
+
+    # TODO - Make sure the graph is fully connected
+    connected: bool = True
+
+    # TODO - If not, find & report "islands"
+
+    # Save the neighbors
+
+    rel_path: str = path_to_file(["data", xx]) + file_name(
+        [xx, str(cycle), unit, "pairs"], "_", "csv"
+    )
+    abs_path: str = FileSpec(rel_path).abs_path
+
+    with open(abs_path, "w") as f:
+        for geoid, neighbor_geoids in graph.items():
+            for neighbor in neighbor_geoids:
+                print(Pair(geoid, neighbor), file=f)
+
     pass  # TODO
 
 

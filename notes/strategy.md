@@ -24,3 +24,5 @@ Create a fully connected adjacency graph w/o any water-only precincts:
 * Revise the graph to remove water-only precincts <<< N/A in NC
 * Make sure the *graph* is fully connected
 * If not, find "islands" and connect them
+
+* Generate the graph as pairs of neighbors
