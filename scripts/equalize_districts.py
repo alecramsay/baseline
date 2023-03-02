@@ -110,7 +110,7 @@ def main() -> None:
         district_graph[current] = list(neighbors)
 
     for id, data in districts.items():
-        border: list[str] = id_border_units(
+        border: list[str] = border_shapes(
             id, data["geoids"], unit_graph, district_by_geoid
         )
         districts[id]["border"] = border
@@ -157,6 +157,15 @@ def main() -> None:
         for j in range(1, fan_out + 1):  # Start w/ the fewest options
             for from_id, neighbors in split_graph.items():  # Ignore equalized districts
                 if from_id not in equalized and len(neighbors) == j:
+                    # while True:
+                    #     to_id: int = neighbors[
+                    #         random.randint(0, len(neighbors) - 1)
+                    #     ]  # Randomly pick a neighbor
+                    #     if to_id not in equalized:
+                    #         break
+
+                    # pass
+
                     to_id: int
                     most_more: int = total_pop * -1
                     most_less: int = total_pop
@@ -164,6 +173,8 @@ def main() -> None:
                     less_id: int = 0
 
                     for neighbor in neighbors:
+                        if neighbor in equalized:
+                            continue
                         dev: int = deviations[neighbor]
                         if dev > most_more:
                             most_more = dev
@@ -173,10 +184,6 @@ def main() -> None:
                             less_id = neighbor
 
                     to_id = more_id if dev < 0 else less_id
-
-                    # to_id: int = neighbors[
-                    #     random.randint(0, len(neighbors) - 1)
-                    # ]  # Randomly pick a neighbor
 
                     adjustment: int = deviations[from_id] * -1
                     deviations[from_id] += adjustment

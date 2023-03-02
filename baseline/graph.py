@@ -9,35 +9,118 @@ import sys
 import csv
 from csv import reader as _reader
 from libpysal.weights import Rook
+import fiona
+import shapely.geometry
+from shapely.geometry import shape, Polygon, MultiPolygon
 
 from .readwrite import *
 
 
-def graph_shapes(rel_path: str, id_field: str) -> Rook:
-    """Extract a rook graph from a shapefile."""
-
-    abs_path: str = FileSpec(rel_path).abs_path
-
-    g: Rook = Rook.from_shapefile(abs_path, id_field)
-    g = g.neighbors  # Get rid of all the extraneous PySAL stuff
-
-    return g
+OUT_OF_STATE: str = "OUT_OF_STATE"
 
 
-def check_graph(graph) -> bool:
-    """Make sure each node is in every neighbor's neighbor list"""
+class Graph:
+    def __init__(self, input: str | dict, id_field: str = None) -> None:
+        if isinstance(input, dict):
+            self._data: dict = input
+            return
 
-    consistent: bool = True
+        if isinstance(input, str):
+            self._abs_path: str = FileSpec(input).abs_path
+            self._id_field: str = id_field
+            self._data: dict = self._from_shapefile()
+            self._is_consistent()
+            self._shp_by_geoid: dict
+            self._meta: dict[str, Any]
+            self._shp_by_geoid, self._meta = load_shapes(self._abs_path, self._id_field)
+            self._data: dict = self._add_out_of_state_neighbors()
 
-    for from_geo, neighbor_geos in graph.items():
-        for to_geo in neighbor_geos:
-            neighbors_neighbors: list[str] = graph[to_geo]
-            if from_geo in neighbors_neighbors:
-                pass
-            else:
-                consistent = False
+            return
 
-    return consistent
+        raise TypeError("Input must be a string or a dict")
+
+    def _from_shapefile(self) -> Rook:
+        """Extract a rook graph from a shapefile."""
+
+        g: Rook = Rook.from_shapefile(self._abs_path, self._id_field)
+        return g.neighbors  # Get rid of all the extraneous PySAL stuff
+
+    def _is_consistent(self) -> bool:
+        """Make sure each node is in every neighbor's neighbor list"""
+
+        consistent: bool = True
+
+        for node, neighbors in self._data.items():
+            for neighbor in neighbors:
+                neighbor_neighbors: list[str] = self.neighbors(neighbor)
+                if node in neighbor_neighbors:
+                    pass
+                else:
+                    raise ValueError("Graph is not internally consistent!")
+
+        return consistent
+
+    def _add_out_of_state_neighbors(self) -> dict:
+        """Add the virtual OUT_OF_STATE geoids to reflect interstate borders."""
+
+        new_graph: dict = dict()
+        new_graph[OUT_OF_STATE] = []
+        epsilon: float = 1.0e-12
+
+        for node, neighbors in self._data.items():
+            new_graph[node] = []
+
+            node_shp: Polygon | MultiPolygon = self._shp_by_geoid[node]
+            perimeter: float = node_shp.length
+            total_shared_border: float = 0.0
+
+            for neighbor in neighbors:
+                new_graph[node].append(neighbor)
+
+                neighbor_shp: Polygon | MultiPolygon = self._shp_by_geoid[neighbor]
+                shared_edge = node_shp.intersection(neighbor_shp)
+                shared_border: float = shared_edge.length
+
+                total_shared_border += shared_border
+
+            if (perimeter - total_shared_border) > epsilon:
+                new_graph[node].append(OUT_OF_STATE)
+                new_graph[OUT_OF_STATE].append(node)
+
+        return new_graph
+
+    def neighbors(self, node: str) -> list[str]:
+        """Return the neighbors of a node."""
+
+        if node in self._data:
+            return self._data[node]
+        else:
+            return []
+
+
+###
+
+# TODO - Update this to use the Graph class
+def border_shapes(
+    id: int,
+    units: list[str],
+    unit_graph: dict[str, list[str]],
+    district_by_geoid: dict[str, int],
+) -> list[str]:
+    """Return a list of *interior* border shapes for a district, i.e., not including those on the state boundary."""
+
+    border: list[str] = list()
+
+    for unit in units:
+        for neighbor in unit_graph[unit]:
+            if district_by_geoid[neighbor] != id:
+                border.append(unit)
+                break
+
+    return border
+
+
+# TODO - Integrate these into the class
 
 
 def modify_graph(graph, mods_csv) -> dict[str, list]:
@@ -86,25 +169,6 @@ def read_mods(mods_csv) -> list:
         sys.exit(e)
 
     return mods
-
-
-def id_border_units(
-    id: int,
-    units: list[str],
-    unit_graph: dict[str, list[str]],
-    district_by_geoid: dict[str, int],
-) -> list[str]:
-    """Return a list of *interior* border units for a district, i.e., not including units on the state boundary."""
-
-    border: list[str] = list()
-
-    for unit in units:
-        for neighbor in unit_graph[unit]:
-            if district_by_geoid[neighbor] != id:
-                border.append(unit)
-                break
-
-    return border
 
 
 ### END ###
