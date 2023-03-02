@@ -16,7 +16,8 @@ $ scripts/equalize_districts.py -h
 
 import argparse
 from argparse import ArgumentParser, Namespace
-from collections import defaultdict
+from libpysal.weights import Rook
+from collections import OrderedDict
 
 from baseline import *
 
@@ -63,17 +64,63 @@ def main() -> None:
     pop_by_geoid: dict[str, int] = {f["geoid"]: f["pop"] for f in features}
     del features
 
-    # TODO - Load the graph
+    # Load the unit (precinct) graph
 
-    # TODO - Load the precinct-assignment file
+    graph_path: str = path_to_file([data_dir, xx]) + file_name(
+        [xx, cycle, unit, "graph"], "_", "pickle"
+    )
+    unit_graph: Rook = read_pickle(graph_path)
 
-    # TODO - Compute a district adjacency graph
+    # Load the precinct-assignment file
 
-    # TODO - Compute the population balance point
+    uaf_path: str = path_to_file([data_dir, xx]) + file_name(
+        [xx, cycle, unit, "assignments"], "_", "csv"
+    )
 
-    # TODO - Compute the district populations
+    types: list = [str, int]
+    assignments: list = read_typed_csv(uaf_path, types)
+
+    district_by_geoid: dict[str, int] = dict()
+    districts: defaultdict[int, list] = dict()
+    for row in assignments:
+        district_by_geoid[row["GEOID20"]] = row["District"]
+        if row["District"] not in districts:
+            districts[row["District"]] = {"geoids": [], "population": 0}
+        districts[row["District"]]["geoids"].append(row["GEOID20"])
+
+    del assignments
+
+    # Compute a district adjacency graph
+
+    district_graph: dict[int, list[int]] = dict()
+    for current, data in districts.items():
+        neighbors: set[int] = set()
+
+        for unit in data["geoids"]:
+            for neighbor in unit_graph[unit]:
+                other: int = district_by_geoid[neighbor]
+                if other != current:
+                    neighbors.add(other)
+
+        district_graph[current] = list(neighbors)
+
+    # Compute the population balance point
+
+    total_pop: int = sum(pop_by_geoid.values())
+    n: int = len(districts)
+    balance_point: int = total_pop // n
+
+    # Compute the district populations
+
+    for geoid, pop in pop_by_geoid.items():
+        district: int = district_by_geoid[geoid]
+        districts[district]["population"] += pop
 
     # TODO - Split precincts to equalize district populations
+
+    print(f"Target district population: {balance_point}")
+    for i in range(1, n + 1):
+        print(f"District {i}: {districts[i]['population'] - balance_point}")
 
     pass  # TODO
 
