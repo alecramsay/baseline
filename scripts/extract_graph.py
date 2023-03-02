@@ -109,12 +109,18 @@ def main() -> None:
 
     # TODO - If not, find & report "islands"
 
-    # Save the neighbors
+    # Pickle the graph & save it as pairs in a CSV file
 
-    rel_path: str = path_to_file(["data", xx]) + file_name(
+    graph_path: str = path_to_file([data_dir, xx]) + file_name(
+        [xx, cycle, unit, "graph"], "_", "pickle"
+    )
+
+    write_pickle(graph_path, graph)
+
+    pairs_path: str = path_to_file(["data", xx]) + file_name(
         [xx, str(cycle), unit, "pairs"], "_", "csv"
     )
-    abs_path: str = FileSpec(rel_path).abs_path
+    abs_path: str = FileSpec(pairs_path).abs_path
 
     with open(abs_path, "w") as f:
         for geoid, neighbor_geoids in graph.items():
