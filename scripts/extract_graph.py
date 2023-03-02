@@ -41,6 +41,9 @@ def parse_args() -> Namespace:
         help="The geographic unit (e.g., vtd)",
         type=str,
     )
+    # TODO - water-only precincts
+
+    # TODO - connections to add
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
