@@ -157,9 +157,26 @@ def main() -> None:
         for j in range(1, fan_out + 1):  # Start w/ the fewest options
             for from_id, neighbors in split_graph.items():  # Ignore equalized districts
                 if from_id not in equalized and len(neighbors) == j:
-                    to_id: int = neighbors[
-                        random.randint(0, len(neighbors) - 1)
-                    ]  # Randomly pick a neighbor
+                    to_id: int
+                    most_more: int = total_pop * -1
+                    most_less: int = total_pop
+                    more_id: int = 0
+                    less_id: int = 0
+
+                    for neighbor in neighbors:
+                        dev: int = deviations[neighbor]
+                        if dev > most_more:
+                            most_more = dev
+                            more_id = neighbor
+                        if dev < most_less:
+                            most_less = dev
+                            less_id = neighbor
+
+                    to_id = more_id if dev < 0 else less_id
+
+                    # to_id: int = neighbors[
+                    #     random.randint(0, len(neighbors) - 1)
+                    # ]  # Randomly pick a neighbor
 
                     adjustment: int = deviations[from_id] * -1
                     deviations[from_id] += adjustment
