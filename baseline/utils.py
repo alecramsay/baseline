@@ -7,6 +7,7 @@ UTILITIES - Not used at this time.
 import time
 from functools import wraps
 from typing import Any, Callable
+from collections import namedtuple
 
 
 # TIMER DECORATORS
@@ -63,6 +64,14 @@ class GeoID:
         self.tract: str = id[0:11]  # id[5:11]
         self.bg: str = id[0:12]  # id[11:12]
         self.block: str = id  # id[12:15]
+
+
+class Pair(NamedTuple):
+    one: int
+    two: int
+
+    def __repr__(self) -> str:
+        return f"{self.one},{self.two}"
 
 
 ### END ###

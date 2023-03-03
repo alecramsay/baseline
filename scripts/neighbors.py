@@ -52,14 +52,6 @@ def parse_args() -> Namespace:
     return args
 
 
-class Pair(NamedTuple):
-    one: int
-    two: int
-
-    def __repr__(self) -> str:
-        return f"{self.one},{self.two}"
-
-
 def main() -> None:
     """Find three nearest neighbors for each point
 

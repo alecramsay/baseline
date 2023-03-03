@@ -16,6 +16,7 @@ $ scripts/equalize_districts.py -h
 
 import argparse
 from argparse import ArgumentParser, Namespace
+from collections import namedtuple
 
 from baseline import *
 
@@ -197,6 +198,8 @@ def main() -> None:
     if verbose:
         print(f"Final discrepancy: {discrepancy}")
         print(f"Total modifications: {len(mods)}")
+
+    ### Aggregate the modifications by district-district pair
 
     pass  # TODO
 
