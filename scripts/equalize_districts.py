@@ -16,7 +16,6 @@ $ scripts/equalize_districts.py -h
 
 import argparse
 from argparse import ArgumentParser, Namespace
-from collections import namedtuple
 
 from baseline import *
 
