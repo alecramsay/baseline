@@ -25,8 +25,21 @@ data: dict = {
 
 g: Graph = Graph(data)
 
-ring: list = g.ring(["OUT_OF_STATE"])
-ring: list = g.ring(ring)
+border: list = [OUT_OF_STATE]
+outer: list = []
+while True:
+    ring: list = g.ring(border, outer)
+    if len(ring) == 0:
+        break
+
+    print(f"ring: {ring}")
+    outer += border
+    border = ring
+
+    pass
+
+# ring: list = g.ring(["OUT_OF_STATE"])
+# ring: list = g.ring(ring)
 # for node, neighbors in data.items():
 #     if OUT_OF_STATE in neighbors:
 #         ring.append(node)

@@ -135,79 +135,122 @@ def main() -> None:
         district: int = district_by_geoid[geoid]
         districts[district]["population"] += pop
 
-    # TODO - HERE
-
     # Split precincts to equalize district populations
 
+    ## Compute district-by-district deviations
     for id in range(1, n + 1):
         districts[id]["deviation"] = districts[id]["population"] - balance_point
 
-    split_graph: dict[
-        int, list[int]
-    ] = dict()  # Districts that can be equalized w/ each other
-    for id, neighbors in district_graph.items():
-        split_graph[id] = list()
+    ## TODO - Figure out district-to-district splits
+    # - Working outside in doesn't work: you can get islands
+    # - Working across the districts ... ?
+
+    equalized: set(int) = set()
+    mods: list = list()
+    deviations: dict[int, list] = {k: v["deviation"] for k, v in districts.items()}
+
+    ## Find the starting point
+
+    border: list = [OUT_OF_STATE]
+    ring: list = district_graph.ring(border)
+
+    data: dict[int, list[int]] = dict()
+    for id, neighbors in district_graph.data().items():
+        data[id] = list()
         for neighbor in neighbors:
+            if neighbor == OUT_OF_STATE:
+                continue
             x: int = districts[id]["deviation"]
             y: int = districts[neighbor]["deviation"]
             if abs(x) + abs(y) != abs(x + y):
-                split_graph[id].append(neighbor)
+                data[id].append(neighbor)
 
-    ## TODO - Figure out district-to-district splits
+    split_graph: Graph = Graph(data)
 
-    i: int = 1
+    priority: list = [
+        {
+            "id": id,
+            "options": len(split_graph.neighbors(id)),
+            "deviation": deviations[id],
+        }
+        for id in ring
+    ]
+    priority = sorted(priority, key=lambda x: abs(x["deviation"]), reverse=True)
+    priority = sorted(priority, key=lambda x: x["options"])
+    priority = [district["id"] for district in priority]
+    start: int = priority[0]
+    next: set[int] = {start}
+
     while True:
-        print(f"Attempt {i}")
-
-        equalized: set(int) = set()
-        mods: list = list()
-        deviations: dict[int, list] = {k: v["deviation"] for k, v in districts.items()}
-
-        fan_out: int = max([len(x) for x in split_graph.values()])
-        for j in range(1, fan_out + 1):  # Start w/ the fewest options
-            for from_id, neighbors in split_graph.items():  # Ignore equalized districts
-                if from_id not in equalized and len(neighbors) == j:
-                    # while True:
-                    #     to_id: int = neighbors[
-                    #         random.randint(0, len(neighbors) - 1)
-                    #     ]  # Randomly pick a neighbor
-                    #     if to_id not in equalized:
-                    #         break
-
-                    # pass
-
-                    to_id: int
-                    most_more: int = total_pop * -1
-                    most_less: int = total_pop
-                    more_id: int = 0
-                    less_id: int = 0
-
-                    for neighbor in neighbors:
-                        if neighbor in equalized:
-                            continue
-                        dev: int = deviations[neighbor]
-                        if dev > most_more:
-                            most_more = dev
-                            more_id = neighbor
-                        if dev < most_less:
-                            most_less = dev
-                            less_id = neighbor
-
-                    to_id = more_id if dev < 0 else less_id
-
-                    adjustment: int = deviations[from_id] * -1
-                    deviations[from_id] += adjustment
-                    deviations[to_id] -= adjustment
-
-                    mod: dict = {"from": from_id, "to": to_id, "adjustment": adjustment}
-                    mods.append(mod)
-
-                    equalized.add(id)
-
-        if sum(deviations.values()) == 0:
+        if len(next) == 0:
             break
 
-        i += 1
+        adjust: list[int] = list(next)
+
+        for from_id in adjust:
+            print(f"Equalize {from_id} ({districts[from_id]['deviation']})")
+
+            candidates: set = (
+                set(district_graph.neighbors(from_id, excluding=[OUT_OF_STATE]))
+                - equalized
+            )
+            # candidates: set = set(split_graph.neighbors(from_id)) - equalized
+
+            if len(candidates) == 1:
+                # Only one candidate; use it
+                to_id: int = candidates.pop()
+
+            elif len(candidates) > 1:
+                # More than one candidate
+                to_id: int = None
+
+                # Prioritize border districts
+                for neighbor in candidates:
+                    if district_graph.is_border(neighbor):
+                        to_id = neighbor
+                        break
+
+                # Then pick a complementary one
+                for neighbor in candidates:
+                    x: int = districts[from_id]["deviation"]
+                    y: int = districts[neighbor]["deviation"]
+                    if abs(x) + abs(y) != abs(x + y):
+                        to_id = neighbor
+                        break
+
+                # Failing those, pick one at random
+                if to_id is None:
+                    to_id = list(candidates)[random.randint(0, len(candidates) - 1)]
+
+            else:
+                raise Exception("No candidates")
+
+            adjustment: int = deviations[from_id] * -1
+            deviations[from_id] += adjustment
+            deviations[to_id] -= adjustment
+
+            mod: dict = {"from": from_id, "to": to_id, "adjustment": adjustment}
+            mods.append(mod)
+
+            equalized.add(from_id)
+
+        next: set[int] = set()
+        for id in equalized:
+            next |= (
+                set(
+                    district_graph.neighbors(
+                        id, repeats=False, excluding=[OUT_OF_STATE]
+                    )
+                )
+                - equalized
+            )
+        # next: list[int] = set(split_graph.neighbors(from_id)) - equalized
+
+        pass
+
+    print(f"Done")
+
+    pass  # TODO
 
     ## TODO - Translate district splits into precinct splits
 

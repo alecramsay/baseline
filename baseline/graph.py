@@ -94,15 +94,31 @@ class Graph:
 
         return self._data
 
-    def neighbors(self, node: str) -> list[str]:
-        """Return the neighbors of a node."""
+    def neighbors(
+        self, node: str, *, repeats: bool = True, excluding: list = []
+    ) -> list[str]:
+        """Return the neighbors of a node.
 
-        if node in self._data:
-            return self._data[node]
-        else:
+        - repeats: If True, return all neighbors. If False, remove neighbors of neighbors.
+        - excluding: A list of nodes to exclude from the list of neighbors.
+        """
+
+        if node not in self._data:
             return []
 
-    def ring(self, within: list[str]) -> list[str]:
+        neighbors_of_neighbors: list[str] = []
+        # if not repeats:
+        #     for neighbor in self._data[node]:
+        #         neighbors_of_neighbors += self._data[neighbor]
+
+        exclude: list[str] = excluding + neighbors_of_neighbors
+
+        if len(exclude) == 0:
+            return self._data[node]
+        else:
+            return [n for n in self._data[node] if n not in exclude]
+
+    def ring(self, within: list[str], outer: list[str] = []) -> list[str]:
         """Return a list of nodes that are connected to any node in the given list.
 
         Use this to find successively smaller "rings" of districts w/in a state.
@@ -112,12 +128,17 @@ class Graph:
         ring: list = []
 
         for node, neighbors in self._data.items():
-            if node in within:
+            if node in within or node in outer:
                 continue
             if len(set(neighbors).intersection(within)) > 0:
                 ring.append(node)
 
         return ring
+
+    def is_border(self, node: str) -> bool:
+        """Return True if the node is on the state boundary."""
+
+        return OUT_OF_STATE in self._data[node]
 
 
 ### HELPERS ###
