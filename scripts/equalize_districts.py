@@ -16,8 +16,6 @@ $ scripts/equalize_districts.py -h
 
 import argparse
 from argparse import ArgumentParser, Namespace
-from libpysal.weights import Rook
-import random
 
 from baseline import *
 
@@ -47,9 +45,10 @@ def main() -> None:
     """Equalize district populations."""
 
     args: Namespace = parse_args()
-    fips_map: dict[str, str] = make_state_codes()
     xx: str = args.state
-    fips: str = fips_map[xx]
+
+    # fips_map: dict[str, str] = make_state_codes()
+    # fips: str = fips_map[xx]
 
     unit: str = "vtd"
 
@@ -69,9 +68,8 @@ def main() -> None:
     graph_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, cycle, unit, "graph"], "_", "pickle"
     )
-    data: Rook = read_pickle(graph_path)
+    data: dict = read_pickle(graph_path)
     unit_graph: Graph = Graph(data)
-    # unit_graph: Rook = read_pickle(graph_path)
 
     # Load the precinct-assignment file
 
@@ -141,20 +139,15 @@ def main() -> None:
     for id in range(1, n + 1):
         districts[id]["deviation"] = districts[id]["population"] - balance_point
 
-    ## TODO - Figure out district-to-district splits
-    # - Working outside in doesn't work: you can get islands
-    # - Working across the districts doesn't work either
+    ## Figure out district-to-district splits
 
-    mods: list = list()
-    deviations: dict[int, list] = {k: v["deviation"] for k, v in districts.items()}
-
-    ## Prioritize the districts
+    ### Prioritize the districts
 
     queue: list = [
         {
             "id": id,
             "options": len(district_graph.neighbors(id, excluding=[OUT_OF_STATE])),
-            "deviation": deviations[id],
+            "deviation": districts[id]["deviation"],
         }
         for id in districts.keys()
     ]
@@ -162,69 +155,48 @@ def main() -> None:
     queue = sorted(queue, key=lambda x: x["options"])
     queue = [district["id"] for district in queue]
 
-    while True:
-        if len(next) == 0:
-            break
+    ### Calculate the initial deviations & aggregate absolute deviation
 
-        adjust: list[int] = list(next)
+    deviations: dict[int, list] = {k: v["deviation"] for k, v in districts.items()}
+    discrepancy: int = sum(abs(v) for v in deviations.values())
 
-        for from_id in adjust:
-            print(f"Equalize {from_id} ({districts[from_id]['deviation']})")
+    ### Swap population between adjacent districts, until the discrepancy is minimized
 
-            candidates: set = (
-                set(district_graph.neighbors(from_id, excluding=[OUT_OF_STATE]))
-                - equalized
-            )
-            # candidates: set = set(split_graph.neighbors(from_id)) - equalized
+    i: int = 1
+    j: int = 1
+    mods: list = list()
+    while discrepancy > n:  # +/- 1 person per district
+        if verbose:
+            print(f"Round {j}: {discrepancy}")
 
-            if len(candidates) == 1:
-                # Only one candidate; use it
-                to_id: int = candidates.pop()
+        for from_id in queue:
+            for to_id in district_graph.neighbors(from_id, excluding=[OUT_OF_STATE]):
+                x: int = deviations[from_id]
+                y: int = deviations[to_id]
+                if (abs(x) + abs(y) != abs(x + y)) or (abs(x) > 0):
+                    adjustment: int = deviations[from_id] * -1
+                    deviations[from_id] += adjustment
+                    deviations[to_id] -= adjustment
 
-            elif len(candidates) > 1:
-                # More than one candidate
-                to_id: int = None
+                    mod: dict = {
+                        "i": i,
+                        "from": from_id,
+                        "to": to_id,
+                        "adjustment": adjustment,
+                    }
+                    mods.append(mod)
 
-                # Prioritize border districts
-                for neighbor in candidates:
-                    if district_graph.is_border(neighbor):
-                        to_id = neighbor
-                        break
+                    if verbose:
+                        print(f"  {from_id} -> {to_id}: {adjustment}")
 
-                # Then pick a complementary one
-                for neighbor in candidates:
-                    x: int = districts[from_id]["deviation"]
-                    y: int = districts[neighbor]["deviation"]
-                    if abs(x) + abs(y) != abs(x + y):
-                        to_id = neighbor
-                        break
+                    i += 1
 
-                # Failing those, pick one at random
-                if to_id is None:
-                    to_id = list(candidates)[random.randint(0, len(candidates) - 1)]
+        discrepancy: int = sum(abs(v) for v in deviations.values())
+        j += 1
 
-            else:
-                raise Exception("No candidates")
-
-            adjustment: int = deviations[from_id] * -1
-            deviations[from_id] += adjustment
-            deviations[to_id] -= adjustment
-
-            mod: dict = {"from": from_id, "to": to_id, "adjustment": adjustment}
-            mods.append(mod)
-
-            equalized.add(from_id)
-
-        next: set[int] = set()
-        for id in equalized:
-            next |= (
-                set(district_graph.neighbors(id, excluding=[OUT_OF_STATE])) - equalized
-            )
-        # next: list[int] = set(split_graph.neighbors(from_id)) - equalized
-
-        pass
-
-    print(f"Done")
+    if verbose:
+        print(f"Final discrepancy: {discrepancy}")
+        print(f"Total modifications: {len(mods)}")
 
     pass  # TODO
 
