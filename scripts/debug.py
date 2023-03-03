@@ -2,6 +2,13 @@
 
 """
 DEBUG
+
+https://www.baeldung.com/cs/shortest-path-visiting-all-nodes
+https://www.graphable.ai/blog/best-graph-traversal-algorithms/
+https://en.wikipedia.org/wiki/Shortest_path_problem#Unweighted_graphs
+
+https://www.cs.cornell.edu/courses/cs2112/2012sp/lectures/lec24/lec24-12sp.html
+https://www.programiz.com/dsa/graph-bfs?ref=hackernoon.com
 """
 
 from baseline import *

@@ -237,12 +237,7 @@ def main() -> None:
         next: set[int] = set()
         for id in equalized:
             next |= (
-                set(
-                    district_graph.neighbors(
-                        id, repeats=False, excluding=[OUT_OF_STATE]
-                    )
-                )
-                - equalized
+                set(district_graph.neighbors(id, excluding=[OUT_OF_STATE])) - equalized
             )
         # next: list[int] = set(split_graph.neighbors(from_id)) - equalized
 

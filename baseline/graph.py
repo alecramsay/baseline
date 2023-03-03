@@ -94,29 +94,16 @@ class Graph:
 
         return self._data
 
-    def neighbors(
-        self, node: str, *, repeats: bool = True, excluding: list = []
-    ) -> list[str]:
-        """Return the neighbors of a node.
-
-        - repeats: If True, return all neighbors. If False, remove neighbors of neighbors.
-        - excluding: A list of nodes to exclude from the list of neighbors.
-        """
+    def neighbors(self, node: str, *, excluding: list = []) -> list[str]:
+        """Return the neighbors of a node."""
 
         if node not in self._data:
             return []
 
-        neighbors_of_neighbors: list[str] = []
-        # if not repeats:
-        #     for neighbor in self._data[node]:
-        #         neighbors_of_neighbors += self._data[neighbor]
-
-        exclude: list[str] = excluding + neighbors_of_neighbors
-
-        if len(exclude) == 0:
+        if len(excluding) == 0:
             return self._data[node]
         else:
-            return [n for n in self._data[node] if n not in exclude]
+            return [n for n in self._data[node] if n not in excluding]
 
     def ring(self, within: list[str], outer: list[str] = []) -> list[str]:
         """Return a list of nodes that are connected to any node in the given list.
