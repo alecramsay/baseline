@@ -143,43 +143,24 @@ def main() -> None:
 
     ## TODO - Figure out district-to-district splits
     # - Working outside in doesn't work: you can get islands
-    # - Working across the districts ... ?
+    # - Working across the districts doesn't work either
 
-    equalized: set(int) = set()
     mods: list = list()
     deviations: dict[int, list] = {k: v["deviation"] for k, v in districts.items()}
 
-    ## Find the starting point
+    ## Prioritize the districts
 
-    border: list = [OUT_OF_STATE]
-    ring: list = district_graph.ring(border)
-
-    data: dict[int, list[int]] = dict()
-    for id, neighbors in district_graph.data().items():
-        data[id] = list()
-        for neighbor in neighbors:
-            if neighbor == OUT_OF_STATE:
-                continue
-            x: int = districts[id]["deviation"]
-            y: int = districts[neighbor]["deviation"]
-            if abs(x) + abs(y) != abs(x + y):
-                data[id].append(neighbor)
-
-    split_graph: Graph = Graph(data)
-
-    priority: list = [
+    queue: list = [
         {
             "id": id,
-            "options": len(split_graph.neighbors(id)),
+            "options": len(district_graph.neighbors(id, excluding=[OUT_OF_STATE])),
             "deviation": deviations[id],
         }
-        for id in ring
+        for id in districts.keys()
     ]
-    priority = sorted(priority, key=lambda x: abs(x["deviation"]), reverse=True)
-    priority = sorted(priority, key=lambda x: x["options"])
-    priority = [district["id"] for district in priority]
-    start: int = priority[0]
-    next: set[int] = {start}
+    queue = sorted(queue, key=lambda x: abs(x["deviation"]), reverse=True)
+    queue = sorted(queue, key=lambda x: x["options"])
+    queue = [district["id"] for district in queue]
 
     while True:
         if len(next) == 0:
