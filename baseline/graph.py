@@ -102,6 +102,23 @@ class Graph:
         else:
             return []
 
+    def ring(self, within: list[str]) -> list[str]:
+        """Return a list of nodes that are connected to any node in the given list.
+
+        Use this to find successively smaller "rings" of districts w/in a state.
+        """
+
+        within: set[str] = set(within)
+        ring: list = []
+
+        for node, neighbors in self._data.items():
+            if node in within:
+                continue
+            if len(set(neighbors).intersection(within)) > 0:
+                ring.append(node)
+
+        return ring
+
 
 ### HELPERS ###
 
