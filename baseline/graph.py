@@ -103,23 +103,26 @@ class Graph:
             return []
 
 
-###
+### HELPERS ###
 
-# TODO - Update this to use the Graph class
+
 def border_shapes(
-    id: int,
+    district_ix: int,
     units: list[str],
-    unit_graph: dict[str, list[str]],
+    unit_graph: Graph,
     district_by_geoid: dict[str, int],
 ) -> list[str]:
     """Return a list of *interior* border shapes for a district, i.e., not including those on the state boundary."""
 
     border: list[str] = list()
 
-    for unit in units:
-        for neighbor in unit_graph[unit]:
-            if district_by_geoid[neighbor] != id:
-                border.append(unit)
+    for geoid in units:
+        for neighbor in unit_graph.neighbors(geoid):
+            if neighbor == OUT_OF_STATE:
+                border.append(geoid)
+                break
+            if district_by_geoid[neighbor] != district_ix:
+                border.append(geoid)
                 break
 
     return border

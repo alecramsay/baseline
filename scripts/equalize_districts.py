@@ -69,7 +69,9 @@ def main() -> None:
     graph_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, cycle, unit, "graph"], "_", "pickle"
     )
-    unit_graph: Rook = read_pickle(graph_path)
+    data: Rook = read_pickle(graph_path)
+    unit_graph: Graph = Graph(data)
+    # unit_graph: Rook = read_pickle(graph_path)
 
     # Load the precinct-assignment file
 
@@ -97,17 +99,23 @@ def main() -> None:
 
     # Compute a district adjacency graph
 
-    district_graph: dict[int, list[int]] = dict()
+    graph_data: dict[int, list[int]] = dict()
     for current, data in districts.items():
         neighbors: set[int] = set()
 
-        for unit in data["geoids"]:
-            for neighbor in unit_graph[unit]:
+        for geoid in data["geoids"]:
+            for neighbor in unit_graph.neighbors(geoid):
+                if neighbor == OUT_OF_STATE:
+                    neighbors.add(OUT_OF_STATE)
+                    continue
+
                 other: int = district_by_geoid[neighbor]
                 if other != current:
                     neighbors.add(other)
 
-        district_graph[current] = list(neighbors)
+        graph_data[current] = list(neighbors)
+
+    district_graph: Graph = Graph(graph_data)
 
     for id, data in districts.items():
         border: list[str] = border_shapes(
@@ -126,6 +134,8 @@ def main() -> None:
     for geoid, pop in pop_by_geoid.items():
         district: int = district_by_geoid[geoid]
         districts[district]["population"] += pop
+
+    # TODO - HERE
 
     # Split precincts to equalize district populations
 
