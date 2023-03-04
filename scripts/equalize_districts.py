@@ -159,18 +159,23 @@ def main() -> None:
     ### Calculate the initial deviations & aggregate absolute deviation
 
     deviations: dict[int, list] = {k: v["deviation"] for k, v in districts.items()}
-    discrepancy: int = sum(abs(v) for v in deviations.values())
-    initial: int = discrepancy
+    total_deviation: int = sum(abs(v) for v in deviations.values())
+    initial: int = total_deviation
+    total_within_tolerance: bool = total_deviation <= n - 1
 
-    ### Swap population between adjacent districts, until the discrepancy is minimized
+    within_tolerance: bool = any(abs(v) <= 1 for v in deviations.values())
+
+    ### Swap population between adjacent districts, until the total_deviation is minimized
 
     i: int = 1
     j: int = 1
     mods: list = list()
-    while discrepancy > n:  # +/- 1 person per district
+    while (
+        not total_within_tolerance  # or not within_tolerance
+    ):  # +/- 1 person per district
         if verbose:
             print()
-            print(f"Round {j} discrepancy: {discrepancy}")
+            print(f"Round {j} total_deviation: {total_deviation}")
 
         for from_id in queue:
             for to_id in district_graph.neighbors(from_id, excluding=[OUT_OF_STATE]):
@@ -194,10 +199,12 @@ def main() -> None:
 
                     i += 1
 
-        discrepancy: int = sum(abs(v) for v in deviations.values())
+        total_deviation: int = sum(abs(v) for v in deviations.values())
+        total_within_tolerance: bool = total_deviation <= n - 1
+        districts_within_tolerance: bool = any(abs(v) > 1 for v in deviations.values())
         j += 1
 
-    final: int = discrepancy
+    final: int = total_deviation
 
     if verbose:
         print()
