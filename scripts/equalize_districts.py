@@ -181,9 +181,13 @@ def main() -> None:
 
         for from_id in queue:
             for to_id in district_graph.neighbors(from_id, excluding=[OUT_OF_STATE]):
+                # TODO - This is only swapping with the first neighbor!
                 x: int = deviations[from_id]
                 y: int = deviations[to_id]
-                if abs(x) > 0:
+                if (
+                    abs(x) > 0
+                ):  # TODO - The check here used to "select" a neighbor based on offsetting deviations
+                    # if (abs(x) + abs(y) != abs(x + y)) or (abs(x) > 0):
                     adjustment: int = deviations[from_id] * -1
                     # if total_within_tolerance:
                     #     adjustment: int = 1 if deviations[from_id] < 0 else -1
