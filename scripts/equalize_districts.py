@@ -16,6 +16,7 @@ $ scripts/equalize_districts.py -h
 
 import argparse
 from argparse import ArgumentParser, Namespace
+from collections import defaultdict
 
 from baseline import *
 
@@ -159,6 +160,7 @@ def main() -> None:
 
     deviations: dict[int, list] = {k: v["deviation"] for k, v in districts.items()}
     discrepancy: int = sum(abs(v) for v in deviations.values())
+    initial: int = discrepancy
 
     ### Swap population between adjacent districts, until the discrepancy is minimized
 
@@ -167,7 +169,8 @@ def main() -> None:
     mods: list = list()
     while discrepancy > n:  # +/- 1 person per district
         if verbose:
-            print(f"Round {j}: {discrepancy}")
+            print()
+            print(f"Round {j} discrepancy: {discrepancy}")
 
         for from_id in queue:
             for to_id in district_graph.neighbors(from_id, excluding=[OUT_OF_STATE]):
@@ -194,11 +197,39 @@ def main() -> None:
         discrepancy: int = sum(abs(v) for v in deviations.values())
         j += 1
 
+    final: int = discrepancy
+
     if verbose:
-        print(f"Final discrepancy: {discrepancy}")
-        print(f"Total modifications: {len(mods)}")
+        print()
+        print(f"Initial: {initial} => final: {final}; # mods: {len(mods)}")
 
     ### Aggregate the modifications by district-district pair
+
+    offsets: dict = defaultdict(int)
+    for mod in mods:
+        one: int
+        two: int
+        adjustment: int
+
+        if mod["from"] < mod["to"]:
+            one = mod["from"]
+            two = mod["to"]
+            adjustment = mod["adjustment"]
+        else:
+            one = mod["to"]
+            two = mod["from"]
+            adjustment = mod["adjustment"] * -1
+
+        offsets[Pair(one, two)] += mod["adjustment"]
+
+    if verbose:
+        moved: int = sum(abs(v) for v in offsets.values())
+
+        print()
+        print(f"Moved: {moved} people between {len(offsets)} pairs:")
+        for pair, adjustment in offsets.items():
+            print(f"  {pair}: {adjustment}")
+        print()
 
     pass  # TODO
 
