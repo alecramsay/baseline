@@ -6,7 +6,10 @@ Equalize district populations.
 
 For example:
 
-$ scripts/equalize_districts.py -s NC
+$ scripts/equalize_districts.py -s NC -v
+$ scripts/equalize_districts.py -s AZ -v
+$ scripts/equalize_districts.py -s GA -v
+$ scripts/equalize_districts.py -s VA -v
 
 For documentation, type:
 
@@ -47,9 +50,6 @@ def main() -> None:
 
     args: Namespace = parse_args()
     xx: str = args.state
-
-    # fips_map: dict[str, str] = make_state_codes()
-    # fips: str = fips_map[xx]
 
     unit: str = "vtd"
 
@@ -230,6 +230,9 @@ def main() -> None:
         for pair, adjustment in offsets.items():
             print(f"  {pair}: {adjustment}")
         print()
+
+        for id in districts.keys():
+            print(f"  {id}: {deviations[id]}")
 
     ## TODO - Translate district splits into precinct splits
 
