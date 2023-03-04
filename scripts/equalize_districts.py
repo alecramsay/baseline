@@ -163,7 +163,7 @@ def main() -> None:
     initial: int = total_deviation
     total_within_tolerance: bool = total_deviation <= n - 1
 
-    within_tolerance: bool = any(abs(v) <= 1 for v in deviations.values())
+    districts_within_tolerance: bool = all(abs(v) < 10 for v in deviations.values())
 
     ### Swap population between adjacent districts, until the total_deviation is minimized
 
@@ -171,7 +171,7 @@ def main() -> None:
     j: int = 1
     mods: list = list()
     while (
-        not total_within_tolerance  # or not within_tolerance
+        not total_within_tolerance or not districts_within_tolerance
     ):  # +/- 1 person per district
         if verbose:
             print()
@@ -181,8 +181,11 @@ def main() -> None:
             for to_id in district_graph.neighbors(from_id, excluding=[OUT_OF_STATE]):
                 x: int = deviations[from_id]
                 y: int = deviations[to_id]
-                if abs(x) > 0:  # if (abs(x) + abs(y) != abs(x + y)) or (abs(x) > 0):
-                    adjustment: int = deviations[from_id] * -1
+                if abs(x) > 0:
+                    if total_within_tolerance:
+                        adjustment: int = 1 if deviations[from_id] < 0 else -1
+                    else:
+                        adjustment: int = deviations[from_id] * -1
                     deviations[from_id] += adjustment
                     deviations[to_id] -= adjustment
 
@@ -201,7 +204,7 @@ def main() -> None:
 
         total_deviation: int = sum(abs(v) for v in deviations.values())
         total_within_tolerance: bool = total_deviation <= n - 1
-        districts_within_tolerance: bool = any(abs(v) > 1 for v in deviations.values())
+        districts_within_tolerance: bool = all(abs(v) < 10 for v in deviations.values())
         j += 1
 
     final: int = total_deviation
