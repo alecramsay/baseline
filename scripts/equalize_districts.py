@@ -176,7 +176,7 @@ def main() -> None:
             for to_id in district_graph.neighbors(from_id, excluding=[OUT_OF_STATE]):
                 x: int = deviations[from_id]
                 y: int = deviations[to_id]
-                if (abs(x) + abs(y) != abs(x + y)) or (abs(x) > 0):
+                if abs(x) > 0:  # if (abs(x) + abs(y) != abs(x + y)) or (abs(x) > 0):
                     adjustment: int = deviations[from_id] * -1
                     deviations[from_id] += adjustment
                     deviations[to_id] -= adjustment
