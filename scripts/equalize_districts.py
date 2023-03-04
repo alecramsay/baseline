@@ -172,6 +172,8 @@ def main() -> None:
     i: int = 1
     j: int = 1
     mods: list = list()
+    used: set = set()
+
     while (
         not total_within_tolerance  # or not districts_within_tolerance
     ):  # +/- 1 person per district
@@ -182,10 +184,12 @@ def main() -> None:
         for from_id in queue:
             for to_id in district_graph.neighbors(from_id, excluding=[OUT_OF_STATE]):
                 # TODO - This is only swapping with the first neighbor!
+                # TODO - Prioritize the neighbors by a) offsetting deviations & b) # of options
+                # TODO - Preventing cycles altogether makes NC fail to converge
                 x: int = deviations[from_id]
                 y: int = deviations[to_id]
                 if (
-                    abs(x) > 0
+                    abs(x) > 0 and Pair.from_data(from_id, to_id) not in used
                 ):  # TODO - The check here used to "select" a neighbor based on offsetting deviations
                     # if (abs(x) + abs(y) != abs(x + y)) or (abs(x) > 0):
                     adjustment: int = deviations[from_id] * -1
@@ -203,6 +207,7 @@ def main() -> None:
                         "adjustment": adjustment,
                     }
                     mods.append(mod)
+                    used.add(Pair.from_data(from_id, to_id))
 
                     if verbose:
                         print(f"  {from_id} -> {to_id}: {adjustment}")

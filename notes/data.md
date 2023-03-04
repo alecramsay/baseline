@@ -7,7 +7,9 @@ Due to their size, the raw input data are stored locally (i.e., not in this repo
 The data for VTDs (precincts) came from these sources:
 
 * The VTD census data came from https://github.com/dra2020/vtd_data.
-* The VTD shapesfiles come from https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/VTD/2020/.
+* The VTD shapefiles come from https://www2.census.gov/geo/tiger/TIGER2020PL/LAYER/VTD/2020/.
+* The precint (VTD) to block mapping files come from https://www.census.gov/geographies/reference-files/time-series/geo/block-assignment-files.html.
+* The Name Lookup tables for friendly precinct (VTD) names are from https://www.census.gov/geographies/reference-files/time-series/geo/name-lookup-tables.html
 
 ## Block, BG, & Tract Data
 
@@ -20,6 +22,5 @@ The data for blocks, blockgroups (BGs), and tracts came from these sources:
 
 These are some other data that I don't currently use:
 
-* The block mapping files come from https://www.census.gov/geographies/reference-files/time-series/geo/block-assignment-files.html.
 * State shapefiles come from https://www2.census.gov/geo/tiger/TIGER2020PL/STATE/.
 
