@@ -90,8 +90,9 @@ def main() -> None:
                             print()
                             print(f"Water-only precincts for {xx}:")
                             print()
-                            print(f"GEOID,ALAND,AWATER")
-                            print(f"{geoid},{aland},{awater}")
+
+                        print(f"GEOID,ALAND,AWATER")
+                        print(f"{geoid},{aland},{awater}")
 
         if not water_only:
             print()
