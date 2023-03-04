@@ -8,8 +8,8 @@ For example:
 
 $ scripts/equalize_districts.py -s NC -v
 $ scripts/equalize_districts.py -s AZ -v
-$ scripts/equalize_districts.py -s GA -v
-$ scripts/equalize_districts.py -s VA -v
+$ scripts/equalize_districts.py -s GA -v <= cycles
+$ scripts/equalize_districts.py -s VA -v <= cycles
 
 For documentation, type:
 
@@ -50,10 +50,12 @@ def main() -> None:
 
     args: Namespace = parse_args()
     xx: str = args.state
-
     unit: str = "vtd"
 
     verbose: bool = args.verbose
+
+    xx = "VA"  # TODO - remove
+    verbose = True  # TODO - remove
 
     # Load the precinct data
 
@@ -171,7 +173,7 @@ def main() -> None:
     j: int = 1
     mods: list = list()
     while (
-        not total_within_tolerance or not districts_within_tolerance
+        not total_within_tolerance  # or not districts_within_tolerance
     ):  # +/- 1 person per district
         if verbose:
             print()
@@ -182,10 +184,11 @@ def main() -> None:
                 x: int = deviations[from_id]
                 y: int = deviations[to_id]
                 if abs(x) > 0:
-                    if total_within_tolerance:
-                        adjustment: int = 1 if deviations[from_id] < 0 else -1
-                    else:
-                        adjustment: int = deviations[from_id] * -1
+                    adjustment: int = deviations[from_id] * -1
+                    # if total_within_tolerance:
+                    #     adjustment: int = 1 if deviations[from_id] < 0 else -1
+                    # else:
+                    #     adjustment: int = deviations[from_id] * -1
                     deviations[from_id] += adjustment
                     deviations[to_id] -= adjustment
 
@@ -201,6 +204,11 @@ def main() -> None:
                         print(f"  {from_id} -> {to_id}: {adjustment}")
 
                     i += 1
+
+        if verbose:
+            print()
+            for id in districts.keys():
+                print(f"  {id}: {deviations[id]}")
 
         total_deviation: int = sum(abs(v) for v in deviations.values())
         total_within_tolerance: bool = total_deviation <= n - 1
