@@ -231,8 +231,6 @@ def main() -> None:
             print(f"  {pair}: {adjustment}")
         print()
 
-    pass  # TODO
-
     ## TODO - Translate district splits into precinct splits
 
     pass  # TODO
