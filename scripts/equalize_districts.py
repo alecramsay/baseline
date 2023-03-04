@@ -54,7 +54,7 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
-    xx = "VA"  # TODO - remove
+    xx = "NC"  # TODO - remove
     verbose = True  # TODO - remove
 
     # Load the precinct data

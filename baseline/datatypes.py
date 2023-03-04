@@ -7,6 +7,8 @@ TYPES
 
 from typing import NamedTuple, TypedDict
 
+# from typing import Self
+
 
 class Coordinate(NamedTuple):
     x: int
@@ -42,6 +44,13 @@ class Pair(NamedTuple):
 
     def __repr__(self) -> str:
         return f"{self.one},{self.two}"
+
+    @classmethod
+    def from_data(cls, x: int, y: int):  # -> Self:
+        one: int = x if x < y else y
+        two: int = y if y > x else x
+
+        return cls(one, two)
 
 
 ### END ###
