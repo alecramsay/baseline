@@ -99,6 +99,19 @@ def main() -> None:
         combo: tuple = (vtd, district)
         vtd_district[combo] += pop
 
+    # Report population by district
+
+    if verbose:
+        district_pop: dict = defaultdict(int)
+        for k, v in vtd_district.items():
+            district_pop[k[1]] += v
+
+        print()
+        print(f"Population by district for {xx}")
+        for k, v in sorted(district_pop.items()):
+            print(f"{k:2d}: {v:8.0f}")
+        print()
+
     # Write the results to initial.csv
 
     splits: list[dict] = [
