@@ -54,9 +54,10 @@ def main() -> None:
     verbose: bool = args.verbose
 
     commands: list[str] = [
-        "scripts/extract_pop.py -s {xx} -p -i 3 > data/{xx}/{xx}_census_log.txt",
+        "scripts/extract_pop.py -s {xx} -p -b -i 3 > data/{xx}/{xx}_census_log.txt",
         "scripts/extract_xy.py -s {xx} -p",
         "scripts/join_feature_data.py -s {xx} -p",
+        "scripts/extract_block_vtds.py -s {xx}",
         "scripts/unpickle_to_csv.py -s {xx} -u vtd",
         # "scripts/unpickle_to_csv.py {xx} block",
         # "scripts/unpickle_to_csv.py {xx} bg",

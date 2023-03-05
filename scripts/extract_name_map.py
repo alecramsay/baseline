@@ -6,7 +6,7 @@ Create a mapping of GEOIDs to friendly names.
 
 For example:
 
-$ scripts/extract_name_map.py -s NC > data/NC/NC_2020_vdt_names.txt
+$ scripts/extract_name_map.py -s NC > data/NC/NC_2020_vtd_names.txt
 
 For documentation, type:
 
