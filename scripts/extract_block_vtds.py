@@ -2,15 +2,15 @@
 #
 
 """
-Create a dict of VTDs and their associated blocks.
+Create a dict of blocks and their associated VTDs.
 
 For example:
 
-$ scripts/extract_vtd_blocks.py -s NC
+$ scripts/extract_block_vtds.py -s NC
 
 For documentation, type:
 
-$ scripts/extract_vtd_blocks.py -h
+$ scripts/extract_block_vtds.py -h
 """
 
 import argparse
