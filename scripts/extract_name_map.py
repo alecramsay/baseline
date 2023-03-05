@@ -6,7 +6,7 @@ Create a mapping of GEOIDs to friendly names.
 
 For example:
 
-$ scripts/extract_name_map.py -s NC > data/NC/NC_NAMES.txt
+$ scripts/extract_name_map.py -s NC > data/NC/NC_2020_vdt_names.txt
 
 For documentation, type:
 
@@ -55,7 +55,7 @@ def main() -> None:
 
     state_dir: str = xx
 
-    ### READ THE SHAPEFILES ###
+    ### READ THE CENSUS FILE ###
 
     unit: str = "bg" if xx in ["CA", "OR"] else "vtd"
 
@@ -79,7 +79,7 @@ def main() -> None:
             name: str = fields[3]
             print(f"{geoid},{name}")
 
-    pass  # TODO
+    pass
 
 
 if __name__ == "__main__":

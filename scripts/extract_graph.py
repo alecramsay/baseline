@@ -99,7 +99,7 @@ def main() -> None:
 
     # Pickle the graph
 
-    graph_path: str = path_to_file([data_dir, xx]) + file_name(
+    graph_path: str = path_to_file([temp_dir, xx]) + file_name(
         [xx, cycle, unit, "graph"], "_", "pickle"
     )
     write_pickle(graph_path, graph.data())
