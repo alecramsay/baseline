@@ -6,20 +6,20 @@ Find districts that minimize population compactness (moment of inertia).
 
 For example:
 
-$ scripts/baseline_state.py NC congress -v > logs/NC_2020_congress_log.txt
-$ scripts/baseline_state.py MD congress -v > logs/MD_2020_congress_log.txt
-$ scripts/baseline_state.py PA congress -v > logs/PA_2020_congress_log.txt
-$ scripts/baseline_state.py VA congress -v > logs/VA_2020_congress_log.txt
+$ scripts/baseline_state.py NC -v > logs/NC_2020_congress_log.txt
+$ scripts/baseline_state.py MD -v > logs/MD_2020_congress_log.txt
+$ scripts/baseline_state.py PA -v > logs/PA_2020_congress_log.txt
+$ scripts/baseline_state.py VA -v > logs/VA_2020_congress_log.txt
 
-$ scripts/baseline_state.py MN congress -v > logs/MN_2020_congress_log.txt
-$ scripts/baseline_state.py NV congress -v > logs/NV_2020_congress_log.txt
-$ scripts/baseline_state.py NM congress -v > logs/NM_2020_congress_log.txt
-$ scripts/baseline_state.py NY congress -v > logs/NY_2020_congress_log.txt
-$ scripts/baseline_state.py TN congress -v > logs/TN_2020_congress_log.txt
-$ scripts/baseline_state.py WA congress -v > logs/WA_2020_congress_log.txt
+$ scripts/baseline_state.py MN -v > logs/MN_2020_congress_log.txt
+$ scripts/baseline_state.py NV -v > logs/NV_2020_congress_log.txt
+$ scripts/baseline_state.py NM -v > logs/NM_2020_congress_log.txt
+$ scripts/baseline_state.py NY -v > logs/NY_2020_congress_log.txt
+$ scripts/baseline_state.py TN -v > logs/TN_2020_congress_log.txt
+$ scripts/baseline_state.py WA -v > logs/WA_2020_congress_log.txt
 
-$ scripts/baseline_state.py OR congress -g -v > logs/OR_2020_congress_log.txt
-$ scripts/baseline_state.py CA congress -t -v > logs/CA_2020_congress_log.txt
+$ scripts/baseline_state.py OR -g -v > logs/OR_2020_congress_log.txt
+$ scripts/baseline_state.py CA -t -v > logs/CA_2020_congress_log.txt
 
 For documentation, type:
 
@@ -39,7 +39,10 @@ parser: ArgumentParser = argparse.ArgumentParser(
 
 parser.add_argument("state", help="The two-character state code, e.g., NC.", type=str)
 parser.add_argument(
-    "type", help="The type of map: { congress | upper | lower }.", type=str
+    "type",
+    default="congress",
+    help="The type of map: { | upper | lower }.",
+    type=str,
 )
 parser.add_argument(
     "-g",

@@ -6,7 +6,7 @@ Extract a contiguity graphs for a state's tracts, blockgroups, and blocks.
 
 For example:
 
-$ scripts/extract_graph.py -s NC -u vtd
+$ scripts/extract_graph.py -s NC
 
 For documentation, type:
 

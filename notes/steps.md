@@ -2,24 +2,26 @@
 
 ## Find water-only precincts
 
+TODO - Write the results to a file
+
 ```
 scripts/extract_water_only.py -s NC
 ```
 
 ## Preprocess data, removing water-only precincts
 
-# TODO
+TODO
 
 ```
 scripts/preprocess_state.py -s NC
 ```
 
-## Generate a graph of precincts, removing water-only precincts
+## Generate a graph of precincts
 
-TODO - Remove the 'vtd' argument (make it default)
+TODO - Remove water-only precincts
 
 ```
-scripts/extract_graph.py -s NC -u vtd
+scripts/extract_graph.py -s NC
 ```
 
 ## Export the official map as a BAF
