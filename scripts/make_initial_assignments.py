@@ -16,6 +16,7 @@ $ scripts/make_initial_assignments.py -h
 
 import argparse
 from argparse import ArgumentParser, Namespace
+from collections import defaultdict
 
 from baseline import *
 
@@ -72,7 +73,9 @@ def main() -> None:
     types: list = [str, int, float, float]
     vtd_points: list = read_typed_csv(rel_path, types)
 
-    # TODO - Create geoid_to_index mapping
+    index_by_geoid: dict = {}
+    for i, vtd in enumerate(vtd_points):
+        index_by_geoid[vtd["GEOID"]] = i
 
     # Read the BAF for the official NC map (data/NC/NC_2020_block_assignments.csv)
 
@@ -84,11 +87,31 @@ def main() -> None:
         rel_path, types
     )  # A list of dicts like {'GEOID20': '371139703032008', 'District': 11}
 
-    # TODO - Loop over the BAF, aggregating the block populations by VTD
+    # Loop over the BAF, aggregating the block populations by VTD/district combination
 
-    # TODO - Write the results to initial.csv
+    vtd_district: dict = defaultdict(int)
+    for row in block_assignments:
+        block: str = row["GEOID20"]
+        district: int = row["District"]
+        pop: int = pop_by_block[block]
+        vtd: str = vtd_by_block[block]
 
-    pass  # TODO
+        combo: tuple = (vtd, district)
+        vtd_district[combo] += pop
+
+    # Write the results to initial.csv
+
+    splits: list[dict] = [
+        {"DISTRICT": k[1], "VTD": index_by_geoid[k[0]], "POP": float(v)}
+        for k, v in vtd_district.items()
+    ]
+
+    rel_path: str = path_to_file([data_dir, xx]) + file_name(
+        [xx, cycle, unit, "assignments"], "_", "csv"
+    )
+    write_csv(rel_path, splits, ["DISTRICT", "VTD", "POP"], "{:.1f}")
+
+    pass
 
 
 if __name__ == "__main__":
