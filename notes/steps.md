@@ -2,10 +2,8 @@
 
 ## Find water-only precincts
 
-TODO - Write the results to a file
-
 ```
-scripts/extract_water_only.py -s NC
+scripts/extract_water_only.py -s NC [> data/NC/NC_2020_water_only.csv]
 ```
 
 ## Preprocess data

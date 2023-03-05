@@ -7,6 +7,7 @@ Extract the water-only precincts.
 For example:
 
 $ scripts/extract_water_only.py -s NC
+$ scripts/extract_water_only.py -s MD > data/MD/MD_2020_water_only.csv
 
 For documentation, type:
 
@@ -86,12 +87,8 @@ def main() -> None:
                     if awater > 0 and aland == 0:
                         if not water_only:
                             water_only = True
+                            print(f"GEOID,ALAND,AWATER")
 
-                            print()
-                            print(f"Water-only precincts for {xx}:")
-                            print()
-
-                        print(f"GEOID,ALAND,AWATER")
                         print(f"{geoid},{aland},{awater}")
 
         if not water_only:
