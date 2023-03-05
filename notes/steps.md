@@ -8,9 +8,9 @@ TODO - Write the results to a file
 scripts/extract_water_only.py -s NC
 ```
 
-## Preprocess data, removing water-only precincts
+## Preprocess data
 
-TODO
+TODO - Remove water-only precincts
 
 ```
 scripts/preprocess_state.py -s NC
@@ -34,8 +34,6 @@ scripts/make_initial_assignments.py -s NC
 
 ## Create a baseline map
 
-TODO - Remove the 'congress' argument (make it default)
-
 ```
-scripts/baseline_state.py NC congress
+scripts/baseline_state.py -s NC
 ```

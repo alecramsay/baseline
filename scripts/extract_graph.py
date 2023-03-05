@@ -41,9 +41,9 @@ def parse_args() -> Namespace:
         help="The geographic unit (e.g., vtd)",
         type=str,
     )
-    # TODO - water-only precincts
+    # TODO - Water-only precincts
 
-    # TODO - connections to add
+    # TODO - Connections to add
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -99,7 +99,7 @@ def main() -> None:
 
     # Pickle the graph
 
-    graph_path: str = path_to_file([temp_dir, xx]) + file_name(
+    graph_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, unit, "graph"], "_", "pickle"
     )
     write_pickle(graph_path, graph.data())

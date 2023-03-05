@@ -6,20 +6,20 @@ Find districts that minimize population compactness (moment of inertia).
 
 For example:
 
-$ scripts/baseline_state.py NC -v > logs/NC_2020_congress_log.txt
-$ scripts/baseline_state.py MD -v > logs/MD_2020_congress_log.txt
-$ scripts/baseline_state.py PA -v > logs/PA_2020_congress_log.txt
-$ scripts/baseline_state.py VA -v > logs/VA_2020_congress_log.txt
+$ scripts/baseline_state.py -s NC -v > logs/NC_2020_congress_log.txt
+$ scripts/baseline_state.py -s MD -v > logs/MD_2020_congress_log.txt
+$ scripts/baseline_state.py -s PA -v > logs/PA_2020_congress_log.txt
+$ scripts/baseline_state.py -s VA -v > logs/VA_2020_congress_log.txt
 
-$ scripts/baseline_state.py MN -v > logs/MN_2020_congress_log.txt
-$ scripts/baseline_state.py NV -v > logs/NV_2020_congress_log.txt
-$ scripts/baseline_state.py NM -v > logs/NM_2020_congress_log.txt
-$ scripts/baseline_state.py NY -v > logs/NY_2020_congress_log.txt
-$ scripts/baseline_state.py TN -v > logs/TN_2020_congress_log.txt
-$ scripts/baseline_state.py WA -v > logs/WA_2020_congress_log.txt
+$ scripts/baseline_state.py -s MN -v > logs/MN_2020_congress_log.txt
+$ scripts/baseline_state.py -s NV -v > logs/NV_2020_congress_log.txt
+$ scripts/baseline_state.py -s NM -v > logs/NM_2020_congress_log.txt
+$ scripts/baseline_state.py -s NY -v > logs/NY_2020_congress_log.txt
+$ scripts/baseline_state.py -s TN -v > logs/TN_2020_congress_log.txt
+$ scripts/baseline_state.py -s WA -v > logs/WA_2020_congress_log.txt
 
-$ scripts/baseline_state.py OR -g -v > logs/OR_2020_congress_log.txt
-$ scripts/baseline_state.py CA -t -v > logs/CA_2020_congress_log.txt
+$ scripts/baseline_state.py -s OR -g -v > logs/OR_2020_congress_log.txt
+$ scripts/baseline_state.py -s CA -t -v > logs/CA_2020_congress_log.txt
 
 For documentation, type:
 
@@ -37,11 +37,18 @@ parser: ArgumentParser = argparse.ArgumentParser(
     description="Find population compact districts."
 )
 
-parser.add_argument("state", help="The two-character state code, e.g., NC.", type=str)
 parser.add_argument(
-    "type",
+    "-s",
+    "--state",
+    default="NC",
+    help="The two-character state code (e.g., NC)",
+    type=str,
+)
+parser.add_argument(
+    "-m",
+    "--map",
     default="congress",
-    help="The type of map: { | upper | lower }.",
+    help="The type of map: { congress | upper | lower }.",
     type=str,
 )
 parser.add_argument(
@@ -65,7 +72,7 @@ parser.add_argument(
 args: Namespace = parser.parse_args()
 
 xx: str = args.state
-plan_type: str = args.type
+plan_type: str = args.map
 bg: bool = args.bg
 tract: bool = args.tract
 
