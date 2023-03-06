@@ -74,13 +74,14 @@ def load_state_shape(shp_file: str, id: str) -> Polygon | MultiPolygon:
 ### READ & WRITE A CSV ###
 
 
-def write_csv(rel_path, rows, cols, precision="{:.6f}") -> None:
+def write_csv(rel_path, rows, cols, *, precision="{:.6f}", header=True) -> None:
     try:
         abs_path: str = FileSpec(rel_path).abs_path
 
         with open(abs_path, "w") as f:
             writer: DictWriter = DictWriter(f, fieldnames=cols)
-            writer.writeheader()
+            if header:
+                writer.writeheader()
 
             for row in rows:
                 mod: dict = {}

@@ -80,7 +80,7 @@ def main() -> None:
     rel_path: str = path_to_file([data_dir, state_dir]) + file_name(
         [xx, cycle, units, "data"], "_", "csv"
     )
-    write_csv(rel_path, l, ["GEOID", "POP", "X", "Y"], "{:.14f}")
+    write_csv(rel_path, l, ["GEOID", "POP", "X", "Y"], precision="{:.14f}")
 
 
 if __name__ == "__main__":

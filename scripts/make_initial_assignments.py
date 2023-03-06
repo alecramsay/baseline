@@ -117,7 +117,9 @@ def main() -> None:
     rel_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, cycle, unit, "assignments"], "_", "csv"
     )
-    write_csv(rel_path, splits, ["DISTRICT", "VTD", "POP"], "{:.1f}")
+    write_csv(
+        rel_path, splits, ["DISTRICT", "VTD", "POP"], precision="{:.1f}", header=False
+    )
 
     pass
 
