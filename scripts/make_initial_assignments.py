@@ -65,17 +65,12 @@ def main() -> None:
     )
     pop_by_block: dict = read_pickle(rel_path)
 
-    # Map VTD geoids to index offsets, using the points file (data/NC/NC_2020_vtd_data.csv)
+    # Load the pickled GEOID index (temp/NC_2020_vtd_index.pickle)
 
-    rel_path: str = path_to_file([data_dir, xx]) + file_name(
-        [xx, cycle, unit, "data"], "_", "csv"
+    rel_path: str = path_to_file([temp_dir]) + file_name(
+        [xx, cycle, "vtd", "index"], "_", "pickle"
     )
-    types: list = [str, int, float, float]
-    vtd_points: list = read_typed_csv(rel_path, types)
-
-    index_by_geoid: dict = {}
-    for i, vtd in enumerate(vtd_points):
-        index_by_geoid[vtd["GEOID"]] = i
+    index_by_geoid: dict = read_pickle(rel_path)
 
     # Read the BAF for the official NC map (data/NC/NC_2020_block_assignments.csv)
 

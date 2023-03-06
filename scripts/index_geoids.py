@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Convert pickled data to CSV format.
+Index GEOIDs by the order in the points file.
 
 For example:
 
-$ scripts/unpickle_to_csv.py -s NC -u vtd
+$ scripts/index_geoids.py -s NC 
 
 For documentation, type:
 
-$ scripts/unpickle_to_csv.py -h
+$ scripts/index_geoids.py -h
 
 """
 
@@ -32,13 +32,6 @@ def parse_args() -> Namespace:
         help="The two-character state code (e.g., NC)",
         type=str,
     )
-    parser.add_argument(
-        "-u",
-        "--units",
-        default="vtd",
-        help="The unit of granularity (e.g., vtd)",
-        type=str,
-    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -54,33 +47,26 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    units: str = args.units
+    unit: str = "vtd"
 
-    state_dir: str = xx
+    ### CREATE THE INDEX ###
 
-    ### LOAD DATA ###
+    rel_path: str = path_to_file([data_dir, xx]) + file_name(
+        [xx, cycle, unit, "data"], "_", "csv"
+    )
+    types: list = [str, int, float, float]
+    vtd_points: list = read_typed_csv(rel_path, types)
+
+    index_by_geoid: dict = {}
+    for i, vtd in enumerate(vtd_points):
+        index_by_geoid[vtd["GEOID"]] = i
+
+    ### PICKLE THE RESULTS ###
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
-        [xx, cycle, units, "data"], "_", "pickle"
+        [xx, cycle, "vtd", "index"], "_", "pickle"
     )
-    collection: FeatureCollection = FeatureCollection(rel_path)
-
-    ### WRITE DATA AS A CSV ###
-
-    l: list = list()
-    for f in collection.features:
-        row: dict[str, int, int, int] = {
-            "GEOID": f["geoid"],
-            "POP": f["pop"],
-            "X": f["xy"].x,
-            "Y": f["xy"].y,
-        }
-        l.append(row)
-
-    rel_path: str = path_to_file([data_dir, state_dir]) + file_name(
-        [xx, cycle, units, "data"], "_", "csv"
-    )
-    write_csv(rel_path, l, ["GEOID", "POP", "X", "Y"], "{:.14f}")
+    write_pickle(rel_path, index_by_geoid)
 
 
 if __name__ == "__main__":

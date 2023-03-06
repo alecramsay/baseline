@@ -106,6 +106,11 @@ def main() -> None:
 
     # Also save it as pairs in a CSV file, but ignore OUT_OF_STATE connections
 
+    rel_path: str = path_to_file([temp_dir]) + file_name(
+        [xx, cycle, "vtd", "index"], "_", "pickle"
+    )
+    index_by_geoid: dict = read_pickle(rel_path)
+
     pairs_path: str = path_to_file(["data", xx]) + file_name(
         [xx, str(cycle), unit, "pairs"], "_", "csv"
     )
@@ -118,7 +123,9 @@ def main() -> None:
             for neighbor in neighbor_geoids:
                 if neighbor == OUT_OF_STATE:
                     continue
-                print(Pair(geoid, neighbor), file=f)
+                x: int = index_by_geoid[geoid]
+                y: int = index_by_geoid[neighbor]
+                print(Pair(x, y), file=f)
 
     pass
 

@@ -58,6 +58,7 @@ def main() -> None:
         "scripts/extract_xy.py -s {xx} -p",
         "scripts/join_feature_data.py -s {xx} -p",
         "scripts/unpickle_to_csv.py -s {xx} -u vtd",
+        "scripts/index_geoids.py -s {xx}",
         # "scripts/unpickle_to_csv.py {xx} block",
         # "scripts/unpickle_to_csv.py {xx} bg",
         "scripts/extract_block_vtds.py -s {xx}",
