@@ -7,7 +7,7 @@ Test evening out adjacent districts' over/under populations
 from baseline import *
 
 
-# def spread_out_overages(deviations: dict, g: dict, verbose: bool = False) -> dict:
+# def smooth_districts(deviations: dict, g: dict, verbose: bool = False) -> dict:
 #     """Spread out overages to neighbors with underages"""
 
 #     mods: list = list()
@@ -127,7 +127,7 @@ def main() -> None:
         14: -1993,
     }
 
-    moves: dict = spread_out_overages(deviations, g, verbose)
+    moves: dict = smooth_districts(deviations, g, verbose)
 
     for m in moves:
         print(f"Move {m['adjustment']} from {m['from']} to {m['to']}")

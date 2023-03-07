@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 """
-EQUALIZE - Spread out overages to neighbors with underages
+EQUALIZE - Smooth out overages & underages
 """
 
 
-def spread_out_overages(deviations: dict, g: dict, verbose: bool = False) -> dict:
+def smooth_districts(deviations: dict, g: dict, verbose: bool = False) -> dict:
     """Spread out overages to neighbors with underages"""
 
     mods: list = list()
@@ -17,6 +17,7 @@ def spread_out_overages(deviations: dict, g: dict, verbose: bool = False) -> dic
     average_deviation: int = int(total_deviation / len(deviations))
 
     if verbose:
+        print()
         print("Before:")
         print(f"  {', '.join([f'{k}: {v}' for k, v in deviations.items()])}")
         print(f"  Average = {average_deviation} | total = {total_deviation}")
@@ -74,6 +75,7 @@ def spread_out_overages(deviations: dict, g: dict, verbose: bool = False) -> dic
         print("After:")
         print(f"  {', '.join([f'{k}: {v}' for k, v in after.items()])}")
         print(f"  Average = {average_deviation} | total = {total_deviation}")
+        print()
 
     return mods
 
