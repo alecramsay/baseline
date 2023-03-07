@@ -7,6 +7,7 @@ from .datatypes import *
 from .data import *
 from .plastic import *
 from .graph import *
+from .equalize import *
 from .baseline import *
 
 name: str = "baseline"
