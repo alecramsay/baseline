@@ -23,20 +23,25 @@ def spread_out_overages(deviations: dict, g: dict, verbose: bool = False) -> dic
         print(f"  {', '.join([f'{k}: {v}' for k, v in deviations.items()])}")
         print(f"  Average = {average_deviation} | total = {total_deviation}")
 
-    after: dict = dict(deviations)  # Updated after each swap
+    after: dict = dict(deviations)  # Update this after each move
 
     overs: list = [k for k, v in deviations.items() if v > 0]
     overs.sort(key=lambda x: deviations[x], reverse=True)
 
     for d in overs:
-        unders: list = [k for k, v in deviations.items() if v < 0]
-        neighbors: list[int] = list(set(g[d]).intersection(unders))
+        unders: list = [
+            k for k, v in after.items() if v < 0
+        ]  # Recompute for each over district
+        neighbors: list[int] = list(
+            set(g[d]).intersection(unders)
+        )  # Only consider "under" neighbors
 
         total_need: int = sum([abs(after[n]) for n in neighbors])
 
-        if deviations[d] > total_need:
+        if after[d] > total_need:
+            # The "over" district can zero out all its "under" neighbors
             for n in neighbors:
-                move: int = after[n] * -1
+                move: int = abs(after[n])
                 after[n] += move
                 mod: dict = {
                     "from": d,
@@ -44,20 +49,22 @@ def spread_out_overages(deviations: dict, g: dict, verbose: bool = False) -> dic
                     "adjustment": move,
                 }
                 mods.append(mod)
-            after[d] = deviations[d] - total_need
+            after[d] = after[d] - total_need
 
         else:
+            # Spread the overage out among the neighbors on a pro rata basis
+            moved: int = 0
             for n in neighbors:
-                target: int = int(total_need / len(neighbors)) * -1
-                delta: int = target - after[n] + int(deviations[d] / len(neighbors))
-                after[n] += delta
+                move: int = round(after[d] * abs(after[n]) / total_need)
+                moved += move
+                after[n] += move
                 mod: dict = {
                     "from": d,
                     "to": n,
-                    "adjustment": delta,
+                    "adjustment": move,
                 }
                 mods.append(mod)
-            after[d] = 0
+            after[d] -= moved
 
     total_deviation: int = 0
     for k, v in after.items():
