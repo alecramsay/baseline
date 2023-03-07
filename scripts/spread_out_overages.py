@@ -6,91 +6,129 @@ Test evening out adjacent districts' over/under populations
 
 from baseline import *
 
-g: dict = {
-    1: [8, 12],
-    2: [3, 8],
-    3: [2, 8, 10, 13, 14],
-    4: [5, 6, 7, 10, 13],
-    5: [4, 6, 11, 13],
-    6: [4, 5, 7, 9, 11],
-    7: [4, 6, 9, 10],
-    8: [1, 2, 3, 10, 12],
-    9: [6, 7, 10, 11, 14],
-    10: [3, 4, 7, 8, 9, 12, 13],
-    11: [5, 6, 9, 13, 14],
-    12: [1, 8, 10],
-    13: [3, 4, 5, 10, 11, 14],
-    14: [3, 9, 11, 13],
-}  # GA
 
-# Check consistency of graph
-consistent: bool = True
-for node, neighbors in g.items():
-    for neighbor in neighbors:
-        if node not in g[neighbor]:
-            consistent = False
-            print(f"ERROR: {node} not in {neighbor}'s neighbors")
-if consistent:
-    print("Graph is consistent")
+def spread_out_overages(deviations: dict, g: dict, verbose: bool = False) -> dict:
+    """Spread out overages to neighbors with underages"""
 
-before: dict = {
-    1: 161,
-    2: 4392,
-    3: -1193,
-    4: 4164,
-    5: -1809,
-    6: 2118,
-    7: -2211,
-    8: -1846,
-    9: 816,
-    10: -1102,
-    11: 589,
-    12: -461,
-    13: -1621,
-    14: -1993,
-}
+    mods: list = list()
 
-total_deviation: int = 0
-for k, v in before.items():
-    total_deviation += abs(v)
+    total_deviation: int = 0
+    for k, v in deviations.items():
+        total_deviation += abs(v)
 
-average_deviation: int = int(total_deviation / len(before))
-print(
-    f"Before: average deviation = {average_deviation} | total deviation = {total_deviation}"
-)
+    average_deviation: int = int(total_deviation / len(deviations))
 
-after: dict = dict(before)  # Updated after each swap
+    if verbose:
+        print("Before:")
+        print(f"  {', '.join([f'{k}: {v}' for k, v in deviations.items()])}")
+        print(f"  Average = {average_deviation} | total = {total_deviation}")
 
-overs: list = [k for k, v in before.items() if v > 0]
-overs.sort(key=lambda x: before[x], reverse=True)
+    after: dict = dict(deviations)  # Updated after each swap
 
-for d in overs:
-    unders: list = [k for k, v in before.items() if v < 0]
-    neighbors: list[int] = list(set(g[d]).intersection(unders))
+    overs: list = [k for k, v in deviations.items() if v > 0]
+    overs.sort(key=lambda x: deviations[x], reverse=True)
 
-    total_need: int = sum([abs(after[n]) for n in neighbors])
+    for d in overs:
+        unders: list = [k for k, v in deviations.items() if v < 0]
+        neighbors: list[int] = list(set(g[d]).intersection(unders))
 
-    if before[d] > total_need:
-        for n in neighbors:
-            after[n] += after[n] * -1
-        after[d] = before[d] - total_need
+        total_need: int = sum([abs(after[n]) for n in neighbors])
 
-    else:
-        for n in neighbors:
-            target: int = int(total_need / len(neighbors)) * -1
-            delta: int = target - after[n] + int(before[d] / len(neighbors))
-            after[n] += delta
-        after[d] = 0
+        if deviations[d] > total_need:
+            for n in neighbors:
+                move: int = after[n] * -1
+                after[n] += move
+                mod: dict = {
+                    "from": d,
+                    "to": n,
+                    "adjustment": move,
+                }
+                mods.append(mod)
+            after[d] = deviations[d] - total_need
 
-total_deviation: int = 0
-for k, v in after.items():
-    total_deviation += abs(v)
+        else:
+            for n in neighbors:
+                target: int = int(total_need / len(neighbors)) * -1
+                delta: int = target - after[n] + int(deviations[d] / len(neighbors))
+                after[n] += delta
+                mod: dict = {
+                    "from": d,
+                    "to": n,
+                    "adjustment": delta,
+                }
+                mods.append(mod)
+            after[d] = 0
 
-average_deviation: int = int(total_deviation / len(after))
-print(
-    f"After: average deviation = {average_deviation} | total deviation = {total_deviation}"
-)
+    total_deviation: int = 0
+    for k, v in after.items():
+        total_deviation += abs(v)
 
-pass
+    average_deviation: int = int(total_deviation / len(after))
+
+    if verbose:
+        print("After:")
+        print(f"  {', '.join([f'{k}: {v}' for k, v in after.items()])}")
+        print(f"  Average = {average_deviation} | total = {total_deviation}")
+
+    return mods
+
+
+def main() -> None:
+    verbose: bool = True
+
+    g: dict = {
+        1: [8, 12],
+        2: [3, 8],
+        3: [2, 8, 10, 13, 14],
+        4: [5, 6, 7, 10, 13],
+        5: [4, 6, 11, 13],
+        6: [4, 5, 7, 9, 11],
+        7: [4, 6, 9, 10],
+        8: [1, 2, 3, 10, 12],
+        9: [6, 7, 10, 11, 14],
+        10: [3, 4, 7, 8, 9, 12, 13],
+        11: [5, 6, 9, 13, 14],
+        12: [1, 8, 10],
+        13: [3, 4, 5, 10, 11, 14],
+        14: [3, 9, 11, 13],
+    }  # GA
+
+    # Check consistency of graph
+    consistent: bool = True
+    for node, neighbors in g.items():
+        for neighbor in neighbors:
+            if node not in g[neighbor]:
+                consistent = False
+                print(f"ERROR: {node} not in {neighbor}'s neighbors")
+    if consistent:
+        print("Graph is consistent")
+
+    deviations: dict = {
+        1: 161,
+        2: 4392,
+        3: -1193,
+        4: 4164,
+        5: -1809,
+        6: 2118,
+        7: -2211,
+        8: -1846,
+        9: 816,
+        10: -1102,
+        11: 589,
+        12: -461,
+        13: -1621,
+        14: -1993,
+    }
+
+    moves: dict = spread_out_overages(deviations, g, verbose)
+
+    for m in moves:
+        print(f"Move {m['adjustment']} from {m['from']} to {m['to']}")
+
+    pass
+
+
+if __name__ == "__main__":
+    main()
 
 ### END ###
