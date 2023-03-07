@@ -46,3 +46,13 @@ scripts/make_initial_assignments.py -s NC
 ```
 scripts/baseline_state.py -s NC
 ```
+
+## All Together
+
+```
+scripts/extract_water_only.py -s XX > data/XX/XX_2020_water_only.csv
+scripts/preprocess_state.py -s XX
+scripts/extract_graph.py -s XX
+scripts/make_initial_assignments.py -s XX
+scripts/baseline_state.py -s XX
+```
