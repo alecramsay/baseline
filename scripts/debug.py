@@ -21,7 +21,15 @@ def main() -> None:
 
     verbose: bool = True
 
+    # Get the # of districts
+
+    n: int = districts_by_state[xx]["congress"]
+
     # Load the block-to-VTD (temp/NC_2020_block_vtd.pickle)
+
+    if verbose:
+        print()
+        print(f"Loading {xx} block-to-VTD assignments ...")
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, "block", "vtd"], "_", "pickle"
@@ -30,6 +38,9 @@ def main() -> None:
 
     # Load the block population file for NC (temp/NC_2020_block_pop.pickle)
 
+    if verbose:
+        print(f"Loading {xx} block populations ...")
+
     rel_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, "block", "pop"], "_", "pickle"
     )
@@ -37,12 +48,18 @@ def main() -> None:
 
     # Load the pickled GEOID index (temp/NC_2020_vtd_index.pickle)
 
+    if verbose:
+        print(f"Loading {xx} GEOID index ...")
+
     rel_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, "vtd", "index"], "_", "pickle"
     )
     index_by_geoid: dict = read_pickle(rel_path)
 
     # Read the BAF for the official NC map (data/NC/NC_2020_block_assignments.csv)
+
+    if verbose:
+        print(f"Loading {xx} block assignments ...")
 
     rel_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, cycle, "block", "assignments"], "_", "csv"
@@ -54,8 +71,12 @@ def main() -> None:
 
     # Loop over the BAF, aggregating the block populations by VTD/district combination
 
+    if verbose:
+        print(f"Aggregating {xx} block populations by precinct ...")
+
     total_pop: int = 0
     vtd_district: dict = defaultdict(int)
+    districts_by_vtd: dict = defaultdict(set)  # Identify split precincts
     for row in block_assignments:
         block: str = row["GEOID20"]
         district: int = row["District"]
@@ -66,76 +87,73 @@ def main() -> None:
         vtd_district[combo] += pop
         total_pop += pop
 
+        districts_by_vtd[vtd].add(district)
+
     # Compute population by district
 
-    district_pop: dict = defaultdict(int)
-    for k, v in vtd_district.items():
-        district_pop[k[1]] += v
-
     if verbose:
-        print()
-        print(f"Population by district for {xx}")
-        for k, v in sorted(district_pop.items()):
-            print(f"{k:2d}: {v:8.0f}")
-        print()
+        print(f"Computing {xx} population by district ...")
+
+    districts: dict[int, dict] = {
+        i: {"population": 0, "geoids": [], "border": []} for i in range(1, n + 1)
+    }
+    for k, v in vtd_district.items():
+        districts[k[1]]["population"] += v
 
     # TODO - Even out overages & underages
 
-    ## Load the unit (precinct) graph
+    ## Load the precinct graph
 
-    graph_path: str = path_to_file([data_dir, xx]) + file_name(
+    if verbose:
+        print(f"Loading {xx} precinct graph ...")
+
+    graph_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, unit, "graph"], "_", "pickle"
     )
     data: dict = read_pickle(graph_path)
-    unit_graph: Graph = Graph(data)
+    vtd_graph: Graph = Graph(data)
 
-    ## Load the precinct-assignment file <= Use the BAF instead ...
+    ## Invert the block assignments by district
 
-    uaf_path: str = path_to_file([data_dir, xx]) + file_name(
-        [xx, cycle, unit, "assignments"], "_", "csv"
-    )
+    if verbose:
+        print(f"Inverting {xx} block assignments by district ...")
 
-    types: list = [str, int]
-    assignments: list = read_typed_csv(uaf_path, types)
-
-    district_by_geoid: dict[str, int] = dict()
-    districts: dict[int, list] = dict()
-    for row in assignments:
-        district_by_geoid[row["GEOID20"]] = row["District"]
-        if row["District"] not in districts:
-            districts[row["District"]] = {
-                "geoids": [],
-                "population": 0,
-                "border": [],
-                "deviation": 0,
-            }
+    for row in block_assignments:
         districts[row["District"]]["geoids"].append(row["GEOID20"])
 
-    del assignments
+    del block_assignments
 
     ## Compute a district adjacency graph
 
-    graph_data: dict[int, list[int]] = dict()
-    for current, data in districts.items():
+    if verbose:
+        print(f"Computing {xx} district adjacency graph ...")
+
+    data: dict[int, list[int]] = dict()
+    for k, v in districts.items():
+        current: int = k
         neighbors: set[int] = set()
 
-        for geoid in data["geoids"]:
-            for neighbor in unit_graph.neighbors(geoid):
+        for block_id in v["geoids"]:
+            vtd_id: str = vtd_by_block[block_id]
+            for neighbor in vtd_graph.neighbors(vtd_id):
                 if neighbor == OUT_OF_STATE:
                     neighbors.add(OUT_OF_STATE)
                     continue
 
-                other: int = district_by_geoid[neighbor]
-                if other != current:
-                    neighbors.add(other)
+                for other in districts_by_vtd[neighbor]:
+                    if other != current:
+                        neighbors.add(other)
 
-        graph_data[current] = list(neighbors)
+        data[current] = list(neighbors)
 
-    district_graph: Graph = Graph(graph_data)
+    district_graph: Graph = Graph(data)
+
+    # TODO - HERE
+    ## Note the border precincts for each district
 
     for id, data in districts.items():
         border: list[str] = border_shapes(
-            id, data["geoids"], unit_graph, district_by_geoid
+            id, data["geoids"], vtd_graph, district_by_geoid
         )
         districts[id]["border"] = border
 
