@@ -30,8 +30,8 @@ def main() -> None:
 
     if verbose:
         print()
-        print(f"Making initial assignments for {xx} ...")
-        print(f"1. Loading block assignments ...")
+        print(f"Making initial precint assignments for {xx}:")
+        print(f"1. Loading block assignments")
 
     rel_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, cycle, "block", "assignments"], "_", "csv"
@@ -44,12 +44,12 @@ def main() -> None:
     ### Aggregate block populations by VTD/district combination ###
 
     if verbose:
-        print(f"2. Aggregating block populations by precinct ...")
+        print(f"2. Aggregating block populations by precinct")
 
     # Load the block-to-VTD (temp/NC_2020_block_vtd.pickle)
 
     if verbose:
-        print(f"    - Loading block-to-VTD assignments ...")
+        print(f"   - Loading block-to-VTD assignments ...")
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, "block", "vtd"], "_", "pickle"
@@ -89,128 +89,137 @@ def main() -> None:
     ### Smooth out population deviations ###
 
     if verbose:
-        print(f"3. Smoothing out population deviations ...")
+        if equalize:
+            print(f"3. Smoothing out population deviations")
+        else:
+            print(f"3. Skipping smoothing out population deviations")
 
-    # Compute population by district
+    if not equalize:
+        pass
 
-    if verbose:
-        print(f"   - Computing populations by district ...")
-
-    districts: dict[int, dict] = {
-        i: {"population": 0, "blocks": [], "precincts": [], "border": []}
-        for i in range(1, n + 1)
-    }
-    for k, v in vtd_district.items():
-        districts[k[1]]["population"] += v
-
-    # Check if the districts are within +/-10 people of the target population
-
-    target_pop: int = round(total_pop / len(districts))
-    deviations: dict = {k: v["population"] - target_pop for k, v in districts.items()}
-    districts_within_tolerance: bool = all(
-        abs(v) < 10 for v in deviations.values()
-    )  # +/- 10 is effectively exact
-
-    if districts_within_tolerance:
-        if verbose:
-            print(
-                f"   - Districts are already within +/-10 people of the target population ..."
-            )
-
-    elif equalize:
-        if verbose:
-            print(f"   - Population deviations can be smoothed out ...")
-
-        # Load the precinct graph
+    else:
+        # Compute population by district
 
         if verbose:
-            print(f"   - Loading the precinct graph ...")
+            print(f"   - Computing populations by district ...")
 
-        graph_path: str = path_to_file([temp_dir]) + file_name(
-            [xx, cycle, unit, "graph"], "_", "pickle"
-        )
-        data: dict = read_pickle(graph_path)
-        vtd_graph: Graph = Graph(data)
-
-        ## Invert the block & precinct assignments by district
-
-        if verbose:
-            print(f"   - Inverting block assignments by district ...")
-
-        for row in block_assignments:
-            districts[row["District"]]["blocks"].append(row["GEOID20"])
-
-        del block_assignments
-
+        districts: dict[int, dict] = {
+            i: {"population": 0, "blocks": [], "precincts": [], "border": []}
+            for i in range(1, n + 1)
+        }
         for k, v in vtd_district.items():
-            d: int = k[1]
-            vtd: str = k[0]
-            if len(districts_by_vtd[vtd]) > 1:
-                continue  # Ignore split precincts
-            districts[d]["precincts"].append(vtd)
+            districts[k[1]]["population"] += v
 
-        # Compute a district adjacency graph
+        # Check if the districts are within +/-10 people of the target population
 
-        if verbose:
-            print(f"   - Computing a district adjacency graph ...")
+        target_pop: int = round(total_pop / len(districts))
+        deviations: dict = {
+            k: v["population"] - target_pop for k, v in districts.items()
+        }
+        districts_within_tolerance: bool = all(
+            abs(v) < 10 for v in deviations.values()
+        )  # +/- 10 is effectively exact
 
-        data: dict[int, list[int]] = dict()
-        for k, v in districts.items():
-            current: int = k
-            neighbors: set[int] = set()
+        if districts_within_tolerance:
+            if verbose:
+                print(
+                    f"   - Districts are already within +/-10 people of the target population ..."
+                )
 
-            for block_id in v["blocks"]:
-                vtd_id: str = vtd_by_block[block_id]
-                for neighbor in vtd_graph.neighbors(vtd_id):
-                    if neighbor == OUT_OF_STATE:
-                        # neighbors.add(OUT_OF_STATE)
-                        continue
+        elif equalize:
+            if verbose:
+                print(f"   - Population deviations can be smoothed out ...")
 
-                    for other in districts_by_vtd[neighbor]:
-                        if other != current:
-                            neighbors.add(other)
+            # Load the precinct graph
 
-            data[current] = list(neighbors)
+            if verbose:
+                print(f"   - Loading the precinct graph ...")
 
-        district_graph: Graph = Graph(data)
-
-        # Note the border precincts for each district
-
-        if verbose:
-            print(f"   - Finding precincts on district borders ...")
-
-        for id, data in districts.items():
-            border: list[str] = border_shapes(
-                id, data["precincts"], vtd_graph, vtd_district
+            graph_path: str = path_to_file([temp_dir]) + file_name(
+                [xx, cycle, unit, "graph"], "_", "pickle"
             )
-            districts[id]["border"] = border
+            data: dict = read_pickle(graph_path)
+            vtd_graph: Graph = Graph(data)
 
-        # Find swaps that reduce the over/under population deviations of adjacent districts
+            ## Invert the block & precinct assignments by district
 
-        if verbose:
-            print(
-                f"   - Finding population swaps that reduce population deviations ..."
-            )
+            if verbose:
+                print(f"   - Inverting block assignments by district ...")
 
-        moves: dict = smooth_districts(deviations, district_graph, verbose)
+            for row in block_assignments:
+                districts[row["District"]]["blocks"].append(row["GEOID20"])
 
-        if verbose:
-            for m in moves:
-                print(f"   - Move {m['adjustment']} from {m['from']} to {m['to']}")
-            print()
+            del block_assignments
 
-        # Reassign precincts to effect moves
+            for k, v in vtd_district.items():
+                d: int = k[1]
+                vtd: str = k[0]
+                if len(districts_by_vtd[vtd]) > 1:
+                    continue  # Ignore split precincts
+                districts[d]["precincts"].append(vtd)
 
-        # TODO - HERE
+            # Compute a district adjacency graph
 
-        pass  # TODO
+            if verbose:
+                print(f"   - Computing a district adjacency graph ...")
+
+            data: dict[int, list[int]] = dict()
+            for k, v in districts.items():
+                current: int = k
+                neighbors: set[int] = set()
+
+                for block_id in v["blocks"]:
+                    vtd_id: str = vtd_by_block[block_id]
+                    for neighbor in vtd_graph.neighbors(vtd_id):
+                        if neighbor == OUT_OF_STATE:
+                            # neighbors.add(OUT_OF_STATE)
+                            continue
+
+                        for other in districts_by_vtd[neighbor]:
+                            if other != current:
+                                neighbors.add(other)
+
+                data[current] = list(neighbors)
+
+            district_graph: Graph = Graph(data)
+
+            # Note the border precincts for each district
+
+            if verbose:
+                print(f"   - Finding precincts on district borders ...")
+
+            for id, data in districts.items():
+                border: list[str] = border_shapes(
+                    id, data["precincts"], vtd_graph, vtd_district
+                )
+                districts[id]["border"] = border
+
+            # Find swaps that reduce the over/under population deviations of adjacent districts
+
+            if verbose:
+                print(
+                    f"   - Finding population swaps that reduce population deviations ..."
+                )
+
+            moves: dict = smooth_districts(deviations, district_graph, verbose)
+
+            if verbose:
+                for m in moves:
+                    print(f"   - Move {m['adjustment']} from {m['from']} to {m['to']}")
+                print()
+
+            # Reassign precincts to effect moves
+
+            # TODO - HERE
+
+            pass  # TODO
 
     ### Write the results to a CSV file ###
 
     if verbose:
-        print(f"4. Writing the results to a CSV file ...")
+        print(f"4. Writing the results to a CSV file")
 
-    # Load the pickled GEOID index (temp/NC_2020_vtd_index.pickle)
+    # Load the pickled GEOID index
 
     if verbose:
         print(f"   - Loading the GEOID offset index ...")
@@ -219,6 +228,11 @@ def main() -> None:
         [xx, cycle, "vtd", "index"], "_", "pickle"
     )
     index_by_geoid: dict = read_pickle(rel_path)
+
+    # Write the file
+
+    if verbose:
+        print(f"   - Writing the file ...")
 
     # TODO
 
