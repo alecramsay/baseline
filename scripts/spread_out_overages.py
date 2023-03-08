@@ -100,6 +100,8 @@ def main() -> None:
         14: [3, 9, 11, 13],
     }  # GA
 
+    district_graph: Graph = Graph(g)
+
     # Check consistency of graph
     consistent: bool = True
     for node, neighbors in g.items():
@@ -127,7 +129,7 @@ def main() -> None:
         14: -1993,
     }
 
-    moves: dict = smooth_districts(deviations, g, verbose)
+    moves: dict = smooth_districts(deviations, district_graph, verbose)
 
     for m in moves:
         print(f"Move {m['adjustment']} from {m['from']} to {m['to']}")

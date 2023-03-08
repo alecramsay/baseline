@@ -95,7 +95,8 @@ def main() -> None:
         print(f"Computing {xx} population by district ...")
 
     districts: dict[int, dict] = {
-        i: {"population": 0, "geoids": [], "border": []} for i in range(1, n + 1)
+        i: {"population": 0, "blocks": [], "precincts": [], "border": []}
+        for i in range(1, n + 1)
     }
     for k, v in vtd_district.items():
         districts[k[1]]["population"] += v
@@ -113,15 +114,22 @@ def main() -> None:
     data: dict = read_pickle(graph_path)
     vtd_graph: Graph = Graph(data)
 
-    ## Invert the block assignments by district
+    ## Invert the block & precinct assignments by district
 
     if verbose:
         print(f"Inverting {xx} block assignments by district ...")
 
     for row in block_assignments:
-        districts[row["District"]]["geoids"].append(row["GEOID20"])
+        districts[row["District"]]["blocks"].append(row["GEOID20"])
 
     del block_assignments
+
+    for k, v in vtd_district.items():
+        d: int = k[1]
+        vtd: str = k[0]
+        if len(districts_by_vtd[vtd]) > 1:
+            continue  # Ignore split precincts
+        districts[d]["precincts"].append(vtd)
 
     ## Compute a district adjacency graph
 
@@ -133,11 +141,11 @@ def main() -> None:
         current: int = k
         neighbors: set[int] = set()
 
-        for block_id in v["geoids"]:
+        for block_id in v["blocks"]:
             vtd_id: str = vtd_by_block[block_id]
             for neighbor in vtd_graph.neighbors(vtd_id):
                 if neighbor == OUT_OF_STATE:
-                    neighbors.add(OUT_OF_STATE)
+                    # neighbors.add(OUT_OF_STATE)
                     continue
 
                 for other in districts_by_vtd[neighbor]:
@@ -148,12 +156,14 @@ def main() -> None:
 
     district_graph: Graph = Graph(data)
 
-    # TODO - HERE
     ## Note the border precincts for each district
+
+    if verbose:
+        print(f"Finding {xx} district borders ...")
 
     for id, data in districts.items():
         border: list[str] = border_shapes(
-            id, data["geoids"], vtd_graph, district_by_geoid
+            id, data["precincts"], vtd_graph, vtd_district
         )
         districts[id]["border"] = border
 
