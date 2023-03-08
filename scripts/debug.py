@@ -213,12 +213,6 @@ def main() -> None:
 
             moves: dict = smooth_districts(deviations, district_graph)
 
-            # TODO
-            # if verbose:
-            #     for m in moves:
-            #         print(f"   - Move {m['adjustment']} from {m['from']} to {m['to']}")
-            #     print()
-
             # Reassign precincts to effect the moves
 
             for m in moves:
@@ -240,19 +234,26 @@ def main() -> None:
                     sorted(unsorted_vtds.items(), key=lambda item: item[1])
                 )
 
-                # TODO - Pick the candidate with the largest population less than the adjustment and move it
-                # TODO - Repeat until the remainder is smaller than any candidate
-                # TODO - If there is a remainder, split a precinct to handle it
-                # TODO - Update the VTD/district pairs
-
-                pass  # TODO
+                for k, v in sorted_vtds.items():
+                    if v < adjustment:
+                        # Move the entire precinct
+                        adjustment -= v
+                        vtd_district_pairs.pop((k, from_d), None)
+                        vtd_district_pairs[(k, to_d)] += v
+                        districts[from_d]["population"] -= v
+                        districts[to_d]["population"] += v
+                    else:
+                        # Split the precinct
+                        vtd_district_pairs[(k, from_d)] -= adjustment
+                        vtd_district_pairs[(k, to_d)] += adjustment
+                        districts[from_d]["population"] -= adjustment
+                        districts[to_d]["population"] += adjustment
+                        break  # The move is complete
 
             if verbose:
                 report_deviations(
                     [districts[i]["population"] for i in districts], "After moves"
                 )
-
-            pass  # TODO
 
     ### Write the results to a CSV file ###
 
@@ -279,13 +280,12 @@ def main() -> None:
         for (v, d), p in vtd_district_pairs.items()
     ]
 
-    # TODO
-    # rel_path: str = path_to_file([data_dir, xx]) + file_name(
-    #     [xx, cycle, unit, "assignments"], "_", "csv"
-    # )
-    # write_csv(
-    #     rel_path, splits, ["DISTRICT", "VTD", "POP"], precision="{:.1f}", header=False
-    # )
+    rel_path: str = path_to_file([data_dir, xx]) + file_name(
+        [xx, cycle, unit, "assignments"], "_", "csv"
+    )
+    write_csv(
+        rel_path, splits, ["DISTRICT", "VTD", "POP"], precision="{:.1f}", header=False
+    )
 
     pass
 
