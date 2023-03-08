@@ -4,6 +4,11 @@ Test initially on states that don't have any water-only precincts: NC, AZ, VA, a
 Then generalize for states with water-only precincts but no connectivity issues.
 Finally, generalize to states with connectivity issues, like CA.
 
+## Ready
+
+- NC: nearly exact (+/- 1 person per district)
+- GA: very small officially and made smaller by the initial assignments script
+
 ## Download files
 
 - VTD names -- https://www.census.gov/geographies/reference-files/time-series/geo/name-lookup-tables.html
@@ -40,6 +45,8 @@ From Dave's Redistricting
 ```
 scripts/make_initial_assignments.py -s NC
 ```
+
+Use the -e flag to spread out the excess population to underpopulated districts.
 
 ## Create a baseline map
 
