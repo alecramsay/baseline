@@ -80,6 +80,11 @@ def main() -> None:
         pop: int = pop_by_block[block]
         vtd: str = vtd_by_block[block]
 
+        assert district in range(1, n + 1)
+
+        # if vtd == "13261000015":
+        #     print(f"District {district}, vtd {vtd}, block {block}, pop {pop}")
+
         combo: tuple = (vtd, district)
         vtd_district[combo] += pop
         total_pop += pop
@@ -154,6 +159,8 @@ def main() -> None:
             for k, v in vtd_district.items():
                 d: int = k[1]
                 vtd: str = k[0]
+                if len(districts_by_vtd[vtd]) == 0:
+                    raise Exception(f"VTD {vtd} is not assigned to any district!")
                 if len(districts_by_vtd[vtd]) > 1:
                     continue  # Ignore split precincts
                 districts[d]["precincts"].append(vtd)
@@ -194,6 +201,11 @@ def main() -> None:
                 )
                 districts[id]["border"] = border
 
+                # DEBUG
+                for k, v in districts_by_vtd.items():
+                    if len(v) == 0:
+                        print(f"VTD has no district: {k}")
+
             # Find swaps that reduce the over/under population deviations of adjacent districts
 
             if verbose:
@@ -209,6 +221,22 @@ def main() -> None:
                 print()
 
             # Reassign precincts to effect the moves
+
+            for m in moves:
+                from_d: str = m["from"]
+                to_d: str = m["to"]
+                adjustment: int = m["adjustment"]
+                candidates: list[str] = on_border_with(
+                    # from_d,
+                    to_d,
+                    districts[from_d]["border"],
+                    vtd_graph,
+                    districts_by_vtd,
+                )
+                print(
+                    f"Find precincts to move {adjustment} from {from_d} to {to_d}: {len(candidates)} candidates"
+                )
+                pass  # TODO
 
             # TODO - HERE
 

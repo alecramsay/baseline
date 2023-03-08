@@ -133,24 +133,52 @@ class Graph:
 
 def border_shapes(
     district_ix: int,
-    units: list[str],
-    unit_graph: Graph,
-    districts_by_geoid: dict[str, int],  # Handles split precincts
+    precincts: list[str],
+    precinct_graph: Graph,
+    districts_by_precinct: dict[str, set],  # Handles split precincts
 ) -> list[str]:
     """Return a list of *interior* border shapes for a district, i.e., not including those on the state boundary."""
 
     border: list[str] = list()
 
-    for geoid in units:
-        for neighbor in unit_graph.neighbors(geoid):
+    for geoid in precincts:
+        for neighbor in precinct_graph.neighbors(geoid):
             if neighbor == OUT_OF_STATE:
                 border.append(geoid)
                 break
-            if district_ix not in districts_by_geoid[neighbor]:
+            if len(districts_by_precinct[neighbor]) > 1:
+                continue  # Skip split precincts
+            if district_ix != next(iter(districts_by_precinct[neighbor])):
                 border.append(geoid)
                 break
 
     return border
+
+
+def on_border_with(
+    # from_d: int,
+    to_d: int,
+    border: list[str],
+    precinct_graph: Graph,
+    districts_by_precinct: dict[str, int],  # Handles split precincts
+) -> list:
+    """Find precincts on the border of one district with another."""
+
+    candidates: list[str] = list()
+
+    for geoid in border:
+        for neighbor in precinct_graph.neighbors(geoid):
+            if neighbor == OUT_OF_STATE:
+                continue
+            if len(districts_by_precinct[neighbor]) > 1:
+                continue  # Skip split precincts
+            if len(districts_by_precinct[neighbor]) == 0:
+                continue  # Skip split precincts
+            if to_d == districts_by_precinct[neighbor].pop():
+                candidates.append(geoid)
+                break
+
+    return candidates
 
 
 # TODO - Integrate these into the class
