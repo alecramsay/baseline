@@ -201,10 +201,12 @@ def main() -> None:
                 )
                 districts[id]["border"] = border
 
-                # DEBUG
-                for k, v in districts_by_vtd.items():
-                    if len(v) == 0:
-                        print(f"VTD has no district: {k}")
+            # DEBUG
+            unassigned: int = 0
+            for k, v in districts_by_vtd.items():
+                if len(v) == 0:
+                    unassigned += 1
+            print(f"# unassigned precincts: {unassigned}")
 
             # Find swaps that reduce the over/under population deviations of adjacent districts
 
@@ -214,6 +216,13 @@ def main() -> None:
                 )
 
             moves: dict = smooth_districts(deviations, district_graph, verbose)
+
+            # DEBUG
+            unassigned: int = 0
+            for k, v in districts_by_vtd.items():
+                if len(v) == 0:
+                    unassigned += 1
+            print(f"# unassigned precincts: {unassigned}")
 
             if verbose:
                 for m in moves:
@@ -227,7 +236,7 @@ def main() -> None:
                 to_d: str = m["to"]
                 adjustment: int = m["adjustment"]
                 candidates: list[str] = on_border_with(
-                    # from_d,
+                    from_d,
                     to_d,
                     districts[from_d]["border"],
                     vtd_graph,
@@ -237,6 +246,13 @@ def main() -> None:
                     f"Find precincts to move {adjustment} from {from_d} to {to_d}: {len(candidates)} candidates"
                 )
                 pass  # TODO
+
+            # DEBUG
+            unassigned: int = 0
+            for k, v in districts_by_vtd.items():
+                if len(v) == 0:
+                    unassigned += 1
+            print(f"# unassigned precincts: {unassigned}")
 
             # TODO - HERE
 

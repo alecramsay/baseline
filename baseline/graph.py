@@ -156,7 +156,7 @@ def border_shapes(
 
 
 def on_border_with(
-    # from_d: int,
+    from_d: int,
     to_d: int,
     border: list[str],
     precinct_graph: Graph,
