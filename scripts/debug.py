@@ -18,6 +18,7 @@ def main() -> None:
 
     xx: str = "GA"
     unit: str = "vtd"
+    equalize: bool = True
 
     verbose: bool = True
 
@@ -171,15 +172,27 @@ def main() -> None:
 
     target_pop: int = round(total_pop / len(districts))
     deviations: dict = {k: v["population"] - target_pop for k, v in districts.items()}
+    districts_within_tolerance: bool = all(
+        abs(v) < 10 for v in deviations.values()
+    )  # +/- 10 is effectively exact
 
-    moves: dict = smooth_districts(deviations, district_graph, verbose)
+    if districts_within_tolerance:
+        if verbose:
+            print(f"{xx} districts are within +/-10 people tolerance")
+    elif equalize:
+        if verbose:
+            print(f"Equalizing {xx} population deviations ...")
 
-    for m in moves:
-        print(f"Move {m['adjustment']} from {m['from']} to {m['to']}")
+        moves: dict = smooth_districts(deviations, district_graph, verbose)
 
-    ## Reassign precincts to effect moves
+        for m in moves:
+            print(f"Move {m['adjustment']} from {m['from']} to {m['to']}")
 
-    # TODO - HERE
+        ## Reassign precincts to effect moves
+
+        # TODO - HERE
+
+        pass  # TODO
 
     # Write the results to initial.csv
 
