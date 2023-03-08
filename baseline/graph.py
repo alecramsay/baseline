@@ -172,8 +172,6 @@ def on_border_with(
                 continue
             if len(districts_by_precinct[neighbor]) > 1:
                 continue  # Skip split precincts
-            # if len(districts_by_precinct[neighbor]) == 0:
-            #     continue  # Skip split precincts
             if to_d == next(iter(districts_by_precinct[neighbor])):
                 candidates.append(geoid)
                 break

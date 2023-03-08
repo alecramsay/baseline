@@ -239,8 +239,6 @@ def main() -> None:
 
                 pass  # TODO
 
-            # TODO - HERE
-
             pass  # TODO
 
     ### Write the results to a CSV file ###
@@ -262,10 +260,6 @@ def main() -> None:
 
     if verbose:
         print(f"   - Writing the file ...")
-
-    # splits: list[dict] = list()
-    # for (v, d), p in vtd_district_pairs.items():
-    #     splits.append({"DISTRICT": d, "VTD": index_by_geoid[v], "POP": float(p)})
 
     splits: list[dict] = [
         {"DISTRICT": d, "VTD": index_by_geoid[v], "POP": float(p)}
