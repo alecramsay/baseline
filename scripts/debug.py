@@ -232,9 +232,10 @@ def main() -> None:
                     f"Find precincts to move {adjustment} from {from_d} to {to_d}: {len(candidates)} candidates"
                 )
 
-                # TODO - Pick a precinct & move it
+                # TODO - Pick the candidate with the largest population less than the adjustment and move it
+                # TODO - Repeat until the remainder is smaller than any candidate
+                # TODO - If there is a remainder, split a precinct to handle it
                 # TODO - Update the VTD/district pairs
-                # TODO - Repeat until the adjustment is ...
 
                 pass  # TODO
 
