@@ -72,7 +72,7 @@ def main() -> None:
         print(f"   - Aggregating block populations by VTD & district ...")
 
     total_pop: int = 0
-    vtd_district: dict = defaultdict(int)
+    vtd_district_pairs: dict = defaultdict(int)
     districts_by_vtd: dict = defaultdict(set)  # Identify split precincts
     for row in block_assignments:
         block: str = row["GEOID20"]
@@ -86,7 +86,7 @@ def main() -> None:
         #     print(f"District {district}, vtd {vtd}, block {block}, pop {pop}")
 
         combo: tuple = (vtd, district)
-        vtd_district[combo] += pop
+        vtd_district_pairs[combo] += pop
         total_pop += pop
 
         districts_by_vtd[vtd].add(district)
@@ -112,7 +112,7 @@ def main() -> None:
             i: {"population": 0, "blocks": [], "precincts": [], "border": []}
             for i in range(1, n + 1)
         }
-        for k, v in vtd_district.items():
+        for k, v in vtd_district_pairs.items():
             districts[k[1]]["population"] += v
 
         # Check if the districts are within +/-10 people of the target population
@@ -156,7 +156,7 @@ def main() -> None:
 
             del block_assignments
 
-            for k, v in vtd_district.items():
+            for k, v in vtd_district_pairs.items():
                 d: int = k[1]
                 vtd: str = k[0]
                 if len(districts_by_vtd[vtd]) == 0:
@@ -201,13 +201,6 @@ def main() -> None:
                 )
                 districts[id]["border"] = border
 
-            # DEBUG
-            unassigned: int = 0
-            for k, v in districts_by_vtd.items():
-                if len(v) == 0:
-                    unassigned += 1
-            print(f"# unassigned precincts: {unassigned}")
-
             # Find swaps that reduce the over/under population deviations of adjacent districts
 
             if verbose:
@@ -216,13 +209,6 @@ def main() -> None:
                 )
 
             moves: dict = smooth_districts(deviations, district_graph, verbose)
-
-            # DEBUG
-            unassigned: int = 0
-            for k, v in districts_by_vtd.items():
-                if len(v) == 0:
-                    unassigned += 1
-            print(f"# unassigned precincts: {unassigned}")
 
             if verbose:
                 for m in moves:
@@ -245,14 +231,12 @@ def main() -> None:
                 print(
                     f"Find precincts to move {adjustment} from {from_d} to {to_d}: {len(candidates)} candidates"
                 )
-                pass  # TODO
 
-            # DEBUG
-            unassigned: int = 0
-            for k, v in districts_by_vtd.items():
-                if len(v) == 0:
-                    unassigned += 1
-            print(f"# unassigned precincts: {unassigned}")
+                # TODO - Pick a precinct & move it
+                # TODO - Update the VTD/district pairs
+                # TODO - Repeat until the adjustment is ...
+
+                pass  # TODO
 
             # TODO - HERE
 
@@ -279,12 +263,12 @@ def main() -> None:
         print(f"   - Writing the file ...")
 
     # splits: list[dict] = list()
-    # for (v, d), p in vtd_district.items():
+    # for (v, d), p in vtd_district_pairs.items():
     #     splits.append({"DISTRICT": d, "VTD": index_by_geoid[v], "POP": float(p)})
 
     splits: list[dict] = [
         {"DISTRICT": d, "VTD": index_by_geoid[v], "POP": float(p)}
-        for (v, d), p in vtd_district.items()
+        for (v, d), p in vtd_district_pairs.items()
     ]
 
     # TODO

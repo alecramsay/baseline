@@ -160,7 +160,7 @@ def on_border_with(
     to_d: int,
     border: list[str],
     precinct_graph: Graph,
-    districts_by_precinct: dict[str, int],  # Handles split precincts
+    districts_by_precinct: dict[str, set],  # Handles split precincts
 ) -> list:
     """Find precincts on the border of one district with another."""
 
@@ -172,9 +172,9 @@ def on_border_with(
                 continue
             if len(districts_by_precinct[neighbor]) > 1:
                 continue  # Skip split precincts
-            if len(districts_by_precinct[neighbor]) == 0:
-                continue  # Skip split precincts
-            if to_d == districts_by_precinct[neighbor].pop():
+            # if len(districts_by_precinct[neighbor]) == 0:
+            #     continue  # Skip split precincts
+            if to_d == next(iter(districts_by_precinct[neighbor])):
                 candidates.append(geoid)
                 break
 
