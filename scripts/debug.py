@@ -167,18 +167,23 @@ def main() -> None:
         )
         districts[id]["border"] = border
 
-    ##
+    ## Smooth out the over/under population deviations of adjacent districts
 
-    target_pop: int = round(total_pop / len(district_pop))
-    deviations: dict = {k: v - target_pop for k, v in district_pop.items()}
+    target_pop: int = round(total_pop / len(districts))
+    deviations: dict = {k: v["population"] - target_pop for k, v in districts.items()}
 
-    moves: dict = smooth_districts(deviations, g, verbose)
+    moves: dict = smooth_districts(deviations, district_graph, verbose)
 
     for m in moves:
         print(f"Move {m['adjustment']} from {m['from']} to {m['to']}")
 
+    ## Reassign precincts to effect moves
+
+    # TODO - HERE
+
+    # Write the results to initial.csv
+
     # TODO
-    # # Write the results to initial.csv
 
     # splits: list[dict] = [
     #     {"DISTRICT": k[1], "VTD": index_by_geoid[k[0]], "POP": float(v)}
