@@ -207,13 +207,17 @@ def main() -> None:
                 print(
                     f"   - Finding population swaps that reduce population deviations ..."
                 )
+                report_deviations(
+                    [districts[i]["population"] for i in districts], "Before moves"
+                )
 
-            moves: dict = smooth_districts(deviations, district_graph, verbose)
+            moves: dict = smooth_districts(deviations, district_graph)
 
-            if verbose:
-                for m in moves:
-                    print(f"   - Move {m['adjustment']} from {m['from']} to {m['to']}")
-                print()
+            # TODO
+            # if verbose:
+            #     for m in moves:
+            #         print(f"   - Move {m['adjustment']} from {m['from']} to {m['to']}")
+            #     print()
 
             # Reassign precincts to effect the moves
 
@@ -221,15 +225,19 @@ def main() -> None:
                 from_d: str = m["from"]
                 to_d: str = m["to"]
                 adjustment: int = m["adjustment"]
-                candidates: list[str] = on_border_with(
+
+                geiods: list[str] = on_border_with(
                     from_d,
                     to_d,
                     districts[from_d]["border"],
                     vtd_graph,
                     districts_by_vtd,
                 )
-                print(
-                    f"Find precincts to move {adjustment} from {from_d} to {to_d}: {len(candidates)} candidates"
+                pops: list[int] = [vtd_district_pairs[(id, from_d)] for id in geiods]
+
+                unsorted_vtds: dict[str, int] = dict(zip(geiods, pops))
+                sorted_vtds: dict[str, int] = dict(
+                    sorted(unsorted_vtds.items(), key=lambda item: item[1])
                 )
 
                 # TODO - Pick the candidate with the largest population less than the adjustment and move it
@@ -238,6 +246,11 @@ def main() -> None:
                 # TODO - Update the VTD/district pairs
 
                 pass  # TODO
+
+            if verbose:
+                report_deviations(
+                    [districts[i]["population"] for i in districts], "After moves"
+                )
 
             pass  # TODO
 

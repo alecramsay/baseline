@@ -94,7 +94,7 @@ class Graph:
 
         return self._data
 
-    def neighbors(self, node: str | int, *, excluding: list = []) -> list:
+    def neighbors(self, node: str | int, *, excluding: list = []) -> list[str | int]:
         """Return the neighbors of a node."""
 
         if node not in self._data:

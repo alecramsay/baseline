@@ -82,4 +82,22 @@ def smooth_districts(deviations: dict, g: Graph, verbose: bool = False) -> dict:
     return mods
 
 
+def report_deviations(populations: list[int], headline: str) -> None:
+    """Report population deviation info for a list of district populations"""
+
+    target_pop: int = round(sum(populations) / len(populations))
+
+    total_deviation: int = 0
+    for pop in populations:
+        total_deviation += abs(pop - target_pop)
+
+    average_deviation: int = int(total_deviation / len(populations))
+
+    deviation: float = (max(populations) - min(populations)) / target_pop
+
+    print(
+        f"   - {headline}: average = {average_deviation} | total = {total_deviation} | pct = {deviation:.2%}"
+    )
+
+
 ### END ###
