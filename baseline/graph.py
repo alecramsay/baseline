@@ -135,7 +135,7 @@ def border_shapes(
     district_ix: int,
     units: list[str],
     unit_graph: Graph,
-    district_by_geoid: dict[str, int],
+    districts_by_geoid: dict[str, int],  # Handles split precincts
 ) -> list[str]:
     """Return a list of *interior* border shapes for a district, i.e., not including those on the state boundary."""
 
@@ -146,7 +146,7 @@ def border_shapes(
             if neighbor == OUT_OF_STATE:
                 border.append(geoid)
                 break
-            if district_by_geoid[neighbor] != district_ix:
+            if district_ix not in districts_by_geoid[neighbor]:
                 border.append(geoid)
                 break
 

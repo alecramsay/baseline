@@ -46,7 +46,7 @@ def main() -> None:
     if verbose:
         print(f"2. Aggregating block populations by precinct")
 
-    # Load the block-to-VTD (temp/NC_2020_block_vtd.pickle)
+    # Load the block-to-VTD mapping
 
     if verbose:
         print(f"   - Loading block-to-VTD assignments ...")
@@ -190,7 +190,7 @@ def main() -> None:
 
             for id, data in districts.items():
                 border: list[str] = border_shapes(
-                    id, data["precincts"], vtd_graph, vtd_district
+                    id, data["precincts"], vtd_graph, districts_by_vtd
                 )
                 districts[id]["border"] = border
 
@@ -208,7 +208,7 @@ def main() -> None:
                     print(f"   - Move {m['adjustment']} from {m['from']} to {m['to']}")
                 print()
 
-            # Reassign precincts to effect moves
+            # Reassign precincts to effect the moves
 
             # TODO - HERE
 
@@ -234,13 +234,16 @@ def main() -> None:
     if verbose:
         print(f"   - Writing the file ...")
 
+    # splits: list[dict] = list()
+    # for (v, d), p in vtd_district.items():
+    #     splits.append({"DISTRICT": d, "VTD": index_by_geoid[v], "POP": float(p)})
+
+    splits: list[dict] = [
+        {"DISTRICT": d, "VTD": index_by_geoid[v], "POP": float(p)}
+        for (v, d), p in vtd_district.items()
+    ]
+
     # TODO
-
-    # splits: list[dict] = [
-    #     {"DISTRICT": k[1], "VTD": index_by_geoid[k[0]], "POP": float(v)}
-    #     for k, v in vtd_district.items()
-    # ]
-
     # rel_path: str = path_to_file([data_dir, xx]) + file_name(
     #     [xx, cycle, unit, "assignments"], "_", "csv"
     # )
