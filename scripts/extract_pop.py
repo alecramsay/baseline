@@ -211,6 +211,8 @@ def main() -> None:
 
     ### PRINT STATISTICS ###
 
+    # TYPE HINT
+
     print()
     if blocks or bgs or tracts:
         print("Total population: {:,}".format(total_pop))
