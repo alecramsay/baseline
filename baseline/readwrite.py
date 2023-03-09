@@ -9,7 +9,17 @@ import json
 from csv import DictReader, DictWriter
 import pickle
 from collections import defaultdict
-from shapely.geometry import shape, Polygon, MultiPolygon
+from shapely.geometry import (
+    shape,
+    Polygon,
+    MultiPolygon,
+    Point,
+    MultiPoint,
+    LineString,
+    MultiLineString,
+    LinearRing,
+    GeometryCollection,
+)
 import fiona
 from typing import Any, Optional
 
@@ -48,18 +58,22 @@ def load_json(rel_path) -> dict[str, Any]:
 ### LOAD A SHAPEFILE ###
 
 
-def load_shapes(shp_file: str, id: str) -> tuple[dict, dict[str, Any]]:
-    shp_file: str = os.path.expanduser(shp_file)
+def load_shapes(shp_file: str, id: str) -> tuple[dict, Optional[dict[str, Any]]]:
+    shp_path: str = os.path.expanduser(shp_file)
     shapes_by_id: dict = dict()
+    meta: Optional[dict[str, Any]] = None
 
     with fiona.Env():
-        with fiona.open(shp_file) as source:
-            meta: dict[str, Any] = source.meta
-            for item in source:
-                obj_id: str = item["properties"][id]
-                shp: Polygon | MultiPolygon = shape(item["geometry"])
+        with fiona.open(shp_path) as source:
+            if source:
+                meta = source.meta
+                for item in source:
+                    obj_id: str = item["properties"][id]
+                    shp: Point | MultiPoint | LineString | MultiLineString | Polygon | MultiPolygon | LinearRing | GeometryCollection = shape(
+                        item["geometry"]
+                    )
 
-                shapes_by_id[obj_id] = shp
+                    shapes_by_id[obj_id] = shp
 
     return shapes_by_id, meta
 
