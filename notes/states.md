@@ -19,3 +19,7 @@ Water-only precincts:
 - TX
 - WA
 - WI
+
+Water-only precincts and connectivity issues:
+
+- CA: What graph(s) do I need?!?

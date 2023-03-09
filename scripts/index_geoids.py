@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 Index GEOIDs by the order in the points file.
+- Need an index for each granularity that is run through Balzer.
 
 For example:
 
@@ -47,7 +48,7 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    unit: str = "vtd"
+    unit: str = "bg" if xx in ["CA", "OR"] else "vtd"
 
     ### CREATE THE INDEX ###
 
@@ -64,7 +65,7 @@ def main() -> None:
     ### PICKLE THE RESULTS ###
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
-        [xx, cycle, "vtd", "index"], "_", "pickle"
+        [xx, cycle, unit, "index"], "_", "pickle"
     )
     write_pickle(rel_path, index_by_geoid)
 

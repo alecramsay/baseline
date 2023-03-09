@@ -18,6 +18,7 @@ $ scripts/make_initial_assignments.py -h
 import argparse
 from argparse import ArgumentParser, Namespace
 from collections import defaultdict
+from typing import cast
 
 from baseline import *
 
@@ -90,7 +91,8 @@ def main() -> None:
     rel_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, "block", "vtd"], "_", "pickle"
     )
-    vtd_by_block: dict = read_pickle(rel_path)
+    vtd_by_block: bytes | None = read_pickle(rel_path)
+    # vtd_by_block: dict = read_pickle(rel_path)
 
     # Load the block population file for NC (temp/NC_2020_block_pop.pickle)
 
@@ -100,7 +102,10 @@ def main() -> None:
     rel_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, "block", "pop"], "_", "pickle"
     )
-    pop_by_block: dict = read_pickle(rel_path)
+
+    pop_by_block: dict[str, str] = read_pickle(rel_path)
+    # pop_by_block: dict = read_pickle(rel_path)
+    # pop_by_block: bytes | None = read_pickle(rel_path)
 
     # Loop over the BAF, aggregating the block populations by VTD/district combination
 

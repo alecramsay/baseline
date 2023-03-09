@@ -107,7 +107,7 @@ def main() -> None:
     # Also save it as pairs in a CSV file, but ignore OUT_OF_STATE connections
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
-        [xx, cycle, "vtd", "index"], "_", "pickle"
+        [xx, cycle, unit, "index"], "_", "pickle"
     )
     index_by_geoid: dict = read_pickle(rel_path)
 

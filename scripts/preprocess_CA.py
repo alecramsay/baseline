@@ -3,6 +3,10 @@
 
 """
 Preprocess data for CA.
+
+For example:
+
+$ scripts/preprocess_CA.py 
 """
 
 import geopandas
@@ -20,6 +24,8 @@ def main() -> None:
         "scripts/join_feature_data.py -s CA -t -g",
         "scripts/unpickle_to_csv.py -s CA -u tract",
         "scripts/unpickle_to_csv.py -s CA -u bg",
+        "scripts/index_geoids.py -s CA",
+        "scripts/extract_block_bgs.py -s CA",
     ]
     for command in commands:
         command: str = command.format(xx="CA")

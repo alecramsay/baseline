@@ -21,7 +21,7 @@ from baseline import *
 
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
-        description="Create a mapping of GEOIDs to friendly names."
+        description="Create a mapping of VTDs (precincts) to blocks."
     )
 
     parser.add_argument(
@@ -54,7 +54,8 @@ def main() -> None:
 
     ### READ THE CENSUS FILE & CREATE THE MAPPINGS ###
 
-    unit: str = "bg" if xx in ["CA", "OR"] else "vtd"
+    if xx in ["CA", "OR"]:
+        raise NotImplementedError("CA and OR do not have VTDs. Use BGs instead.")
 
     rel_path: str = path_to_file([rawdata_dir, xx]) + file_name(
         ["BlockAssign", f"ST{fips}", xx, unit.upper()], "_", "txt"
