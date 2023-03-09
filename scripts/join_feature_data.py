@@ -103,17 +103,17 @@ def main() -> None:
             [xx, cycle, unit, "xy"], "_", "pickle"
         )
 
-        pop: bytes | None = read_pickle(pop_path)
-        xy: bytes | None = read_pickle(xy_path)
+        pop: dict = read_pickle(pop_path)
+        xy: dict = read_pickle(xy_path)
 
         features: list[Feature] = list()
 
-        for geoid, pop in pop.items():
+        for geoid, population in pop.items():
             if geoid not in xy:
-                print(f"Missing xy data for {geoid} (pop: {pop}))")
+                print(f"Missing xy data for {geoid} (pop: {population}))")
                 continue
             features.append(
-                {"geoid": geoid, "pop": pop, "xy": xy[geoid], "district": 0}
+                {"geoid": geoid, "pop": population, "xy": xy[geoid], "district": 0}
             )
 
         join_path: str = path_to_file([temp_dir]) + file_name(

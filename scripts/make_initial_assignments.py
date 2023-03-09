@@ -146,7 +146,7 @@ def main() -> None:
         if verbose:
             print(f"   - Computing populations by district ...")
 
-        districts: dict[int, dict] = {
+        districts: dict[int, Any] = {
             i: {"population": 0, "blocks": [], "precincts": [], "border": []}
             for i in range(1, n + 1)
         }
@@ -181,8 +181,8 @@ def main() -> None:
             graph_path: str = path_to_file([temp_dir]) + file_name(
                 [xx, cycle, unit, "graph"], "_", "pickle"
             )
-            data: dict = read_pickle(graph_path)
-            vtd_graph: Graph = Graph(data)
+            unit_data: dict = read_pickle(graph_path)
+            vtd_graph: Graph = Graph(unit_data)
 
             ## Invert the block & precinct assignments by district
 
@@ -208,7 +208,7 @@ def main() -> None:
             if verbose:
                 print(f"   - Computing a district adjacency graph ...")
 
-            data: dict[int, list[int]] = dict()
+            district_data: dict[int, list[int]] = dict()
             for k, v in districts.items():
                 current: int = k
                 neighbors: set[int] = set()
@@ -224,9 +224,9 @@ def main() -> None:
                             if other != current:
                                 neighbors.add(other)
 
-                data[current] = list(neighbors)
+                district_data[current] = list(neighbors)
 
-            district_graph: Graph = Graph(data)
+            district_graph: Graph = Graph(district_data)
 
             # Note the border precincts for each district
 
@@ -249,13 +249,13 @@ def main() -> None:
                     [districts[i]["population"] for i in districts], "Before moves"
                 )
 
-            moves: dict = smooth_districts(deviations, district_graph)
+            moves: list = smooth_districts(deviations, district_graph)
 
             # Reassign precincts to effect the moves
 
             for m in moves:
-                from_d: str = m["from"]
-                to_d: str = m["to"]
+                from_d: int = m["from"]
+                to_d: int = m["to"]
                 adjustment: int = m["adjustment"]
 
                 geiods: list[str] = on_border_with(

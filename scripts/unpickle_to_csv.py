@@ -69,7 +69,7 @@ def main() -> None:
 
     l: list = list()
     for f in collection.features:
-        row: dict[str, int, int, int] = {
+        row: dict = {
             "GEOID": f["geoid"],
             "POP": f["pop"],
             "X": f["xy"].x,

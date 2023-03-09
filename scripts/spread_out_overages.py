@@ -129,7 +129,7 @@ def main() -> None:
         14: -1993,
     }
 
-    moves: dict = smooth_districts(deviations, district_graph, verbose)
+    moves: list = smooth_districts(deviations, district_graph, verbose)
 
     for m in moves:
         print(f"Move {m['adjustment']} from {m['from']} to {m['to']}")

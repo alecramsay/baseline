@@ -20,10 +20,9 @@ for xx in study_states:
         while line:
             if line.startswith("baseline_state ="):
                 seconds: float = float(line.split()[2])
+                print(f"{xx},{n},{seconds}")
                 break
             line = f.readline()
-
-        print(f"{xx},{n},{seconds}")
 
 
 ### END ###
