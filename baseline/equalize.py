@@ -7,7 +7,7 @@ EQUALIZE - Smooth out overages & underages
 from .graph import Graph
 
 
-def smooth_districts(deviations: dict, g: Graph, verbose: bool = False) -> dict:
+def smooth_districts(deviations: dict, g: Graph, verbose: bool = False) -> list:
     """Spread out overages to neighbors with underages"""
 
     mods: list = list()
@@ -33,7 +33,7 @@ def smooth_districts(deviations: dict, g: Graph, verbose: bool = False) -> dict:
         unders: list = [
             k for k, v in after.items() if v < 0
         ]  # Recompute for each over district
-        neighbors: list[int] = list(
+        neighbors: list[int | str] = list(
             set(g.neighbors(d)).intersection(unders)
         )  # Only consider "under" neighbors
 
