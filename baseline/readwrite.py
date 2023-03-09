@@ -79,7 +79,7 @@ def load_shapes(shp_file: str, id: str) -> tuple[dict, Optional[dict[str, Any]]]
 
 
 def load_state_shape(shp_file: str, id: str) -> Polygon | MultiPolygon:
-    shapes: tuple[dict, dict[str, Any]] = load_shapes(shp_file, id)
+    shapes: tuple[dict, Optional[dict[str, Any]]] = load_shapes(shp_file, id)
     state_shp: Polygon | MultiPolygon = list(shapes[0].items())[0][1]
 
     return state_shp
@@ -111,8 +111,8 @@ def write_csv(rel_path, rows, cols, *, precision="{:.6f}", header=True) -> None:
 
 
 def read_typed_csv(rel_path, field_types) -> list:
-    """
-    Read a CSV with DictReader
+    """Read a CSV with DictReader
+
     Patterned after: https://stackoverflow.com/questions/8748398/python-csv-dictreader-type
     """
 
@@ -126,9 +126,12 @@ def read_typed_csv(rel_path, field_types) -> list:
             )
 
             for row_in in reader:
-                if len(field_types) >= len(reader.fieldnames):
+                fieldnames: list[str] = (
+                    list(reader.fieldnames) if reader.fieldnames else []
+                )
+                if len(field_types) >= len(fieldnames):
                     # Extract the values in the same order as the csv header
-                    ivalues = map(row_in.get, reader.fieldnames)
+                    ivalues: map[str | Any | None] = map(row_in.get, fieldnames)
 
                     # Apply type conversions
                     iconverted: list = [
@@ -136,9 +139,9 @@ def read_typed_csv(rel_path, field_types) -> list:
                     ]
 
                     # Pass the field names and the converted values to the dict constructor
-                    row_out: dict = dict(zip(reader.fieldnames, iconverted))
+                    row_out: dict = dict(zip(fieldnames, iconverted))
 
-                rows.append(row_out)
+                    rows.append(row_out)
 
         return rows
 
@@ -191,7 +194,7 @@ class FileSpec:
         self.extension: str = file_extension
 
 
-def file_name(parts: list[str], delim: str = "_", ext: str = None) -> str:
+def file_name(parts: list[str], delim: str = "_", ext: Optional[str] = None) -> str:
     """
     Construct a file name with parts separated by the delimeter and ending with the extension.
     """
