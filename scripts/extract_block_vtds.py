@@ -58,7 +58,7 @@ def main() -> None:
         raise NotImplementedError("CA and OR do not have VTDs. Use BGs instead.")
 
     rel_path: str = path_to_file([rawdata_dir, xx]) + file_name(
-        ["BlockAssign", f"ST{fips}", xx, unit.upper()], "_", "txt"
+        ["BlockAssign", f"ST{fips}", xx, "VTD"], "_", "txt"
     )
 
     vtd_blocks: dict[str, list[str]] = dict()  # NOTE - Not pickled at this time
