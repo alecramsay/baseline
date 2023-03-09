@@ -11,8 +11,8 @@ from typing import NamedTuple, TypedDict
 
 
 class Coordinate(NamedTuple):
-    x: int
-    y: int
+    x: float
+    y: float
 
     def __repr__(self) -> str:
         return f"({self.x}, {self.y})"

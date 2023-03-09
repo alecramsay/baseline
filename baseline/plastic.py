@@ -8,7 +8,7 @@ PLASTIC SEQUENCE GENERATOR
 
 import math
 from shapely.geometry import Point, Polygon, MultiPolygon
-from typing import Generator
+from typing import Generator, Any
 
 from .datatypes import Coordinate
 
@@ -22,24 +22,25 @@ class PlasticCoordinates:
         self.n: int = n
         self.shape: Polygon | MultiPolygon = shape
 
-        xmin: float
-        ymin: float
-        xmax: float
-        ymax: float
-        xmin, ymin, xmax, ymax = self.shape.bounds
+        bounds: tuple[()] | Any = self.shape.bounds
+        if bounds:
+            xmin: float = bounds[0]
+            ymin: float = bounds[1]
+            xmax: float = bounds[2]
+            ymax: float = bounds[3]
 
-        self.min_pt: Coordinate
-        self.max_pt: Coordinate
-        self.min_pt, self.max_pt = trim_bbox(
-            Coordinate(xmin, ymin),
-            Coordinate(xmax, ymax),
-            margin=0.05,
-        )
+            self.min_pt: Coordinate
+            self.max_pt: Coordinate
+            self.min_pt, self.max_pt = trim_bbox(
+                Coordinate(xmin, ymin),
+                Coordinate(xmax, ymax),
+                margin=0.05,
+            )
 
-        self.coordinates: list[Coordinate] = []
-        self._generate()
+            self.coordinates: list[Coordinate] = list()
+            self._generate()
 
-    def _generate(self) -> list[Coordinate]:
+    def _generate(self):
         gen: Generator[Coordinate, None, None] = plastic_2D_seq()
 
         for i in range(self.n):
@@ -64,7 +65,7 @@ class PlasticCoordinates:
 
         return radius
 
-    def echo(self) -> str:
+    def echo(self):
         print()
         for seed in self.coordinates:
             print(seed)
@@ -97,7 +98,7 @@ def plastic_2D_seq() -> Generator[Coordinate, None, None]:
     """
     Generate a 2D plastic sequence.
     """
-    alpha: list[float, float] = [0.0, 0.0]
+    alpha: list[float] = [0.0, 0.0]
 
     for j in range(2):
         alpha[j] = pow(1 / g, j + 1) % 1
