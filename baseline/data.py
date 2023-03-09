@@ -23,7 +23,7 @@ class FeatureCollection:
 
         self._calc_one_time_stats()
 
-    def _load(self, rel_path: str) -> bytes:
+    def _load(self, rel_path: str) -> list[Feature]:
         unpickled: list[Feature] = read_pickle(rel_path)
         if not unpickled:
             raise Exception("Error: FeatureCollection.__init__(): Failed to load data.")
@@ -53,6 +53,10 @@ class FeatureCollection:
                     f"WARNING: Feature {geoid} has more people ({pop}) than the target district size ({target_pop})."
                 )
                 print()
+
+                return False
+
+        return True
 
         """
         # Handle features more populous than a single district?
