@@ -82,7 +82,7 @@ def find_center(shp) -> Coordinate:
 
 
 def find_centers(feature_shps) -> dict[str, Coordinate]:
-    feature_xy: defaultdict[str, Coordinate] = defaultdict(Coordinate)
+    feature_xy: defaultdict[str, Coordinate] = defaultdict()
 
     for item in feature_shps[0].items():
         geoID: str = item[0]
@@ -121,12 +121,12 @@ def main() -> None:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
             ["tl_2020", fips, "tract"], "_"
         )
-        feature_shps: tuple[dict, dict[str, Any]] = load_shapes(
+        tract_shps: tuple[dict, Optional[dict[str, Any]]] = load_shapes(
             rel_path, unit_id("tract")
         )
-        feature_xy: dict[str, Coordinate] = find_centers(feature_shps)
+        feature_xy: dict[str, Coordinate] = find_centers(tract_shps)
 
-        del feature_shps
+        del tract_shps
 
         rel_path: str = path_to_file([temp_dir]) + file_name(
             [xx, cycle, "tract", "xy"], "_", "pickle"
@@ -141,10 +141,12 @@ def main() -> None:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
             ["tl_2020", fips, "bg"], "_"
         )
-        feature_shps: tuple[dict, dict[str, Any]] = load_shapes(rel_path, unit_id("bg"))
-        feature_xy: dict[str, Coordinate] = find_centers(feature_shps)
+        bg_shps: tuple[dict, Optional[dict[str, Any]]] = load_shapes(
+            rel_path, unit_id("bg")
+        )
+        feature_xy: dict[str, Coordinate] = find_centers(bg_shps)
 
-        del feature_shps
+        del bg_shps
 
         rel_path: str = path_to_file([temp_dir]) + file_name(
             [xx, cycle, "bg", "xy"], "_", "pickle"
@@ -159,12 +161,12 @@ def main() -> None:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
             ["tl_2020", fips, "tabblock20"], "_"
         )
-        feature_shps: tuple[dict, dict[str, Any]] = load_shapes(
+        block_shps: tuple[dict, Optional[dict[str, Any]]] = load_shapes(
             rel_path, unit_id("block")
         )
-        feature_xy: dict[str, Coordinate] = find_centers(feature_shps)
+        feature_xy: dict[str, Coordinate] = find_centers(block_shps)
 
-        del feature_shps
+        del block_shps
 
         rel_path: str = path_to_file([temp_dir]) + file_name(
             [xx, cycle, "block", "xy"], "_", "pickle"
@@ -179,12 +181,12 @@ def main() -> None:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
             ["tl_2020", fips, "vtd20"], "_"
         )
-        feature_shps: tuple[dict, dict[str, Any]] = load_shapes(
+        precinct_shps: tuple[dict, Optional[dict[str, Any]]] = load_shapes(
             rel_path, unit_id("vtd")
         )
-        feature_xy: dict[str, Coordinate] = find_centers(feature_shps)
+        feature_xy: dict[str, Coordinate] = find_centers(precinct_shps)
 
-        del feature_shps
+        del precinct_shps
 
         rel_path: str = path_to_file([temp_dir]) + file_name(
             [xx, cycle, "vtd", "xy"], "_", "pickle"
