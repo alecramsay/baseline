@@ -76,20 +76,20 @@ def main() -> None:
 
         with fiona.Env():
             with fiona.open(shp_file) as source:
-                meta: dict[str, Any] = source.meta
-                for item in source:
-                    geoid: str = item["properties"][id]
-                    land_key: str = "ALAND20" if unit == "vtd" else "ALAND"
-                    water_key: str = "AWATER20" if unit == "vtd" else "AWATER"
-                    aland: int = item["properties"][land_key]
-                    awater: int = item["properties"][water_key]
+                if source:
+                    for item in source:
+                        geoid: str = item["properties"][id]
+                        land_key: str = "ALAND20" if unit == "vtd" else "ALAND"
+                        water_key: str = "AWATER20" if unit == "vtd" else "AWATER"
+                        aland: int = item["properties"][land_key]
+                        awater: int = item["properties"][water_key]
 
-                    if awater > 0 and aland == 0:
-                        if not water_only:
-                            water_only = True
-                            print(f"GEOID,ALAND,AWATER")
+                        if awater > 0 and aland == 0:
+                            if not water_only:
+                                water_only = True
+                                print(f"GEOID,ALAND,AWATER")
 
-                        print(f"{geoid},{aland},{awater}")
+                            print(f"{geoid},{aland},{awater}")
 
         if not water_only:
             print()
