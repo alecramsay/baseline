@@ -8,10 +8,9 @@ import os
 import sys
 import csv
 from csv import reader as _reader
-from libpysal.weights import Rook
-import fiona
-import shapely.geometry
+from libpysal.weights import Rook, WSP
 from shapely.geometry import shape, Polygon, MultiPolygon
+from typing import cast, Any, Optional
 
 from .readwrite import *
 
@@ -20,29 +19,30 @@ OUT_OF_STATE: str = "OUT_OF_STATE"
 
 
 class Graph:
-    def __init__(self, input: str | dict, id_field: str = None) -> None:
+    def __init__(self, input: str | dict, id_field: str = "") -> None:
         if isinstance(input, dict):
             self._data: dict = input
             return
 
         if isinstance(input, str):
             self._abs_path: str = FileSpec(input).abs_path
-            self._id_field: str = id_field
+            self._id_field: Optional[str] = id_field
             self._data: dict = self._from_shapefile()
             self._is_consistent()
             self._shp_by_geoid: dict
-            self._meta: dict[str, Any]
+            self._meta: Optional[dict[str, Any]]
             self._shp_by_geoid, self._meta = load_shapes(self._abs_path, self._id_field)
             self._data: dict = self._add_out_of_state_neighbors()
-
             return
 
         raise TypeError("Input must be a string or a dict")
 
-    def _from_shapefile(self) -> Rook:
+    def _from_shapefile(self) -> Any | dict[Any, Any]:
         """Extract a rook graph from a shapefile."""
 
-        g: Rook = Rook.from_shapefile(self._abs_path, self._id_field)
+        g: Rook | WSP = Rook.from_shapefile(self._abs_path, self._id_field)
+
+        # TYPE HINT
         return g.neighbors  # Get rid of all the extraneous PySAL stuff
 
     def _is_consistent(self) -> bool:
@@ -52,7 +52,7 @@ class Graph:
 
         for node, neighbors in self._data.items():
             for neighbor in neighbors:
-                neighbor_neighbors: list[str] = self.neighbors(neighbor)
+                neighbor_neighbors: list[str | int] = self.neighbors(neighbor)
                 if node in neighbor_neighbors:
                     pass
                 else:
@@ -142,13 +142,13 @@ def border_shapes(
     border: list[str] = list()
 
     for geoid in precincts:
-        for neighbor in precinct_graph.neighbors(geoid):
+        for neighbor in precinct_graph.neighbors(geoid):  # neighbor is a GEOID (str)
             if neighbor == OUT_OF_STATE:
                 border.append(geoid)
                 break
-            if len(districts_by_precinct[neighbor]) > 1:
+            if len(districts_by_precinct[str(neighbor)]) > 1:
                 continue  # Skip split precincts
-            if district_ix != next(iter(districts_by_precinct[neighbor])):
+            if district_ix != next(iter(districts_by_precinct[str(neighbor)])):
                 border.append(geoid)
                 break
 
@@ -167,12 +167,12 @@ def on_border_with(
     candidates: list[str] = list()
 
     for geoid in border:
-        for neighbor in precinct_graph.neighbors(geoid):
+        for neighbor in precinct_graph.neighbors(geoid):  # neighbor is a GEOID (str)
             if neighbor == OUT_OF_STATE:
                 continue
-            if len(districts_by_precinct[neighbor]) > 1:
+            if len(districts_by_precinct[str(neighbor)]) > 1:
                 continue  # Skip split precincts
-            if to_d == next(iter(districts_by_precinct[neighbor])):
+            if to_d == next(iter(districts_by_precinct[str(neighbor)])):
                 candidates.append(geoid)
                 break
 
@@ -213,9 +213,10 @@ def read_mods(mods_csv) -> list:
 
     try:
         # Get the full path to the .csv
-        mods_csv: str = os.path.expanduser(mods_csv)
+        mods_path: str = os.path.expanduser(mods_csv)
 
-        with open(mods_csv, mode="r", encoding="utf-8-sig") as f_input:
+        with open(mods_path, mode="r", encoding="utf-8-sig") as f_input:
+            # TYPE HINT
             reader: _reader = csv.reader(
                 f_input, skipinitialspace=True, delimiter=",", quoting=csv.QUOTE_NONE
             )
@@ -223,9 +224,9 @@ def read_mods(mods_csv) -> list:
             for row in reader:
                 mods.append(row)
 
-    except Exception as e:
+    except Exception:
         print("Exception reading mods.csv")
-        sys.exit(e)
+        sys.exit()
 
     return mods
 
