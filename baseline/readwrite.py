@@ -151,7 +151,7 @@ def write_pickle(rel_path, obj) -> bool:
         return False
 
 
-def read_pickle(rel_path) -> Optional[bytes]:
+def read_pickle(rel_path) -> Any:
     abs_path: str = FileSpec(rel_path).abs_path
 
     try:

@@ -20,6 +20,14 @@ Water-only precincts:
 - WA
 - WI
 
-Water-only precincts and connectivity issues:
+Water-only precincts & connectivity issues:
+
+- ?? <= Find one of these ...
+
+Used BGs instead of VTDs:
+
+- OR
+
+Uses tracts & BGs, has water-only precincts & connectivity issues:
 
 - CA: What graph(s) do I need?!?
