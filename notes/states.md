@@ -1,9 +1,12 @@
 No water-only precincts:
 
 - NC
-- VA
+
+Not quite exactly equal populations:
+
 - AZ
 - GA
+- VA
 
 Water-only precincts:
 
