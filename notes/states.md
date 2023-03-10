@@ -65,8 +65,11 @@ Some water-only precincts & connectivity issues:
 
 ## Category 6
 
-Special cases for one reason or another (all almost exactly equal populations)):
+Special cases for one reason or another (all almost exactly equal populations):
 
 - CA: Uses tracts & BGs, has water-only precincts & connectivity issues:
 - FL: Some missing xy data
 - OR: Uses BGs instead of VTDs
+
+In DRA, we only addressed operational contiguity issues for only two states with three or more congressional districts: CA & FL.
+AK, HI, ME, NH, and RI -- all states with just two congressional districts -- also had contiguity issues which we didn't fix.
