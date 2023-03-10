@@ -7,6 +7,7 @@ Extract a contiguity graphs for a state's tracts, blockgroups, and blocks.
 For example:
 
 $ scripts/extract_graph.py -s NC
+$ scripts/extract_graph.py -s MI -w
 
 For documentation, type:
 
@@ -41,7 +42,9 @@ def parse_args() -> Namespace:
         help="The geographic unit (e.g., vtd)",
         type=str,
     )
-    # TODO - Water-only precincts
+    parser.add_argument(
+        "-w", "--water", dest="water", action="store_true", help="Water-only precincts"
+    )
 
     # TODO - Connections to add
 
@@ -62,6 +65,8 @@ def main() -> None:
     fips_map: dict[str, str] = make_state_codes()
 
     xx: str = args.state
+    xx = "MI"  # HACK
+
     fips: str = fips_map[xx]
 
     unit: str = args.unit
@@ -73,6 +78,9 @@ def main() -> None:
 
     unit_label: str = "vtd20" if unit == "vtd" else "bg"
     # "tract", "bg", "tabblock20"
+
+    water: bool = args.water
+    water = True  # HACK
 
     verbose: bool = args.verbose
 
@@ -88,7 +96,17 @@ def main() -> None:
 
     graph: Graph = Graph(shp_path, id)
 
-    # TODO - Remove water-only precincts <<< N/A for NC
+    # TODO - Remove water-only precincts
+
+    water_precincts: list = list()
+    if water:
+        rel_path: str = path_to_file([data_dir, xx]) + file_name(
+            [xx, cycle, "water_only"], "_", "csv"
+        )  # GEOID,ALAND,AWATER
+        types: list = [str, int, int]
+        water_precincts = [row["GEOID"] for row in read_typed_csv(rel_path, types)]
+
+    pass  # TODO
 
     # TODO - Add connections <<< N/A for NC
 
