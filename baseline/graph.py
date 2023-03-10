@@ -10,7 +10,7 @@ import csv
 from csv import reader as _reader
 from libpysal.weights import Rook, WSP
 from shapely.geometry import shape, Polygon, MultiPolygon
-from typing import cast, Any, Optional
+from typing import Any, Optional
 
 from .readwrite import *
 
@@ -41,6 +41,8 @@ class Graph:
         """Extract a rook graph from a shapefile."""
 
         g: Rook | WSP = Rook.from_shapefile(self._abs_path, self._id_field)
+        # https://stackoverflow.com/questions/44739764/how-to-cast-a-typing-union-to-one-of-its-subtypes-in-python
+        # x: Rook = cast(Rook, g)
 
         # TYPE HINT
         return g.neighbors  # Get rid of all the extraneous PySAL stuff
