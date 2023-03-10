@@ -2,56 +2,70 @@
 
 There are 37 states with three or more congressional districts.
 
-## No Water-only Precincts & Almost Exactly Equal Populations
+## Category 1
 
-- NC <= 1st
+No water-only precincts & almost exactly equal populations:
 
-## No Water-only Precincts & Not Quite Exactly Equal Populations
-
-- AZ <= 2nd
-- GA <=
-- VA <=
+- NC
 
 - AL
-- AR
-- CO
 - CT
-- IA
 - MS
-- NE
-- NM
 - OK
 - SC
 
-## Water-only Precincts
+## Category 2
+
+No water-only precincts & not quite exactly equal populations:
+
+- AZ
+- GA
+- VA
+
+- AR
+- CO
+- IA
+- NE
+- NM
+
+## Category 3
+
+Some water-only precincts & almost exactly equal populations:
 
 - IL
 - IN
 - KS
 - KY
-- LA
 - MA
 - MD
-- MI <= 3rd
 - MN
 - MO
 - NJ
-- NV
 - OH
 - PA
 - TN
 - TX
 - UT
-- WA
 - WI
 
-## Water-only Precincts & Connectivity issues
+## Category 4
 
-- NY: "There are 2 disconnected components. There is 1 island with id: 36061000084." <= 4th
+Some water-only precincts & not quite exactly equal populations:
 
-## Special Cases
+- LA
+- MI
+- NV
+- WA
 
-Handle these last:
+## Category 5
+
+Some water-only precincts & connectivity issues:
+
+- NY: "There are 2 disconnected components. There is 1 island with id: 36061000084." (effectively almost equal populations)
+
+## Category 6
+
+Special cases for one reason or another (all almost exactly equal populations)):
 
 - CA: Uses tracts & BGs, has water-only precincts & connectivity issues:
 - FL: Some missing xy data
