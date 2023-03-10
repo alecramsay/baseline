@@ -7,9 +7,7 @@ Preprocess data for a state.
 For example:
 
 $ scripts/preprocess_state.py -s NC
-$ scripts/preprocess_state.py -s MD
-$ scripts/preprocess_state.py -s PA
-$ scripts/preprocess_state.py -s VA
+$ scripts/preprocess_state.py -s MI -w
 
 For documentation, type:
 
@@ -36,6 +34,9 @@ def parse_args() -> Namespace:
         help="The two-character state code (e.g., NC)",
         type=str,
     )
+    parser.add_argument(
+        "-w", "--water", dest="water", action="store_true", help="Water-only precincts"
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -50,22 +51,23 @@ def main() -> None:
 
     args: Namespace = parse_args()
     xx: str = args.state
+    water: bool = args.water
 
     verbose: bool = args.verbose
+
+    water_flag: str = "-w" if water else ""
 
     commands: list[str] = [
         "scripts/extract_pop.py -s {xx} -p -b -i 3 > data/{xx}/{xx}_census_log.txt",
         "scripts/extract_xy.py -s {xx} -p",
         "scripts/join_feature_data.py -s {xx} -p",
-        "scripts/unpickle_to_csv.py -s {xx} -u vtd",
+        "scripts/unpickle_to_csv.py -s {xx} -u vtd {w}",
         "scripts/index_geoids.py -s {xx}",
-        # "scripts/unpickle_to_csv.py {xx} block",
-        # "scripts/unpickle_to_csv.py {xx} bg",
         "scripts/extract_block_vtds.py -s {xx}",
         "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
     ]
     for command in commands:
-        command: str = command.format(xx=xx)
+        command: str = command.format(xx=xx, w=water_flag)
         os.system(command)
 
 

@@ -39,6 +39,9 @@ def parse_args() -> Namespace:
         help="The unit of granularity (e.g., vtd)",
         type=str,
     )
+    parser.add_argument(
+        "-w", "--water", dest="water", action="store_true", help="Water-only precincts"
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -55,8 +58,7 @@ def main() -> None:
 
     xx: str = args.state
     units: str = args.units
-
-    state_dir: str = xx
+    water: bool = args.water
 
     ### LOAD DATA ###
 
@@ -64,6 +66,14 @@ def main() -> None:
         [xx, cycle, units, "data"], "_", "pickle"
     )
     collection: FeatureCollection = FeatureCollection(rel_path)
+
+    water_precincts: list = list()
+    if water:
+        rel_path: str = path_to_file([data_dir, xx]) + file_name(
+            [xx, cycle, "water_only"], "_", "csv"
+        )  # GEOID,ALAND,AWATER
+        types: list = [str, int, int]
+        water_precincts = [row["GEOID"] for row in read_typed_csv(rel_path, types)]
 
     ### WRITE DATA AS A CSV ###
 
@@ -75,9 +85,12 @@ def main() -> None:
             "X": f["xy"].x,
             "Y": f["xy"].y,
         }
-        l.append(row)
+        if f in water_precincts:
+            continue
+        else:
+            l.append(row)
 
-    rel_path: str = path_to_file([data_dir, state_dir]) + file_name(
+    rel_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, cycle, units, "data"], "_", "csv"
     )
     write_csv(rel_path, l, ["GEOID", "POP", "X", "Y"], precision="{:.14f}")
