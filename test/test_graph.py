@@ -50,5 +50,22 @@ class TestGraph:
         g: Graph = Graph(adjacency)
         assert g.is_connected()
 
+    def test_remove(self) -> None:
+        adjacency: dict[str, list[str]] = {
+            "a": ["b", "c"],
+            "b": ["a", "c"],
+            "c": ["a", "b", "w"],
+            "d": ["e", "f", "w"],
+            "e": ["d", "f"],
+            "f": ["d", "e"],
+            "w": ["c", "d"],
+        }
+        g: Graph = Graph(adjacency)
+        assert g.is_connected()
+
+        g.remove("w")
+        assert g._is_consistent()
+        assert g.is_connected()
+
 
 ### END ###

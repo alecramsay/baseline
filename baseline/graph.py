@@ -120,6 +120,36 @@ class Graph:
 
         return is_connected(geos, adjacency)
 
+    def add(self, node: str | int) -> None:
+        """Add a node to the graph."""
+
+        self._data[node] = []
+
+    def connect(self, node1: str | int, node2: str | int) -> None:
+        """Connect two nodes in the graph."""
+
+        if node1 not in self._data or node2 not in self._data:
+            raise ValueError("Both nodes must be in the graph to connect them.")
+
+        self._data[node1].append(node2)
+        self._data[node2].append(node1)
+
+    def remove(self, node: str | int) -> None:
+        """Remove a node from the graph maintaining its connectedness."""
+
+        neighbors: list[str | int] = self.neighbors(node)
+        for neighbor in neighbors:
+            self._data[neighbor].remove(node)
+            for new_neighbor in neighbors:
+                if (
+                    new_neighbor != neighbor
+                    and new_neighbor not in self._data[neighbor]
+                ):
+                    self._data[neighbor].append(new_neighbor)
+
+        if node in self._data:
+            del self._data[node]
+
 
 ### HELPERS ###
 
