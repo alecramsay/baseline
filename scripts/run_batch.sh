@@ -7,10 +7,10 @@
 # scripts/run_batch.sh
 #
 
-scripts/preprocess_state.py -s NC
-scripts/preprocess_state.py -s MD
-scripts/preprocess_state.py -s PA
-scripts/preprocess_state.py -s VA
+scripts/extract_data.py -s NC
+scripts/extract_data.py -s MD
+scripts/extract_data.py -s PA
+scripts/extract_data.py -s VA
 
 scripts/extract_pop.py -s FL -p -i 3 > data/FL/FL_census_log.txt
 scripts/extract_xy.py -s FL -p

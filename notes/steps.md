@@ -23,7 +23,7 @@ scripts/extract_water_only.py -s NC [> data/NC/NC_2020_water_only.csv]
 ## Preprocess data
 
 ```
-scripts/preprocess_state.py -s NC
+scripts/extract_data.py -s NC
 ```
 
 ## Generate a graph of precincts
@@ -54,7 +54,7 @@ scripts/baseline_state.py -s NC
 
 ```
 scripts/extract_water_only.py -s XX > data/XX/XX_2020_water_only.csv
-scripts/preprocess_state.py -s XX
+scripts/extract_data.py -s XX
 scripts/extract_graph.py -s XX
 scripts/make_initial_assignments.py -s XX -e -v
 scripts/baseline_state.py -s XX

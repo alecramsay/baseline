@@ -2,16 +2,16 @@
 #
 
 """
-Preprocess data for a state.
+Extract data for a state.
 
 For example:
 
-$ scripts/preprocess_state.py -s NC
-$ scripts/preprocess_state.py -s MI -w
+$ scripts/extract_data.py -s NC
+$ scripts/extract_data.py -s MI -w
 
 For documentation, type:
 
-$ scripts/preprocess_state.py -h
+$ scripts/extract_data.py -h
 
 """
 

@@ -8,13 +8,13 @@
 #
 
 echo "Preprocessing data for AL ..."
-scripts/preprocess_state.py -s AL
+scripts/extract_data.py -s AL
 
 echo "Preprocessing data for AZ ..."
-scripts/preprocess_state.py -s AZ
+scripts/extract_data.py -s AZ
 
 echo "Preprocessing data for AR ..."
-scripts/preprocess_state.py -s AR
+scripts/extract_data.py -s AR
 
 # CA uses BG's instead of VTD's
 echo "Preprocessing data for CA ..."
@@ -25,77 +25,77 @@ scripts/unpickle_to_csv.py -s CA -u tract
 scripts/unpickle_to_csv.py -s CA -u bg
 
 echo "Preprocessing data for CO ..."
-scripts/preprocess_state.py -s CO
+scripts/extract_data.py -s CO
 
 echo "Preprocessing data for CT ..."
-scripts/preprocess_state.py -s CT
+scripts/extract_data.py -s CT
 
 # Use preprocess_FL.py instead
 # echo "Preprocessing data for FL ..."
-# scripts/preprocess_state.py -s FL
+# scripts/extract_data.py -s FL
 
 echo "Preprocessing data for GA ..."
-scripts/preprocess_state.py -s GA
+scripts/extract_data.py -s GA
 
 echo "Preprocessing data for IL ..."
-scripts/preprocess_state.py -s IL
+scripts/extract_data.py -s IL
 
 echo "Preprocessing data for IN ..."
-scripts/preprocess_state.py -s IN
+scripts/extract_data.py -s IN
 
 echo "Preprocessing data for IA ..."
-scripts/preprocess_state.py -s IA
+scripts/extract_data.py -s IA
 
 echo "Preprocessing data for KS ..."
-scripts/preprocess_state.py -s KS
+scripts/extract_data.py -s KS
 
 echo "Preprocessing data for KY ..."
-scripts/preprocess_state.py -s KY
+scripts/extract_data.py -s KY
 
 echo "Preprocessing data for LA ..."
-scripts/preprocess_state.py -s LA
+scripts/extract_data.py -s LA
 
 echo "Preprocessing data for MD ..."
-scripts/preprocess_state.py -s MD
+scripts/extract_data.py -s MD
 
 echo "Preprocessing data for MA ..."
-scripts/preprocess_state.py -s MA
+scripts/extract_data.py -s MA
 
 echo "Preprocessing data for MI ..."
-scripts/preprocess_state.py -s MI
+scripts/extract_data.py -s MI
 
 echo "Preprocessing data for MN ..."
-scripts/preprocess_state.py -s MN
+scripts/extract_data.py -s MN
 
 echo "Preprocessing data for MS ..."
-scripts/preprocess_state.py -s MS
+scripts/extract_data.py -s MS
 
 echo "Preprocessing data for MO ..."
-scripts/preprocess_state.py -s MO
+scripts/extract_data.py -s MO
 
 echo "Preprocessing data for NE ..."
-scripts/preprocess_state.py -s NE
+scripts/extract_data.py -s NE
 
 echo "Preprocessing data for NV ..."
-scripts/preprocess_state.py -s NV
+scripts/extract_data.py -s NV
 
 echo "Preprocessing data for NJ ..."
-scripts/preprocess_state.py -s NJ
+scripts/extract_data.py -s NJ
 
 echo "Preprocessing data for NM ..."
-scripts/preprocess_state.py -s NM
+scripts/extract_data.py -s NM
 
 echo "Preprocessing data for NY ..."
-scripts/preprocess_state.py -s NY
+scripts/extract_data.py -s NY
 
 echo "Preprocessing data for NC ..."
-scripts/preprocess_state.py -s NC
+scripts/extract_data.py -s NC
 
 echo "Preprocessing data for OH ..."
-scripts/preprocess_state.py -s OH
+scripts/extract_data.py -s OH
 
 echo "Preprocessing data for OK ..."
-scripts/preprocess_state.py -s OK
+scripts/extract_data.py -s OK
 
 echo "Preprocessing data for OR ..."
 scripts/extract_pop.py -s OR -g -i 3 > data/OR/OR_census_log.txt
@@ -104,27 +104,27 @@ scripts/join_feature_data.py -s OR -g
 scripts/unpickle_to_csv.py -s OR -u bg
 
 echo "Preprocessing data for PA ..."
-scripts/preprocess_state.py -s PA
+scripts/extract_data.py -s PA
 
 echo "Preprocessing data for SC ..."
-scripts/preprocess_state.py -s SC
+scripts/extract_data.py -s SC
 
 echo "Preprocessing data for TN ..."
-scripts/preprocess_state.py -s TN
+scripts/extract_data.py -s TN
 
 echo "Preprocessing data for TX ..."
-scripts/preprocess_state.py -s TX
+scripts/extract_data.py -s TX
 
 echo "Preprocessing data for UT ..."
-scripts/preprocess_state.py -s UT
+scripts/extract_data.py -s UT
 
 echo "Preprocessing data for VA ..."
-scripts/preprocess_state.py -s VA
+scripts/extract_data.py -s VA
 
 echo "Preprocessing data for WA ..."
-scripts/preprocess_state.py -s WA
+scripts/extract_data.py -s WA
 
 echo "Preprocessing data for WI ..."
-scripts/preprocess_state.py -s WI
+scripts/extract_data.py -s WI
 
 echo "... done."
