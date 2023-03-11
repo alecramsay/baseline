@@ -6,7 +6,7 @@ There are 37 states with three or more congressional districts.
 
 No water-only precincts & almost exactly equal populations:
 
-- NC
+- NC: Ready
 
 - AL
 - CT
@@ -18,9 +18,9 @@ No water-only precincts & almost exactly equal populations:
 
 No water-only precincts & not quite exactly equal populations:
 
-- AZ
-- GA
-- VA
+- AZ: Ready
+- GA: Ready
+- VA: Ready
 
 - AR
 - CO
@@ -32,7 +32,7 @@ No water-only precincts & not quite exactly equal populations:
 
 Some water-only precincts & almost exactly equal populations:
 
-- IL
+- IL <=
 - IN
 - KS
 - KY
@@ -52,10 +52,10 @@ Some water-only precincts & almost exactly equal populations:
 
 Some water-only precincts & not quite exactly equal populations:
 
-- LA
+- LA <=
 - MI <= There's a contiguity_mods.csv file for MI
 - NV
-- WA
+- WA <=
 
 ## Category 5
 
