@@ -96,7 +96,7 @@ def main() -> None:
 
     graph: Graph = Graph(shp_path, id)
 
-    # TODO - Remove water-only precincts
+    # Remove water-only precincts
 
     water_precincts: list = list()
     if water:
@@ -106,12 +106,19 @@ def main() -> None:
         types: list = [str, int, int]
         water_precincts = [row["GEOID"] for row in read_typed_csv(rel_path, types)]
 
-    pass  # TODO
+        for w in water_precincts:
+            if w in graph:
+                print(f"Removing water-only precinct {w}.")
+                graph.remove(w)
 
-    # TODO - Add connections <<< N/A for NC
+    # TODO - Add connections as needed
 
-    # TODO - Make sure the graph is fully connected
-    connected: bool = True
+    # Make sure the graph is consistent & fully connected
+
+    if not graph.is_consistent():
+        raise ValueError("Graph is not consistent.")
+    if not graph.is_connected():
+        raise ValueError("Graph is not fully connected.")
 
     # TODO - If not, find & report "islands"
 

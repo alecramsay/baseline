@@ -9,15 +9,15 @@ from baseline import *
 
 
 class TestGraph:
-    def test_is_consistent(self) -> None:
+    def testis_consistent(self) -> None:
         data: dict[str, list[str]] = {"a": ["b", "c"], "b": ["a", "c"], "c": ["a", "b"]}
         g: Graph = Graph(data)
-        assert g._is_consistent()
+        assert g.is_consistent()
 
         data: dict[str, list[str]] = {"a": ["b", "c"], "b": ["c"], "c": ["a", "b"]}
         g: Graph = Graph(data)
         try:
-            g._is_consistent()
+            g.is_consistent()
             assert False
         except:
             assert True
@@ -64,7 +64,7 @@ class TestGraph:
         assert g.is_connected()
 
         g.remove("w")
-        assert g._is_consistent()
+        assert g.is_consistent()
         assert g.is_connected()
 
 

@@ -28,7 +28,7 @@ class Graph:
             self._abs_path: str = FileSpec(input).abs_path
             self._id_field: Optional[str] = id_field
             self._data: dict = self._from_shapefile()
-            self._is_consistent()
+            self.is_consistent()
             self._shp_by_geoid: dict
             self._meta: Optional[dict[str, Any]]
             self._shp_by_geoid, self._meta = load_shapes(self._abs_path, self._id_field)
@@ -47,7 +47,7 @@ class Graph:
         # TYPE HINT
         return g.neighbors  # Get rid of all the extraneous PySAL stuff
 
-    def _is_consistent(self) -> bool:
+    def is_consistent(self) -> bool:
         """Make sure each node is in every neighbor's neighbor list"""
 
         consistent: bool = True
