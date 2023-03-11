@@ -32,7 +32,7 @@ No water-only precincts & not quite exactly equal populations:
 
 Some water-only precincts & almost exactly equal populations:
 
-- IL <=
+- IL <= Ready
 - IN
 - KS
 - KY
