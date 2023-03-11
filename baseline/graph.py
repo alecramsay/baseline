@@ -107,27 +107,18 @@ class Graph:
         else:
             return [n for n in self._data[node] if n not in excluding]
 
-    # def ring(self, within: list[str], outer: list[str] = []) -> list[str]:
-    #     """Return a list of nodes that are connected to any node in the given list.
-
-    #     Use this to find successively smaller "rings" of districts w/in a state.
-    #     """
-
-    #     within: set[str] = set(within)
-    #     ring: list = []
-
-    #     for node, neighbors in self._data.items():
-    #         if node in within or node in outer:
-    #             continue
-    #         if len(set(neighbors).intersection(within)) > 0:
-    #             ring.append(node)
-
-    #     return ring
-
     def is_border(self, node: str | int) -> bool:
         """Return True if the node is on the state boundary."""
 
         return OUT_OF_STATE in self._data[node]
+
+    def is_connected(self) -> bool:
+        """Return True if the graph is connected."""
+
+        geos: list[str | int] = list(self._data.keys())
+        adjacency: dict[str | int, list[str | int]] = self._data
+
+        return is_connected(geos, adjacency)
 
 
 ### HELPERS ###
@@ -179,6 +170,27 @@ def on_border_with(
                 break
 
     return candidates
+
+
+def is_connected(geos: list[Any], adjacency: dict[Any, list[Any]]) -> bool:
+    """Kenshi's iterative implementation of the recursive algorithm
+
+    geos - the list of geographies
+    adjacency - the connectedness of the geos
+    """
+    visited: set[Any] = set()
+    all_geos: set[Any] = set(geos)
+    to_process: list[Any] = [geos[0]]
+    while to_process:
+        node: Any = to_process.pop()
+        visited.add(node)
+        neighbors: list[Any] = adjacency[node]
+        neighbors_to_visit: list[Any] = [
+            n for n in neighbors if n in all_geos and n not in visited
+        ]
+        to_process.extend(neighbors_to_visit)
+
+    return len(visited) == len(geos)
 
 
 # TODO - Integrate these into the class

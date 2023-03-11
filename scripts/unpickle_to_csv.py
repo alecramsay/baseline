@@ -74,6 +74,7 @@ def main() -> None:
         )  # GEOID,ALAND,AWATER
         types: list = [str, int, int]
         water_precincts = [row["GEOID"] for row in read_typed_csv(rel_path, types)]
+        print(f"# of water-only precincts: {len(water_precincts)}")
 
     ### WRITE DATA AS A CSV ###
 
@@ -86,6 +87,7 @@ def main() -> None:
             "Y": f["xy"].y,
         }
         if f in water_precincts:
+            print(f"Removing water-only precinct {f['geoid']}")
             continue
         else:
             l.append(row)
