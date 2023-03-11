@@ -120,9 +120,6 @@ def main() -> None:
 
         assert district in range(1, n + 1)
 
-        # if vtd == "13261000015":
-        #     print(f"District {district}, vtd {vtd}, block {block}, pop {pop}")
-
         combo: tuple = (vtd, district)
         vtd_district_pairs[combo] += pop
         total_pop += pop
