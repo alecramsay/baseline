@@ -54,7 +54,7 @@ def parse_args() -> Namespace:
         "--precinct",
         dest="precinct",
         action="store_true",
-        help="Generate precinct-level data",
+        help="Generate VTD-level data",
     )
 
     parser.add_argument(
@@ -75,11 +75,7 @@ def main() -> None:
     tracts: bool = args.tract
     bgs: bool = args.bg
     blocks: bool = args.block
-    precincts: bool = args.precinct
-
-    # HACK - Remove this
-    # xx = "FL"
-    # precincts = True
+    vtds: bool = args.precinct
 
     verbose: bool = args.verbose
 
@@ -92,7 +88,7 @@ def main() -> None:
         units.append("tract")
     if bgs:
         units.append("bg")
-    if precincts:
+    if vtds:
         units.append("vtd")
 
     for unit in units:

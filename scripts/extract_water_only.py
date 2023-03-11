@@ -2,7 +2,7 @@
 #
 
 """
-Extract the water-only precincts.
+Extract the water-only VTDs (precincts).
 
 For example:
 
@@ -45,7 +45,7 @@ def parse_args() -> Namespace:
 
 
 def main() -> None:
-    """Find water-only precincts."""
+    """Find water-only VTDs (precincts)."""
 
     args: Namespace = parse_args()
 
@@ -54,7 +54,7 @@ def main() -> None:
     xx: str = args.state
     fips: str = fips_map[xx]
 
-    precincts: bool = True  # Just do precincts for now
+    vtds: bool = True  # Just do VTDs (precincts) for now
 
     verbose: bool = args.verbose
 
@@ -65,7 +65,7 @@ def main() -> None:
     unit: str = "bg" if xx in ["CA", "OR"] else "vtd"
     unit_label: str = "vtd20" if unit == "vtd" else "bg"
 
-    if precincts:
+    if vtds:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
             ["tl_2020", fips, unit_label], "_"
         )
@@ -93,7 +93,7 @@ def main() -> None:
 
         if not water_only:
             print()
-            print(f"No water-only precincts for {xx}")
+            print(f"No water-only VTDs (precincts) for {xx}")
             print()
         else:
             print()

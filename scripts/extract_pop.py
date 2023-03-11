@@ -88,12 +88,8 @@ def main() -> None:
     tracts: bool = args.tract
     bgs: bool = args.bg
     blocks: bool = args.block
-    precincts: bool = args.precinct
+    vtds: bool = args.precinct
     iteration: str = "" if args.iteration == 0 else f"-{args.iteration}"
-
-    # HACK - Remove this
-    # precincts = True
-    # iteration = "-3"
 
     verbose: bool = args.verbose
 
@@ -170,7 +166,7 @@ def main() -> None:
             del pop_by_bg
 
     # VTD data comes from another
-    if precincts:
+    if vtds:
         rel_path: str = path_to_file([vtd_dir, state_dir]) + file_name(
             [f"{cycle}", "census", xx + iteration], "_", "csv"
         )

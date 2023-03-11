@@ -2,7 +2,7 @@
 #
 
 """
-Extract the centroid coordinates of a state's tracts, blockgroups, and blocks.
+Extract the centroid coordinates of a state's geographic units.
 
 For example:
 
@@ -54,7 +54,7 @@ def parse_args() -> Namespace:
         "--precinct",
         dest="precinct",
         action="store_true",
-        help="Generate precinct-level data",
+        help="Generate VTD-level data",
     )
 
     parser.add_argument(
@@ -107,7 +107,7 @@ def main() -> None:
     tracts: bool = args.tract
     bgs: bool = args.bg
     blocks: bool = args.block
-    precincts: bool = args.precinct
+    vtds: bool = args.precinct
 
     verbose: bool = args.verbose
 
@@ -177,16 +177,16 @@ def main() -> None:
 
     # Precincts (VTDs)
 
-    if precincts:
+    if vtds:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
             ["tl_2020", fips, "vtd20"], "_"
         )
-        precinct_shps: tuple[dict, Optional[dict[str, Any]]] = load_shapes(
+        vtd_shps: tuple[dict, Optional[dict[str, Any]]] = load_shapes(
             rel_path, unit_id("vtd")
         )
-        feature_xy: dict[str, Coordinate] = find_centers(precinct_shps)
+        feature_xy: dict[str, Coordinate] = find_centers(vtd_shps)
 
-        del precinct_shps
+        del vtd_shps
 
         rel_path: str = path_to_file([temp_dir]) + file_name(
             [xx, cycle, "vtd", "xy"], "_", "pickle"

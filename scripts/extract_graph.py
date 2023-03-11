@@ -2,7 +2,7 @@
 #
 
 """
-Extract a contiguity graphs for a state's tracts, blockgroups, and blocks.
+Extract a contiguity graph for a state & geographic unit.
 
 For example:
 

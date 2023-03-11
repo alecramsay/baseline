@@ -60,7 +60,7 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
-    unit: str = "vtd"
+    unit: str = "vtd"  # TODO - bg for CA & OR
     n: int = districts_by_state[xx]["congress"]
 
     ### Read the BAF for the input map ###
@@ -89,9 +89,9 @@ def main() -> None:
         print(f"   - Loading block-to-VTD assignments ...")
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
-        [xx, cycle, "block", "vtd"], "_", "pickle"
+        [xx, cycle, "block", unit], "_", "pickle"
     )
-    vtd_by_block: dict[str, str] = read_pickle(rel_path)
+    precinct_by_block: dict[str, str] = read_pickle(rel_path)
 
     # Load the block population file for NC (temp/NC_2020_block_pop.pickle)
 
@@ -110,21 +110,21 @@ def main() -> None:
         print(f"   - Aggregating block populations by VTD & district ...")
 
     total_pop: int = 0
-    vtd_district_pairs: dict = defaultdict(int)
-    districts_by_vtd: dict = defaultdict(set)  # Identify split precincts
+    precinct_district_pairs: dict = defaultdict(int)
+    districts_by_precinct: dict = defaultdict(set)  # Identify split precincts
     for row in block_assignments:
         block: str = row["GEOID20"]
         district: int = row["District"]
         pop: int = pop_by_block[block]
-        vtd: str = vtd_by_block[block]
+        precinct: str = precinct_by_block[block]
 
         assert district in range(1, n + 1)
 
-        combo: tuple = (vtd, district)
-        vtd_district_pairs[combo] += pop
+        combo: tuple = (precinct, district)
+        precinct_district_pairs[combo] += pop
         total_pop += pop
 
-        districts_by_vtd[vtd].add(district)
+        districts_by_precinct[precinct].add(district)
 
     ### Smooth out population deviations ###
 
@@ -147,7 +147,7 @@ def main() -> None:
             i: {"population": 0, "blocks": [], "precincts": [], "border": []}
             for i in range(1, n + 1)
         }
-        for k, v in vtd_district_pairs.items():
+        for k, v in precinct_district_pairs.items():
             districts[k[1]]["population"] += v
 
         # Check if the districts are within +/-10 people of the target population
@@ -179,7 +179,7 @@ def main() -> None:
                 [xx, cycle, unit, "graph"], "_", "pickle"
             )
             unit_data: dict = read_pickle(graph_path)
-            vtd_graph: Graph = Graph(unit_data)
+            precinct_graph: Graph = Graph(unit_data)
 
             ## Invert the block & precinct assignments by district
 
@@ -191,14 +191,16 @@ def main() -> None:
 
             del block_assignments
 
-            for k, v in vtd_district_pairs.items():
+            for k, v in precinct_district_pairs.items():
                 d: int = k[1]
-                vtd: str = k[0]
-                if len(districts_by_vtd[vtd]) == 0:
-                    raise Exception(f"VTD {vtd} is not assigned to any district!")
-                if len(districts_by_vtd[vtd]) > 1:
+                precinct: str = k[0]
+                if len(districts_by_precinct[precinct]) == 0:
+                    raise Exception(
+                        f"Precinct {precinct} is not assigned to any district!"
+                    )
+                if len(districts_by_precinct[precinct]) > 1:
                     continue  # Ignore split precincts
-                districts[d]["precincts"].append(vtd)
+                districts[d]["precincts"].append(precinct)
 
             # Compute a district adjacency graph
 
@@ -211,13 +213,13 @@ def main() -> None:
                 neighbors: set[int] = set()
 
                 for block_id in v["blocks"]:
-                    vtd_id: str = vtd_by_block[block_id]
-                    for neighbor in vtd_graph.neighbors(vtd_id):
+                    precinct_id: str = precinct_by_block[block_id]
+                    for neighbor in precinct_graph.neighbors(precinct_id):
                         if neighbor == OUT_OF_STATE:
                             # neighbors.add(OUT_OF_STATE)
                             continue
 
-                        for other in districts_by_vtd[neighbor]:
+                        for other in districts_by_precinct[neighbor]:
                             if other != current:
                                 neighbors.add(other)
 
@@ -232,7 +234,7 @@ def main() -> None:
 
             for id, data in districts.items():
                 border: list[str] = border_shapes(
-                    id, data["precincts"], vtd_graph, districts_by_vtd
+                    id, data["precincts"], precinct_graph, districts_by_precinct
                 )
                 districts[id]["border"] = border
 
@@ -259,29 +261,31 @@ def main() -> None:
                     from_d,
                     to_d,
                     districts[from_d]["border"],
-                    vtd_graph,
-                    districts_by_vtd,
+                    precinct_graph,
+                    districts_by_precinct,
                 )
-                pops: list[int] = [vtd_district_pairs[(id, from_d)] for id in geiods]
+                pops: list[int] = [
+                    precinct_district_pairs[(id, from_d)] for id in geiods
+                ]
 
-                unsorted_vtds: dict[str, int] = dict(zip(geiods, pops))
-                sorted_vtds: dict[str, int] = dict(
-                    sorted(unsorted_vtds.items(), key=lambda item: item[1])
+                unsorted_precincts: dict[str, int] = dict(zip(geiods, pops))
+                sorted_precincts: dict[str, int] = dict(
+                    sorted(unsorted_precincts.items(), key=lambda item: item[1])
                 )
 
-                for k, v in sorted_vtds.items():
+                for k, v in sorted_precincts.items():
                     if v < adjustment:
                         # Move the entire precinct
-                        vtd_district_pairs.pop((k, from_d), None)
-                        vtd_district_pairs[(k, to_d)] += v
+                        precinct_district_pairs.pop((k, from_d), None)
+                        precinct_district_pairs[(k, to_d)] += v
                         districts[from_d]["population"] -= v
                         districts[to_d]["population"] += v
 
                         adjustment -= v
                     else:
                         # Split the precinct
-                        vtd_district_pairs[(k, from_d)] -= adjustment
-                        vtd_district_pairs[(k, to_d)] += adjustment
+                        precinct_district_pairs[(k, from_d)] -= adjustment
+                        precinct_district_pairs[(k, to_d)] += adjustment
                         districts[from_d]["population"] -= adjustment
                         districts[to_d]["population"] += adjustment
                         break  # The move is complete
@@ -302,7 +306,7 @@ def main() -> None:
         print(f"   - Loading the GEOID offset index ...")
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
-        [xx, cycle, "vtd", "index"], "_", "pickle"
+        [xx, cycle, unit, "index"], "_", "pickle"
     )
     index_by_geoid: dict = read_pickle(rel_path)
 
@@ -313,7 +317,7 @@ def main() -> None:
 
     splits: list[dict] = [
         {"DISTRICT": d, "VTD": index_by_geoid[v], "POP": float(p)}
-        for (v, d), p in vtd_district_pairs.items()
+        for (v, d), p in precinct_district_pairs.items()
     ]
 
     rel_path: str = path_to_file([data_dir, xx]) + file_name(
