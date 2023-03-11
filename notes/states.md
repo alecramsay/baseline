@@ -52,7 +52,7 @@ Some water-only precincts & almost exactly equal populations:
 
 Some water-only precincts & not quite exactly equal populations:
 
-- LA <=
+- LA <= Ready
 - MI <= There's a contiguity_mods.csv file for MI
 - NV
 - WA <=
