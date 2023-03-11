@@ -96,6 +96,11 @@ class Graph:
 
         return self._data
 
+    def nodes(self) -> list[str | int]:
+        """Return the nodes in the graph."""
+
+        return list(self._data.keys())
+
     def neighbors(self, node: str | int, *, excluding: list = []) -> list[str | int]:
         """Return the neighbors of a node."""
 

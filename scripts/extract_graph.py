@@ -65,7 +65,6 @@ def main() -> None:
     fips_map: dict[str, str] = make_state_codes()
 
     xx: str = args.state
-    xx = "MI"  # HACK
 
     fips: str = fips_map[xx]
 
@@ -80,7 +79,6 @@ def main() -> None:
     # "tract", "bg", "tabblock20"
 
     water: bool = args.water
-    water = True  # HACK
 
     verbose: bool = args.verbose
 
@@ -107,7 +105,7 @@ def main() -> None:
         water_precincts = [row["GEOID"] for row in read_typed_csv(rel_path, types)]
 
         for w in water_precincts:
-            if w in graph:
+            if w in graph.nodes():
                 print(f"Removing water-only precinct {w}.")
                 graph.remove(w)
 
@@ -119,8 +117,6 @@ def main() -> None:
         raise ValueError("Graph is not consistent.")
     if not graph.is_connected():
         raise ValueError("Graph is not fully connected.")
-
-    # TODO - If not, find & report "islands"
 
     # Pickle the graph
 
