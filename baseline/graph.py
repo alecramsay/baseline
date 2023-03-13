@@ -10,7 +10,7 @@ import csv
 from csv import reader as _reader
 from libpysal.weights import Rook, WSP
 from shapely.geometry import shape, Polygon, MultiPolygon
-from typing import Any, Optional
+from typing import Any, Optional, Iterable
 
 from .readwrite import *
 
@@ -41,10 +41,8 @@ class Graph:
         """Extract a rook graph from a shapefile."""
 
         g: Rook | WSP = Rook.from_shapefile(self._abs_path, self._id_field)
-        # https://stackoverflow.com/questions/44739764/how-to-cast-a-typing-union-to-one-of-its-subtypes-in-python
-        # x: Rook = cast(Rook, g)
+        assert isinstance(g, Rook)
 
-        # TYPE HINT
         return g.neighbors  # Get rid of all the extraneous PySAL stuff
 
     def is_consistent(self) -> bool:
@@ -265,8 +263,7 @@ def read_mods(mods_csv) -> list:
         mods_path: str = os.path.expanduser(mods_csv)
 
         with open(mods_path, mode="r", encoding="utf-8-sig") as f_input:
-            # TYPE HINT
-            reader: _reader = csv.reader(
+            reader: Iterable[list[str]] = csv.reader(
                 f_input, skipinitialspace=True, delimiter=",", quoting=csv.QUOTE_NONE
             )
 
