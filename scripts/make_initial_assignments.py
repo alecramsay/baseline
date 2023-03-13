@@ -114,11 +114,11 @@ def main() -> None:
     districts_by_precinct: dict = defaultdict(set)  # Identify split precincts
     for row in block_assignments:
         block: str = row["GEOID20"]
-        district: int = row["District"]
+        district: int = row["District"] - 1  # Convert to 0-based index
         pop: int = pop_by_block[block]
         precinct: str = precinct_by_block[block]
 
-        assert district in range(1, n + 1)
+        assert district in range(0, n)
 
         combo: tuple = (precinct, district)
         precinct_district_pairs[combo] += pop
@@ -145,7 +145,7 @@ def main() -> None:
 
         districts: dict[int, Any] = {
             i: {"population": 0, "blocks": [], "precincts": [], "border": []}
-            for i in range(1, n + 1)
+            for i in range(0, n)
         }
         for k, v in precinct_district_pairs.items():
             districts[k[1]]["population"] += v

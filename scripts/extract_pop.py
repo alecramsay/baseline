@@ -97,6 +97,17 @@ def main() -> None:
 
     ### READ THE CENSUS DATA, PIVOT IT BY LEVEL, AND PICKLE IT ###
 
+    total_pop: int = 0
+    max_block_pop: int = 0
+    max_tract_pop: int = 0
+    ntracts: int = 0
+    max_bg_pop: int = 0
+    nbgs: int = 0
+    max_block_pop: int = 0
+    nblocks: int = 0
+    max_vtd_pop: int = 0
+    nvtds: int = 0
+
     # All this data comes from one file
     if blocks or bgs or tracts:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
@@ -106,9 +117,6 @@ def main() -> None:
         pop_by_block: defaultdict[str, int] = read_census_json(rel_path)
         pop_by_tract: defaultdict[str, int] = defaultdict(int)
         pop_by_bg: defaultdict[str, int] = defaultdict(int)
-
-        total_pop: int = 0
-        max_block_pop: int = 0
 
         for block, pop in pop_by_block.items():
             g: GeoID = GeoID(block)
@@ -135,8 +143,6 @@ def main() -> None:
         # Tracts
 
         if tracts:
-            max_tract_pop: int = 0
-
             for tract, pop in pop_by_tract.items():
                 if pop > max_tract_pop:
                     max_tract_pop = pop
@@ -152,7 +158,6 @@ def main() -> None:
         # Blockgroups
 
         if bgs:
-            max_bg_pop: int = 0
             for bg, pop in pop_by_bg.items():
                 if pop > max_bg_pop:
                     max_bg_pop = pop
@@ -182,8 +187,6 @@ def main() -> None:
         census: list = read_typed_csv(rel_path, types)
 
         id: str = unit_id("vtd")
-        max_vtd_pop: int = 0
-        nvtds: int = 0
         pop_by_vtd: defaultdict[str, int] = defaultdict(int)
 
         for row in census:
@@ -207,8 +210,6 @@ def main() -> None:
 
     ### PRINT STATISTICS ###
 
-    # TYPE HINT
-
     print()
     if blocks or bgs or tracts:
         print("Total population: {:,}".format(total_pop))
@@ -227,7 +228,7 @@ def main() -> None:
             "Max block population: {:,}".format(max_block_pop),
             "# of blocks: {:,}".format(nblocks),
         )
-    if precincts:
+    if vtds:
         print(
             "Max precinct (VTD) population: {:,}".format(max_vtd_pop),
             "# of blocks: {:,}".format(nvtds),
