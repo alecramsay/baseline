@@ -38,7 +38,7 @@ def baseline_state(xx: str, plan_type: str, unit: str, verbose: bool = False) ->
         [intermediate_dir, xx], [map_label, unit, "consolidated"]
     )
     complete_csv: str = full_path([intermediate_dir, xx], [map_label, unit, "complete"])
-    output_csv: str = full_path([maps_dir], [map_label, unit, "baf"])  # TODO
+    output_csv: str = full_path([maps_dir], [map_label, unit, "assignments"])  # TODO
 
     make_points(input_csv, points_csv)
     get_sites(points_csv, initial_csv, centroids_csv)
