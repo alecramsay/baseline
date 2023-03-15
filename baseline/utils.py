@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-UTILITIES - Not used at this time.
+UTILITIES
 """
 
 import time
