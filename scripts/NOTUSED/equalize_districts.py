@@ -81,7 +81,7 @@ def main() -> None:
     )
 
     types: list = [str, int]
-    assignments: list = read_typed_csv(uaf_path, types)
+    assignments: list = read_csv(uaf_path, types)
 
     district_by_geoid: dict[str, int] = dict()
     districts: dict[int, list] = dict()

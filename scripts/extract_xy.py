@@ -121,7 +121,7 @@ def main() -> None:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
             ["tl_2020", fips, "tract"], "_"
         )
-        tract_shps: tuple[dict, Optional[dict[str, Any]]] = load_shapes(
+        tract_shps: tuple[dict, Optional[dict[str, Any]]] = read_shapes(
             rel_path, unit_id("tract")
         )
         feature_xy: dict[str, Coordinate] = find_centers(tract_shps)
@@ -141,7 +141,7 @@ def main() -> None:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
             ["tl_2020", fips, "bg"], "_"
         )
-        bg_shps: tuple[dict, Optional[dict[str, Any]]] = load_shapes(
+        bg_shps: tuple[dict, Optional[dict[str, Any]]] = read_shapes(
             rel_path, unit_id("bg")
         )
         feature_xy: dict[str, Coordinate] = find_centers(bg_shps)
@@ -161,7 +161,7 @@ def main() -> None:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
             ["tl_2020", fips, "tabblock20"], "_"
         )
-        block_shps: tuple[dict, Optional[dict[str, Any]]] = load_shapes(
+        block_shps: tuple[dict, Optional[dict[str, Any]]] = read_shapes(
             rel_path, unit_id("block")
         )
         feature_xy: dict[str, Coordinate] = find_centers(block_shps)
@@ -181,7 +181,7 @@ def main() -> None:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
             ["tl_2020", fips, "vtd20"], "_"
         )
-        vtd_shps: tuple[dict, Optional[dict[str, Any]]] = load_shapes(
+        vtd_shps: tuple[dict, Optional[dict[str, Any]]] = read_shapes(
             rel_path, unit_id("vtd")
         )
         feature_xy: dict[str, Coordinate] = find_centers(vtd_shps)

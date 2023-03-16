@@ -56,7 +56,7 @@ def main() -> None:
         [xx, cycle, unit, "data"], "_", "csv"
     )
     types: list = [str, int, float, float]
-    vtd_points: list = read_typed_csv(rel_path, types)
+    vtd_points: list = read_csv(rel_path, types)
 
     index_by_geoid: dict = {}
     for i, vtd in enumerate(vtd_points):

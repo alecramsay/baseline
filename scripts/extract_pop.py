@@ -184,7 +184,7 @@ def main() -> None:
             ncols = len(first_line.split(","))
 
         types: list = [str] + [int] * (ncols - 1)
-        census: list = read_typed_csv(rel_path, types)
+        census: list = read_csv(rel_path, types)
 
         id: str = unit_id("vtd")
         pop_by_vtd: defaultdict[str, int] = defaultdict(int)

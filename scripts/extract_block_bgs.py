@@ -58,7 +58,7 @@ def main() -> None:
         [xx, cycle, "block", "assignments"], "_", "csv"
     )
     types: list = [str, int]
-    block_assignments: list = read_typed_csv(
+    block_assignments: list = read_csv(
         rel_path, types
     )  # A list of dicts like {'GEOID20': '371139703032008', 'District': 11}
 

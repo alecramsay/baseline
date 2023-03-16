@@ -7,8 +7,6 @@ TYPES
 
 from typing import NamedTuple, TypedDict
 
-# from typing import Self
-
 
 class Coordinate(NamedTuple):
     x: float

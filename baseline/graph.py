@@ -31,7 +31,7 @@ class Graph:
             self.is_consistent()
             self._shp_by_geoid: dict
             self._meta: Optional[dict[str, Any]]
-            self._shp_by_geoid, self._meta = load_shapes(self._abs_path, self._id_field)
+            self._shp_by_geoid, self._meta = read_shapes(self._abs_path, self._id_field)
             self._data: dict = self._add_out_of_state_neighbors()
             return
 
