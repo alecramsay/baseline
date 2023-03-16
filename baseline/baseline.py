@@ -79,7 +79,7 @@ def baseline_state_iterative(
 
     N: int = districts_by_state[xx][plan_type]
     K: int = 1  # TODO: make this a parameter
-    fips_map: dict[str, str] = make_state_codes()
+    fips_map: dict[str, str] = STATE_FIPS
     fips: str = fips_map[xx]
 
     start: int = K * N * int(fips)

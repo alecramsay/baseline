@@ -37,7 +37,7 @@ parser.add_argument(
 )
 
 args: Namespace = parser.parse_args()
-fips_map: dict[str, str] = make_state_codes()
+fips_map: dict[str, str] = STATE_FIPS
 
 xx: str = args.state
 fips: str = fips_map[xx]
