@@ -1,26 +1,16 @@
 #!/usr/bin/env python3
 
 """
-READ/WRITE helpers
+READ/WRITE routines
 """
 
-import os
 import json
-from csv import DictReader, DictWriter
-import pickle
 from collections import defaultdict
 from shapely.geometry import (
     shape,
     Polygon,
     MultiPolygon,
-    Point,
-    MultiPoint,
-    LineString,
-    MultiLineString,
-    LinearRing,
-    GeometryCollection,
 )
-import fiona
 from typing import Any, Optional
 
 from pyutils import (
