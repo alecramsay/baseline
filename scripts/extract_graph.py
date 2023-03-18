@@ -102,7 +102,7 @@ def main() -> None:
             [xx, cycle, "water_only"], "_", "csv"
         )  # GEOID,ALAND,AWATER
         types: list = [str, int, int]
-        water_precincts = [row["GEOID"] for row in read_typed_csv(rel_path, types)]
+        water_precincts = [row["GEOID"] for row in read_csv(rel_path, types)]
 
         for w in water_precincts:
             if w in graph.nodes():
