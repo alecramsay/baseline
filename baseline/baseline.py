@@ -20,6 +20,7 @@ def do_baseline_run(
     data: str,
     adjacencies: str,
     output: str,
+    verbose: bool = False,
 ) -> None:
     """Make a set of baseline districts from random starting sites
 
@@ -37,7 +38,12 @@ def do_baseline_run(
         --output=output.csv 
     """
 
-    command: str = f"python3 {dccvt_py}/create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output}"
+    command: str = f"{dccvt_py}/create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output}"
+    if verbose:
+        print()
+        print(command)
+        print()
+
     os.system(command)
 
 
@@ -326,7 +332,7 @@ def label_map(xx: str, plan_type: str) -> str:
 
 
 def label_iteration(I: int, K: int, N: int) -> str:
-    return f"I{I:02d}K{K:02d}N{N:02d}"
+    return f"I{I:03d}K{K:02d}N{N:02d}"
 
 
 ### END ###

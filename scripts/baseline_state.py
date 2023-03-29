@@ -66,6 +66,7 @@ def main() -> None:
 
     #
 
+    print()
     print(f"Generating a baseline map for {xx}/{plan_type}:")
 
     map_label: str = label_map(xx, plan_type)  # e.g., "NC20C"
@@ -80,15 +81,24 @@ def main() -> None:
     start: int = K * N * int(fips)
     iterations: int = 100
 
+    # for i, seed in enumerate(range(start, start + iterations)):
+    #     iter_label: str = label_iteration(i, K, N)
+    #     print(f"... Iteration: {iter_label}, seed: {seed} ...")
+
+    i: int = 0
+    iter_label: str = label_iteration(i, K, N)
+
     # script args
 
-    tmpdir: str = intermediate_dir  # --tmpdir=./testing/tmp \
+    tmpdir: str = intermediate_dir + "/" + xx  # --tmpdir=./testing/tmp \
     N = N  # --N=6 \
     seed: int = start  # --seed=0 \
-    prefix: str = map_label  # --prefix=file \
+    prefix: str = map_label  # --prefix=file \ # TODO - Add iteration #
     data: str = input_csv  # --data=data.csv \
     adjacencies: str = pairs_csv  # --adjacencies=adjacent.csv \
     output: str = output_csv  # --output=output.csv
+
+    do_baseline_run(tmpdir, N, seed, prefix, data, adjacencies, output, verbose)
 
     pass
 
