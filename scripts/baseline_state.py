@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-#
 
 """
 Find districts that minimize population compactness (moment of inertia).
@@ -10,13 +9,6 @@ $ scripts/baseline_state.py -s NC -v > logs/NC_2020_congress_log.txt
 $ scripts/baseline_state.py -s MD -v > logs/MD_2020_congress_log.txt
 $ scripts/baseline_state.py -s PA -v > logs/PA_2020_congress_log.txt
 $ scripts/baseline_state.py -s VA -v > logs/VA_2020_congress_log.txt
-
-$ scripts/baseline_state.py -s MN -v > logs/MN_2020_congress_log.txt
-$ scripts/baseline_state.py -s NV -v > logs/NV_2020_congress_log.txt
-$ scripts/baseline_state.py -s NM -v > logs/NM_2020_congress_log.txt
-$ scripts/baseline_state.py -s NY -v > logs/NY_2020_congress_log.txt
-$ scripts/baseline_state.py -s TN -v > logs/TN_2020_congress_log.txt
-$ scripts/baseline_state.py -s WA -v > logs/WA_2020_congress_log.txt
 
 $ scripts/baseline_state.py -s OR -g -v > logs/OR_2020_congress_log.txt
 $ scripts/baseline_state.py -s CA -t -v > logs/CA_2020_congress_log.txt
@@ -33,56 +25,75 @@ from typing import Any
 
 from baseline import *
 
-parser: ArgumentParser = argparse.ArgumentParser(
-    description="Find population compact districts."
-)
 
-parser.add_argument(
-    "-s",
-    "--state",
-    default="NC",
-    help="The two-character state code (e.g., NC)",
-    type=str,
-)
-parser.add_argument(
-    "-m",
-    "--map",
-    default="congress",
-    help="The type of map: { congress | upper | lower }.",
-    type=str,
-)
-parser.add_argument(
-    "-g",
-    "--bg",
-    dest="bg",
-    action="store_true",
-    help="Use block groups instead of VTDs.",
-)
-parser.add_argument(
-    "-t",
-    "--tract",
-    dest="tract",
-    action="store_true",
-    help="Use tracts to iterate, BGs to finish.",
-)
-parser.add_argument(
-    "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
-)
+def parse_args() -> Namespace:
+    parser: ArgumentParser = argparse.ArgumentParser(
+        description="Find districts that minimize population compactness."
+    )
 
-args: Namespace = parser.parse_args()
+    parser.add_argument(
+        "-s",
+        "--state",
+        default="NC",
+        help="The two-character state code (e.g., NC)",
+        type=str,
+    )
+    parser.add_argument(
+        "-m",
+        "--map",
+        default="congress",
+        help="The type of map: { congress | upper | lower }.",
+        type=str,
+    )
 
-xx: str = args.state
-plan_type: str = args.map
-bg: bool = args.bg
-tract: bool = args.tract
+    parser.add_argument(
+        "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
+    )
 
-verbose: bool = args.verbose
+    args: Namespace = parser.parse_args()
+    return args
 
-if bg:
-    baseline_state(xx, plan_type, "bg", "bg", verbose)
-elif tract:  # CA
-    baseline_state(xx, plan_type, "tract", "bg", verbose)
-else:
-    baseline_state(xx, plan_type, "vtd", "vtd", verbose)
+
+def main() -> None:
+    """Find districts that minimize population compactness."""
+
+    args: Namespace = parse_args()
+
+    xx: str = args.state
+    plan_type: str = args.map
+
+    verbose: bool = args.verbose
+
+    #
+
+    print(f"Generating a baseline map for {xx}/{plan_type}:")
+
+    map_label: str = label_map(xx, plan_type)  # e.g., "NC20C"
+    N: int = districts_by_state[xx][plan_type]
+    K: int = 1  # district multiplier
+    fips: str = STATE_FIPS[xx]
+
+    input_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
+    pairs_csv = full_path([data_dir, xx], [xx, cycle, "vtd", "pairs"])
+    output_csv: str = full_path([maps_dir], [map_label, "vtd", "assignments"])
+
+    start: int = K * N * int(fips)
+    iterations: int = 100
+
+    # script args
+
+    tmpdir: str = intermediate_dir  # --tmpdir=./testing/tmp \
+    N = N  # --N=6 \
+    seed: int = start  # --seed=0 \
+    prefix: str = map_label  # --prefix=file \
+    data: str = input_csv  # --data=data.csv \
+    adjacencies: str = pairs_csv  # --adjacencies=adjacent.csv \
+    output: str = output_csv  # --output=output.csv
+
+    pass
+
+
+if __name__ == "__main__":
+    main()
 
 ### END ###

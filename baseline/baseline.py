@@ -12,7 +12,42 @@ from .readwrite import *
 
 
 @time_function
-def baseline_state(xx: str, plan_type: str, unit: str, verbose: bool = False) -> None:
+def do_baseline_run(
+    tmpdir: str,
+    N: int,
+    seed: int,
+    prefix: str,
+    data: str,
+    adjacencies: str,
+    output: str,
+) -> None:
+    """Make a set of baseline districts from random starting sites
+
+    Do this many times, and then choose the baseline as the map with the lowest energy.
+
+    For example
+
+    $ ./create.sh 
+        --tmpdir=./testing/tmp \
+        --N=6 \
+        --seed=0 \
+        --prefix=file \
+        --data=data.csv \
+        --adjacencies=adjacent.csv \
+        --output=output.csv 
+    """
+
+    command: str = f"python3 {dccvt_py}/create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output}"
+    os.system(command)
+
+
+### TODO - What do we end up using of this?
+
+
+@time_function
+def baseline_state_WIP(
+    xx: str, plan_type: str, unit: str, verbose: bool = False
+) -> None:
     """Find baseline districts for a state using 'precincts' (VTDs or BGs) & maintaining contiguity"""
 
     map_label: str = label_map(xx, plan_type)

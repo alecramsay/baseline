@@ -13,7 +13,7 @@ def main() -> None:
 
     verbose: bool = True
 
-    baseline_state(xx, plan_type, "vtd", verbose)
+    baseline_state_WIP(xx, plan_type, "vtd", verbose)
 
 
 if __name__ == "__main__":
