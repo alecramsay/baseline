@@ -5,6 +5,7 @@ BASELINE DISTRICTS
 """
 
 import os
+import sys
 
 from .constants import *
 from .utils import *
@@ -38,7 +39,8 @@ def do_baseline_run(
         --output=output.csv 
     """
 
-    command: str = f"{dccvt_py}/create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output}"
+    command: str = f"create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output}"
+    # command: str = f"{dccvt_py}/create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output}"
     if verbose:
         print()
         print(command)

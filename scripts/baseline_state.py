@@ -76,31 +76,29 @@ def main() -> None:
 
     input_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
     pairs_csv = full_path([data_dir, xx], [xx, cycle, "vtd", "pairs"])
-    output_csv: str = full_path([maps_dir], [map_label, "vtd", "assignments"])
 
     start: int = K * N * int(fips)
     iterations: int = 100
 
-    # for i, seed in enumerate(range(start, start + iterations)):
-    #     iter_label: str = label_iteration(i, K, N)
-    #     print(f"... Iteration: {iter_label}, seed: {seed} ...")
+    for i, seed in enumerate(range(start, start + iterations)):
+        iter_label: str = label_iteration(i, K, N)
+        print(f"... Iteration: {iter_label}, seed: {seed} ...")
 
-    i: int = 0
-    iter_label: str = label_iteration(i, K, N)
+        output_csv: str = full_path(
+            [intermediate_dir, xx], [map_label, iter_label, "vtd", "assignments"]
+        )
 
-    # script args
+        tmpdir: str = intermediate_dir + "/" + xx
+        N = N
+        seed: int = start
+        prefix: str = map_label
+        data: str = input_csv
+        adjacencies: str = pairs_csv
+        output: str = output_csv
 
-    tmpdir: str = intermediate_dir + "/" + xx  # --tmpdir=./testing/tmp \
-    N = N  # --N=6 \
-    seed: int = start  # --seed=0 \
-    prefix: str = map_label  # --prefix=file \ # TODO - Add iteration #
-    data: str = input_csv  # --data=data.csv \
-    adjacencies: str = pairs_csv  # --adjacencies=adjacent.csv \
-    output: str = output_csv  # --output=output.csv
+        do_baseline_run(tmpdir, N, seed, prefix, data, adjacencies, output, verbose)
 
-    do_baseline_run(tmpdir, N, seed, prefix, data, adjacencies, output, verbose)
-
-    pass
+        pass
 
 
 if __name__ == "__main__":
