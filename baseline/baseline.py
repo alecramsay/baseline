@@ -5,7 +5,6 @@ BASELINE DISTRICTS
 """
 
 import os
-import sys
 
 from .constants import *
 from .utils import *

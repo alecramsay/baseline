@@ -65,7 +65,15 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
-    #
+    # Add dccvt to the path
+
+    path_list: list[str] = [
+        "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting",
+        "/Users/alecramsay/iCloud/dev/dccvt/bin",
+    ]
+    os.environ["PATH"] += os.pathsep + os.pathsep.join(path_list)
+
+    # Set up
 
     print()
     print(f"Generating baseline maps for {xx}/{plan_type}:")
@@ -79,7 +87,9 @@ def main() -> None:
     pairs_csv = full_path([data_dir, xx], [xx, cycle, "vtd", "pairs"])
 
     start: int = K * N * int(fips)
-    iterations: int = 100  # 10 | 100 | 1000
+    iterations: int = 10  # 10 | 100 | 1000
+
+    # Iterate creating baseline maps
 
     for i, seed in enumerate(range(start, start + iterations)):
         iter_label: str = label_iteration(i, K, N)
