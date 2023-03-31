@@ -309,10 +309,10 @@ def handle_unassigned(
 ### HELPER FUNCTIONS ###
 
 
-def full_path(dirs: list[str], file_parts: list[str]) -> str:
+def full_path(dirs: list[str], file_parts: list[str], ext: str = "csv") -> str:
     """Return a fully qualifed file name from a list of directories and a list of file parts"""
 
-    rel_path: str = path_to_file(dirs) + file_name(file_parts, "_", "csv")
+    rel_path: str = path_to_file(dirs) + file_name(file_parts, "_", ext)
     return FileSpec(rel_path).abs_path
 
 
