@@ -79,7 +79,7 @@ def main() -> None:
     pairs_csv = full_path([data_dir, xx], [xx, cycle, "vtd", "pairs"])
 
     start: int = K * N * int(fips)
-    iterations: int = 10  # TODO - 100
+    iterations: int = 100  # 10 | 100 | 1000
 
     for i, seed in enumerate(range(start, start + iterations)):
         iter_label: str = label_iteration(i, K, N)
