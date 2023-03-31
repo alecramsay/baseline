@@ -5,7 +5,7 @@ Find districts that minimize population compactness (moment of inertia).
 
 For example:
 
-$ scripts/baseline_state.py -s NC -v > logs/NC_2020_congress_log.txt
+$ scripts/baseline_state.py -s NC -v > intermediate/NC/NC_2020_congress_log.txt
 $ scripts/baseline_state.py -s MD -v > logs/MD_2020_congress_log.txt
 $ scripts/baseline_state.py -s PA -v > logs/PA_2020_congress_log.txt
 $ scripts/baseline_state.py -s VA -v > logs/VA_2020_congress_log.txt
@@ -54,6 +54,7 @@ def parse_args() -> Namespace:
     return args
 
 
+@time_function
 def main() -> None:
     """Find districts that minimize population compactness."""
 
@@ -67,7 +68,7 @@ def main() -> None:
     #
 
     print()
-    print(f"Generating a baseline map for {xx}/{plan_type}:")
+    print(f"Generating baseline maps for {xx}/{plan_type}:")
 
     map_label: str = label_map(xx, plan_type)  # e.g., "NC20C"
     N: int = districts_by_state[xx][plan_type]
@@ -78,7 +79,7 @@ def main() -> None:
     pairs_csv = full_path([data_dir, xx], [xx, cycle, "vtd", "pairs"])
 
     start: int = K * N * int(fips)
-    iterations: int = 100
+    iterations: int = 10  # TODO - 100
 
     for i, seed in enumerate(range(start, start + iterations)):
         iter_label: str = label_iteration(i, K, N)

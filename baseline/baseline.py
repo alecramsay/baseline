@@ -12,7 +12,6 @@ from .utils import *
 from .readwrite import *
 
 
-@time_function
 def do_baseline_run(
     tmpdir: str,
     N: int,
@@ -26,26 +25,14 @@ def do_baseline_run(
     """Make a set of baseline districts from random starting sites
 
     Do this many times, and then choose the baseline as the map with the lowest energy.
-
-    For example
-
-    $ ./create.sh 
-        --tmpdir=./testing/tmp \
-        --N=6 \
-        --seed=0 \
-        --prefix=file \
-        --data=data.csv \
-        --adjacencies=adjacent.csv \
-        --output=output.csv 
     """
 
     command: str = f"create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output}"
-    # command: str = f"{dccvt_py}/create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output}"
-    if verbose:
-        print()
-        print(command)
-        print()
+    os.system(command)
 
+    print(f"... {command}")
+
+    command = f"redistricting.py energy --assignment {tmpdir}/{prefix}.complete.csv --points {tmpdir}/{prefix}.points.csv"
     os.system(command)
 
 
