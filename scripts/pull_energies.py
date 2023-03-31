@@ -73,30 +73,42 @@ def main() -> None:
 
             line = f.readline()
 
+    maps: list[dict] = list()
     lowest: float = 1e9
     lowest_map: str = ""
-    maps: list[dict] = list()
+    i: int = 0
+    N: int = districts_by_state[xx][plan_type]
+    K: int = 1  # district multiplier
 
     for line in lines:
         if line.startswith("Energy for map "):
             result = line[15:].strip()
             parts: list[str] = [x.strip() for x in result.split("=")]
 
-            name: str = parts[0]
+            name: str = label_iteration(i, K, N)  # parts[0]
             energy: float = float(parts[1])
-            maps.append({"map": name, "energy": energy})
 
             if energy < lowest:
                 lowest = energy
                 lowest_map = name
 
-    print(f"MAP,ENERGY,INDEX")
-    for m in maps:
-        name: str = m["map"]
-        energy: float = m["energy"]
-        delta: float = (energy - lowest) / lowest
+            maps.append({"MAP": name, "ENERGY": energy})
+            i += 1
 
-        print(f"{name},{energy:.4f},{delta:.4%}")
+    print(f"Lowest energy map: {lowest_map}")
+
+    for m in maps:
+        name: str = m["MAP"]
+        energy: float = m["ENERGY"]
+        delta: float = (energy - lowest) / lowest
+        note: str = "" if name != lowest_map else "<---"
+
+        m["DELTA"] = delta
+        m["NOTE"] = note
+
+    write_csv(
+        energies_csv, maps, ["MAP", "ENERGY", "DELTA", "NOTE"], precision="{:.6f}"
+    )
 
 
 pass
