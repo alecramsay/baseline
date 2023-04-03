@@ -93,6 +93,7 @@ def main() -> None:
 
     for i, seed in enumerate(range(start, start + iterations)):
         iter_label: str = label_iteration(i, K, N)
+        print()
         print(f"... Iteration: {iter_label}, seed: {seed} ...")
 
         output_csv: str = full_path(

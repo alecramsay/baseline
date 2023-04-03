@@ -29,10 +29,8 @@ def do_baseline_run(
     command: str = f"create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output}"
     os.system(command)
 
+    print()
     print(f"... {command}")
-
-    command = f"redistricting.py energy --assignment {tmpdir}/{prefix}.complete.csv --points {tmpdir}/{prefix}.points.csv"
-    os.system(command)
 
 
 ### TODO - What do we end up using of this?
