@@ -5,7 +5,7 @@ Pull energies for all iterations from a log file.
 
 For example:
 
-$ scripts/pull_energies.py -s NC -v > intermediate/NC/NC_2020_congress_log.txt
+$ scripts/pull_energies.py -s NC -i 10 -v
 
 For documentation, type:
 
@@ -37,6 +37,13 @@ def parse_args() -> Namespace:
         help="The type of map: { congress | upper | lower }.",
         type=str,
     )
+    parser.add_argument(
+        "-i",
+        "--iterations",
+        default=10,
+        help="The # of iterations to run (default: 10).",
+        type=int,
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -53,14 +60,21 @@ def main() -> None:
 
     xx: str = args.state
     plan_type: str = args.map
+    iterations: int = args.iterations
 
     verbose: bool = args.verbose
 
     #
 
+    fips: str = STATE_FIPS[xx]
     map_label: str = label_map(xx, plan_type)
-    log_txt: str = full_path([intermediate_dir, xx], [map_label, "log"], "txt")
-    energies_csv: str = full_path([intermediate_dir, xx], [map_label, "energies"])
+
+    log_txt: str = full_path(
+        [intermediate_dir, xx], [map_label, "log", str(iterations)], "txt"
+    )
+    energies_csv: str = full_path(
+        [intermediate_dir, xx], [map_label, "energies", str(iterations)]
+    )
 
     #
 
@@ -80,26 +94,52 @@ def main() -> None:
     N: int = districts_by_state[xx][plan_type]
     K: int = 1  # district multiplier
 
-    for line in lines:
-        if line.startswith("Energy for map "):
-            result = line[15:].strip()
-            parts: list[str] = [x.strip() for x in result.split("=")]
+    result: str
+    parts: list[str]
+    name: str = "N/A"
+    regions: int
+    energy: float
+    contiguous: bool = False
 
-            name: str = label_iteration(i, K, N)  # parts[0]
-            energy: float = float(parts[1])
+    for line in lines:
+        if line.startswith("Map "):
+            # Map NC20C_I000K01N14 = Contiguous 14
+            result = line[4:].strip()
+            parts = [x.strip() for x in result.split("=")]
+
+            name = label_iteration(i, K, N)  # parts[0]
+
+            regions = int(parts[1].split(" ")[-1])
+            contiguous = True if regions == N else False
+
+            continue
+
+        if line.startswith("Energy for map "):
+            # Energy for map NC20C_I000K01N14 = 3100302.685077957
+
+            result = line[15:].strip()
+            parts = [x.strip() for x in result.split("=")]
+
+            again: str = label_iteration(i, K, N)  # parts[0]
+            if again != name:
+                raise ValueError(f"Unexpected map name: {name} != {again}")
+
+            energy = float(parts[1])
 
             if energy < lowest:
                 lowest = energy
                 lowest_map = name
 
-            maps.append({"MAP": name, "ENERGY": energy})
+            maps.append({"MAP": name, "ENERGY": energy, "CONTIGUOUS": contiguous})
+
             i += 1
+            continue
 
     print(f"Lowest energy map: {lowest_map}")
 
     for m in maps:
-        name: str = m["MAP"]
-        energy: float = m["ENERGY"]
+        name = m["MAP"]
+        energy = m["ENERGY"]
         delta: float = (energy - lowest) / lowest
         note: str = "" if name != lowest_map else "<---"
 
@@ -107,7 +147,10 @@ def main() -> None:
         m["NOTE"] = note
 
     write_csv(
-        energies_csv, maps, ["MAP", "ENERGY", "DELTA", "NOTE"], precision="{:.6f}"
+        energies_csv,
+        maps,
+        ["MAP", "ENERGY", "DELTA", "CONTIGUOUS", "NOTE"],
+        precision="{:.6f}",
     )
 
 
