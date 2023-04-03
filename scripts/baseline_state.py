@@ -5,14 +5,7 @@ Find districts that minimize population compactness (moment of inertia).
 
 For example:
 
-$ scripts/baseline_state.py -s NC -v > intermediate/NC/NC20C_log.txt
-
-$ scripts/baseline_state.py -s MD -v > intermediate/MD/MD_2020_congress_log.txt
-$ scripts/baseline_state.py -s PA -v > intermediate/PA/PA_2020_congress_log.txt
-$ scripts/baseline_state.py -s VA -v > intermediate/VA/VA_2020_congress_log.txt
-
-$ scripts/baseline_state.py -s OR -g -v > intermediate/OR/OR_2020_congress_log.txt
-$ scripts/baseline_state.py -s CA -t -v > intermediate/CA/CA_2020_congress_log.txt
+$ scripts/baseline_state.py -s NC -i 10 -v > intermediate/NC/NC20C_log_10.txt
 
 For documentation, type:
 
@@ -109,8 +102,6 @@ def main() -> None:
         label: str = f"{map_label}_{iter_label}"
 
         tmpdir: str = intermediate_dir + "/" + xx
-        N = N
-        seed: int = start
         prefix: str = map_label
         data: str = input_csv
         adjacencies: str = pairs_csv

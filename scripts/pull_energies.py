@@ -6,6 +6,8 @@ Pull energies for all iterations from a log file.
 For example:
 
 $ scripts/pull_energies.py -s NC -i 10 -v
+$ scripts/pull_energies.py -s NC -i 100 -v
+$ scripts/pull_energies.py -s NC -i 1000 -v
 
 For documentation, type:
 
@@ -104,13 +106,12 @@ def main() -> None:
     for line in lines:
         if line.startswith("Map "):
             # Map NC20C_I000K01N14 = Contiguous 14
+            # Map NC20C_I018K01N14 = Discontiguous 15 != 14
             result = line[4:].strip()
             parts = [x.strip() for x in result.split("=")]
 
             name = label_iteration(i, K, N)  # parts[0]
-
-            regions = int(parts[1].split(" ")[-1])
-            contiguous = True if regions == N else False
+            contiguous = True if parts[1].split(" ")[0] == "Contiguous" else False
 
             continue
 
