@@ -6,6 +6,8 @@ Find districts that minimize population compactness (moment of inertia).
 For example:
 
 $ scripts/baseline_state.py -s NC -i 10 -v > intermediate/NC/NC20C_log_10.txt
+$ scripts/baseline_state.py -s NC -i 100 -v > intermediate/NC/NC20C_log_100.txt
+$ scripts/baseline_state.py -s NC -i 1000 -v > intermediate/NC/NC20C_log_1000.txt
 
 For documentation, type:
 
