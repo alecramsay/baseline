@@ -19,6 +19,7 @@ def do_baseline_run(
     data: str,
     adjacencies: str,
     output: str,
+    label: str,
     verbose: bool = False,
 ) -> None:
     """Make a set of baseline districts from random starting sites
@@ -26,7 +27,7 @@ def do_baseline_run(
     Do this many times, and then choose the baseline as the map with the lowest energy.
     """
 
-    command: str = f"create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output}"
+    command: str = f"create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output} --label={label}"
     os.system(command)
 
     print()

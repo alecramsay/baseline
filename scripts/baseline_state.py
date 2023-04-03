@@ -45,6 +45,13 @@ def parse_args() -> Namespace:
         help="The type of map: { congress | upper | lower }.",
         type=str,
     )
+    parser.add_argument(
+        "-i",
+        "--iterations",
+        default=10,
+        help="The # of iterations to run (default: 10).",
+        type=int,
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -62,6 +69,7 @@ def main() -> None:
 
     xx: str = args.state
     plan_type: str = args.map
+    iterations: int = args.iterations
 
     verbose: bool = args.verbose
 
@@ -87,7 +95,6 @@ def main() -> None:
     pairs_csv = full_path([data_dir, xx], [xx, cycle, "vtd", "pairs"])
 
     start: int = K * N * int(fips)
-    iterations: int = 10  # 10 | 100 | 1000
 
     # Iterate creating baseline maps
 
@@ -99,6 +106,7 @@ def main() -> None:
         output_csv: str = full_path(
             [intermediate_dir, xx], [map_label, iter_label, "vtd", "assignments"]
         )
+        label: str = f"{map_label}_{iter_label}"
 
         tmpdir: str = intermediate_dir + "/" + xx
         N = N
@@ -108,7 +116,9 @@ def main() -> None:
         adjacencies: str = pairs_csv
         output: str = output_csv
 
-        do_baseline_run(tmpdir, N, seed, prefix, data, adjacencies, output, verbose)
+        do_baseline_run(
+            tmpdir, N, seed, prefix, data, adjacencies, output, label, verbose
+        )
 
         pass
 
