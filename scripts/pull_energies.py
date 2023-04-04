@@ -14,6 +14,8 @@ For documentation, type:
 $ scripts/pull_energies.py -h
 """
 
+# TODO - Pull extracting energies into a module/file in the source directory.
+
 import argparse
 from argparse import ArgumentParser, Namespace
 
