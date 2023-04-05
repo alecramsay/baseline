@@ -45,3 +45,47 @@ def effective_splits(splits: list[float]) -> float:
         es = 0.0
 
     return es
+
+
+def rate_uom(uom: float) -> int:
+    """Rate uncertainty of membership [0–100] like DRA (Compare tab)
+
+    The TypeScript implementation in DRA:
+
+    function rateSplittingUncertainty(uncertainty: number): number
+    {
+    // See dra-analytics:
+    // * The worst = 1.00 is [0.5, 0.5] splits (for every district) => rating of 0
+    //               1.58 was districts split into thirds.
+    // * The midpoint = 0.5                                         => rating of 50
+    // * The best = 0.0 is a district preserved in it's entirety    => rating of 100
+
+    const worst: number = 1.0;
+    const scale: number = 100;
+
+    let raw: number = uncertainty;
+    let rating: number;
+
+    raw = Math.min(Math.max(0, raw), worst);  // clip it
+    raw = Math.abs(raw / worst);              // unitize it
+    raw = 1 - raw;                            // invert it
+
+    rating = Math.round(raw * scale);         // re-scale it
+
+    return rating;
+    }
+    """
+
+    worst: float = 1.0
+    scale: int = 100
+
+    raw: float = min(max(0, uom), worst)  # clip it
+    raw = abs(raw / worst)  # unitize it
+    raw = 1 - raw  # invert it
+
+    rating: int = round(raw * scale)  # re-scale it
+
+    return rating
+
+
+### END ###
