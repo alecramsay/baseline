@@ -101,6 +101,7 @@ class PlanDiff:
     """Compute 'splits' for the districts of two plans."""
 
     splits: list[list[float]]
+    shared_by_district: list[float]
     uom_by_district: list[float]
     es_by_district: list[float]
 
@@ -129,13 +130,16 @@ class PlanDiff:
         self.splits = plan_splits
 
     def _compute_metrics(self) -> None:
+        self.shared_by_district = list()
         self.uom_by_district = list()
         self.es_by_district = list()
 
         for d in self.splits:
+            shared: float = max(d)
             uom: float = uncertainty_of_membership(d)
             es: float = effective_splits(d)
 
+            self.shared_by_district.append(shared)
             self.uom_by_district.append(uom)
             self.es_by_district.append(es)
 

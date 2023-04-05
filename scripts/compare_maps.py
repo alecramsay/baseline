@@ -147,6 +147,7 @@ def main() -> None:
         # Compare the two plans
 
         diff: PlanDiff = PlanDiff(baseline, alt_plan)
+        avg_shared: float = statistics.fmean(diff.shared_by_district)
         avg_uncertainty: float = statistics.fmean(diff.uom_by_district)
         avg_splits: float = statistics.fmean(diff.es_by_district)
 
@@ -168,6 +169,7 @@ def main() -> None:
             note = "Lowest: " + ", ".join(buckets)
         plan["NOTE"] = note
 
+        plan["SHARED"] = avg_shared
         plan["UOM"] = avg_uncertainty
         plan["ES"] = avg_splits
 
