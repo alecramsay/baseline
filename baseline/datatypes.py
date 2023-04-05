@@ -58,23 +58,24 @@ class Plan:
     _geoids_by_district: dict[int, set[str]]
     _pop_by_district: dict[int, int]
 
-    def __init__(self, rel_path: str) -> None:  # , fc: FeatureCollection) -> None:
+    def __init__(self, rel_path: str, pop_by_geoid: dict[str, int]) -> None:
         assignments: list[dict] = read_csv(rel_path, [str, int])
         self._district_by_geoid = {
             str(row["GEOID"]): row["DISTRICT"] for row in assignments
         }
         self._invert()
+        self._sum_pop_by_district(pop_by_geoid)
 
     def _invert(self) -> None:
         self._geoids_by_district = defaultdict(set)
         for geoid, district in self._district_by_geoid.items():
             self._geoids_by_district[district].add(geoid)
 
-    # def _sum_pop_by_district(self) -> None:
-    #     self._pop_by_district = defaultdict(int)
-    #     for district, geoids in self._geoids_by_district.items():
-    #         for geoid in geoids:
-    #             self._pop_by_district[district] += pop_by_geoid[geoid]
+    def _sum_pop_by_district(self, pop_by_geoid: dict[str, int]) -> None:
+        self._pop_by_district = defaultdict(int)
+        for district, geoids in self._geoids_by_district.items():
+            for geoid in geoids:
+                self._pop_by_district[district] += pop_by_geoid[geoid]
 
     def district_for_geoid(self, geoid: str) -> int:
         return self._district_by_geoid[geoid]

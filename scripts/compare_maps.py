@@ -115,20 +115,9 @@ def main() -> None:
     lowest_plan_csv: str = full_path(
         [intermediate_dir, xx], [map_label, lowest_plan, "vtd", "assignments"]
     )
-    baseline: Plan = Plan(lowest_plan_csv)
-
-    pass
-
-    # TODO - Calculate population by district
-
-    # _pop_by_district: dict[int, int] = defaultdict(int)
-    # for district, geoids in _geoids_by_district.items():
-    #     for geoid in geoids:
-    #         _pop_by_district[district] += pop_by_geoid[geoid]
+    baseline: Plan = Plan(lowest_plan_csv, pop_by_geoid)
 
     # TODO - Load each candidate map
-
-    # TODO - Invert it
 
     # TODO - Compare the two
 
