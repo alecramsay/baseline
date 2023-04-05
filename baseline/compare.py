@@ -36,6 +36,10 @@ def cull_energies(log_txt: str, xx: str, plan_type: str) -> list[dict]:
     contiguous: bool = False
 
     for line in lines:
+        if i > 990:
+            print(f"i: {i}: {line}")
+            pass
+
         if line.startswith("Map "):
             # Map NC20C_I000K01N14 = Contiguous 14
             # Map NC20C_I018K01N14 = Discontiguous 15 != 14

@@ -52,8 +52,8 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-i",
         "--iterations",
-        default=100,
-        help="The # of iterations to run (default: 10).",
+        default=1000,
+        help="The # of iterations to run (default: 1000).",
         type=int,
     )
 
@@ -97,13 +97,16 @@ def main() -> None:
     log_txt: str = full_path(
         [intermediate_dir, xx], [map_label, "log", str(iterations)], "txt"
     )
-    plans: list[dict] = cull_energies(log_txt, xx, plan_type)
+    plan_energies: list[dict] = cull_energies(
+        log_txt, xx, plan_type
+    )  # These will be in ascending seed order
 
     # Find the lowest energy maps
 
     lowest_energies: dict[str, float]
     lowest_plans: dict[str, str]
-    lowest_plans, lowest_energies = find_lowest_energies(plans)
+    lowest_plans, lowest_energies = find_lowest_energies(plan_energies)
+    inv_lowest_plans = {v: k for k, v in lowest_plans.items()}
 
     lowest_energy: float = min(lowest_energies.values())
     lowest_plan: str = [
@@ -119,30 +122,48 @@ def main() -> None:
     )
     baseline: Plan = Plan(lowest_plan_csv, pop_by_geoid)
 
-    # Load each candidate map
+    # Compare each candidate map
 
+    plans: list[dict] = list()
     start: int = K * N * int(fips)
 
-    # Iterate creating baseline maps
-
     for i, seed in enumerate(range(start, start + iterations)):
+        # Load the plan
+
         iter_label: str = label_iteration(i, K, N)
         alt_plan_csv: str = full_path(
             [intermediate_dir, xx], [map_label, iter_label, "vtd", "assignments"]
         )
         alt_plan: Plan = Plan(alt_plan_csv, pop_by_geoid)
 
-        # TODO - Compare the two
-        # TODO - Add to plans dict
+        # Compare the two plans
 
         diff: PlanDiff = PlanDiff(baseline, alt_plan)
         avg_uncertainty: float = statistics.fmean(diff.uom_by_district)
         avg_splits: float = statistics.fmean(diff.es_by_district)
 
-        if i > 0:  # TODO - Remove
-            break
+        # Add a row to the list of plans
+
+        plan: dict = plan_energies[i]
+
+        name: str = plan["MAP"]
+        energy: float = plan["ENERGY"]
+        delta: float = (energy - lowest_energy) / lowest_energy
+        plan["DELTA"] = delta
+
+        note: str = ""
+        if name in inv_lowest_plans:
+            note = f"Lowest: {inv_lowest_plans[name]}"  # TODO
+        plan["NOTE"] = note
+
+        plan["UOM"] = avg_uncertainty
+        plan["ES"] = avg_splits
+
+        plans.append(plan)
 
     # TODO - Write analysis to file
+
+    pass
 
     # energies_csv: str = full_path(
     #     [intermediate_dir, xx], [map_label, "energies", str(iterations)]
