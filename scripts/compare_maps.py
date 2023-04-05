@@ -136,6 +136,12 @@ def main() -> None:
     for i, seed in enumerate(range(start, start + iterations)):
         map_name: str = map_label + "_" + label_iteration(i, K, N)
 
+        # Make sure the map exists
+
+        if map_name not in plan_energies:
+            # This baseline iteration failed. Skip it.
+            continue
+
         # Load the plan
 
         iter_label: str = label_iteration(i, K, N)
@@ -161,11 +167,11 @@ def main() -> None:
         plan["DELTA"] = delta
 
         note: str = ""
-        if name in lowest_plans:
+        if name in lowest_plans.values():
             buckets: list[str] = list()
             for k, v in lowest_plans.items():
                 if v == name:
-                    buckets.append(v)
+                    buckets.append(k)
             note = "Lowest: " + ", ".join(buckets)
         plan["NOTE"] = note
 
@@ -173,17 +179,15 @@ def main() -> None:
         plan["UOM"] = avg_uncertainty
         plan["ES"] = avg_splits
 
+        plan["I"] = i + 1
+
         plans.append(plan)
 
-        pass  # TODO - DELETE
+    # Sort the maps by energy
 
-    # TODO - Write analysis to file
+    plans = sorted(plans, key=lambda plan: plan["ENERGY"])
 
-    pass
-
-    # energies_csv: str = full_path(
-    #     [intermediate_dir, xx], [map_label, "energies", str(iterations)]
-    # )
+    # Write analysis to file
 
     # write_csv(
     #     energies_csv,

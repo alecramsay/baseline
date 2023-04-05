@@ -122,7 +122,10 @@ class PlanDiff:
                 intersection: set[str] = base_geoids.intersection(compare_geoids)
 
                 if intersection:
-                    pct: float = base.population_for_split(intersection) / base_total
+                    split_pop: int = base.population_for_split(intersection)
+                    pct: float = (
+                        split_pop / base_total if split_pop < base_total else 1.0
+                    )
                     district_splits.append(pct)
 
             plan_splits.append(district_splits)
