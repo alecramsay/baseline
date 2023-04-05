@@ -7,8 +7,9 @@ DATA STRUCTURES
 from shapely.geometry import Point, Polygon, MultiPolygon
 
 from .readwrite import *
-from .datatypes import *
-from .plastic import *
+from .datatypes import Feature
+
+# from .plastic import *
 
 
 class FeatureCollection:

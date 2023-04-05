@@ -4,8 +4,10 @@
 TYPES
 """
 
-
+from collections import defaultdict
 from typing import NamedTuple, TypedDict
+
+from .readwrite import read_csv
 
 
 class Coordinate(NamedTuple):
@@ -49,6 +51,33 @@ class Pair(NamedTuple):
         two: int = y if y > x else x
 
         return cls(one, two)
+
+
+class Plan:
+    _district_by_geoid: dict[str, int]
+    _geoids_by_district: dict[int, set[str]]
+    _pop_by_district: dict[int, int]
+
+    def __init__(self, rel_path: str) -> None:  # , fc: FeatureCollection) -> None:
+        assignments: list[dict] = read_csv(rel_path, [str, int])
+        self._district_by_geoid = {
+            str(row["GEOID"]): row["DISTRICT"] for row in assignments
+        }
+        self._invert()
+
+    def _invert(self) -> None:
+        self._geoids_by_district = defaultdict(set)
+        for geoid, district in self._district_by_geoid.items():
+            self._geoids_by_district[district].add(geoid)
+
+    # def _sum_pop_by_district(self) -> None:
+    #     self._pop_by_district = defaultdict(int)
+    #     for district, geoids in self._geoids_by_district.items():
+    #         for geoid in geoids:
+    #             self._pop_by_district[district] += pop_by_geoid[geoid]
+
+    def district_for_geoid(self, geoid: str) -> int:
+        return self._district_by_geoid[geoid]
 
 
 ### END ###

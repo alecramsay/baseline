@@ -5,7 +5,8 @@ from .readwrite import *
 from .utils import *
 from .datatypes import *
 from .data import *
-from .plastic import *
+
+# from .plastic import *
 from .graph import *
 from .coi import *
 from .compare import *

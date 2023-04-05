@@ -15,17 +15,15 @@ $ scripts/compare_maps.py -h
 import argparse
 from argparse import ArgumentParser, Namespace
 
-from collections import defaultdict
-
 from baseline.constants import (
     cycle,
-    temp_dir,
+    data_dir,
     intermediate_dir,
     districts_by_state,
     STATE_FIPS,
 )
 from baseline.readwrite import file_name, path_to_file, read_csv
-from baseline.data import FeatureCollection
+from baseline.datatypes import Plan
 from baseline.compare import cull_energies, find_lowest_energies
 from baseline.baseline import label_map, full_path
 
@@ -86,10 +84,11 @@ def main() -> None:
 
     # Load the feature data
 
-    data_path: str = path_to_file([temp_dir]) + file_name(
-        [xx, cycle, unit, "data"], "_", "pickle"
+    data_path: str = path_to_file([data_dir, xx]) + file_name(
+        [xx, cycle, unit, "data"], "_", "csv"
     )
-    fc: FeatureCollection = FeatureCollection(data_path)
+    data: list[dict] = read_csv(data_path, [str, int, float, float])
+    pop_by_geoid: dict[str, int] = {row["GEOID"]: row["POP"] for row in data}
 
     # Pull the energies from the log file
 
@@ -111,22 +110,14 @@ def main() -> None:
         if lowest_energies[key] == lowest_energy
     ][0]
 
-    # TODO - Load the lowest energy map
+    # Load the lowest energy map
 
-    lowest_map_csv: str = full_path(
-        [intermediate_dir, xx], [map_label, lowest_map, "vtd", "assignments"]
+    lowest_plan_csv: str = full_path(
+        [intermediate_dir, xx], [map_label, lowest_plan, "vtd", "assignments"]
     )
-    assignments: list[dict[str, int]] = read_csv(lowest_map_csv, [str, int])
-    _district_by_geoid: dict[str, int] = {
-        str(d["GEOID"]): d["DISTRICT"] for d in assignments
-    }
-    del assignments
+    baseline: Plan = Plan(lowest_plan_csv)
 
-    # TODO - Invert it
-
-    _geoids_by_district: dict[int, set[str]] = defaultdict(set)
-    for geoid, district in _district_by_geoid.items():
-        _geoids_by_district[district].add(geoid)
+    pass
 
     # TODO - Calculate population by district
 
