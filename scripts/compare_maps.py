@@ -114,7 +114,6 @@ def main() -> None:
     lowest_energies: dict[str, float]
     lowest_plans: dict[str, str]
     lowest_plans, lowest_energies = find_lowest_energies(plan_energies)
-    inv_lowest_plans = {v: k for k, v in lowest_plans.items()}
 
     lowest_energy: float = min(lowest_energies.values())
     lowest_plan: str = [
@@ -126,7 +125,7 @@ def main() -> None:
     # Load the lowest energy map
 
     lowest_plan_csv: str = full_path(
-        [intermediate_dir, xx], [map_label, lowest_plan, "vtd", "assignments"]
+        [intermediate_dir, xx], [lowest_plan, "vtd", "assignments"]
     )
     baseline: Plan = Plan(lowest_plan_csv, pop_by_geoid)
 
@@ -135,6 +134,8 @@ def main() -> None:
     plans: list[dict] = list()
 
     for i, seed in enumerate(range(start, start + iterations)):
+        map_name: str = map_label + "_" + label_iteration(i, K, N)
+
         # Load the plan
 
         iter_label: str = label_iteration(i, K, N)
@@ -151,7 +152,7 @@ def main() -> None:
 
         # Add a row to the list of plans
 
-        plan: dict = plan_energies[i]
+        plan: dict = plan_energies[map_name]
 
         name: str = plan["MAP"]
         energy: float = plan["ENERGY"]
@@ -159,14 +160,20 @@ def main() -> None:
         plan["DELTA"] = delta
 
         note: str = ""
-        if name in inv_lowest_plans:
-            note = f"Lowest: {inv_lowest_plans[name]}"  # TODO
+        if name in lowest_plans:
+            buckets: list[str] = list()
+            for k, v in lowest_plans.items():
+                if v == name:
+                    buckets.append(v)
+            note = "Lowest: " + ", ".join(buckets)
         plan["NOTE"] = note
 
         plan["UOM"] = avg_uncertainty
         plan["ES"] = avg_splits
 
         plans.append(plan)
+
+        pass  # TODO - DELETE
 
     # TODO - Write analysis to file
 
