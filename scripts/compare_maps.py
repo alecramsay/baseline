@@ -15,6 +15,8 @@ $ scripts/compare_maps.py -h
 import argparse
 from argparse import ArgumentParser, Namespace
 
+import statistics
+
 from baseline.constants import (
     cycle,
     data_dir,
@@ -134,8 +136,8 @@ def main() -> None:
         # TODO - Add to plans dict
 
         diff: PlanDiff = PlanDiff(baseline, alt_plan)
-        avg_uncertainty: float
-        avg_splits: float
+        avg_uncertainty: float = statistics.fmean(diff.uom_by_district)
+        avg_splits: float = statistics.fmean(diff.es_by_district)
 
         if i > 0:  # TODO - Remove
             break

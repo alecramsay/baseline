@@ -25,6 +25,9 @@ def uncertainty_of_membership(splits: list[float]) -> float:
 
     uom: float = -1 * sum([x * math.log2(x) for x in splits if x > 0])
 
+    if uom == -0.0:
+        uom = 0.0
+
     return uom
 
 
@@ -37,5 +40,8 @@ def effective_splits(splits: list[float]) -> float:
     """
 
     es: float = (1 / sum([x**2 for x in splits if x > 0])) - 1
+
+    if es == -0.0:
+        es = 0.0
 
     return es
