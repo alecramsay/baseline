@@ -8,6 +8,8 @@ from pyutils import FileSpec
 
 from .constants import districts_by_state
 from .baseline import label_iteration
+from .datatypes import Plan
+from .coi import uncertainty_of_membership, effective_splits
 
 
 def cull_energies(log_txt: str, xx: str, plan_type: str) -> list[dict]:
@@ -91,6 +93,47 @@ def find_lowest_energies(
             lowest_plans["thousand"] = plan["MAP"]
 
     return lowest_plans, lowest_energy
+
+
+class PlanDiff:
+    """Compute 'splits' for the districts of two plans."""
+
+    splits: list[list[float]]
+    uncertainty_by_district: list[float]
+    splits_by_district: list[float]
+
+    def __init__(self, base: Plan, compare: Plan) -> None:
+        self._compute_splits(base, compare)
+
+    def _compute_splits(self, base: Plan, compare: Plan) -> None:
+        plan_splits: list[list[float]] = list()
+
+        for i in base.district_ids:
+            district_splits: list[float] = list()
+            base_geoids: set[str] = base.geoids_for_district(i)
+
+            for j in compare.district_ids:
+                compare_geoids: set[str] = compare.geoids_for_district(j)
+                intersection: set[str] = base_geoids.intersection(compare_geoids)
+
+                if intersection:
+                    # districts: list[int] = [from_id, to_id]
+                    # n: int = len(intersection)
+                    # pop: int = 0
+                    # for geoid in intersection:
+                    #     n += 1
+                    #     pop += features[geoid].pop
+                    # region: Region = Region(
+                    #     districts=districts,
+                    #     geoids=intersection,
+                    #     n=n,
+                    #     pop=pop,
+                    # )
+                    # district_splits.append(region)
+
+                    continue  # TODO: remove
+
+        self.splits = [[0.33, 0.33, 0.34], [0.92, 0.05, 0.03]]
 
 
 ### END ###

@@ -24,8 +24,8 @@ from baseline.constants import (
 )
 from baseline.readwrite import file_name, path_to_file, read_csv
 from baseline.datatypes import Plan
-from baseline.compare import cull_energies, find_lowest_energies
-from baseline.baseline import label_map, full_path
+from baseline.compare import cull_energies, find_lowest_energies, PlanDiff
+from baseline.baseline import label_map, full_path, label_iteration
 
 
 def parse_args() -> Namespace:
@@ -117,9 +117,41 @@ def main() -> None:
     )
     baseline: Plan = Plan(lowest_plan_csv, pop_by_geoid)
 
-    # TODO - Load each candidate map
+    # Load each candidate map
 
-    # TODO - Compare the two
+    start: int = K * N * int(fips)
+
+    # Iterate creating baseline maps
+
+    for i, seed in enumerate(range(start, start + iterations)):
+        iter_label: str = label_iteration(i, K, N)
+        alt_plan_csv: str = full_path(
+            [intermediate_dir, xx], [map_label, iter_label, "vtd", "assignments"]
+        )
+        alt_plan: Plan = Plan(alt_plan_csv, pop_by_geoid)
+
+        # TODO - Compare the two
+        # TODO - Add to plans dict
+
+        PlanDiff(baseline, alt_plan).splits
+        avg_uncertainty: float
+        avg_splits: float
+
+        if i > 0:  # TODO - Remove
+            break
+
+    # TODO - Write analysis to file
+
+    # energies_csv: str = full_path(
+    #     [intermediate_dir, xx], [map_label, "energies", str(iterations)]
+    # )
+
+    # write_csv(
+    #     energies_csv,
+    #     maps,
+    #     ["MAP", "ENERGY", "DELTA", "CONTIGUOUS", "NOTE"],
+    #     precision="{:.6f}",
+    # )
 
     pass
 

@@ -14,6 +14,7 @@ For documentation, type:
 $ scripts/pull_energies.py -h
 """
 
+# TODO - DELETE
 # TODO - Pull extracting energies into a module/file in the source directory.
 
 import argparse

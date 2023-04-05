@@ -54,6 +54,7 @@ class Pair(NamedTuple):
 
 
 class Plan:
+    _district_ids: set[int]
     _district_by_geoid: dict[str, int]
     _geoids_by_district: dict[int, set[str]]
     _pop_by_district: dict[int, int]
@@ -64,6 +65,7 @@ class Plan:
             str(row["GEOID"]): row["DISTRICT"] for row in assignments
         }
         self._invert()
+        self._district_ids = set(self._geoids_by_district.keys())
         self._sum_pop_by_district(pop_by_geoid)
 
     def _invert(self) -> None:
@@ -77,8 +79,18 @@ class Plan:
             for geoid in geoids:
                 self._pop_by_district[district] += pop_by_geoid[geoid]
 
+    @property
+    def district_ids(self) -> set[int]:
+        return self._district_ids
+
     def district_for_geoid(self, geoid: str) -> int:
         return self._district_by_geoid[geoid]
+
+    def geoids_for_district(self, district: int) -> set[str]:
+        return self._geoids_by_district[district]
+
+    def population_for_district(self, district: int) -> int:
+        return self._pop_by_district[district]
 
 
 ### END ###
