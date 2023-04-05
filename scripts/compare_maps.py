@@ -21,10 +21,11 @@ from baseline.constants import (
     cycle,
     data_dir,
     intermediate_dir,
+    maps_dir,
     districts_by_state,
     STATE_FIPS,
 )
-from baseline.readwrite import file_name, path_to_file, read_csv
+from baseline.readwrite import file_name, path_to_file, read_csv, write_csv
 from baseline.datatypes import Plan
 from baseline.compare import cull_energies, find_lowest_energies, PlanDiff
 from baseline.baseline import label_map, full_path, label_iteration
@@ -76,8 +77,6 @@ def main() -> None:
     unit: str = "vtd"  # Mod for CA & OR
 
     verbose: bool = args.verbose
-
-    iterations = 1000  # TODO - DELETE
 
     # Constants
 
@@ -189,12 +188,16 @@ def main() -> None:
 
     # Write analysis to file
 
-    # write_csv(
-    #     energies_csv,
-    #     maps,
-    #     ["MAP", "ENERGY", "DELTA", "CONTIGUOUS", "NOTE"],
-    #     precision="{:.6f}",
-    # )
+    energies_csv: str = path_to_file([maps_dir, xx]) + file_name(
+        [map_label, "energies"], "_", "csv"
+    )
+
+    write_csv(
+        energies_csv,
+        plans,
+        ["I", "MAP", "CONTIGUOUS", "ENERGY", "DELTA", "SHARED", "UOM", "ES", "NOTE"],
+        precision="{:.6f}",
+    )
 
     pass
 
