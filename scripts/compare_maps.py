@@ -178,7 +178,7 @@ def main() -> None:
         plan["UOM"] = avg_uncertainty
         plan["ES"] = avg_splits
 
-        plan["I"] = i + 1
+        plan["#"] = i + 1
 
         plans.append(plan)
 
@@ -195,7 +195,7 @@ def main() -> None:
     write_csv(
         energies_csv,
         plans,
-        ["I", "MAP", "CONTIGUOUS", "ENERGY", "DELTA", "SHARED", "UOM", "ES", "NOTE"],
+        ["#", "MAP", "CONTIGUOUS", "ENERGY", "DELTA", "SHARED", "UOM", "ES", "NOTE"],
         precision="{:.6f}",
     )
 
