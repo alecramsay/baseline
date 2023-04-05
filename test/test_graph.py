@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 
 """
-TEST EXCEL NAMING
+TEST GRAPH FUNCTIONS
 """
 
 
-from baseline import *
+from baseline.graph import Graph, is_connected
 
 
 class TestGraph:
-    def testis_consistent(self) -> None:
+    def test_is_consistent(self) -> None:
         data: dict[str, list[str]] = {"a": ["b", "c"], "b": ["a", "c"], "c": ["a", "b"]}
         g: Graph = Graph(data)
         assert g.is_consistent()

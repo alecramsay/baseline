@@ -7,7 +7,9 @@ from .datatypes import *
 from .data import *
 from .plastic import *
 from .graph import *
-from .equalize import *
+from .coi import *
 from .baseline import *
 
 name: str = "baseline"
+
+# TODO - Limit exports
