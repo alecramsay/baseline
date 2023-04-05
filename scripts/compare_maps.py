@@ -133,7 +133,7 @@ def main() -> None:
         # TODO - Compare the two
         # TODO - Add to plans dict
 
-        PlanDiff(baseline, alt_plan).splits
+        diff: PlanDiff = PlanDiff(baseline, alt_plan)
         avg_uncertainty: float
         avg_splits: float
 

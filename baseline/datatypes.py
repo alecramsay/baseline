@@ -58,26 +58,30 @@ class Plan:
     _district_by_geoid: dict[str, int]
     _geoids_by_district: dict[int, set[str]]
     _pop_by_district: dict[int, int]
+    _pop_by_geoid: dict[str, int]
 
     def __init__(self, rel_path: str, pop_by_geoid: dict[str, int]) -> None:
         assignments: list[dict] = read_csv(rel_path, [str, int])
         self._district_by_geoid = {
             str(row["GEOID"]): row["DISTRICT"] for row in assignments
         }
+        self._pop_by_geoid = pop_by_geoid
+
         self._invert()
         self._district_ids = set(self._geoids_by_district.keys())
-        self._sum_pop_by_district(pop_by_geoid)
+
+        self._sum_pop_by_district()
 
     def _invert(self) -> None:
         self._geoids_by_district = defaultdict(set)
         for geoid, district in self._district_by_geoid.items():
             self._geoids_by_district[district].add(geoid)
 
-    def _sum_pop_by_district(self, pop_by_geoid: dict[str, int]) -> None:
+    def _sum_pop_by_district(self) -> None:
         self._pop_by_district = defaultdict(int)
         for district, geoids in self._geoids_by_district.items():
             for geoid in geoids:
-                self._pop_by_district[district] += pop_by_geoid[geoid]
+                self._pop_by_district[district] += self._pop_by_geoid[geoid]
 
     @property
     def district_ids(self) -> set[int]:
@@ -91,6 +95,13 @@ class Plan:
 
     def population_for_district(self, district: int) -> int:
         return self._pop_by_district[district]
+
+    def population_for_split(self, geoids: set[str]) -> int:
+        pop: int = 0
+        for geoid in geoids:
+            pop += self._pop_by_geoid[geoid]
+
+        return pop
 
 
 ### END ###

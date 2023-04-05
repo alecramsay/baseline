@@ -100,10 +100,11 @@ class PlanDiff:
 
     splits: list[list[float]]
     uncertainty_by_district: list[float]
-    splits_by_district: list[float]
+    effective_splits_by_district: list[float]
 
     def __init__(self, base: Plan, compare: Plan) -> None:
         self._compute_splits(base, compare)
+        self._compute_metrics()
 
     def _compute_splits(self, base: Plan, compare: Plan) -> None:
         plan_splits: list[list[float]] = list()
@@ -111,29 +112,30 @@ class PlanDiff:
         for i in base.district_ids:
             district_splits: list[float] = list()
             base_geoids: set[str] = base.geoids_for_district(i)
+            base_total: int = base.population_for_district(i)
 
             for j in compare.district_ids:
                 compare_geoids: set[str] = compare.geoids_for_district(j)
                 intersection: set[str] = base_geoids.intersection(compare_geoids)
 
                 if intersection:
-                    # districts: list[int] = [from_id, to_id]
-                    # n: int = len(intersection)
-                    # pop: int = 0
-                    # for geoid in intersection:
-                    #     n += 1
-                    #     pop += features[geoid].pop
-                    # region: Region = Region(
-                    #     districts=districts,
-                    #     geoids=intersection,
-                    #     n=n,
-                    #     pop=pop,
-                    # )
-                    # district_splits.append(region)
+                    pct: float = base.population_for_split(intersection) / base_total
+                    district_splits.append(pct)
 
-                    continue  # TODO: remove
+            plan_splits.append(district_splits)
 
-        self.splits = [[0.33, 0.33, 0.34], [0.92, 0.05, 0.03]]
+        self.splits = plan_splits
+
+    def _compute_metrics(self) -> None:
+        self.uncertainty_by_district = list()
+        self.effective_splits_by_district = list()
+
+        for d in self.splits:
+            uom: float = uncertainty_of_membership(d)
+            es: float = effective_splits(d)
+
+            self.uncertainty_by_district.append(uom)
+            self.effective_splits_by_district.append(es)
 
 
 ### END ###
