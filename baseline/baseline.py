@@ -30,8 +30,8 @@ def do_baseline_run(
     command: str = f"create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output} --label={label}"
     os.system(command)
 
-    print()
-    print(f"... {command}")
+    # print()
+    # print(f"... {command}")
 
 
 ### TODO - What do we end up using of this?
