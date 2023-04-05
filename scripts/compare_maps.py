@@ -52,8 +52,8 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-i",
         "--iterations",
-        default=1000,
-        help="The # of iterations to run (default: 1000).",
+        default=100,
+        help="The # of iterations to run (default: 100).",
         type=int,
     )
 
@@ -77,12 +77,15 @@ def main() -> None:
 
     verbose: bool = args.verbose
 
+    iterations = 1000  # TODO - DELETE
+
     # Constants
 
     map_label: str = label_map(xx, plan_type)
     N: int = districts_by_state[xx][plan_type]
     K: int = 1  # district multiplier
     fips: str = STATE_FIPS[xx]
+    start: int = K * N * int(fips)
 
     # Load the feature data
 
@@ -97,9 +100,14 @@ def main() -> None:
     log_txt: str = full_path(
         [intermediate_dir, xx], [map_label, "log", str(iterations)], "txt"
     )
-    plan_energies: list[dict] = cull_energies(
-        log_txt, xx, plan_type
-    )  # These will be in ascending seed order
+    plan_energies: dict[str, dict] = cull_energies(log_txt, xx, plan_type)
+
+    if len(plan_energies) != iterations:
+        print(f"Missing iterations: Expected {iterations}; got {len(plan_energies)}.")
+        for i, seed in enumerate(range(start, start + iterations)):
+            map_name: str = map_label + "_" + label_iteration(i, K, N)
+            if map_name not in plan_energies:
+                print(f"Map {map_name} not in log.")
 
     # Find the lowest energy maps
 
@@ -125,7 +133,6 @@ def main() -> None:
     # Compare each candidate map
 
     plans: list[dict] = list()
-    start: int = K * N * int(fips)
 
     for i, seed in enumerate(range(start, start + iterations)):
         # Load the plan

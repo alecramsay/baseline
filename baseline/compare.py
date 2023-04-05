@@ -12,7 +12,8 @@ from .datatypes import Plan
 from .coi import uncertainty_of_membership, effective_splits
 
 
-def cull_energies(log_txt: str, xx: str, plan_type: str) -> list[dict]:
+# def cull_energies(log_txt: str, xx: str, plan_type: str) -> list[dict]:
+def cull_energies(log_txt: str, xx: str, plan_type: str) -> dict[str, dict]:
     """Cull plan (map) energies from a log file."""
 
     abs_path: str = FileSpec(log_txt).abs_path
@@ -24,10 +25,7 @@ def cull_energies(log_txt: str, xx: str, plan_type: str) -> list[dict]:
 
             line = f.readline()
 
-    plans: list[dict] = list()
-    i: int = 0
-    N: int = districts_by_state[xx][plan_type]
-    K: int = 1  # district multiplier
+    plans: dict[str, dict] = dict()
 
     result: str
     parts: list[str]
@@ -36,17 +34,14 @@ def cull_energies(log_txt: str, xx: str, plan_type: str) -> list[dict]:
     contiguous: bool = False
 
     for line in lines:
-        if i > 990:
-            print(f"i: {i}: {line}")
-            pass
-
         if line.startswith("Map "):
             # Map NC20C_I000K01N14 = Contiguous 14
             # Map NC20C_I018K01N14 = Discontiguous 15 != 14
             result = line[4:].strip()
             parts = [x.strip() for x in result.split("=")]
 
-            name = label_iteration(i, K, N)  # parts[0]
+            name = parts[0]
+            # name = label_iteration(i, K, N)  # parts[0]
             contiguous = True if parts[1].split(" ")[0] == "Contiguous" else False
 
             continue
@@ -57,44 +52,47 @@ def cull_energies(log_txt: str, xx: str, plan_type: str) -> list[dict]:
             result = line[15:].strip()
             parts = [x.strip() for x in result.split("=")]
 
-            again: str = label_iteration(i, K, N)  # parts[0]
+            again: str = parts[0]
+            # again: str = label_iteration(i, K, N)  # parts[0]
             if again != name:
                 raise ValueError(f"Unexpected map name: {name} != {again}")
 
             energy = float(parts[1])
 
-            plans.append({"MAP": name, "ENERGY": energy, "CONTIGUOUS": contiguous})
+            plans[name] = {"MAP": name, "ENERGY": energy, "CONTIGUOUS": contiguous}
 
-            i += 1
             continue
 
     return plans
 
 
 def find_lowest_energies(
-    plans: list[dict],
+    plans: dict[str, dict],
 ) -> tuple[dict[str, str], dict[str, float]]:
     """Find the lowest energy plans for 1-10, 1-100, and 1-1000 runs."""
 
-    lowest_energy: dict[str, float] = {"ten": 1e9, "hundred": 1e9, "thousand": 1e9}
+    lowest_energy: dict[str, float] = {"1-10": 1e9, "1-100": 1e9, "1-1000": 1e9}
     lowest_plans: dict[str, str] = {
-        "ten": "TBD",
-        "hundred": "TBD",
-        "thousand": "TBD",
+        "1-10": "TBD",
+        "1-100": "TBD",
+        "1-1000": "TBD",
     }
 
-    for i, plan in enumerate(plans):
-        if i < 10 and plan["ENERGY"] < lowest_energy["ten"]:
-            lowest_energy["ten"] = plan["ENERGY"]
-            lowest_plans["ten"] = plan["MAP"]
+    i: int = 0
+    for k, v in plans.items():
+        if i < 10 and v["ENERGY"] < lowest_energy["1-10"]:
+            lowest_energy["1-10"] = v["ENERGY"]
+            lowest_plans["1-10"] = v["MAP"]
 
-        if i < 100 and plan["ENERGY"] < lowest_energy["hundred"]:
-            lowest_energy["hundred"] = plan["ENERGY"]
-            lowest_plans["hundred"] = plan["MAP"]
+        if i < 100 and v["ENERGY"] < lowest_energy["1-100"]:
+            lowest_energy["1-100"] = v["ENERGY"]
+            lowest_plans["1-100"] = v["MAP"]
 
-        if i < 1000 and plan["ENERGY"] < lowest_energy["thousand"]:
-            lowest_energy["thousand"] = plan["ENERGY"]
-            lowest_plans["thousand"] = plan["MAP"]
+        if i < 1000 and v["ENERGY"] < lowest_energy["1-1000"]:
+            lowest_energy["1-1000"] = v["ENERGY"]
+            lowest_plans["1-1000"] = v["MAP"]
+
+        i += 1
 
     return lowest_plans, lowest_energy
 
