@@ -65,4 +65,32 @@ def cull_energies(log_txt: str, xx: str, plan_type: str) -> list[dict]:
     return plans
 
 
+def find_lowest_energies(
+    plans: list[dict],
+) -> tuple[dict[str, str], dict[str, float]]:
+    """Find the lowest energy plans for 1-10, 1-100, and 1-1000 runs."""
+
+    lowest_energy: dict[str, float] = {"ten": 1e9, "hundred": 1e9, "thousand": 1e9}
+    lowest_plans: dict[str, str] = {
+        "ten": "TBD",
+        "hundred": "TBD",
+        "thousand": "TBD",
+    }
+
+    for i, plan in enumerate(plans):
+        if i < 10 and plan["ENERGY"] < lowest_energy["ten"]:
+            lowest_energy["ten"] = plan["ENERGY"]
+            lowest_plans["ten"] = plan["MAP"]
+
+        if i < 100 and plan["ENERGY"] < lowest_energy["hundred"]:
+            lowest_energy["hundred"] = plan["ENERGY"]
+            lowest_plans["hundred"] = plan["MAP"]
+
+        if i < 1000 and plan["ENERGY"] < lowest_energy["thousand"]:
+            lowest_energy["thousand"] = plan["ENERGY"]
+            lowest_plans["thousand"] = plan["MAP"]
+
+    return lowest_plans, lowest_energy
+
+
 ### END ###

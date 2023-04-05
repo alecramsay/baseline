@@ -26,7 +26,7 @@ from baseline.constants import (
 )
 from baseline.readwrite import file_name, path_to_file, read_csv
 from baseline.data import FeatureCollection
-from baseline.compare import cull_energies
+from baseline.compare import cull_energies, find_lowest_energies
 from baseline.baseline import label_map, full_path
 
 
@@ -91,16 +91,25 @@ def main() -> None:
     )
     fc: FeatureCollection = FeatureCollection(data_path)
 
-    # TODO - Pull the energies from the log file
+    # Pull the energies from the log file
 
     log_txt: str = full_path(
         [intermediate_dir, xx], [map_label, "log", str(iterations)], "txt"
     )
     plans: list[dict] = cull_energies(log_txt, xx, plan_type)
 
-    # TODO
+    # Find the lowest energy maps
 
-    lowest_map: str = "I536K01N14"
+    lowest_energies: dict[str, float]
+    lowest_plans: dict[str, str]
+    lowest_plans, lowest_energies = find_lowest_energies(plans)
+
+    lowest_energy: float = min(lowest_energies.values())
+    lowest_plan: str = [
+        lowest_plans[key]
+        for key in lowest_energies
+        if lowest_energies[key] == lowest_energy
+    ][0]
 
     # TODO - Load the lowest energy map
 
