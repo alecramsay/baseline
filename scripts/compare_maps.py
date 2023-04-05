@@ -17,7 +17,17 @@ from argparse import ArgumentParser, Namespace
 
 from collections import defaultdict
 
-from baseline import *
+from baseline.constants import (
+    cycle,
+    temp_dir,
+    intermediate_dir,
+    districts_by_state,
+    STATE_FIPS,
+)
+from baseline.readwrite import file_name, path_to_file, read_csv
+from baseline.data import FeatureCollection
+from baseline.compare import cull_energies
+from baseline.baseline import label_map, full_path
 
 
 def parse_args() -> Namespace:
@@ -79,15 +89,14 @@ def main() -> None:
     data_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, unit, "data"], "_", "pickle"
     )
-    features: list[Feature] = read_pickle(data_path)
-    pop_by_geoid: dict[str, int] = {f["geoid"]: f["pop"] for f in features}
-    del features
+    fc: FeatureCollection = FeatureCollection(data_path)
 
     # TODO - Pull the energies from the log file
 
     log_txt: str = full_path(
         [intermediate_dir, xx], [map_label, "log", str(iterations)], "txt"
     )
+    plans: list[dict] = cull_energies(log_txt, xx, plan_type)
 
     # TODO
 
@@ -112,10 +121,10 @@ def main() -> None:
 
     # TODO - Calculate population by district
 
-    _pop_by_district: dict[int, int] = defaultdict(int)
-    for district, geoids in _geoids_by_district.items():
-        for geoid in geoids:
-            _pop_by_district[district] += pop_by_geoid[geoid]
+    # _pop_by_district: dict[int, int] = defaultdict(int)
+    # for district, geoids in _geoids_by_district.items():
+    #     for geoid in geoids:
+    #         _pop_by_district[district] += pop_by_geoid[geoid]
 
     # TODO - Load each candidate map
 

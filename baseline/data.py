@@ -13,7 +13,7 @@ from .plastic import *
 
 class FeatureCollection:
     """
-    Collections of tracts, BGs, or blocks.
+    Collections of geographic features: precincts (VTDs), tracts, BGs, blocks.
     """
 
     def __init__(self, features_path) -> None:
