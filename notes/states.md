@@ -6,7 +6,7 @@ There are 37 states with three or more congressional districts.
 
 No water-only precincts & almost exactly equal populations:
 
-- NC: run 4/4/2023.
+- NC: Baseline run 4/4/2023.
 
 - AL
 - CT
@@ -18,7 +18,7 @@ No water-only precincts & almost exactly equal populations:
 
 No water-only precincts & not quite exactly equal populations:
 
-- AZ: Ready
+- AZ: Baseline run 4/6/23 w/ some issues. NOTE - I've only done thru Step 7 in pg.
 - GA: Ready
 - VA: Ready
 
