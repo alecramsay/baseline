@@ -5,7 +5,7 @@ Compare all the iteration maps with the one with the lowest energy.
 
 For example:
 
-$ scripts/compare_maps.py -s NC -i 1000 -v
+$ scripts/compare_maps.py -s NC -i 100 -v
 
 For documentation, type:
 
