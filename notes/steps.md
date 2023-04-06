@@ -32,22 +32,10 @@ scripts/extract_data.py -s NC
 scripts/extract_graph.py -s NC
 ```
 
-## Export the official map as a BAF
-
-From Dave's Redistricting
-
-## Generate the initial.csv file 
-
-```
-scripts/make_initial_assignments.py -s NC
-```
-
-Use the -e flag to spread out the excess population to underpopulated districts.
-
 ## Create a baseline map
 
 ```
-scripts/baseline_state.py -s NC
+scripts/baseline_state.py -s NC -i 100 -v > intermediate/NC/NC20C_log_100.txt
 ```
 
 ## All Together
@@ -56,6 +44,5 @@ scripts/baseline_state.py -s NC
 scripts/extract_water_only.py -s XX > data/XX/XX_2020_water_only.csv
 scripts/extract_data.py -s XX
 scripts/extract_graph.py -s XX
-scripts/make_initial_assignments.py -s XX -e -v
-scripts/baseline_state.py -s XX
+scripts/baseline_state.py -s XX -i 100 -v > intermediate/XX/XX20C_log_100.txt
 ```

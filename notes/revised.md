@@ -1,5 +1,7 @@
 # Revised Process
 
+TODO - Update this to reflect the new process.
+
 Do N times:
 - Step 1: Balzer w/ random seeds -- Produces least energy and equal population districts that are not necessarily contiguous.
 - Reassign regions to make districts contiguous.
