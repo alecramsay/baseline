@@ -4,6 +4,7 @@
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
+.pytest_cache/
 
 # Misc test, temp, and housekeeping files
 sandbox.py
