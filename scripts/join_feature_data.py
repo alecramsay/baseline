@@ -43,13 +43,6 @@ def parse_args() -> Namespace:
         "-g", "--bg", dest="bg", action="store_true", help="Generate BG-level data"
     )
     parser.add_argument(
-        "-b",
-        "--block",
-        dest="block",
-        action="store_true",
-        help="Generate block-level data",
-    )
-    parser.add_argument(
         "-p",
         "--precinct",
         dest="precinct",
@@ -74,7 +67,7 @@ def main() -> None:
 
     tracts: bool = args.tract
     bgs: bool = args.bg
-    blocks: bool = args.block
+    blocks: bool = True  # args.block
     vtds: bool = args.precinct
 
     verbose: bool = args.verbose
