@@ -7,8 +7,8 @@ aggregate it by track and blockgroup (BG).
 
 For example:
 
-$ scripts/extract_pop.py -s NC -p
-$ scripts/extract_pop.py -s NC -p > data/NC/NC_census_log.txt
+$ scripts/extract_pop.py -s NC -p -i 3
+$ scripts/extract_pop.py -s NC -p -i 3 > data/NC/NC_census_log.txt
 
 For documentation, type:
 
@@ -36,6 +36,13 @@ def parse_args() -> Namespace:
         type=str,
     )
     parser.add_argument(
+        "-p",
+        "--precinct",
+        dest="precinct",
+        action="store_true",
+        help="Generate precinct-level data",
+    )
+    parser.add_argument(
         "-t",
         "--tract",
         dest="tract",
@@ -44,20 +51,6 @@ def parse_args() -> Namespace:
     )
     parser.add_argument(
         "-g", "--bg", dest="bg", action="store_true", help="Generate BG-level data"
-    )
-    parser.add_argument(
-        "-b",
-        "--block",
-        dest="block",
-        action="store_true",
-        help="Generate block-level data",
-    )
-    parser.add_argument(
-        "-p",
-        "--precinct",
-        dest="precinct",
-        action="store_true",
-        help="Generate precinct-level data",
     )
     parser.add_argument(
         "-i",
@@ -87,7 +80,7 @@ def main() -> None:
 
     tracts: bool = args.tract
     bgs: bool = args.bg
-    blocks: bool = args.block
+    blocks: bool = True  # args.block
     vtds: bool = args.precinct
     iteration: str = "" if args.iteration == 0 else f"-{args.iteration}"
 
