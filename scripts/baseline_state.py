@@ -78,9 +78,6 @@ def main() -> None:
 
     # Set up
 
-    # print()
-    # print(f"Generating baseline maps for {xx}/{plan_type}:")
-
     map_label: str = label_map(xx, plan_type)  # e.g., "NC20C"
     N: int = districts_by_state[xx][plan_type]
     K: int = 1  # district multiplier
@@ -95,9 +92,6 @@ def main() -> None:
 
     for i, seed in enumerate(range(start, start + iterations)):
         iter_label: str = label_iteration(i, K, N)
-        # print()
-        # print(f"... Iteration: {iter_label}, seed: {seed} ...")
-
         output_csv: str = full_path(
             [intermediate_dir, xx], [map_label, iter_label, "vtd", "assignments"]
         )

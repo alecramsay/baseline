@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Index GEOIDs by the order in the points file.
+Index GEOIDs by the order in the points file:
+- For generating the adjacency file
 - Need an index for each granularity that is run through Balzer.
 
 For example:

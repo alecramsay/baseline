@@ -4,6 +4,8 @@
 PLASTIC SEQUENCE GENERATOR
 - http://extremelearning.com.au/unreasonable-effectiveness-of-quasirandom-sequences/
 - https://observablehq.com/@jrus/plastic-sequence
+
+NOTE - Not used.
 """
 
 import math
