@@ -42,14 +42,6 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-g", "--bg", dest="bg", action="store_true", help="Generate BG-level data"
     )
-    # TODO - DELETE
-    # parser.add_argument(
-    #     "-b",
-    #     "--block",
-    #     dest="block",
-    #     action="store_true",
-    #     help="Generate block-level data",
-    # )
     parser.add_argument(
         "-p",
         "--precinct",
