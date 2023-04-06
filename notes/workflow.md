@@ -4,6 +4,17 @@ Test initially on states that don't have any water-only precincts: XX, AZ, VA, a
 Then generalize for states with water-only precincts but no connectivity issues.
 Finally, generalize to states with connectivity issues, like CA.
 
+## Summary
+
+- Download files
+- Create output directories
+- Find water-only precincts
+- Preprocess data
+- Generate a graph of precincts
+- Create a baseline map
+- Compare the candidate maps
+- Choose a baseline
+
 ## Download files
 
 - VTD names -- https://www.census.gov/geographies/reference-files/time-series/geo/name-lookup-tables.html
