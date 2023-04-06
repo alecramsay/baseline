@@ -133,7 +133,7 @@ districts_by_state: dict[str, Any] = {
 }
 
 
-# TODO - Flesh this out
+# TODO - Log the resulting baseline maps here
 baseline_maps: dict[str, str] = {
     "AL": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "AR": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
@@ -155,7 +155,7 @@ baseline_maps: dict[str, str] = {
     "MN": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "MO": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "MS": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "NC": "c62fa27b-1f4b-40ba-bcd7-9e2ca6f9df87",
+    "NC": "48ea8e69-e6b8-4ddf-89f1-bcc65254ff00",
     "NE": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "NJ": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "NM": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
