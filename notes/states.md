@@ -18,7 +18,7 @@ No water-only precincts & almost exactly equal populations:
 
 No water-only precincts & not quite exactly equal populations:
 
-- AZ: Baseline run 4/6/23 w/ some issues. NOTE - I've only done thru Step 7 in 'pg'.
+- AZ: Baseline run 4/6/23 w/ some issues.
 - GA: Baseline run 4/7/23 w/ some issues. NOTE - I've only done thru Step 7 in 'pg'.
 - VA: Baseline run 4/6/23.
 
