@@ -32,7 +32,7 @@ Finally, generalize to states with connectivity issues, like CA.
 scripts/extract_water_only.py -s XX [> data/XX/XX_2020_water_only.csv]
 ```
 
-Check the results to data/XX/XX_2020_water_only.csv.
+Check the results in data/XX/XX_2020_water_only.csv.
 
 ## Preprocess data
 
@@ -60,8 +60,6 @@ scripts/extract_data.py -s XX
 scripts/extract_graph.py -s XX
 scripts/baseline_state.py -s XX -i 100 -v > intermediate/XX/XX20C_log_100.txt
 ```
-
-Save missing maps to maps/XX/XX20C_missing.txt.
 
 ## Compare the candidate maps
 
