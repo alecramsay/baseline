@@ -2,6 +2,8 @@
 
 """
 DATA STRUCTURES
+
+TODO - Collapse this into unpickle_to_csv.py
 """
 
 from shapely.geometry import Point, Polygon, MultiPolygon
@@ -13,9 +15,7 @@ from .datatypes import Feature
 
 
 class FeatureCollection:
-    """
-    Collections of geographic features: precincts (VTDs), tracts, BGs, blocks.
-    """
+    """Collections of geographic features: precincts (VTDs), tracts, BGs, blocks."""
 
     def __init__(self, features_path) -> None:
         self.features: list[Feature] = self._load(features_path)

@@ -38,12 +38,14 @@ Check the results in data/XX/XX_2020_water_only.csv.
 
 ```
 scripts/extract_data.py -s XX
+scripts/extract_data.py -s XX -w
 ```
 
 ## Generate a graph of precincts
 
 ```
 scripts/extract_graph.py -s XX
+scripts/extract_graph.py -s XX -w
 ```
 
 ## Create a baseline map
