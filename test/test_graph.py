@@ -62,10 +62,13 @@ class TestGraph:
         }
         g: Graph = Graph(adjacency)
         assert g.is_connected()
+        before: int = len(g.nodes())
 
         g.remove("w")
         assert g.is_consistent()
         assert g.is_connected()
+        after: int = len(g.nodes())
+        assert before > after
 
 
 ### END ###
