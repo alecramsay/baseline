@@ -18,8 +18,8 @@ No water-only precincts:
 
 No water-only precincts:
 
-- AZ: Baseline run 4/6/23 w/ some issues.
-- GA: Baseline run 4/7/23 w/ some issues. NOTE - I've only done thru Step 7 in 'pg'.
+- AZ: Baseline run 4/7/23.
+- GA: Baseline run 4/7/23.
 - VA: Baseline run 4/6/23.
 
 - AR
@@ -32,7 +32,7 @@ No water-only precincts:
 
 Some water-only precinctsL
 
-- IL <= Ready
+- IL <= Issues ...
 - IN
 - KS
 - KY
@@ -52,10 +52,10 @@ Some water-only precinctsL
 
 Some water-only precincts:
 
-- LA <= Ready
-- MI <= Ready
+- LA <= Baseline run 4/7/23.
+- MI <= Issues ...
 - NV
-- WA <= Ready
+- WA <= Issues ...
 
 ## Category 5
 
