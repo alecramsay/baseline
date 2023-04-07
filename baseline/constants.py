@@ -169,7 +169,7 @@ baseline_maps: dict[str, str] = {
     "TN": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "TX": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "UT": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "VA": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "VA": "9981cdbe-ac6a-41f1-ab61-5ddebdd4f715",  # 04/06/23
     "WA": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "WI": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
 }

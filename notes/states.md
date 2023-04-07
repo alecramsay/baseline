@@ -20,7 +20,7 @@ No water-only precincts & not quite exactly equal populations:
 
 - AZ: Baseline run 4/6/23 w/ some issues. NOTE - I've only done thru Step 7 in pg.
 - GA: Ready
-- VA: Ready
+- VA: Baseline run 4/6/23.
 
 - AR
 - CO
