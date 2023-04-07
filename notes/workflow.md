@@ -20,13 +20,13 @@ Finally, generalize to states with connectivity issues, like CA.
 - VTD names -- https://www.census.gov/geographies/reference-files/time-series/geo/name-lookup-tables.html
 - Block assignments -- https://www.census.gov/geographies/reference-files/time-series/geo/block-assignment-files.html
 
-## Create output directories
+(1) Create output directories
 
 - data/XX
 - intermediate/XX
 - maps/XX
 
-## Find water-only precincts
+(2))Find water-only precincts
 
 ```
 scripts/extract_water_only.py -s XX [> data/XX/XX_2020_water_only.csv]
@@ -34,21 +34,21 @@ scripts/extract_water_only.py -s XX [> data/XX/XX_2020_water_only.csv]
 
 Check the results in data/XX/XX_2020_water_only.csv.
 
-## Preprocess data
+(3)) Preprocess data
 
 ```
 scripts/extract_data.py -s XX
 scripts/extract_data.py -s XX -w
 ```
 
-## Generate a graph of precincts
+(4) Generate a graph of precincts
 
 ```
 scripts/extract_graph.py -s XX
 scripts/extract_graph.py -s XX -w
 ```
 
-## Create a baseline map
+(5) Create a baseline map
 
 ```
 scripts/baseline_state.py -s XX -i 100 -v > intermediate/XX/XX20C_log_100.txt
@@ -63,7 +63,7 @@ scripts/extract_graph.py -s XX
 scripts/baseline_state.py -s XX -i 100 -v > intermediate/XX/XX20C_log_100.txt
 ```
 
-## Compare the candidate maps
+(6) Compare the candidate maps
 
 ```
 scripts/compare_maps.py -s XX -i 100 -v
@@ -72,7 +72,7 @@ scripts/compare_maps.py -s XX -i 100 -v
 - Copy any missing maps output to maps/XX/XX20C_missing.txt.
 - Import XX20C_energies.csv into a spreadheet, and verify that the results are OK.
 
-## Choose a baseline
+(7) Choose a baseline
 
 - Copy the lowest energy baseline map to the maps/XX directory as XX20C_baseline_100.csv.
 
