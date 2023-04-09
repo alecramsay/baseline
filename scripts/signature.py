@@ -118,7 +118,9 @@ def main() -> None:
         if row["Y"] > max_y:
             max_y = row["Y"]
 
-    center: Coordinate = Coordinate((min_x + max_x) / 2.0, (min_y + max_y) / 2.0)
+    center_of_state_bbox: Coordinate = Coordinate(
+        (min_x + max_x) / 2.0, (min_y + max_y) / 2.0
+    )
 
     # Pull the energies from the log file
 
@@ -181,21 +183,32 @@ def main() -> None:
 
             centroids.append(Coordinate(temp_x / district_pop, temp_y / district_pop))
 
+        avg_x: float = sum([x for x, y in centroids]) / len(centroids)
+        avg_y: float = sum([y for x, y in centroids]) / len(centroids)
+        center_of_districts: Coordinate = Coordinate(avg_x, avg_y)
+
+        normalized_center: Coordinate = Coordinate(
+            round((center_of_districts.x / center_of_state_bbox.x) * 1000, 3),
+            round((center_of_districts.y / center_of_state_bbox.y) * 1000, 3),
+        )
+
+        print(f"Center for {map_name}: {normalized_center}")
+
         # for i, centroid in enumerate(centroids):
         #     print(f"Centroids for district {i + 1}: {centroid}")
 
-        district_distances: list[float] = list()
-        for centroid in centroids:
-            d: float = math.sqrt(
-                (centroid.x - center.x) ** 2 + (centroid.y - center.y) ** 2
-            )
-            district_distances.append(d)
+        # district_distances: list[float] = list()
+        # for centroid in centroids:
+        #     d: float = math.sqrt(
+        #         (centroid.x - center.x) ** 2 + (centroid.y - center.y) ** 2
+        #     )
+        #     district_distances.append(d)
 
-        # TODO - How should district distances be combined?
+        # # TODO - How should district distances be combined?
 
-        signature: float = sum(district_distances)
+        # signature: float = sum(district_distances)
 
-        print(f"Signature for {map_name}: {signature}")
+        # print(f"Signature for {map_name}: {signature}")
 
         pass
 
