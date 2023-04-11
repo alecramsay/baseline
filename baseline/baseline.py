@@ -22,13 +22,34 @@ def do_baseline_run(
     label: str,
     verbose: bool = False,
 ) -> None:
-    """Make a set of baseline districts from random starting sites
+    """Create a baseline candidate map for a state by calling create.sh.
 
     Do this many times, and then choose the baseline as the map with the lowest energy.
+
+    TODO - Rename this and integrate it into create_baseline_candidate.
     """
 
     command: str = f"create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output} --label={label}"
     os.system(command)
+
+
+def create_baseline_candidate(
+    tmpdir: str,
+    N: int,
+    seed: int,
+    prefix: str,
+    data: str,
+    adjacencies: str,
+    output: str,
+    label: str,
+    verbose: bool = False,
+) -> None:
+    """Create a baseline candidate map for a state by calling individual functions.
+
+    Do this many times, and then choose the baseline as the map with the lowest energy.
+    """
+
+    print(f"Generating baseline map for {label}:")
 
 
 ### RESTORED ###
