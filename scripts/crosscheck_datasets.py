@@ -71,7 +71,7 @@ def main() -> None:
     result: bool = datasets_are_consistent(data, pairs, index)
 
     if result:
-        print("{xx} data and adjacency pairs datasets are consistent.")
+        print(f"{xx} data and adjacency pairs datasets are consistent.")
 
 
 if __name__ == "__main__":

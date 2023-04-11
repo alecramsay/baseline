@@ -60,6 +60,11 @@ def main() -> None:
     units: str = args.units
     water: bool = args.water
 
+    ### DEBUG ###
+
+    # xx = "MI"
+    # water = True
+
     ### LOAD DATA ###
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
@@ -86,7 +91,7 @@ def main() -> None:
             "X": f["xy"].x,
             "Y": f["xy"].y,
         }
-        if f in water_precincts:
+        if f["geoid"] in water_precincts:
             print(f"Removing water-only precinct {f['geoid']}")
             continue
         else:

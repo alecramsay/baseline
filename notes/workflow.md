@@ -48,6 +48,12 @@ scripts/extract_graph.py -s XX
 scripts/extract_graph.py -s XX -w
 ```
 
+Crosscheck the data and adjacency data for consistency!
+
+```
+scripts/crosscheck_datasets.py -s XX
+```
+
 (5) Create a baseline map
 
 ```
