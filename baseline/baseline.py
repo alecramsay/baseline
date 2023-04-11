@@ -22,7 +22,7 @@ def do_baseline_run(
     label: str,
     verbose: bool = False,
 ) -> None:
-    """Create a baseline candidate map for a state by calling create.sh.
+    """Create a baseline candidate map by calling dccvt/examples/redistricting/create.sh.
 
     Do this many times, and then choose the baseline as the map with the lowest energy.
 
@@ -34,187 +34,73 @@ def do_baseline_run(
 
 
 def create_baseline_candidate(
-    tmpdir: str,
-    N: int,
-    seed: int,
-    prefix: str,
-    data: str,
-    adjacencies: str,
-    output: str,
-    label: str,
-    verbose: bool = False,
-) -> None:
-    """Create a baseline candidate map for a state by calling individual functions.
-
-    Do this many times, and then choose the baseline as the map with the lowest energy.
-    """
-
-    print(f"Generating baseline map for {label}:")
-
-
-### RESTORED ###
-
-# TODO - DELETE
-# @time_function
-# def baseline_state_iterative(
-#     xx: str, plan_type: str, iter_unit: str, finish_unit: str, verbose: bool = False
-# ) -> None:
-#     """Find baseline districts for a state using iter_unit x 100 and finish_unit once."""
-
-#     map_label: str = label_map(xx, plan_type)
-#     print(f"Generating baseline map for {map_label}:")
-
-#     input_csv: str
-#     points_csv: str
-#     sites_csv: str
-#     initial_csv: str
-#     balzer_csv: str
-#     consolidated_csv: str
-#     centroids_csv: str
-#     output_csv: str
-
-#     # 1 - Run repeated runs using VTDs & random seeds.
-
-#     input_csv: str = full_path([data_dir, xx], [xx, cycle, iter_unit, "data"])
-
-#     points_csv = full_path([intermediate_dir, xx], [map_label, iter_unit, "points"])
-#     create_points_file(input_csv, points_csv)
-
-#     N: int = districts_by_state[xx][plan_type]
-#     K: int = 1  # TODO: make this a parameter
-#     fips_map: dict[str, str] = STATE_FIPS
-#     fips: str = fips_map[xx]
-
-#     start: int = K * N * int(fips)
-#     iterations: int = 100
-
-#     for i, seed in enumerate(range(start, start + iterations)):
-#         iter_label: str = label_iteration(i, K, N)
-#         print(f"... Iteration: {iter_label}, seed: {seed} ...")
-
-#         sites_csv = full_path(
-#             [intermediate_dir, xx], [map_label, iter_unit, iter_label, "sites"]
-#         )
-#         initial_csv = full_path(
-#             [intermediate_dir, xx], [map_label, iter_unit, iter_label, "initial"]
-#         )
-#         balzer_csv = full_path(
-#             [intermediate_dir, xx], [map_label, iter_unit, iter_label, "balzer"]
-#         )
-#         centroids_csv = full_path(
-#             [intermediate_dir, xx], [map_label, iter_unit, iter_label, "centroids"]
-#         )
-
-#         create_random_sites_file(points_csv, sites_csv, seed, K * N)
-#         create_initial_assignment_file(sites_csv, points_csv, initial_csv)
-#         run_balzer(sites_csv, points_csv, initial_csv, balzer_csv)
-#         get_centroids_file(points_csv, balzer_csv, centroids_csv)
-
-#     # 2 - Find characteristic sites (district centroids) resulting from the random-seed runs.
-
-#     print(f"... Finding characteristic sites ...")
-
-#     centroids_pattern: str = full_path(
-#         [intermediate_dir, xx], [map_label, iter_unit, "*", "centroids"]
-#     )
-#     points_csv = full_path(
-#         [intermediate_dir, xx], [map_label, "characteristic", "points"]
-#     )
-#     sites_csv = full_path(
-#         [intermediate_dir, xx], [map_label, "characteristic", "sites"]
-#     )
-#     initial_csv = full_path(
-#         [intermediate_dir, xx], [map_label, "characteristic", "initial"]
-#     )
-#     balzer_csv = full_path(
-#         [intermediate_dir, xx], [map_label, "characteristic", "balzer"]
-#     )
-#     centroids_csv = full_path(
-#         [intermediate_dir, xx], [map_label, "characteristic", "centroids"]
-#     )
-
-#     combine_centroids_files(centroids_pattern, points_csv)
-#     create_random_sites_file(points_csv, sites_csv, start + iterations + 1, K * N)
-#     create_initial_assignment_file(sites_csv, points_csv, initial_csv)
-#     run_balzer(sites_csv, points_csv, initial_csv, balzer_csv)
-#     get_centroids_file(points_csv, balzer_csv, centroids_csv)
-
-#     # 3 - Do a final clean up run:
-#     # * Use VTDs again, but
-#     # * Use the characteristic sites instead of random ones
-#     # * Snap each VTD to one and only one district.
-#     # * Generate a VTD-assignment file.
-
-#     print(f"... Final clean up run ...")
-
-#     input_csv: str = full_path([data_dir, xx], [xx, cycle, finish_unit, "data"])
-#     points_csv = full_path([intermediate_dir, xx], [map_label, finish_unit, "points"])
-#     initial_csv = full_path([intermediate_dir, xx], [map_label, finish_unit, "initial"])
-#     balzer_csv = full_path([intermediate_dir, xx], [map_label, finish_unit, "balzer"])
-#     consolidated_csv = full_path(
-#         [intermediate_dir, xx], [map_label, finish_unit, "consolidated"]
-#     )
-#     complete_csv: str = full_path(
-#         [intermediate_dir, xx], [map_label, finish_unit, "complete"]
-#     )
-#     output_csv: str = full_path([maps_dir], [map_label, finish_unit, "baf"])
-
-#     create_points_file(input_csv, points_csv)
-#     # sites_csv = centroids_csv from previous step
-#     create_initial_assignment_file(centroids_csv, points_csv, initial_csv)
-#     run_balzer(centroids_csv, points_csv, initial_csv, balzer_csv)
-#     create_consolidated_file(balzer_csv, consolidated_csv)
-#     create_complete_file(consolidated_csv, points_csv, balzer_csv, complete_csv)
-#     create_output_file(input_csv, complete_csv, output_csv)
-
-#     pass
-
-
-### DCCVT WRAPPERS ###
-
-
-def do_create_run(
     *,
     tmpdir: str,
     N: int,
     seed: int,
     prefix: str,
     data: str,
-    adjacencies_csv: str,
+    adjacencies: str,
     label: str,
     output: str,
+    verbose: bool = False,
 ) -> None:
-    """Emulate dccvt/examples/redistricting/create.sh"""
+    """Create a baseline candidate map by emulating dccvt/examples/redistricting/create.sh w/ individual dccvt wrappers calls.
 
-    # infile="$tmpdir/$prefix.geoid_data.csv"
-    # pointsfile="$tmpdir/$prefix.points.csv"
-    # randomsitesfile="$tmpdir/$prefix.randomsites.csv"
-    # initial_balanced_noncontiguous_assignmentfile="$tmpdir/$prefix.initialized.csv"
-    # balzer_balanced_noncontiguous_assignmentfile="$tmpdir/$prefix.balzer.csv"
-    # unbalanced_contiguous_assignmentfile="$tmpdir/$prefix.unbalancedcontiguous.csv"
-    # balzer_unbalanced_contiguous_assignmentfile="$tmpdir/$prefix.balzerunbalancedcontiguous.csv"
-    # balanced_contiguous_assignmentfile="$tmpdir/$prefix.balancedcontiguous.csv"
-    # balzer_balanced_contiguous_assignmentfile="$tmpdir/$prefix.balzerbalancedcontiguous.csv"
-    # consolidatedfile="$tmpdir/$prefix.consolidated.csv"
-    # completefile="$tmpdir/$prefix.complete.csv"
-    # outfile="$tmpdir/$prefix.out.csv"
-    # adjacenciesfile="$tmpdir/$prefix.adjacencies.csv"
+    Do this many times, and then choose the baseline as the map with the lowest energy.
+    """
 
-    THRESHOLD = 1000
+    THRESHOLD: int = 1000
 
-    points_csv: str = "TODO"
-    sites_csv: str = "TODO"
-    initial_csv: str = "TODO"  # balanced, noncontiguous
-    balzer_1_csv: str = "TODO"  # initial, balanced, noncontiguous
-    unbalanced_csv: str = "TODO"
-    balzer_2_csv: str = "TODO"  # unbalanced, contiguous
-    balanced_csv: str = "TODO"
-    balzer_3_csv: str = "TODO"  # balanced, contiguous
-    consolidated_csv: str = "TODO"
+    if verbose:
+        print(f"Generate candidate baseline map:")
+        print(f"- tmpdir: {tmpdir}")
+        print(f"- N: {N}")
+        print(f"- seed: {seed}")
+        print(f"- prefix: {prefix}")
+        print(f"- data: {data}")
+        print(f"- adjacencies: {adjacencies}")
+        print(f"- label: {label}")
+        print(f"- output: {output}")
+        print()
 
-    create_points_file(input_csv=data, output_csv=points_csv)
+    data_csv: str = data
+    adjacencies_csv: str = adjacencies
+    output_csv: str = output
+
+    points_csv: str = f"{tmpdir}/{prefix}.points.csv"
+    sites_csv: str = f"{tmpdir}/{prefix}.randomsites.csv"
+    initial_csv: str = f"{tmpdir}/{prefix}.initialized.csv"  # balanced, noncontiguous
+    balzer_1_csv: str = (
+        f"{tmpdir}/{prefix}.balzer.csv"  # initial, balanced, noncontiguous
+    )
+    unbalanced_csv: str = f"{tmpdir}/{prefix}.unbalancedcontiguous.csv"
+    balzer_2_csv: str = (
+        f"{tmpdir}/{prefix}.balzerunbalancedcontiguous.csv"  # unbalanced, contiguous
+    )
+    balanced_csv: str = f"{tmpdir}/{prefix}.balancedcontiguous.csv"
+    balzer_3_csv: str = (
+        f"{tmpdir}/{prefix}.balzerbalancedcontiguous.csv"  # balanced, contiguous
+    )
+    consolidated_csv: str = f"{tmpdir}/{prefix}.consolidated.csv"
+    complete_csv: str = f"{tmpdir}/{prefix}.complete.csv"
+
+    if verbose:
+        print(f"- points_csv: {points_csv}")
+        print(f"- sites_csv: {sites_csv}")
+        print(f"- initial_csv: {initial_csv}")
+        print(f"- balzer_1_csv: {balzer_1_csv}")
+        print(f"- unbalanced_csv: {unbalanced_csv}")
+        print(f"- balzer_2_csv: {balzer_2_csv}")
+        print(f"- balanced_csv: {balanced_csv}")
+        print(f"- balzer_3_csv: {balzer_3_csv}")
+        print(f"- consolidated_csv: {consolidated_csv}")
+        print(f"- complete_csv: {complete_csv}")
+        print()
+
+    create_points_file(input_csv=data_csv, output_csv=points_csv, debug=verbose)
     create_random_sites_file(
-        points_csv=points_csv, output_csv=sites_csv, seed=seed, n=N
+        points_csv=points_csv, output_csv=sites_csv, seed=seed, n=N, debug=verbose
     )
     create_initial_assignment_file(
         points_csv=points_csv, sites_csv=sites_csv, output_csv=initial_csv
@@ -225,11 +111,13 @@ def do_create_run(
         adjacencies_csv=adjacencies_csv,
         threshold=THRESHOLD,
         output_csv=balzer_1_csv,
+        debug=verbose,
     )  # Create initial, balanced, noncontiguous balzer file
     create_unbalanced_contiguous_assignment_file(
         assignment_csv=balzer_1_csv,
         adjacencies_csv=adjacencies_csv,
         output_csv=unbalanced_csv,
+        debug=verbose,
     )
     run_balzer(
         points_csv=points_csv,
@@ -237,12 +125,14 @@ def do_create_run(
         adjacencies_csv=adjacencies_csv,
         threshold=THRESHOLD,
         output_csv=balzer_2_csv,
+        debug=verbose,
     )  # Create unbalanced, contiguous, balzer file
     create_balanced_contiguous_assignment_file(
         assignment_csv=unbalanced_csv,
         adjacencies_csv=adjacencies_csv,
         max_iterations=1000,
         output_csv=balanced_csv,
+        debug=verbose,
     )
     run_balzer(
         points_csv=points_csv,
@@ -250,6 +140,7 @@ def do_create_run(
         adjacencies_csv=adjacencies_csv,
         threshold=THRESHOLD,
         output_csv=balzer_3_csv,
+        debug=verbose,
     )  # Create balanced, contiguous, balzer file
 
     create_consolidated_file(
@@ -257,13 +148,19 @@ def do_create_run(
         adjacencies_csv=adjacencies_csv,
         label=label,
         output_csv=consolidated_csv,
+        debug=verbose,
     )
     # TODO - HERE
+    print()
+    print("More ...")
 
     pass
 
 
-def create_points_file(*, input_csv: str, output_csv: str) -> None:
+### DCCVT WRAPPERS ###
+
+
+def create_points_file(*, input_csv: str, output_csv: str, debug: bool = False) -> None:
     """Create points.csv from preferred redistricting input.csv format
 
     python3 geoid.py points --input redistricting.csv --output points.csv
@@ -272,11 +169,11 @@ def create_points_file(*, input_csv: str, output_csv: str) -> None:
     command: str = (
         f"python3 {dccvt_py}/geoid.py points --input {input_csv} --output {output_csv}"
     )
-    os.system(command)
+    execute(command, debug)
 
 
 def create_random_sites_file(
-    *, points_csv: str, output_csv: str, seed: int, n: int
+    *, points_csv: str, output_csv: str, seed: int, n: int, debug: bool = False
 ) -> None:
     """Create random sites from points.csv
 
@@ -284,11 +181,11 @@ def create_random_sites_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py sites --points {points_csv} --output {output_csv} --seed {seed} --N {n}"
-    os.system(command)
+    execute(command, debug)
 
 
 def create_initial_assignment_file(
-    *, points_csv: str, sites_csv: str, output_csv: str
+    *, points_csv: str, sites_csv: str, output_csv: str, debug: bool = False
 ) -> None:
     """Create starting sites from points.csv
 
@@ -296,7 +193,7 @@ def create_initial_assignment_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py initial --points {points_csv} --sites {sites_csv} --output {output_csv}"
-    os.system(command)
+    execute(command, debug)
 
 
 def run_balzer(
@@ -306,6 +203,7 @@ def run_balzer(
     adjacencies_csv: str,
     threshold: int,
     output_csv: str,
+    debug: bool = False,
 ) -> None:
     """Run Balzer
 
@@ -313,11 +211,11 @@ def run_balzer(
     """
 
     command: str = f"{dccvt_go}/dccvt --points {points_csv} --initial {initial_csv} --adjacencies {adjacencies_csv} --threshold {threshold} --output {output_csv}"
-    os.system(command)
+    execute(command, debug)
 
 
 def create_unbalanced_contiguous_assignment_file(
-    *, assignment_csv: str, adjacencies_csv: str, output_csv: str
+    *, assignment_csv: str, adjacencies_csv: str, output_csv: str, debug: bool = False
 ) -> None:
     """Create an unbalanced contiguous assignment file
 
@@ -328,11 +226,16 @@ def create_unbalanced_contiguous_assignment_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py contiguous --assignment {assignment_csv} --adjacent {adjacencies_csv} --output {output_csv}"
-    os.system(command)
+    execute(command, debug)
 
 
 def create_balanced_contiguous_assignment_file(
-    *, assignment_csv: str, adjacencies_csv: str, max_iterations: int, output_csv: str
+    *,
+    assignment_csv: str,
+    adjacencies_csv: str,
+    max_iterations: int,
+    output_csv: str,
+    debug: bool = False,
 ) -> None:
     """Create a balanced contiguous assignment file
 
@@ -344,11 +247,16 @@ def create_balanced_contiguous_assignment_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py rebalance --assignment {assignment_csv} --adjacent {adjacencies_csv} --max_iterations {max_iterations} --output {output_csv}"
-    os.system(command)
+    execute(command, debug)
 
 
 def create_consolidated_file(
-    *, assignment_csv: str, adjacencies_csv: str, label: str, output_csv: str
+    *,
+    assignment_csv: str,
+    adjacencies_csv: str,
+    label: str,
+    output_csv: str,
+    debug: bool = False,
 ) -> None:
     """Consolidate potentially fractional/split assignments in balzer.csv to unique assignments in consolidated.csv
 
@@ -360,7 +268,7 @@ def create_consolidated_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py consolidate --assignment {assignment_csv} --adjacent {adjacencies_csv} --label {label} --output {output_csv}"
-    os.system(command)
+    execute(command, debug)
 
 
 def create_complete_file(
@@ -368,6 +276,7 @@ def create_complete_file(
     adjacencies_csv: str,
     points_csv: str,
     complete_csv: str,
+    debug: bool = False,
 ) -> None:
     """Create complete file
 
@@ -379,10 +288,12 @@ def create_complete_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py complete --assignment {consolidated_csv} --adjacent {adjacencies_csv} --points {points_csv} --output {complete_csv}"
-    os.system(command)
+    execute(command, debug)
 
 
-def compute_energy(assignment_csv: str, points_csv: str, label: str) -> None:
+def compute_energy(
+    assignment_csv: str, points_csv: str, label: str, debug: bool = False
+) -> None:
     """Computing energy of a completed map
 
     python3 redistricting.py energy \
@@ -392,10 +303,12 @@ def compute_energy(assignment_csv: str, points_csv: str, label: str) -> None:
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py energy --assignment {assignment_csv} --points {points_csv} --label {label}"
-    os.system(command)
+    execute(command, debug)
 
 
-def create_output_file(input_csv: str, complete_csv: str, baf_csv: str) -> None:
+def create_output_file(
+    input_csv: str, complete_csv: str, baf_csv: str, debug: bool = False
+) -> None:
     """Make an assignment file from a file of unique assignments of VTDs (or blocks) to districts (sites)
 
     python3 geoid.py postprocess --input complete.csv --redistricting_input redistricting.csv --output output.csv
@@ -407,10 +320,12 @@ def create_output_file(input_csv: str, complete_csv: str, baf_csv: str) -> None:
     """
 
     command: str = f"python3 {dccvt_py}/geoid.py postprocess --input {complete_csv} --redistricting_input {input_csv} --output {baf_csv}"
-    os.system(command)
+    execute(command, debug)
 
 
-def get_centroids_file(points_csv: str, assign_csv: str, centroids_csv: str) -> None:
+def get_centroids_file(
+    points_csv: str, assign_csv: str, centroids_csv: str, debug: bool = False
+) -> None:
     """Get sites (district centroids) from assignments
 
     python3 redistricting.py centroids --points point.csv  --assignment balzer.csv --centroids centroids.csv
@@ -419,20 +334,30 @@ def get_centroids_file(points_csv: str, assign_csv: str, centroids_csv: str) -> 
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py centroids --points {points_csv}  --assignment {assign_csv} --centroids {centroids_csv}"
-    os.system(command)
+    execute(command, debug)
 
 
-def combine_centroids_files(inputs: str, output: str) -> None:
+def combine_centroids_files(inputs: str, output: str, debug: bool = False) -> None:
     """Concatenate all BG centroids.csv into one file
 
     cat NC20C_bg_*_centroids.csv > NC20C_block_sites.csv
     """
 
     command: str = f"cat {inputs} > {output}"
-    os.system(command)
+    execute(command, debug)
 
 
 ### HELPER FUNCTIONS ###
+
+
+def execute(command: str, debug: bool = False) -> None:
+    """Execute a shell command"""
+
+    if debug:
+        print()
+        print(command)
+    else:
+        os.system(command)
 
 
 def full_path(dirs: list[str], file_parts: list[str], ext: str = "csv") -> str:

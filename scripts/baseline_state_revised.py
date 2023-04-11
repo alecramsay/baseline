@@ -66,6 +66,7 @@ def main() -> None:
     iterations: int = args.iterations
 
     verbose: bool = args.verbose
+    verbose = True  # TODO - Remove this line.
 
     # Add dccvt to the path
 
@@ -82,7 +83,7 @@ def main() -> None:
     K: int = 1  # district multiplier
     fips: str = STATE_FIPS[xx]
 
-    input_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
+    data_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
     pairs_csv = full_path([data_dir, xx], [xx, cycle, "vtd", "pairs"])
 
     start: int = K * N * int(fips)
@@ -96,14 +97,16 @@ def main() -> None:
         )
         label: str = f"{map_label}_{iter_label}"
 
-        tmpdir: str = intermediate_dir + "/" + xx
-        prefix: str = map_label
-        data: str = input_csv
-        adjacencies: str = pairs_csv
-        output: str = output_csv
-
         create_baseline_candidate(
-            tmpdir, N, seed, prefix, data, adjacencies, output, label, verbose
+            tmpdir=intermediate_dir + "/" + xx,
+            N=N,
+            seed=seed,
+            prefix=map_label,
+            data=data_csv,
+            adjacencies=pairs_csv,
+            label=label,
+            output=output_csv,
+            verbose=verbose,
         )
 
 
