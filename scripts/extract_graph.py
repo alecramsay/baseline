@@ -127,30 +127,14 @@ def main() -> None:
 
     # Also save it as pairs in a CSV file, but ignore OUT_OF_STATE connections
 
-    # TODO - DELETE
-    # rel_path: str = path_to_file([temp_dir]) + file_name(
-    #     [xx, cycle, unit, "index"], "_", "pickle"
-    # )
-    # index_by_geoid: dict = read_pickle(rel_path)
-
     pairs_path: str = path_to_file(["data", xx]) + file_name(
         [xx, str(cycle), unit, "adjacencies"], "_", "csv"
     )
     abs_path: str = FileSpec(pairs_path).abs_path
 
     with open(abs_path, "w") as f:
-        for geoid, neighbor_geoids in graph.data().items():
-            if geoid == OUT_OF_STATE:
-                continue
-            for neighbor in neighbor_geoids:
-                if neighbor == OUT_OF_STATE:
-                    continue
-
-                print(f"{geoid},{neighbor}", file=f)
-                # TODO - DELETE
-                # x: int = index_by_geoid[geoid]
-                # y: int = index_by_geoid[neighbor]
-                # print(Pair(x, y), file=f)
+        for one, two in graph.adjacencies():
+            print(f"{one},{two}", file=f)
 
     pass
 
