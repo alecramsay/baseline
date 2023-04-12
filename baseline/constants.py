@@ -132,8 +132,6 @@ districts_by_state: dict[str, Any] = {
     "WY": {"congress": 1, "upper": 31, "lower": 62},
 }
 
-
-# TODO - Log the resulting baseline maps here
 baseline_maps: dict[str, str] = {
     "AL": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "AR": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
