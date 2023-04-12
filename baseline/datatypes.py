@@ -38,19 +38,20 @@ class GeoID:
         self.block: str = id  # id[12:15]
 
 
-class Pair(NamedTuple):
-    one: int
-    two: int
+# TODO - DELETE
+# class Pair(NamedTuple):
+#     one: int
+#     two: int
 
-    def __repr__(self) -> str:
-        return f"{self.one},{self.two}"
+#     def __repr__(self) -> str:
+#         return f"{self.one},{self.two}"
 
-    @classmethod
-    def from_data(cls, x: int, y: int):  # -> Self:
-        one: int = x if x < y else y
-        two: int = y if y > x else x
+#     @classmethod
+#     def from_data(cls, x: int, y: int):  # -> Self:
+#         one: int = x if x < y else y
+#         two: int = y if y > x else x
 
-        return cls(one, two)
+#         return cls(one, two)
 
 
 class Plan:

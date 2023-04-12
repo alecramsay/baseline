@@ -12,6 +12,7 @@ For documentation, type:
 
 $ scripts/index_geoids.py -h
 
+TODO - DELETE this script. It is no longer needed.
 """
 
 import argparse

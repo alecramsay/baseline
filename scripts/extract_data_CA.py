@@ -7,6 +7,8 @@ Preprocess data for CA.
 For example:
 
 $ scripts/preprocess_CA.py 
+
+TODO - Revise this before running it again.
 """
 
 import geopandas
