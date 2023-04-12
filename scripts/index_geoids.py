@@ -24,7 +24,7 @@ from baseline import *
 
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
-        description="Unpickle data to CSV format."
+        description="Index GEOIDs by the order in the points file."
     )
 
     parser.add_argument(
@@ -44,7 +44,7 @@ def parse_args() -> Namespace:
 
 
 def main() -> None:
-    """Convert pickled data to CSV format."""
+    """Index GEOIDs by the order in the points file."""
 
     args: Namespace = parse_args()
 
