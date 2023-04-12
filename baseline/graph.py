@@ -10,7 +10,7 @@ import csv
 from csv import reader as _reader
 from libpysal.weights import Rook, WSP
 from shapely.geometry import shape, Polygon, MultiPolygon
-from typing import Any, Optional, Iterable
+from typing import Any, Optional, Iterable, Generator, NamedTuple
 
 from .readwrite import *
 
@@ -19,9 +19,12 @@ OUT_OF_STATE: str = "OUT_OF_STATE"
 
 
 class Graph:
+    _data: dict
+    _adjacencies: set[tuple[str, str]]
+
     def __init__(self, input: str | dict, id_field: str = "") -> None:
         if isinstance(input, dict):
-            self._data: dict = input
+            self._data = input
             return
 
         if isinstance(input, str):
@@ -152,6 +155,29 @@ class Graph:
 
         if node in self._data:
             del self._data[node]
+
+    def adjacencies(self) -> set[tuple[str, str]]:
+        """Return unique pairs of adjacencent nodes in the graph."""
+
+        n: int = 0
+        self._adjacencies = set()
+
+        for node, neighbors in self._data.items():
+            for neighbor in neighbors:
+                n += 1
+
+                one: str = node if node < neighbor else neighbor
+                two: str = neighbor if neighbor > node else node
+                a: tuple[str, str] = (one, two)
+
+                if a in self._adjacencies:
+                    continue
+                else:
+                    self._adjacencies.add(a)
+
+        assert n == 2 * len(self._adjacencies)
+
+        return self._adjacencies
 
 
 ### HELPERS ###

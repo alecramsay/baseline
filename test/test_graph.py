@@ -70,5 +70,12 @@ class TestGraph:
         after: int = len(g.nodes())
         assert before > after
 
+    def test_adjacencies(self) -> None:
+        data: dict[str, list[str]] = {"a": ["b", "c"], "b": ["a", "c"], "c": ["a", "b"]}
+        g: Graph = Graph(data)
+
+        adjacencies: list[tuple[str, str]] = list(g.adjacencies())
+        assert len(adjacencies) == 3
+
 
 ### END ###
