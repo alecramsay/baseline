@@ -58,7 +58,7 @@ def main() -> None:
 
         print(f"Iteration {i + 1} of {iterations} (seed {seed})")
 
-        do_baseline_run(
+        execute_create_sh(
             tmpdir, N, seed, prefix, data, adjacencies, output, label, verbose
         )
 

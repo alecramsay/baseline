@@ -11,7 +11,7 @@ from .utils import *
 from .readwrite import *
 
 
-def do_baseline_run(
+def execute_create_sh(
     tmpdir: str,
     N: int,
     seed: int,
@@ -25,8 +25,6 @@ def do_baseline_run(
     """Create a baseline candidate map by calling dccvt/examples/redistricting/create.sh.
 
     Do this many times, and then choose the baseline as the map with the lowest energy.
-
-    TODO - Rename this and integrate it into create_baseline_candidate.
     """
 
     command: str = f"create.sh --tmpdir={tmpdir} --N={N} --seed={seed} --prefix={prefix} --data={data} --adjacencies={adjacencies} --output={output} --label={label}"
@@ -53,16 +51,8 @@ def create_baseline_candidate(
     THRESHOLD: int = 1000
 
     if verbose:
-        print(f"Generate candidate baseline map:")
-        print(f"- tmpdir: {tmpdir}")
-        print(f"- N: {N}")
-        print(f"- seed: {seed}")
-        print(f"- prefix: {prefix}")
-        print(f"- data: {data}")
-        print(f"- adjacencies: {adjacencies}")
-        print(f"- label: {label}")
-        print(f"- output: {output}")
         print()
+        print(f">>> GENERATE CANDIDATE BASELINE MAP {label} <<<")
 
     data_csv: str = data
     adjacencies_csv: str = adjacencies
@@ -85,25 +75,15 @@ def create_baseline_candidate(
     consolidated_csv: str = f"{tmpdir}/{prefix}.consolidated.csv"
     complete_csv: str = f"{tmpdir}/{prefix}.complete.csv"
 
-    if verbose:
-        print(f"- points_csv: {points_csv}")
-        print(f"- sites_csv: {sites_csv}")
-        print(f"- initial_csv: {initial_csv}")
-        print(f"- balzer_1_csv: {balzer_1_csv}")
-        print(f"- unbalanced_csv: {unbalanced_csv}")
-        print(f"- balzer_2_csv: {balzer_2_csv}")
-        print(f"- balanced_csv: {balanced_csv}")
-        print(f"- balzer_3_csv: {balzer_3_csv}")
-        print(f"- consolidated_csv: {consolidated_csv}")
-        print(f"- complete_csv: {complete_csv}")
-        print()
-
     create_points_file(input_csv=data_csv, output_csv=points_csv, debug=verbose)
     create_random_sites_file(
         points_csv=points_csv, output_csv=sites_csv, seed=seed, n=N, debug=verbose
     )
     create_initial_assignment_file(
-        points_csv=points_csv, sites_csv=sites_csv, output_csv=initial_csv
+        points_csv=points_csv,
+        sites_csv=sites_csv,
+        output_csv=initial_csv,
+        debug=verbose,
     )
     run_balzer(
         points_csv=points_csv,
@@ -111,8 +91,9 @@ def create_baseline_candidate(
         adjacencies_csv=adjacencies_csv,
         threshold=THRESHOLD,
         output_csv=balzer_1_csv,
+        log_msg="Create initial, balanced, noncontiguous balzer file",
         debug=verbose,
-    )  # Create initial, balanced, noncontiguous balzer file
+    )
     create_unbalanced_contiguous_assignment_file(
         assignment_csv=balzer_1_csv,
         adjacencies_csv=adjacencies_csv,
@@ -125,8 +106,9 @@ def create_baseline_candidate(
         adjacencies_csv=adjacencies_csv,
         threshold=THRESHOLD,
         output_csv=balzer_2_csv,
+        log_msg="Create unbalanced, contiguous, balzer file",
         debug=verbose,
-    )  # Create unbalanced, contiguous, balzer file
+    )
     create_balanced_contiguous_assignment_file(
         assignment_csv=unbalanced_csv,
         adjacencies_csv=adjacencies_csv,
@@ -140,9 +122,9 @@ def create_baseline_candidate(
         adjacencies_csv=adjacencies_csv,
         threshold=THRESHOLD,
         output_csv=balzer_3_csv,
+        log_msg="Create balanced, contiguous, balzer file",
         debug=verbose,
-    )  # Create balanced, contiguous, balzer file
-
+    )
     create_consolidated_file(
         assignment_csv=balzer_3_csv,
         adjacencies_csv=adjacencies_csv,
@@ -169,7 +151,7 @@ def create_points_file(*, input_csv: str, output_csv: str, debug: bool = False) 
     command: str = (
         f"python3 {dccvt_py}/geoid.py points --input {input_csv} --output {output_csv}"
     )
-    execute(command, debug)
+    execute(command, "Create points file:", debug)
 
 
 def create_random_sites_file(
@@ -181,7 +163,7 @@ def create_random_sites_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py sites --points {points_csv} --output {output_csv} --seed {seed} --N {n}"
-    execute(command, debug)
+    execute(command, "Create random sites file:", debug)
 
 
 def create_initial_assignment_file(
@@ -193,7 +175,7 @@ def create_initial_assignment_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py initial --points {points_csv} --sites {sites_csv} --output {output_csv}"
-    execute(command, debug)
+    execute(command, "Create initial assignment file:", debug)
 
 
 def run_balzer(
@@ -203,6 +185,7 @@ def run_balzer(
     adjacencies_csv: str,
     threshold: int,
     output_csv: str,
+    log_msg: str = "Run Balzer:",
     debug: bool = False,
 ) -> None:
     """Run Balzer
@@ -211,7 +194,7 @@ def run_balzer(
     """
 
     command: str = f"{dccvt_go}/dccvt --points {points_csv} --initial {initial_csv} --adjacencies {adjacencies_csv} --threshold {threshold} --output {output_csv}"
-    execute(command, debug)
+    execute(command, f"{log_msg}", debug)
 
 
 def create_unbalanced_contiguous_assignment_file(
@@ -226,7 +209,7 @@ def create_unbalanced_contiguous_assignment_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py contiguous --assignment {assignment_csv} --adjacent {adjacencies_csv} --output {output_csv}"
-    execute(command, debug)
+    execute(command, "Create unbalanced contiguous assignment file:", debug)
 
 
 def create_balanced_contiguous_assignment_file(
@@ -247,7 +230,7 @@ def create_balanced_contiguous_assignment_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py rebalance --assignment {assignment_csv} --adjacent {adjacencies_csv} --max_iterations {max_iterations} --output {output_csv}"
-    execute(command, debug)
+    execute(command, "Create balanced contiguous assignment file:", debug)
 
 
 def create_consolidated_file(
@@ -268,7 +251,7 @@ def create_consolidated_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py consolidate --assignment {assignment_csv} --adjacent {adjacencies_csv} --label {label} --output {output_csv}"
-    execute(command, debug)
+    execute(command, "Create consolidated file:", debug)
 
 
 def create_complete_file(
@@ -288,7 +271,7 @@ def create_complete_file(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py complete --assignment {consolidated_csv} --adjacent {adjacencies_csv} --points {points_csv} --output {complete_csv}"
-    execute(command, debug)
+    execute(command, "Create complete file:", debug)
 
 
 def compute_energy(
@@ -303,7 +286,7 @@ def compute_energy(
     """
 
     command: str = f"python3 {dccvt_py}/redistricting.py energy --assignment {assignment_csv} --points {points_csv} --label {label}"
-    execute(command, debug)
+    execute(command, "Compute energy:", debug)
 
 
 def create_output_file(
@@ -320,43 +303,19 @@ def create_output_file(
     """
 
     command: str = f"python3 {dccvt_py}/geoid.py postprocess --input {complete_csv} --redistricting_input {input_csv} --output {baf_csv}"
-    execute(command, debug)
-
-
-def get_centroids_file(
-    points_csv: str, assign_csv: str, centroids_csv: str, debug: bool = False
-) -> None:
-    """Get sites (district centroids) from assignments
-
-    python3 redistricting.py centroids --points point.csv  --assignment balzer.csv --centroids centroids.csv
-
-    TODO - Todd: Does this still work?
-    """
-
-    command: str = f"python3 {dccvt_py}/redistricting.py centroids --points {points_csv}  --assignment {assign_csv} --centroids {centroids_csv}"
-    execute(command, debug)
-
-
-def combine_centroids_files(inputs: str, output: str, debug: bool = False) -> None:
-    """Concatenate all BG centroids.csv into one file
-
-    cat NC20C_bg_*_centroids.csv > NC20C_block_sites.csv
-    """
-
-    command: str = f"cat {inputs} > {output}"
-    execute(command, debug)
+    execute(command, "Create output file:", debug)
 
 
 ### HELPER FUNCTIONS ###
 
 
-def execute(command: str, debug: bool = False) -> None:
+def execute(command: str, log_msg: str, debug: bool = False) -> None:
     """Execute a shell command"""
 
-    if debug:
-        print()
-        print(command)
-    else:
+    print()
+    print(log_msg)
+    print(command)
+    if not debug:
         os.system(command)
 
 

@@ -42,11 +42,14 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-i",
         "--iterations",
-        default=10,
-        help="The # of iterations to run (default: 10).",
+        default=100,
+        help="The # of iterations to run (default: 100).",
         type=int,
     )
 
+    parser.add_argument(
+        "-c", "--create", dest="create_sh", action="store_true", help="Use create.sh"
+    )
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
     )
@@ -65,7 +68,15 @@ def main() -> None:
     plan_type: str = args.map
     iterations: int = args.iterations
 
+    create_sh: bool = args.create_sh
     verbose: bool = args.verbose
+
+    # Debug
+
+    xx = "MI"
+    create_sh = False
+    verbose = True
+    iterations = 3
 
     # Add dccvt to the path
 
@@ -82,8 +93,8 @@ def main() -> None:
     K: int = 1  # district multiplier
     fips: str = STATE_FIPS[xx]
 
-    input_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
-    pairs_csv = full_path([data_dir, xx], [xx, cycle, "vtd", "pairs"])
+    data_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
+    adjacencies_csv = full_path([data_dir, xx], [xx, cycle, "vtd", "adjacencies"])
 
     start: int = K * N * int(fips)
 
@@ -96,15 +107,30 @@ def main() -> None:
         )
         label: str = f"{map_label}_{iter_label}"
 
-        tmpdir: str = intermediate_dir + "/" + xx
-        prefix: str = map_label
-        data: str = input_csv
-        adjacencies: str = pairs_csv
-        output: str = output_csv
-
-        do_baseline_run(
-            tmpdir, N, seed, prefix, data, adjacencies, output, label, verbose
-        )
+        if create_sh:
+            execute_create_sh(
+                intermediate_dir + "/" + xx,
+                N,
+                seed,
+                map_label,
+                data_csv,
+                adjacencies_csv,
+                output_csv,
+                label,
+                verbose,
+            )
+        else:
+            create_baseline_candidate(
+                tmpdir=intermediate_dir + "/" + xx,
+                N=N,
+                seed=seed,
+                prefix=map_label,
+                data=data_csv,
+                adjacencies=adjacencies_csv,
+                label=label,
+                output=output_csv,
+                verbose=verbose,
+            )
 
         pass
 
