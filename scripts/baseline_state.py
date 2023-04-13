@@ -5,7 +5,7 @@ Find districts that minimize population compactness (moment of inertia).
 
 For example:
 
-$ scripts/baseline_state.py -s NC -i 100 -v > intermediate/NC/NC20C_log_100.txt
+$ scripts/baseline_state.py -s NC -v > intermediate/NC/NC20C_log_100.txt
 $ scripts/baseline_state.py -s NC -i 1000 -v > intermediate/NC/NC20C_log_1000.txt
 
 For documentation, type:
@@ -94,7 +94,8 @@ def main() -> None:
     fips: str = STATE_FIPS[xx]
 
     data_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
-    adjacencies_csv = full_path([data_dir, xx], [xx, cycle, "vtd", "adjacencies"])
+    adjacencies_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "adjacencies"])
+    tmpdir: str = intermediate_dir + "/" + xx
 
     start: int = K * N * int(fips)
 
@@ -109,19 +110,19 @@ def main() -> None:
 
         if create_sh:
             execute_create_sh(
-                intermediate_dir + "/" + xx,
-                N,
-                seed,
-                map_label,
-                data_csv,
-                adjacencies_csv,
-                output_csv,
-                label,
-                verbose,
+                tmpdir=tmpdir,
+                N=N,
+                seed=seed,
+                prefix=map_label,
+                data=data_csv,
+                adjacencies=adjacencies_csv,
+                label=label,
+                output=output_csv,
+                verbose=verbose,
             )
         else:
             create_baseline_candidate(
-                tmpdir=intermediate_dir + "/" + xx,
+                tmpdir=tmpdir,
                 N=N,
                 seed=seed,
                 prefix=map_label,
@@ -132,7 +133,7 @@ def main() -> None:
                 verbose=verbose,
             )
 
-        pass
+        pass  # for a breakpoint
 
 
 if __name__ == "__main__":
