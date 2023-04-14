@@ -71,7 +71,7 @@ def main() -> None:
     create_sh: bool = args.create_sh
     verbose: bool = args.verbose
 
-    # Debug
+    # DEBUG - TODO: Comment these out
 
     xx = "MI"
     create_sh = False
@@ -88,6 +88,9 @@ def main() -> None:
     os.environ["PATH"] += os.pathsep + os.pathsep.join(path_list)
 
     # Set up
+
+    print()
+    print(f">>> GENERATING BASELINE CANDIDATES FOR {xx} <<<")
 
     map_label: str = label_map(xx, plan_type)  # e.g., "NC20C"
     N: int = districts_by_state[xx][plan_type]
@@ -136,6 +139,8 @@ def main() -> None:
             )
 
         pass  # for a breakpoint
+
+    print()
 
 
 if __name__ == "__main__":

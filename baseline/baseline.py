@@ -54,7 +54,7 @@ def create_baseline_candidate(
 
     if verbose:
         print()
-        print(f">>> GENERATE CANDIDATE BASELINE MAP {label} <<<")
+        print(f"... ITERATION FOR CANDIDATE {label} ...")
 
     data_csv: str = data
     adjacencies_csv: str = adjacencies
