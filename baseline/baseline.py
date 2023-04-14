@@ -61,6 +61,7 @@ def create_baseline_candidate(
     output_csv: str = output
 
     points_csv: str = f"{tmpdir}/{prefix}.points.csv"
+    adjacent_points_csv: str = f"{tmpdir}/{prefix}.adjacenct_points.csv"  # TODO
     sites_csv: str = f"{tmpdir}/{prefix}.randomsites.csv"
     initial_csv: str = f"{tmpdir}/{prefix}.initialized.csv"  # balanced, noncontiguous
     balzer_1_csv: str = (
@@ -79,7 +80,7 @@ def create_baseline_candidate(
 
     create_points_file(input_csv=data_csv, output_csv=points_csv, debug=debug)
     # TODO
-    # create_adjacencies_file(input_csv=data_csv, output_csv=points_csv, debug=debug)
+    # create_adjacencies_file(input_csv=adjacencies_csv, output_csv=adjacent_points_csv, debug=debug)
     create_random_sites_file(
         points_csv=points_csv, output_csv=sites_csv, seed=seed, n=N, debug=debug
     )
@@ -92,7 +93,7 @@ def create_baseline_candidate(
     run_balzer(
         points_csv=points_csv,
         initial_csv=initial_csv,
-        adjacencies_csv=adjacencies_csv,
+        adjacencies_csv=adjacent_points_csv,
         threshold=THRESHOLD,
         output_csv=balzer_1_csv,
         log_msg="Create initial, balanced, noncontiguous balzer file",
@@ -100,14 +101,14 @@ def create_baseline_candidate(
     )
     create_unbalanced_contiguous_assignment_file(
         assignment_csv=balzer_1_csv,
-        adjacencies_csv=adjacencies_csv,
+        adjacencies_csv=adjacent_points_csv,
         output_csv=unbalanced_csv,
         debug=debug,
     )
     run_balzer(
         points_csv=points_csv,
         initial_csv=unbalanced_csv,
-        adjacencies_csv=adjacencies_csv,
+        adjacencies_csv=adjacent_points_csv,
         threshold=THRESHOLD,
         output_csv=balzer_2_csv,
         log_msg="Create unbalanced, contiguous, balzer file",
@@ -115,7 +116,7 @@ def create_baseline_candidate(
     )
     create_balanced_contiguous_assignment_file(
         assignment_csv=unbalanced_csv,
-        adjacencies_csv=adjacencies_csv,
+        adjacencies_csv=adjacent_points_csv,
         max_iterations=1000,
         output_csv=balanced_csv,
         debug=debug,
@@ -123,7 +124,7 @@ def create_baseline_candidate(
     run_balzer(
         points_csv=points_csv,
         initial_csv=balanced_csv,
-        adjacencies_csv=adjacencies_csv,
+        adjacencies_csv=adjacent_points_csv,
         threshold=THRESHOLD,
         output_csv=balzer_3_csv,
         log_msg="Create balanced, contiguous, balzer file",
@@ -131,14 +132,14 @@ def create_baseline_candidate(
     )
     create_consolidated_file(
         assignment_csv=balzer_3_csv,
-        adjacencies_csv=adjacencies_csv,
+        adjacencies_csv=adjacent_points_csv,
         label=label,
         output_csv=consolidated_csv,
         debug=debug,
     )
     create_complete_file(
         consolidated_csv=consolidated_csv,
-        adjacencies_csv=adjacencies_csv,
+        adjacencies_csv=adjacent_points_csv,
         points_csv=points_csv,
         output_csv=complete_csv,
         debug=debug,
