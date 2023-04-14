@@ -43,6 +43,7 @@ def create_baseline_candidate(
     label: str,
     output: str,
     verbose: bool = False,
+    debug: bool = False,
 ) -> None:
     """Create a baseline candidate map by emulating dccvt/examples/redistricting/create.sh w/ individual dccvt wrappers calls.
 
@@ -134,6 +135,39 @@ def create_baseline_candidate(
         debug=verbose,
     )
     # TODO - HERE
+
+    # # create complete file
+    # echo "Creating complete file: $completefile"
+    # $PY complete \
+    #     --assignment "$consolidatedfile" \
+    #     --adjacent "$adjacenciesfile" \
+    #     --points "$pointsfile" \
+    #     --output "$completefile"
+
+    # if [ $? -ne 0 ]; then
+    #     echo "Failed to create complete file"
+    #     exit 1
+    # fi
+
+    # # compute energy
+    # echo "Computing energy of: $completefile"
+    # $PY energy \
+    #     --assignment "$completefile" \
+    #     --points "$pointsfile" \
+    #     --label "$label"
+
+    # if [ $? -ne 0 ]; then
+    #     echo "Failed to compute energy"
+    #     exit 1
+    # fi
+
+    # # create output file
+    # echo "Creating output file: $outfile"
+    # $GEOID postprocess \
+    #     --input "$completefile" \
+    #     --redistricting_input "$infile" \
+    #     --output "$outfile"
+
     print()
     print("More ...")
 

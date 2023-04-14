@@ -76,7 +76,8 @@ def main() -> None:
     xx = "MI"
     create_sh = False
     verbose = True
-    iterations = 3
+    debug = True
+    iterations = 1
 
     # Add dccvt to the path
 
@@ -131,6 +132,7 @@ def main() -> None:
                 label=label,
                 output=output_csv,
                 verbose=verbose,
+                debug=debug,
             )
 
         pass  # for a breakpoint
