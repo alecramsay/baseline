@@ -77,15 +77,17 @@ def create_baseline_candidate(
     consolidated_csv: str = f"{tmpdir}/{prefix}.consolidated.csv"
     complete_csv: str = f"{tmpdir}/{prefix}.complete.csv"
 
-    create_points_file(input_csv=data_csv, output_csv=points_csv, debug=verbose)
+    create_points_file(input_csv=data_csv, output_csv=points_csv, debug=debug)
+    # TODO
+    # create_adjacencies_file(input_csv=data_csv, output_csv=points_csv, debug=debug)
     create_random_sites_file(
-        points_csv=points_csv, output_csv=sites_csv, seed=seed, n=N, debug=verbose
+        points_csv=points_csv, output_csv=sites_csv, seed=seed, n=N, debug=debug
     )
     create_initial_assignment_file(
         points_csv=points_csv,
         sites_csv=sites_csv,
         output_csv=initial_csv,
-        debug=verbose,
+        debug=debug,
     )
     run_balzer(
         points_csv=points_csv,
@@ -94,13 +96,13 @@ def create_baseline_candidate(
         threshold=THRESHOLD,
         output_csv=balzer_1_csv,
         log_msg="Create initial, balanced, noncontiguous balzer file",
-        debug=verbose,
+        debug=debug,
     )
     create_unbalanced_contiguous_assignment_file(
         assignment_csv=balzer_1_csv,
         adjacencies_csv=adjacencies_csv,
         output_csv=unbalanced_csv,
-        debug=verbose,
+        debug=debug,
     )
     run_balzer(
         points_csv=points_csv,
@@ -109,14 +111,14 @@ def create_baseline_candidate(
         threshold=THRESHOLD,
         output_csv=balzer_2_csv,
         log_msg="Create unbalanced, contiguous, balzer file",
-        debug=verbose,
+        debug=debug,
     )
     create_balanced_contiguous_assignment_file(
         assignment_csv=unbalanced_csv,
         adjacencies_csv=adjacencies_csv,
         max_iterations=1000,
         output_csv=balanced_csv,
-        debug=verbose,
+        debug=debug,
     )
     run_balzer(
         points_csv=points_csv,
@@ -125,53 +127,33 @@ def create_baseline_candidate(
         threshold=THRESHOLD,
         output_csv=balzer_3_csv,
         log_msg="Create balanced, contiguous, balzer file",
-        debug=verbose,
+        debug=debug,
     )
     create_consolidated_file(
         assignment_csv=balzer_3_csv,
         adjacencies_csv=adjacencies_csv,
         label=label,
         output_csv=consolidated_csv,
-        debug=verbose,
+        debug=debug,
     )
-    # TODO - HERE
+    create_complete_file(
+        consolidated_csv=consolidated_csv,
+        adjacencies_csv=adjacencies_csv,
+        points_csv=points_csv,
+        output_csv=complete_csv,
+        debug=debug,
+    )
+    compute_energy(
+        assignment_csv=complete_csv, points_csv=points_csv, label=label, debug=debug
+    )
+    create_output_file(
+        input_csv=data_csv,
+        complete_csv=complete_csv,
+        output_csv=output_csv,
+        debug=debug,
+    )
 
-    # # create complete file
-    # echo "Creating complete file: $completefile"
-    # $PY complete \
-    #     --assignment "$consolidatedfile" \
-    #     --adjacent "$adjacenciesfile" \
-    #     --points "$pointsfile" \
-    #     --output "$completefile"
-
-    # if [ $? -ne 0 ]; then
-    #     echo "Failed to create complete file"
-    #     exit 1
-    # fi
-
-    # # compute energy
-    # echo "Computing energy of: $completefile"
-    # $PY energy \
-    #     --assignment "$completefile" \
-    #     --points "$pointsfile" \
-    #     --label "$label"
-
-    # if [ $? -ne 0 ]; then
-    #     echo "Failed to compute energy"
-    #     exit 1
-    # fi
-
-    # # create output file
-    # echo "Creating output file: $outfile"
-    # $GEOID postprocess \
-    #     --input "$completefile" \
-    #     --redistricting_input "$infile" \
-    #     --output "$outfile"
-
-    print()
-    print("More ...")
-
-    pass
+    pass  # for a breakpoint
 
 
 ### DCCVT WRAPPERS ###
@@ -290,10 +272,11 @@ def create_consolidated_file(
 
 
 def create_complete_file(
+    *,
     consolidated_csv: str,
     adjacencies_csv: str,
     points_csv: str,
-    complete_csv: str,
+    output_csv: str,
     debug: bool = False,
 ) -> None:
     """Create complete file
@@ -305,12 +288,12 @@ def create_complete_file(
         --output "$completefile"
     """
 
-    command: str = f"python3 {dccvt_py}/redistricting.py complete --assignment {consolidated_csv} --adjacent {adjacencies_csv} --points {points_csv} --output {complete_csv}"
+    command: str = f"python3 {dccvt_py}/redistricting.py complete --assignment {consolidated_csv} --adjacent {adjacencies_csv} --points {points_csv} --output {output_csv}"
     execute(command, "Create complete file:", debug)
 
 
 def compute_energy(
-    assignment_csv: str, points_csv: str, label: str, debug: bool = False
+    *, assignment_csv: str, points_csv: str, label: str, debug: bool = False
 ) -> None:
     """Computing energy of a completed map
 
@@ -325,7 +308,7 @@ def compute_energy(
 
 
 def create_output_file(
-    input_csv: str, complete_csv: str, baf_csv: str, debug: bool = False
+    *, input_csv: str, complete_csv: str, output_csv: str, debug: bool = False
 ) -> None:
     """Make an assignment file from a file of unique assignments of VTDs (or blocks) to districts (sites)
 
@@ -337,7 +320,7 @@ def create_output_file(
     --output "$outfile"
     """
 
-    command: str = f"python3 {dccvt_py}/geoid.py postprocess --input {complete_csv} --redistricting_input {input_csv} --output {baf_csv}"
+    command: str = f"python3 {dccvt_py}/geoid.py postprocess --input {complete_csv} --redistricting_input {input_csv} --output {output_csv}"
     execute(command, "Create output file:", debug)
 
 
