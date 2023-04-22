@@ -62,29 +62,24 @@ def main() -> None:
 
     args: Namespace = parse_args()
 
-    fips_map: dict[str, str] = STATE_FIPS
-
     xx: str = args.state
-
-    fips: str = fips_map[xx]
-
     unit: str = args.unit
     if unit != "vtd":
         raise ValueError(f"Unit {unit} not recognized.")
-
     if xx in ["CA", "OR"]:
         unit = "bg"
-
     unit_label: str = "vtd20" if unit == "vtd" else "bg"
     # "tract", "bg", "tabblock20"
-
     water: bool = args.water
-
     verbose: bool = args.verbose
 
     #
 
+    fips_map: dict[str, str] = STATE_FIPS
+    fips: str = fips_map[xx]
+
     id: str = unit_id(unit)
+
     shp_dir: str = file_name(["tl_2020", fips, unit_label], "_")
     shp_path: str = path_to_file([rawdata_dir, xx, shp_dir]) + file_name(
         ["tl_2020", fips, unit_label], "_", "shp"
@@ -134,7 +129,8 @@ def main() -> None:
 
     with open(abs_path, "w") as f:
         for one, two in graph.adjacencies():
-            print(f"{one},{two}", file=f)
+            if one != "OUT_OF_STATE" and two != "OUT_OF_STATE":
+                print(f"{one},{two}", file=f)
 
     pass
 

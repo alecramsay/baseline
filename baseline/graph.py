@@ -140,6 +140,7 @@ class Graph:
         self._data[node1].append(node2)
         self._data[node2].append(node1)
 
+    # TODO - Review this
     def remove(self, node: str | int) -> None:
         """Remove a node from the graph maintaining its connectedness."""
 
@@ -252,6 +253,7 @@ def is_connected(geos: list[Any], adjacency: dict[Any, list[Any]]) -> bool:
     return len(visited) == len(geos)
 
 
+# TODO - DELETE: Part of old index vs. GEOID adjacencies
 def datasets_are_consistent(data: list, pairs: list, index: dict) -> bool:
     result: bool = True
 

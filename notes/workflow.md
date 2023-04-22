@@ -48,7 +48,7 @@ scripts/extract_graph.py -s XX
 scripts/extract_graph.py -s XX -w
 ```
 
-(5) Crosscheck the data and adjacency data for consistency!
+(x) Crosscheck the data and adjacency data for consistency! <<< TODO - DELETE this step
 
 ```
 scripts/crosscheck_datasets.py -s XX
