@@ -17,6 +17,8 @@ $ scripts/extract_xy.py -h
 import argparse
 from argparse import ArgumentParser, Namespace
 
+from shapely.geometry import Point
+
 from baseline import *
 
 

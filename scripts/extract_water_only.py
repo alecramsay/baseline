@@ -49,18 +49,17 @@ def main() -> None:
 
     args: Namespace = parse_args()
 
-    fips_map: dict[str, str] = STATE_FIPS
-
     xx: str = args.state
-    fips: str = fips_map[xx]
-
     vtds: bool = True  # Just do VTDs (precincts) for now
-
     verbose: bool = args.verbose
 
-    state_dir: str = xx
+    ### DEBUG ###
 
     ### READ THE SHAPEFILES ###
+
+    fips_map: dict[str, str] = STATE_FIPS
+    fips: str = fips_map[xx]
+    state_dir: str = xx
 
     unit: str = "bg" if xx in ["CA", "OR"] else "vtd"
     unit_label: str = "vtd20" if unit == "vtd" else "bg"
@@ -83,8 +82,9 @@ def main() -> None:
                         water_key: str = "AWATER20" if unit == "vtd" else "AWATER"
                         aland: int = item["properties"][land_key]
                         awater: int = item["properties"][water_key]
+                        vtd: str = item["properties"]["VTDST20"]
 
-                        if awater > 0 and aland == 0:
+                        if (awater > 0 and aland == 0) or vtd == "ZZZZZZ":
                             if not water_only:
                                 water_only = True
                                 print(f"GEOID,ALAND,AWATER")
