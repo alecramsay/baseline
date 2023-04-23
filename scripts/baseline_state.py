@@ -5,6 +5,10 @@ Find districts that minimize population compactness (moment of inertia).
 
 For example:
 
+$ scripts/baseline_state.py -s NC -i 1 -v -c
+$ scripts/baseline_state.py -s NC -i 1 -v -d
+$ scripts/baseline_state.py -s NC -i 1 -v
+
 $ scripts/baseline_state.py -s NC -v > intermediate/NC/NC20C_log_100.txt
 $ scripts/baseline_state.py -s NC -i 1000 -v > intermediate/NC/NC20C_log_1000.txt
 
@@ -53,6 +57,9 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
     )
+    parser.add_argument(
+        "-d", "--debug", dest="debug", action="store_true", help="Debug mode"
+    )
 
     args: Namespace = parser.parse_args()
     return args
@@ -70,14 +77,15 @@ def main() -> None:
 
     create_sh: bool = args.create_sh
     verbose: bool = args.verbose
+    debug: bool = args.debug
 
-    # DEBUG - TODO: Comment these out
+    # DEBUG
 
-    xx = "MI"
-    create_sh = False
-    verbose = True
-    debug = True
-    iterations = 1
+    # xx = "MI"
+    # create_sh = False
+    # verbose = True
+    # debug = True
+    # iterations = 1
 
     # Add dccvt to the path
 
