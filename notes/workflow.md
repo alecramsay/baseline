@@ -48,19 +48,13 @@ scripts/extract_graph.py -s XX
 scripts/extract_graph.py -s XX -w
 ```
 
-(x) Crosscheck the data and adjacency data for consistency! <<< TODO - DELETE this step
-
-```
-scripts/crosscheck_datasets.py -s XX
-```
-
-(6) Create a baseline map
+(5) Create a baseline map
 
 ```
 scripts/baseline_state.py -s XX -i 100 -v > intermediate/XX/XX20C_log_100.txt
 ```
 
-(7) Compare the candidate maps
+(6) Compare the candidate maps
 
 ```
 scripts/compare_maps.py -s XX -i 100 -v
@@ -69,7 +63,7 @@ scripts/compare_maps.py -s XX -i 100 -v
 - Copy any missing maps output to maps/XX/XX20C_missing.txt.
 - Import XX20C_energies.csv into a spreadheet, and verify that the results are OK.
 
-(8) Choose a baseline
+(7) Choose a baseline
 
 - Copy the lowest energy baseline map to the maps/XX directory as XX20C_baseline_100.csv.
 
