@@ -252,41 +252,6 @@ def is_connected(geos: list[Any], adjacency: dict[Any, list[Any]]) -> bool:
     return len(visited) == len(geos)
 
 
-# TODO - DELETE: Part of old index vs. GEOID adjacencies
-# def datasets_are_consistent(data: list, pairs: list, index: dict) -> bool:
-#     result: bool = True
-
-#     data_units: set[str] = {row["GEOID"] for row in data}
-#     pairs_indexes: set[int] = set()
-#     for row in pairs:
-#         for elem in row.values():
-#             pairs_indexes.add(elem)
-
-#     geoid_by_index = {v: k for k, v in index.items()}
-
-#     pairs_units: set[str] = {geoid_by_index[i] for i in pairs_indexes}
-
-#     # Checks
-
-#     if data_units != pairs_units:
-#         print(
-#             f"... Different # of precincts in data ({len(data_units)}) and pairs ({len(pairs_units)})."
-#         )
-#         result = False
-
-#     missing_pairs: set[str] = data_units.difference(pairs_units)
-#     if missing_pairs:
-#         print(f"... Missing precincts in adjacency pairs: {missing_pairs}")
-#         result = False
-
-#     missing_data: set[str] = pairs_units.difference(data_units)
-#     if missing_data:
-#         print(f"... Missing precincts in data: {missing_data}")
-#         result = False
-
-#     return result
-
-
 # TODO - Integrate these into the class
 
 

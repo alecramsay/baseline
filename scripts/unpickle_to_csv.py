@@ -61,9 +61,6 @@ def main() -> None:
 
     ### DEBUG ###
 
-    # xx = "MI"
-    # water = True
-
     ### LOAD DATA ###
 
     rel_path: str = path_to_file([temp_dir]) + file_name(

@@ -193,10 +193,10 @@ def create_random_sites_file(
 ) -> None:
     """Create random sites from points.csv
 
-    python3 redistricting.py sites --points points.csv --output sites.csv --seed 31415 --N 14
+    python3 redistricting.py randomsites --points points.csv --output sites.csv --seed 31415 --N 14
     """
 
-    command: str = f"python3 {dccvt_py}/redistricting.py sites --points {points_csv} --output {output_csv} --seed {seed} --N {n}"
+    command: str = f"python3 {dccvt_py}/redistricting.py randomsites --points {points_csv} --output {output_csv} --seed {seed} --N {n}"
     execute(command, "Create random sites file:", debug)
 
 

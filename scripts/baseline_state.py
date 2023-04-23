@@ -9,7 +9,9 @@ $ scripts/baseline_state.py -s NC -i 1 -v -c
 $ scripts/baseline_state.py -s NC -i 1 -v -d
 $ scripts/baseline_state.py -s NC -i 1 -v
 
-$ scripts/baseline_state.py -s NC -v > intermediate/NC/NC20C_log_100.txt
+$ scripts/baseline_state.py -s NC > intermediate/NC/NC20C_log_100.txt
+$ scripts/baseline_state.py -s NC -c > intermediate/NC/NC20C_log_100.txt
+
 $ scripts/baseline_state.py -s NC -i 1000 -v > intermediate/NC/NC20C_log_1000.txt
 
 For documentation, type:
@@ -80,12 +82,6 @@ def main() -> None:
     debug: bool = args.debug
 
     # DEBUG
-
-    # xx = "MI"
-    # create_sh = False
-    # verbose = True
-    # debug = True
-    # iterations = 1
 
     # Add dccvt to the path
 
