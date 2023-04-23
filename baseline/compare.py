@@ -6,8 +6,6 @@ COMPARE CANDIDATE BASELINE MAPS
 
 from pyutils import FileSpec
 
-from .constants import districts_by_state
-from .baseline import label_iteration
 from .datatypes import Plan
 from .coi import uncertainty_of_membership, effective_splits
 
@@ -30,6 +28,7 @@ def cull_energies(log_txt: str, xx: str, plan_type: str) -> dict[str, dict]:
     result: str
     parts: list[str]
     name: str = "N/A"
+    qualifier: str
     energy: float
     contiguous: bool = False
 
@@ -41,8 +40,10 @@ def cull_energies(log_txt: str, xx: str, plan_type: str) -> dict[str, dict]:
             parts = [x.strip() for x in result.split("=")]
 
             name = parts[0]
-            # name = label_iteration(i, K, N)  # parts[0]
-            contiguous = True if parts[1].split(" ")[0] == "Contiguous" else False
+            qualifier = parts[1].split(" ")[0]
+            if qualifier in ["Contiguous", "Discontiguous"]:
+                contiguous = True if qualifier == "Contiguous" else False
+                # contiguous = True if parts[1].split(" ")[0] == "Contiguous" else False
 
             continue
 
