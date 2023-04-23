@@ -10,6 +10,8 @@ $ scripts/baseline_state.py -s NC -i 1 -v -d
 $ scripts/baseline_state.py -s NC -i 1 -v
 
 $ scripts/baseline_state.py -s NC > intermediate/NC/NC20C_log_100.txt
+
+NOTE - To get STDOUT in the right order, use the -c option:
 $ scripts/baseline_state.py -s NC -c > intermediate/NC/NC20C_log_100.txt
 
 $ scripts/baseline_state.py -s NC -i 1000 -v > intermediate/NC/NC20C_log_1000.txt

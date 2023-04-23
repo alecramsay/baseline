@@ -2,6 +2,10 @@
 
 """
 BASELINE DISTRICTS
+
+NOTE - In order to get STDOUT in the right order for subsequent scraping, execute create.sh
+instead of calling each dccvt wrapper individually (with create_baseline_candidate). The
+latter is for debugging.
 """
 
 import os
