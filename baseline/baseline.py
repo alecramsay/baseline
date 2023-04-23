@@ -79,8 +79,12 @@ def create_baseline_candidate(
     complete_csv: str = f"{tmpdir}/{prefix}.complete.csv"
 
     create_points_file(input_csv=data_csv, output_csv=points_csv, debug=debug)
-    # TODO
-    # create_adjacencies_file(input_csv=adjacencies_csv, output_csv=adjacent_points_csv, debug=debug)
+    create_adjacencies_file(
+        points_csv=points_csv,
+        pairs_csv=adjacencies_csv,
+        output_csv=adjacent_points_csv,
+        debug=debug,
+    )
     create_random_sites_file(
         points_csv=points_csv, output_csv=sites_csv, seed=seed, n=N, debug=debug
     )
@@ -163,13 +167,25 @@ def create_baseline_candidate(
 def create_points_file(*, input_csv: str, output_csv: str, debug: bool = False) -> None:
     """Create points.csv from preferred redistricting input.csv format
 
-    python3 geoid.py points --input redistricting.csv --output points.csv
+    python3 geoid.py points --input data.csv --output points.csv
     """
 
     command: str = (
         f"python3 {dccvt_py}/geoid.py points --input {input_csv} --output {output_csv}"
     )
     execute(command, "Create points file:", debug)
+
+
+def create_adjacencies_file(
+    *, points_csv: str, pairs_csv: str, output_csv: str, debug: bool = False
+) -> None:
+    """Create indexed adjacencies from pairs of adjacent GEOIDs
+
+    python3 geoid.py pairs --points points.csv --pairs adjacencies.csv --output adjacent_points_csv
+    """
+
+    command: str = f"python3 {dccvt_py}/geoid.py pairs --points {points_csv} --pairs {pairs_csv} --output {output_csv}"
+    execute(command, "Create adjacencies file:", debug)
 
 
 def create_random_sites_file(
