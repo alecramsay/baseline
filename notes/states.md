@@ -14,8 +14,8 @@ No water-only precincts:
 - OK
 - SC
 
-- AZ: Baseline run 4/7/23.
-- GA: Baseline run 4/7/23.
+- AZ: Baseline run 4/24/23.
+- GA: Baseline run 4/24/23.
 - VA: Baseline run 4/6/23.
 
 - AR
