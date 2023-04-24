@@ -6,7 +6,7 @@ There are 37 states with three or more congressional districts.
 
 No water-only precincts:
 
-- NC: Baseline run 4/23/23.
+- NC: 4/24/23
 
 - AL
 - CT
@@ -14,9 +14,9 @@ No water-only precincts:
 - OK
 - SC
 
-- AZ: Baseline run 4/24/23.
-- GA: Baseline run 4/24/23.
-- VA: Baseline run 4/6/23.
+- AZ: 4/24/23
+- GA: 4/24/23
+- VA: TODO
 
 - AR
 - CO
@@ -28,7 +28,7 @@ No water-only precincts:
 
 Some water-only precinctsL
 
-- IL <= Baseline run 4/10/23.
+- IL 4/24/23
 - IN
 - KS
 - KY
@@ -44,10 +44,10 @@ Some water-only precinctsL
 - UT
 - WI
 
-- LA <= Baseline run 4/7/23.
-- MI <= Baseline run 4/23/23.
+- LA: 4/24/23
+- MI: 4/24/23.
 - NV
-- WA <= Baseline run 4/10/23.
+- WA: TODO
 
 ## Category 3
 
