@@ -165,14 +165,15 @@ def main() -> None:
         delta: float = (energy - lowest_energy) / lowest_energy
         plan["DELTA"] = delta
 
-        note: str = ""
-        if name in lowest_plans.values():
-            buckets: list[str] = list()
-            for k, v in lowest_plans.items():
-                if v == name:
-                    buckets.append(k)
-            note = "Lowest: " + ", ".join(buckets)
-        plan["NOTE"] = note
+        # Don't identify the lowest energy (only) plan -- consider contiguity & population deviation
+        # note: str = " "
+        # if name in lowest_plans.values():
+        #     buckets: list[str] = list()
+        #     for k, v in lowest_plans.items():
+        #         if v == name:
+        #             buckets.append(k)
+        #     note = "Lowest: " + ", ".join(buckets)
+        # plan["NOTE"] = note
 
         plan["SHARED"] = avg_shared
         plan["UOM"] = avg_uncertainty
@@ -188,14 +189,25 @@ def main() -> None:
 
     # Write analysis to file
 
-    energies_csv: str = path_to_file([maps_dir, xx]) + file_name(
-        [map_label, "energies"], "_", "csv"
+    candidates_csv: str = path_to_file([maps_dir, xx]) + file_name(
+        [map_label, "candidates"], "_", "csv"
     )
 
     write_csv(
-        energies_csv,
+        candidates_csv,
         plans,
-        ["#", "MAP", "CONTIGUOUS", "ENERGY", "DELTA", "SHARED", "UOM", "ES", "NOTE"],
+        [
+            "#",
+            "MAP",
+            "CONTIGUOUS",
+            "ENERGY",
+            "POPDEV",
+            "DELTA",
+            "SHARED",
+            "UOM",
+            "ES",
+            # "NOTE",
+        ],
         precision="{:.6f}",
     )
 

@@ -27,23 +27,27 @@ def cull_energies(log_txt: str, xx: str, plan_type: str) -> dict[str, dict]:
 
     result: str
     parts: list[str]
+    rhs: list[str]
     name: str = "N/A"
     qualifier: str
     energy: float
     contiguous: bool = False
+    popdev: float = 100.0
 
     for line in lines:
         if line.startswith("Map "):
-            # Map NC20C_I000K01N14 = Contiguous 14
-            # Map NC20C_I018K01N14 = Discontiguous 15 != 14
             result = line[4:].strip()
             parts = [x.strip() for x in result.split("=")]
 
             name = parts[0]
             qualifier = parts[1].split(" ")[0]
             if qualifier in ["Contiguous", "Discontiguous"]:
+                # Map NC20C_I000K01N14 = Contiguous 14
+                # Map NC20C_I018K01N14 = Discontiguous 15 != 14
                 contiguous = True if qualifier == "Contiguous" else False
-                # contiguous = True if parts[1].split(" ")[0] == "Contiguous" else False
+            else:
+                # Map NC20C_I000K01N14 = 740980 to 751329, Diff = 10349, Percent = 1.388%
+                popdev = float(parts[-1].strip("%")) / 100
 
             continue
 
@@ -60,7 +64,12 @@ def cull_energies(log_txt: str, xx: str, plan_type: str) -> dict[str, dict]:
 
             energy = float(parts[1])
 
-            plans[name] = {"MAP": name, "ENERGY": energy, "CONTIGUOUS": contiguous}
+            plans[name] = {
+                "MAP": name,
+                "ENERGY": energy,
+                "CONTIGUOUS": contiguous,
+                "POPDEV": popdev,
+            }
 
             continue
 
