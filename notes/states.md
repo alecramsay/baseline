@@ -21,8 +21,8 @@ There are 37 states with three or more congressional districts.
 - IA: 4/25/23
 - IN: 4/25/23
 - KS: 4/25/23 FAILED
-- KY: 
-- MA
+- KY: 4/25/23
+- MA: 4/25/23
 - MD
 - MN
 - MO
