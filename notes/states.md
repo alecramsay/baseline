@@ -26,7 +26,7 @@ There are 37 states with three or more congressional districts.
 - MD: 4/25/23
 - MN: 4/25/23
 - MO: 4/25/23
-- MS
+- MS: 4/25/23
 - NE
 
 - NJ
