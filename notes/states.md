@@ -37,7 +37,7 @@ There are 37 states with three or more congressional districts.
 - PA: 4/25/23
 - SC: 4/25/23
 - TN: 4/25/23
-- TX
+- TX: 4/25/23
 - UT: 4/25/23 <= FAILED
 - WI: 4/25/23
 
