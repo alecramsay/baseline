@@ -20,7 +20,7 @@ There are 37 states with three or more congressional districts.
 - CT: 4/25/23
 - IA: 4/25/23
 - IN: 4/25/23
-- KS: 4/25/23 FAILED
+- KS: 4/25/23 <= FAILED
 - KY: 4/25/23
 - MA: 4/25/23
 - MD: 4/25/23
@@ -29,9 +29,9 @@ There are 37 states with three or more congressional districts.
 - MS: 4/25/23
 - NE: 4/25/23
 
-- NJ: 4/25/23
-- NM
-- NV
+- NJ: 4/25/23 <= Contiguity is whacked because of a ring water-only precincts
+- NM: 4/25/23
+- NV: 4/25/23
 - OK
 - OH
 - PA
