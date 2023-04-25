@@ -35,7 +35,7 @@ There are 37 states with three or more congressional districts.
 - OH: 4/25/23
 - OK: 4/25/23
 - PA: 4/25/23
-- SC
+- SC: 4/25/23
 - TN
 - TX
 - UT
