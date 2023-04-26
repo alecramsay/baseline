@@ -22,9 +22,10 @@ def main() -> None:
         "scripts/unpickle_to_csv.py -s OR -u bg",
         "scripts/unpickle_to_csv.py -s OR -u block",
         "scripts/extract_block_bgs.py -s OR",
-        "scripts/extract_name_map.py -s OR > data/OR/OR_2020_vtd_names.txt",
     ]
     for command in commands:
+        print()
+        print(command)
         command: str = command.format(xx="CA")
         os.system(command)
 

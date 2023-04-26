@@ -123,9 +123,7 @@ class FeatureCollection:
         self.avg_pop: int = round(self.total_pop / len(self.features))
 
     def check_feature_sizes(self, ndistricts: int) -> bool:
-        """
-        Warn if any features are more populous than a target district.
-        """
+        """Warn if any features are more populous than a target district."""
 
         target_pop: int = round(self.total_pop / ndistricts)
 

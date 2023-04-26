@@ -2,7 +2,7 @@
 #
 
 """
-Create a dict of blocks and their associated VTDs.
+Create a dict of VTDs and their associated blocks.
 
 For example:
 
@@ -11,6 +11,8 @@ $ scripts/extract_block_vtds.py -s NC
 For documentation, type:
 
 $ scripts/extract_block_vtds.py -h
+
+TODO - Is this used? Is it for operational contiguity down the pike?
 """
 
 import argparse

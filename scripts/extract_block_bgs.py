@@ -45,26 +45,20 @@ def main() -> None:
 
     args: Namespace = parse_args()
 
-    fips_map: dict[str, str] = STATE_FIPS
-
     xx: str = args.state
-    fips: str = fips_map[xx]
-
     verbose: bool = args.verbose
 
     ### READ A BAF & CREATE THE MAPPINGS ###
 
     rel_path: str = path_to_file([data_dir, xx]) + file_name(
-        [xx, cycle, "block", "assignments"], "_", "csv"
+        [xx, cycle, "block", "data"], "_", "csv"
     )
-    types: list = [str, int]
-    block_assignments: list = read_csv(
-        rel_path, types
-    )  # A list of dicts like {'GEOID20': '371139703032008', 'District': 11}
+    types: list = [str, int, float, float]
+    blocks: list = read_csv(rel_path, types)  # A list of dicts
 
     block_bg: dict[str, str] = dict()
-    for row in block_assignments:
-        block: str = row["GEOID20"]
+    for row in blocks:
+        block: str = row["GEOID"]
         bg: str = GeoID(block).bg
         block_bg[block] = bg
 
