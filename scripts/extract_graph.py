@@ -9,6 +9,9 @@ For example:
 $ scripts/extract_graph.py -s NC
 $ scripts/extract_graph.py -s MI -w
 
+$ scripts/extract_graph.py -s OR -w
+$ scripts/extract_graph.py -s CA -w
+
 For documentation, type:
 
 $ scripts/extract_graph.py -h

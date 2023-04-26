@@ -238,12 +238,20 @@ def is_connected(geos: list[Any], adjacency: dict[Any, list[Any]]) -> bool:
     adjacency - the connectedness of the geos
     """
     visited: set[Any] = set()
+
     all_geos: set[Any] = set(geos)
-    to_process: list[Any] = [geos[0]]
+    all_geos.discard(OUT_OF_STATE)
+
+    start: str = next(iter(all_geos))
+    assert start != OUT_OF_STATE
+
+    to_process: list[Any] = [start]
     while to_process:
         node: Any = to_process.pop()
         visited.add(node)
         neighbors: list[Any] = adjacency[node]
+        if OUT_OF_STATE in neighbors:
+            neighbors.remove(OUT_OF_STATE)
         neighbors_to_visit: list[Any] = [
             n for n in neighbors if n in all_geos and n not in visited
         ]

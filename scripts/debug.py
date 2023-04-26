@@ -7,9 +7,13 @@ DEBUG
 from baseline import *
 
 
-xx: str = "KS"
+xx: str = "CA"  # TODO
+
 unit: str = "vtd"
+if xx in ["CA", "OR"]:
+    unit = "bg"
 unit_label: str = "vtd20"
+
 water: bool = True
 verbose: bool = True
 
@@ -38,6 +42,12 @@ def main() -> None:
             if w in g.nodes():
                 print(f"Removing water-only precinct {w}.")
                 g.remove(w)
+
+    # DEBUG #
+
+    # bgs: list[str] = ["060375991001", "060759804011"]
+    # for bg in bgs:
+    #     print(f"BG {bg}: {g.neighbors(bg)}")
 
     print(f"Graph is consistent: {g.is_consistent()}")
     print(f"Graph is connected: {g.is_connected()}")
