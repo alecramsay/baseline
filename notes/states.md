@@ -29,7 +29,7 @@ There are 37 states with three or more congressional districts.
 - MS: 4/25/23
 - NE: 4/25/23
 
-- NJ: 4/25/23 <= Contiguity is whacked because of a ring water-only precincts
+- NJ: 4/25/23 <= Tweak the map by hand to reassign (or unassign) Berkeley township Island Beach State Park (34029025000).
 - NM: 4/25/23
 - NV: 4/25/23 <= FAILED
 - OH: 4/25/23
