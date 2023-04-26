@@ -82,7 +82,11 @@ def main() -> None:
                         water_key: str = "AWATER20" if unit == "vtd" else "AWATER"
                         aland: int = item["properties"][land_key]
                         awater: int = item["properties"][water_key]
-                        vtd: str = item["properties"]["VTDST20"]
+                        vtd: str = (
+                            item["properties"]["VTDST20"]
+                            if "VTDST20" in item["properties"]
+                            else "N/A"
+                        )
 
                         if (awater > 0 and aland == 0) or vtd == "ZZZZZZ":
                             if not water_only:
