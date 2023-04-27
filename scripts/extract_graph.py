@@ -23,8 +23,6 @@ from argparse import ArgumentParser, Namespace
 
 from baseline import *
 
-from libpysal.weights import Rook
-
 
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
