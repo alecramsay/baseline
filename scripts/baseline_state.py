@@ -83,6 +83,11 @@ def main() -> None:
     verbose: bool = args.verbose
     debug: bool = args.debug
 
+    unit: str = "vtd"
+    if xx in ["CA", "OR"]:
+        unit = "bg"
+    unit_label: str = "vtd20" if unit == "vtd" else "bg"
+
     # DEBUG
 
     # Add dccvt to the path
@@ -103,8 +108,8 @@ def main() -> None:
     K: int = 1  # district multiplier
     fips: str = STATE_FIPS[xx]
 
-    data_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "data"])
-    adjacencies_csv: str = full_path([data_dir, xx], [xx, cycle, "vtd", "adjacencies"])
+    data_csv: str = full_path([data_dir, xx], [xx, cycle, unit, "data"])
+    adjacencies_csv: str = full_path([data_dir, xx], [xx, cycle, unit, "adjacencies"])
     tmpdir: str = intermediate_dir + "/" + xx
 
     start: int = K * N * int(fips)

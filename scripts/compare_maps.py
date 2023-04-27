@@ -74,7 +74,9 @@ def main() -> None:
     xx: str = args.state
     plan_type: str = args.map
     iterations: int = args.iterations
-    unit: str = "vtd"  # Mod for CA & OR
+    unit: str = "vtd"
+    if xx in ["CA", "OR"]:
+        unit = "bg"
 
     verbose: bool = args.verbose
 
