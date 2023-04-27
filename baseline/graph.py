@@ -51,17 +51,15 @@ class Graph:
     def is_consistent(self) -> bool:
         """Make sure each node is in every neighbor's neighbor list"""
 
-        consistent: bool = True
-
         for node, neighbors in self._data.items():
             for neighbor in neighbors:
                 neighbor_neighbors: list[str | int] = self.neighbors(neighbor)
                 if node in neighbor_neighbors:
                     pass
                 else:
-                    raise ValueError("Graph is not internally consistent!")
+                    return False
 
-        return consistent
+        return True
 
     def _add_out_of_state_neighbors(self) -> dict:
         """Add the virtual OUT_OF_STATE geoids to reflect interstate borders."""

@@ -7,7 +7,7 @@ DEBUG
 from baseline import *
 
 
-xx: str = "CA"  # TODO
+xx: str = "NC"  # TODO
 
 unit: str = "vtd"
 if xx in ["CA", "OR"]:
@@ -27,6 +27,10 @@ def main() -> None:
     data: dict = read_pickle(graph_path)
 
     g: Graph = Graph(data)
+
+    print("Before removing water-only precincts:")
+    print(f"Graph is consistent: {g.is_consistent()}")
+    print(f"Graph is connected: {g.is_connected()}")
 
     # Remove water-only precincts
 
@@ -49,6 +53,7 @@ def main() -> None:
     # for bg in bgs:
     #     print(f"BG {bg}: {g.neighbors(bg)}")
 
+    print("After removing water-only precincts:")
     print(f"Graph is consistent: {g.is_consistent()}")
     print(f"Graph is connected: {g.is_connected()}")
 
