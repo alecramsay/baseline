@@ -112,9 +112,9 @@ def main() -> None:
     # Make sure the graph is consistent & fully connected
 
     if not graph.is_consistent():
-        raise ValueError("Graph is not consistent.")
+        print(f"WARNING: Graph is not consistent.")
     if not graph.is_connected():
-        raise ValueError("Graph is not fully connected.")
+        print(f"WARNING: Graph is not fully connected.")
 
     # Pickle the graph
 

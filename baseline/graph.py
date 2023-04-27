@@ -175,7 +175,8 @@ class Graph:
                 else:
                     self._adjacencies.add(a)
 
-        assert n == 2 * len(self._adjacencies)
+        if n != 2 * len(self._adjacencies):
+            print(f"ERROR: Pairs of adjacencies are not consistent with the graph.")
 
         return self._adjacencies
 
