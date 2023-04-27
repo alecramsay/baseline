@@ -7,7 +7,7 @@ DEBUG
 from baseline import *
 
 
-xx: str = "NC"  # TODO
+xx: str = "OR"  # TODO
 
 unit: str = "vtd"
 if xx in ["CA", "OR"]:

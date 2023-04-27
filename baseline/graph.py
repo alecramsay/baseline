@@ -54,7 +54,6 @@ class Graph:
         for node, neighbors in self._data.items():
             for neighbor in neighbors:
                 neighbor_neighbors: list[str | int] = self._data[neighbor]
-                # neighbor_neighbors: list[str | int] = self.neighbors(neighbor) DELETE
                 if node in neighbor_neighbors:
                     pass
                 else:
@@ -143,7 +142,6 @@ class Graph:
         """Remove a node from the graph maintaining its connectedness."""
 
         neighbors: list[str | int] = self._data[node]
-        # neighbors: list[str | int] = self.neighbors(node) DELETE
         for neighbor in neighbors:
             self._data[neighbor].remove(node)
             for new_neighbor in neighbors:
@@ -196,7 +194,6 @@ def border_shapes(
 
     for geoid in precincts:
         for neighbor in precinct_graph._data[geoid]:
-            # for neighbor in precinct_graph.neighbors(geoid):  # neighbor is a GEOID (str) DELETE
             if neighbor == OUT_OF_STATE:
                 border.append(geoid)
                 break
@@ -222,7 +219,6 @@ def on_border_with(
 
     for geoid in border:
         for neighbor in precinct_graph._data[geoid]:
-            # for neighbor in precinct_graph.neighbors(geoid):  # neighbor is a GEOID (str) DELETE
             if neighbor == OUT_OF_STATE:
                 continue
             if len(districts_by_precinct[str(neighbor)]) > 1:
@@ -235,7 +231,9 @@ def on_border_with(
 
 
 def is_connected(geos: list[Any], adjacency: dict[Any, list[Any]]) -> bool:
-    """Kenshi's iterative implementation of the recursive algorithm
+    """Make sure a graph is fully connected *internally*, i.e., w/o regard to the virtual state boundary "shapes".
+
+    Kenshi's iterative implementation of the recursive algorithm
 
     geos - the list of geographies
     adjacency - the connectedness of the geos
@@ -243,24 +241,24 @@ def is_connected(geos: list[Any], adjacency: dict[Any, list[Any]]) -> bool:
     visited: set[Any] = set()
 
     all_geos: set[Any] = set(geos)
-    # all_geos.discard(OUT_OF_STATE)
+    all_geos.discard(OUT_OF_STATE)
 
     start: str = next(iter(all_geos))
-    # assert start != OUT_OF_STATE
+    assert start != OUT_OF_STATE
 
     to_process: list[Any] = [start]
     while to_process:
         node: Any = to_process.pop()
         visited.add(node)
-        neighbors: list[Any] = adjacency[node]
-        # if OUT_OF_STATE in neighbors:
-        #     neighbors.remove(OUT_OF_STATE)
+        neighbors: list[Any] = list(adjacency[node])
+        if OUT_OF_STATE in neighbors:
+            neighbors.remove(OUT_OF_STATE)
         neighbors_to_visit: list[Any] = [
             n for n in neighbors if n in all_geos and n not in visited
         ]
         to_process.extend(neighbors_to_visit)
 
-    return len(visited) == len(geos)
+    return len(visited) == len(all_geos)
 
 
 # TODO - Integrate these into the class
