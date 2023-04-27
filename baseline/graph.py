@@ -154,6 +154,15 @@ class Graph:
         if node in self._data:
             del self._data[node]
 
+    def add_adjacency(self, node1: str | int, node2: str | int) -> None:
+        """Connect two nodes in the graph."""
+
+        if node1 not in self._data or node2 not in self._data:
+            raise ValueError("Both nodes must be in the graph to connect them.")
+
+        self._data[node1].append(node2)
+        self._data[node2].append(node1)
+
     def adjacencies(self) -> set[tuple[str, str]]:
         """Return unique pairs of adjacencent nodes in the graph."""
 
@@ -261,12 +270,10 @@ def is_connected(geos: list[Any], adjacency: dict[Any, list[Any]]) -> bool:
     return len(visited) == len(all_geos)
 
 
-# TODO - Integrate these into the class
-
+"""
+The original graph modification code from the dra2020/data_tools Python script:
 
 def modify_graph(graph, mods_csv) -> dict[str, list]:
-    """Modify & return a graph."""
-
     # Mod column indexes
     OP: int = 0
     FROM: int = 1
@@ -287,10 +294,6 @@ def modify_graph(graph, mods_csv) -> dict[str, list]:
 
 
 def read_mods(mods_csv) -> list:
-    """
-    +, 440099902000, 440099901000
-    """
-
     mods: list = list()
 
     try:
@@ -310,6 +313,8 @@ def read_mods(mods_csv) -> list:
         sys.exit()
 
     return mods
+    
+"""
 
 
 ### END ###

@@ -7,7 +7,7 @@ baseline:
 	There are 23 water-only BGs.
 	
 (3) scripts/extract_data.py -s CA -w
-(4) scripts/extract_graph.py -s CA -w <= DONE thru here
+(4) scripts/extract_graph.py -s CA -w -a <= DONE thru here
 
 >>> BUT MY CODE IS NOT CATCHING THAT CA SHAPES ARE NOT FULLY CONNECTED! <<<
 
