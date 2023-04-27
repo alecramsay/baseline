@@ -1,0 +1,73 @@
+baseline:
+
+(1) Create output directories
+
+(2) scripts/extract_water_only.py -s NJ > data/NJ/NJ_2020_water_only.csv
+
+	Five water-only precincts
+	
+(3) scripts/extract_data.py -s NJ -w
+(4) scripts/extract_graph.py -s NJ -w
+(5) scripts/baseline_state.py -s NJ -i 100 -c -v > intermediate/NJ/NJ20C_log_100.txt
+
+	* Review "WARNING" messages in the log.
+
+(6) scripts/compare_maps.py -s NJ -i 100 -v
+
+	* Copy any missing maps output to maps/NJ/NJ20C_missing.txt.
+	* Import NJ20C_candidates.csv into a spreadheet, and verify that the results are OK.
+	
+(7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NJ directory as NJ20C_baseline_100.csv.
+
+	NJ20C_I081K01N12
+
+--------
+
+Assigned away from the rest of District 3, because of intervening water-only precincts:
+34029025000,Berkeley township Island Beach State Park
+34029025000,0,-74.09064102444029,39.83416263428525
+
+This precinct has no population and only causes a problem because of it's unique location.
+	1. We could just manually fix this up, i.e., just handle this has a zero population landed precinct, or
+	2. We could cull zero-population landed precincts too.
+	
+The latter would introduce a change to what Todd's code sees, so #1 seems like the way to go. It handles "normal"
+zero population landed precincts.
+
+--------
+
+pg:
+
+(5) scripts/import_base_map.sh NJ
+
+	Verify the map in DRA.
+
+(6) Open the map in DRA:
+	* Set the Colors and Overlays -- 'Change Palette' to Plasma
+	* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
+	* Export the block-assignment file
+	* Rename it to NJ_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
+	* Move it to the data/NJ/ folder
+(7) scripts/pull_map_ratings.sh NJ Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+(8) Tweak each duplicated Official and Notable map in DRA
+	* NJ_2022_Congress_Compact_map.png
+	* NJ_2022_Congress_Competitive_map.png
+	* NJ_2022_Congress_Minority_map.png
+	* NJ_2022_Congress_Official_map.png
+	* NJ_2022_Congress_Proportional_map.png
+	* NJ_2022_Congress_Splitting_map.png
+	* Move them to the docs/assets/images/ folder
+	* Add the maps to the Group
+(9) scripts/analyze_state.py NJ
+
+
+(10) Add population deviation & runtime to the abstract spreadsheet
+
+	cat intermediate/NJ/NJ20C_log_100.txt | awk 'END{print}'
+	
+(11) Turn the state on in the website
+
+	* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
+	* On the state's page in docs/_pages/pages/NJ.markdown, change the layout to 'state' and remove the NYI one-liner
+	
+--------

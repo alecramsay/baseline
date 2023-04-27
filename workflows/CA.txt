@@ -1,0 +1,74 @@
+baseline:
+
+(1) Create output directories
+
+(2) scripts/extract_water_only.py -s CA > data/CA/CA_2020_water_only.csv
+
+	There are 23 water-only BGs.
+	
+(3) scripts/extract_data.py -s CA -w
+(4) scripts/extract_graph.py -s CA -w <= DONE thru here
+
+>>> BUT MY CODE IS NOT CATCHING THAT CA SHAPES ARE NOT FULLY CONNECTED! <<<
+
+Shapely/Fiona report:
+
+ There are 4 disconnected components.
+ There are 2 islands with ids: 060375991001, 060759804011.
+ 
+ Traceback (most recent call last):
+   File "/Users/alecramsay/Documents/dev/baseline/scripts/extract_graph.py", line 142, in <module>
+     main()
+   File "/Users/alecramsay/Documents/dev/baseline/scripts/extract_graph.py", line 134, in main
+     for one, two in graph.adjacencies():
+   File "/Users/alecramsay/Documents/dev/baseline/baseline/graph.py", line 178, in adjacencies
+     assert n == 2 * len(self._adjacencies)
+
+(5) scripts/baseline_state.py -s CA -i 100 -c -v > intermediate/CA/CA20C_log_100.txt
+
+	* Review "WARNING" messages in the log.
+
+(6) scripts/compare_maps.py -s CA -i 100 -v
+
+	* Copy any missing maps output to maps/CA/CA20C_missing.txt.
+	* Import CA20C_candidates.csv into a spreadheet, and verify that the results are OK.
+	
+(7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/CA directory as CA20C_baseline_100.csv.
+
+--------
+
+pg:
+
+(5) scripts/import_base_map.sh CA
+
+	Verify the map in DRA.
+
+(6) Open the map in DRA:
+	* Set the Colors and Overlays -- 'Change Palette' to Plasma
+	* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
+	* Export the block-assignment file
+	* Rename it to CA_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
+	* Move it to the data/CA/ folder
+(7) scripts/pull_map_ratings.sh CA Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+(8) Tweak each duplicated Official and Notable map in DRA
+	* CA_2022_Congress_Compact_map.png
+	* CA_2022_Congress_Competitive_map.png
+	* CA_2022_Congress_Minority_map.png
+	* CA_2022_Congress_Official_map.png
+	* CA_2022_Congress_Proportional_map.png
+	* CA_2022_Congress_Splitting_map.png
+	* Move them to the docs/assets/images/ folder
+	* Add the maps to the Group
+(9) scripts/analyze_state.py CA
+
+
+(10) Add population deviation & runtime to the abstract spreadsheet
+
+	cat intermediate/CA/CA20C_log_100.txt | awk 'END{print}'
+	
+(11) Turn the state on in the website
+
+	* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
+	* On the state's page in docs/_pages/pages/CA.markdown, change the layout to 'state' and remove the NYI one-liner
+	
+--------
