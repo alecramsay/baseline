@@ -61,8 +61,12 @@ def main() -> None:
     fips: str = fips_map[xx]
     state_dir: str = xx
 
-    unit: str = "bg" if xx in ["CA", "OR"] else "vtd"
-    unit_label: str = "vtd20" if unit == "vtd" else "bg"
+    unit: str = "vtd"
+    if xx in ["OR"]:
+        unit = "bg"
+    elif xx in ["CA"]:
+        unit = "tract"
+    unit_label: str = "vtd20" if unit == "vtd" else unit
 
     if vtds:
         rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(

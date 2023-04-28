@@ -97,12 +97,13 @@ def main() -> None:
 
     xx: str = args.state
     unit: str = args.unit
-    if unit != "vtd":
-        raise ValueError(f"Unit {unit} not recognized.")
-    if xx in ["CA", "OR"]:
+    # if unit != "vtd":
+    #     raise ValueError(f"Unit {unit} not recognized.")
+    if xx in ["OR"]:
         unit = "bg"
-    unit_label: str = "vtd20" if unit == "vtd" else "bg"
-    # "tract", "bg", "tabblock20"
+    elif xx in ["CA"]:
+        unit = "tract"
+    unit_label: str = "vtd20" if unit == "vtd" else unit
     water: bool = args.water
     adds: bool = args.adds
     verbose: bool = args.verbose
@@ -140,7 +141,7 @@ def main() -> None:
     water_precincts: list = list()
     if water:
         water_path: str = path_to_file([data_dir, xx]) + file_name(
-            [xx, cycle, "water_only"], "_", "csv"
+            [xx, cycle, unit, "water_only"], "_", "csv"
         )  # GEOID,ALAND,AWATER
         types: list = [str, int, int]
         water_precincts = [row["GEOID"] for row in read_csv(water_path, types)]
