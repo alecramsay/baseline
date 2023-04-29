@@ -7,7 +7,7 @@ baseline:
 	Sixty seven water-only precincts!
 	
 (3) scripts/extract_data.py -s NY -w
-(4) scripts/extract_graph.py -s NY -w
+(4) scripts/extract_graph.py -s NY -w -a
 (5) scripts/baseline_state.py -s NY -i 100 -c -v > intermediate/NY/NY20C_log_100.txt
 
 	* Review "WARNING" messages in the log.
@@ -19,21 +19,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NY directory as NY20C_baseline_100.csv.
 
---------
-
-Fiona reports:
-
- There are 2 disconnected components.
- There is 1 island with id: 36061000084.
- 
-and I detect:
-
- WARNING: Graph is not fully connected.
- 
-VTD 36061000084 has a friendly name of 84. It is offshore from:
-
-	* 36061000082 => 82
-	* 36047000935 => 935
+	NY20C_I005K01N26 <= NOTE - Not the lowest energy map.
 	
 --------
 

@@ -70,6 +70,22 @@ class TestGraph:
         after: int = len(g.nodes())
         assert before > after
 
+    def test_add_adjacency(self) -> None:
+        adjacency: dict[str, list[str]] = {
+            "a": ["b", "c"],
+            "b": ["a", "c"],
+            "c": ["a", "b"],
+            "d": ["e", "f"],
+            "e": ["d", "f"],
+            "f": ["d", "e"],
+        }
+        g: Graph = Graph(adjacency)
+        assert not g.is_connected()
+
+        g.add_adjacency("c", "d")
+        assert g.is_consistent()
+        assert g.is_connected()
+
     def test_adjacencies(self) -> None:
         data: dict[str, list[str]] = {"a": ["b", "c"], "b": ["a", "c"], "c": ["a", "b"]}
         g: Graph = Graph(data)

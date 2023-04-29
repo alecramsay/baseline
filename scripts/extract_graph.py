@@ -10,7 +10,9 @@ $ scripts/extract_graph.py -s NC
 $ scripts/extract_graph.py -s MI -w
 
 $ scripts/extract_graph.py -s OR -w
-$ scripts/extract_graph.py -s CA -w
+
+$ scripts/extract_graph.py -s NY -w -a
+$ scripts/extract_graph.py -s CA -w -a
 
 For documentation, type:
 
@@ -46,8 +48,9 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-w", "--water", dest="water", action="store_true", help="Water-only precincts"
     )
-
-    # TODO - Connections to add
+    parser.add_argument(
+        "-a", "--adds", dest="adds", action="store_true", help="Additional adjacencies"
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -58,6 +61,35 @@ def parse_args() -> Namespace:
     return args
 
 
+def read_mods(mods_csv) -> list:
+    """Read a CSV file of modifications to a graph.
+
+    Example:
+
+    +, 440099902000, 440099901000
+    """
+
+    mods: list = list()
+
+    try:
+        # Get the full path to the .csv
+        mods_path: str = os.path.expanduser(mods_csv)
+
+        with open(mods_path, mode="r", encoding="utf-8-sig") as f_input:
+            reader: Iterable[list[str]] = csv.reader(
+                f_input, skipinitialspace=True, delimiter=",", quoting=csv.QUOTE_NONE
+            )
+
+            for row in reader:
+                mods.append(row)
+
+    except Exception:
+        print("Exception reading mods.csv")
+        sys.exit()
+
+    return mods
+
+
 def main() -> None:
     """Extract an adjacency graph from a shapefile."""
 
@@ -65,13 +97,15 @@ def main() -> None:
 
     xx: str = args.state
     unit: str = args.unit
-    if unit != "vtd":
-        raise ValueError(f"Unit {unit} not recognized.")
-    if xx in ["CA", "OR"]:
+    # if unit != "vtd":
+    #     raise ValueError(f"Unit {unit} not recognized.")
+    if xx in ["OR"]:
         unit = "bg"
-    unit_label: str = "vtd20" if unit == "vtd" else "bg"
-    # "tract", "bg", "tabblock20"
+    elif xx in ["CA"]:
+        unit = "tract"
+    unit_label: str = "vtd20" if unit == "vtd" else unit
     water: bool = args.water
+    adds: bool = args.adds
     verbose: bool = args.verbose
 
     #
@@ -90,22 +124,32 @@ def main() -> None:
 
     graph: Graph = Graph(shp_path, id)
 
+    # Add connections as needed to make the graph derived from shapes fully connected
+
+    if adds:
+        adds_path: str = path_to_file([data_dir, xx]) + file_name(
+            [xx, cycle, unit, "contiguity_mods"], "_", "csv"
+        )
+        mods: list = read_mods(adds_path)
+        # NOTE - Assume all mods are additions. Nothing else is supported yet.
+
+        for mod in mods:
+            graph.add_adjacency(mod[1], mod[2])
+
     # Remove water-only precincts
 
     water_precincts: list = list()
     if water:
-        rel_path: str = path_to_file([data_dir, xx]) + file_name(
-            [xx, cycle, "water_only"], "_", "csv"
+        water_path: str = path_to_file([data_dir, xx]) + file_name(
+            [xx, cycle, unit, "water_only"], "_", "csv"
         )  # GEOID,ALAND,AWATER
         types: list = [str, int, int]
-        water_precincts = [row["GEOID"] for row in read_csv(rel_path, types)]
+        water_precincts = [row["GEOID"] for row in read_csv(water_path, types)]
 
         for w in water_precincts:
             if w in graph.nodes():
                 print(f"Removing water-only precinct {w}.")
                 graph.remove(w)
-
-    # TODO - Add connections as needed
 
     # Make sure the graph is consistent & fully connected
 

@@ -1,12 +1,15 @@
-TODO - Revise this to work with Florida data & shapes.
+TODO - Get shapes from Dave.
 --------
 baseline:
 
 (1) Create output directories
 
-(2) scripts/extract_water_only.py -s FL > data/FL/FL_2020_water_only.csv
-(3) scripts/extract_data.py -s FL -w
-(4) scripts/extract_graph.py -s FL -w
+(2) scripts/extract_water_only.py -s FL > data/FL/FL_2020_vtd_water_only.csv
+
+	Thirty four water-only precincts
+
+(3) scripts/extract_data_FL.py          <= NOTE - Custom for FL
+(4) scripts/extract_graph.py -s FL -w   <= TODO - Is this using the right shapes?!?
 (5) scripts/baseline_state.py -s FL -i 100 -c -v > intermediate/FL/FL20C_log_100.txt
 
 	* Review "WARNING" messages in the log.

@@ -1,0 +1,5 @@
+
+Total population: 21,538,187
+Max block population: 6,107 # of blocks: 390,066
+Max precinct (VTD) population: 47,847 # of blocks: 7,247
+
