@@ -10,6 +10,10 @@ For documentation, type:
 
 $ scripts/unpickle_to_csv.py -h
 
+TODO
+
+- Rationalize water-only precincts between data & shapes
+
 """
 
 import argparse

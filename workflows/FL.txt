@@ -8,8 +8,8 @@ baseline:
 
 	Thirty four water-only precincts
 
-(3) scripts/extract_data_FL.py          <= NOTE - Custom for FL
-(4) scripts/extract_graph.py -s FL -w   <= TODO - Is this using the right shapes?!?
+(3) scripts/extract_FL.py          <= NOTE - Custom for Florida
+(4) 
 (5) scripts/baseline_state.py -s FL -i 100 -c -v > intermediate/FL/FL20C_log_100.txt
 
 	* Review "WARNING" messages in the log.

@@ -4,6 +4,9 @@
 ADJACENCY/CONTIGUITY GRAPHS
 """
 
+import geopandas
+from geopandas import GeoDataFrame
+
 from libpysal.weights import Rook, WSP
 from shapely.geometry import Polygon, MultiPolygon
 from typing import Any, Optional
@@ -18,7 +21,7 @@ class Graph:
     _data: dict
     _adjacencies: set[tuple[str, str]]
 
-    def __init__(self, input: str | dict, id_field: str = "") -> None:
+    def __init__(self, input: str | dict | GeoDataFrame, id_field: str = "") -> None:
         if isinstance(input, dict):
             self._data = input
             return
@@ -34,12 +37,24 @@ class Graph:
             self._data: dict = self._add_out_of_state_neighbors()
             return
 
+        if isinstance(input, GeoDataFrame):
+            self._data: dict = self._from_dataframe(input)
+            return
+
         raise TypeError("Input must be a string or a dict")
 
     def _from_shapefile(self) -> Any | dict[Any, Any]:
         """Extract a rook graph from a shapefile."""
 
         g: Rook | WSP = Rook.from_shapefile(self._abs_path, self._id_field)
+        assert isinstance(g, Rook)
+
+        return g.neighbors  # Get rid of all the extraneous PySAL stuff
+
+    def _from_dataframe(self, df: GeoDataFrame) -> Any | dict[Any, Any]:
+        """Extract a rook graph from a GeoDataFrame."""
+
+        g: Rook | WSP = Rook.from_dataframe(df)
         assert isinstance(g, Rook)
 
         return g.neighbors  # Get rid of all the extraneous PySAL stuff
