@@ -15,9 +15,10 @@ baseline:
 	+, 06037599100, 06037990300
 	+, 06037599100, 06059990100
 
+(5) scripts/baseline_state.py -s CA -i 100 -c -v > intermediate/CA/CA20C_log_100.txt
 
-(5) scripts/baseline_state.py -s CA -i 100 -c -v > intermediate/CA/CA20C_log_100.txt <<< Started @ 5:40am
-
+	* Start tract run @ 7:36
+	* By 1:53 it had only produced 25 maps, and nothing between then and 4:30
 	* Review "WARNING" messages in the log.
 
 (6) scripts/compare_maps.py -s CA -i 100 -v

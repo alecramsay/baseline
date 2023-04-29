@@ -32,7 +32,7 @@ Finally, generalize to states with connectivity issues, like CA.
 scripts/extract_water_only.py -s XX [> data/XX/XX_2020_water_only.csv]
 ```
 
-Check the results in data/XX/XX_2020_water_only.csv.
+Check the results in data/XX/XX_2020_vtd_water_only.csv.
 
 (3)) Preprocess data
 
