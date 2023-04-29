@@ -4,13 +4,9 @@
 ADJACENCY/CONTIGUITY GRAPHS
 """
 
-import os
-import sys
-import csv
-from csv import reader as _reader
 from libpysal.weights import Rook, WSP
-from shapely.geometry import shape, Polygon, MultiPolygon
-from typing import Any, Optional, Iterable, Generator, NamedTuple
+from shapely.geometry import Polygon, MultiPolygon
+from typing import Any, Optional
 
 from .readwrite import *
 
