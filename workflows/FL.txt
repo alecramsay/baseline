@@ -7,24 +7,29 @@ baseline:
 	scripts/extract_water_only.py -s FL > data/FL/FL_2020_vtd_water_only.csv
 
 (3) Extracted data & graph, using custom code 
-
+(4)
 	scripts/extract_FL.py
-
-(4) 
 
 (5) scripts/baseline_state.py -s FL -i 100 -c -v > intermediate/FL/FL20C_log_100.txt
 
 Traceback (most recent call last):
-  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/geoid.py", line 256, in <module>
+  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/redistricting.py", line 315, in <module>
     main()
-  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/geoid.py", line 172, in main
-    pairs(args.points, args.pairs, args.output)
-  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/geoid.py", line 118, in pairs
-    adjacent_pairs: List[Tuple[int, int]] = [
-  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/geoid.py", line 119, in <listcomp>
-    (mapping[p1], mapping[p2]) for p1, p2 in pairs
-KeyError: '1209'
+  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/redistricting.py", line 40, in main
+    mk_contiguous(args.assignment, args.adjacent, args.output)
+  File "/Users/alecramsay/Documents/dev/dccvt/examples/redistricting/make_contiguous.py", line 86, in mk_contiguous
+    contig: list[Assignment] = get_contiguous(assignments, adjacents)
+  File "/Users/alecramsay/Documents/dev/dccvt/examples/redistricting/make_contiguous.py", line 66, in get_contiguous
+    assert len(counter) > 0, f"no neighboring blocks for {smallest}"
+AssertionError: no neighboring blocks for {2476}
 
+id = 12033000111
+
+This is the same problem as for KS, NV, and UT.
+
+NOTE - In the GeoJSON and shapefile, the island that *appears* disconnects but which is part of the tip is:
+
+id = 12087000007
 
 	* Review "WARNING" messages in the log.
 
