@@ -38,6 +38,7 @@ class Graph:
             return
 
         if isinstance(input, GeoDataFrame):
+            self._id_field: Optional[str] = id_field
             self._data: dict = self._from_dataframe(input)
             return
 
@@ -54,7 +55,7 @@ class Graph:
     def _from_dataframe(self, df: GeoDataFrame) -> Any | dict[Any, Any]:
         """Extract a rook graph from a GeoDataFrame."""
 
-        g: Rook | WSP = Rook.from_dataframe(df)
+        g: Rook | WSP = Rook.from_dataframe(df, idVariable=self._id_field)
         assert isinstance(g, Rook)
 
         return g.neighbors  # Get rid of all the extraneous PySAL stuff

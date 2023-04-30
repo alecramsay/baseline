@@ -19,7 +19,16 @@ rel_path: str = path_to_file([rawdata_dir, xx]) + file_name(
     ["tabblock.vtd"], "_", "geojson"
 )
 vtds: GeoDataFrame = geopandas.read_file(rel_path)
-g: Graph = Graph(vtds, id)
+
+
+for index, row in vtds.iterrows():
+    pass
+
+pass
+
+# print(vtds.columns.tolist())
+
+# g: Graph = Graph(vtds, id)
 
 # TODO - Inspect the graph for the water-only precincts
 

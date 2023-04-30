@@ -45,7 +45,6 @@ def main() -> None:
         y: float = pt.y
         coord: Coordinate = Coordinate(x, y)
         feature_xy[geoid] = coord
-        # feature_xy[geoid] = row["geometry"].representative_point()
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, "vtd", "xy"], "_", "pickle"
@@ -60,9 +59,9 @@ def main() -> None:
 
     commands: list[str] = [
         "scripts/extract_pop.py -s {xx} -p -i 3 > data/{xx}/{xx}_census_log.txt",
-        # "scripts/extract_xy.py -s {xx} -p",
+        # "scripts/extract_xy.py -s {xx} -p", # NOTE - Points extracted from DRA shapes above
         "scripts/join_feature_data.py -s {xx} -p",
-        "scripts/unpickle_to_csv.py -s {xx} -u vtd -w",
+        "scripts/unpickle_to_csv.py -s {xx} -u vtd",  # NOTE - Not removing water-only precincts
         "scripts/unpickle_to_csv.py -s {xx} -u block",
         "scripts/extract_block_vtds.py -s {xx}",
         "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
@@ -76,7 +75,7 @@ def main() -> None:
     print("Extracting the graph ...")
 
     unit: str = "vtd"
-    id: str = unit_id(unit)
+    id: str = "id"  # unit_id(unit)
     graph: Graph = Graph(vtds, id)
 
     # Add connections as needed to make the graph derived from shapes fully connected
@@ -91,22 +90,25 @@ def main() -> None:
     #     for mod in mods:
     #         graph.add_adjacency(mod[1], mod[2])
 
+    # NOTE - Again, not removing water-only precincts here, because the corrected
+    # shapes from DRA don't contain the necessary information.
+
     # Remove water-only precincts
 
-    print("Removing water-only precincts ...")
+    # print("Removing water-only precincts ...")
 
-    water_precincts: list = list()
-    if water:
-        water_path: str = path_to_file([data_dir, xx]) + file_name(
-            [xx, cycle, unit, "water_only"], "_", "csv"
-        )  # GEOID,ALAND,AWATER
-        types: list = [str, int, int]
-        water_precincts = [row["GEOID"] for row in read_csv(water_path, types)]
+    # water_precincts: list = list()
+    # if water:
+    #     water_path: str = path_to_file([data_dir, xx]) + file_name(
+    #         [xx, cycle, unit, "water_only"], "_", "csv"
+    #     )  # GEOID,ALAND,AWATER
+    #     types: list = [str, int, int]
+    #     water_precincts = [row["GEOID"] for row in read_csv(water_path, types)]
 
-        for w in water_precincts:
-            if w in graph.nodes():
-                print(f"Removing water-only precinct {w}.")
-                graph.remove(w)
+    #     for w in water_precincts:
+    #         if w in graph.nodes():
+    #             print(f"Removing water-only precinct {w}.")
+    #             graph.remove(w)
 
     # Make sure the graph is consistent & fully connected
 
