@@ -20,7 +20,7 @@ def main() -> None:
     """Preprocess modified VTD (precinct) data for FL"""
 
     xx: str = "FL"
-    water: bool = True
+    # water: bool = True
     adds: bool = False
 
     ### Read DRA's GeoJSON file of corrects Florida VTDs ###
@@ -80,15 +80,15 @@ def main() -> None:
 
     # Add connections as needed to make the graph derived from shapes fully connected
 
-    # if adds:
-    #     adds_path: str = path_to_file([data_dir, xx]) + file_name(
-    #         [xx, cycle, unit, "contiguity_mods"], "_", "csv"
-    #     )
-    #     mods: list = read_mods(adds_path)
-    #     # NOTE - Assume all mods are additions. Nothing else is supported yet.
+    if adds:
+        adds_path: str = path_to_file([data_dir, xx]) + file_name(
+            [xx, cycle, unit, "contiguity_mods"], "_", "csv"
+        )
+        mods: list = read_mods(adds_path)
+        # NOTE - Assume all mods are additions. Nothing else is supported yet.
 
-    #     for mod in mods:
-    #         graph.add_adjacency(mod[1], mod[2])
+        for mod in mods:
+            graph.add_adjacency(mod[1], mod[2])
 
     # NOTE - Again, not removing water-only precincts here, because the corrected
     # shapes from DRA don't contain the necessary information.

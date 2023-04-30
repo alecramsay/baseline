@@ -282,30 +282,14 @@ def is_connected(geos: list[Any], adjacency: dict[Any, list[Any]]) -> bool:
     return len(visited) == len(all_geos)
 
 
-"""
-The original graph modification code from the dra2020/data_tools Python script:
-
-def modify_graph(graph, mods_csv) -> dict[str, list]:
-    # Mod column indexes
-    OP: int = 0
-    FROM: int = 1
-    TO: int = 2
-
-    mods: list = read_mods(mods_csv)
-
-    for mod in mods:
-        if mod[OP] == "+":
-            graph[mod[FROM]].append(mod[TO])
-            graph[mod[TO]].append(mod[FROM])
-        elif mod[OP] == "-":
-            print("Removing connections is not supported yet.")
-        else:
-            print("Unrecognized modify operator.")
-
-    return graph
-
-
 def read_mods(mods_csv) -> list:
+    """Read a CSV file of modifications to a graph.
+
+    Example:
+
+    +, 440099902000, 440099901000
+    """
+
     mods: list = list()
 
     try:
@@ -325,8 +309,6 @@ def read_mods(mods_csv) -> list:
         sys.exit()
 
     return mods
-    
-"""
 
 
 ### END ###

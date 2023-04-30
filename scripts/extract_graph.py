@@ -61,35 +61,6 @@ def parse_args() -> Namespace:
     return args
 
 
-def read_mods(mods_csv) -> list:
-    """Read a CSV file of modifications to a graph.
-
-    Example:
-
-    +, 440099902000, 440099901000
-    """
-
-    mods: list = list()
-
-    try:
-        # Get the full path to the .csv
-        mods_path: str = os.path.expanduser(mods_csv)
-
-        with open(mods_path, mode="r", encoding="utf-8-sig") as f_input:
-            reader: Iterable[list[str]] = csv.reader(
-                f_input, skipinitialspace=True, delimiter=",", quoting=csv.QUOTE_NONE
-            )
-
-            for row in reader:
-                mods.append(row)
-
-    except Exception:
-        print("Exception reading mods.csv")
-        sys.exit()
-
-    return mods
-
-
 def main() -> None:
     """Extract an adjacency graph from a shapefile."""
 
