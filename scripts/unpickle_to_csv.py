@@ -96,6 +96,8 @@ def main() -> None:
             "X": f["xy"].x,
             "Y": f["xy"].y,
         }
+        # NOTE - We could *not* remove water-only precincts that have + population,
+        # but we'd have to do the same when generating the graph/adjacencies.
         if f["geoid"] in water_precincts:
             print(f"Removing water-only precinct {f['geoid']}")
             continue

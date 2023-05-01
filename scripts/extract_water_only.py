@@ -93,6 +93,7 @@ def main() -> None:
                         )
 
                         if (awater > 0 and aland == 0) or vtd == "ZZZZZZ":
+                            # NOTE - We don't have access to population here, unfortunately.
                             if not water_only:
                                 water_only = True
                                 print(f"GEOID,ALAND,AWATER")

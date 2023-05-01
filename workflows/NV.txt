@@ -23,6 +23,13 @@ baseline:
 
 --------
 
+NOTE - One precinct at the western vertex with 5 people it is not assigned.
+
+It's 32005ZZZZZZ, i.e., a water-only precinct ... with people in it!?!
+Just assign this one precinct by hand.
+
+--------
+
 pg:
 
 (5) scripts/import_base_map.sh NV

@@ -21,19 +21,6 @@ baseline:
 
 --------
 
-Traceback (most recent call last):
-  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/redistricting.py", line 315, in <module>
-    main()
-  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/redistricting.py", line 40, in main
-    mk_contiguous(args.assignment, args.adjacent, args.output)
-  File "/Users/alecramsay/Documents/dev/dccvt/examples/redistricting/make_contiguous.py", line 86, in mk_contiguous
-    contig: list[Assignment] = get_contiguous(assignments, adjacents)
-  File "/Users/alecramsay/Documents/dev/dccvt/examples/redistricting/make_contiguous.py", line 66, in get_contiguous
-    assert len(counter) > 0, f"no neighboring blocks for {smallest}"
-AssertionError: no neighboring blocks for {316}
-
---------
-
 pg:
 
 (5) scripts/import_base_map.sh UT
