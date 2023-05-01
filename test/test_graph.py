@@ -93,5 +93,27 @@ class TestGraph:
         adjacencies: list[tuple[str, str]] = list(g.adjacencies())
         assert len(adjacencies) == 3
 
+    def test_bridge(self) -> None:
+        adjacency: dict[str, list[str]] = {
+            "a": ["b", "c"],
+            "b": ["a", "c"],
+            "c": ["a", "b", "z"],
+            "d": ["e", "f", "z"],
+            "e": ["d", "f"],
+            "f": ["d", "e"],
+            "z": ["c", "d"],
+        }
+        g: Graph = Graph(adjacency)
+        assert g.is_consistent()
+        assert g.is_connected()
+        assert "d" not in g.neighbors("c")
+        assert "c" not in g.neighbors("d")
+
+        g.bridge("z")
+        assert g.is_consistent()
+        assert g.is_connected()
+        assert "d" in g.neighbors("c")
+        assert "c" in g.neighbors("d")
+
 
 ### END ###

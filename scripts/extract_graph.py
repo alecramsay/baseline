@@ -9,6 +9,8 @@ For example:
 $ scripts/extract_graph.py -s NC
 $ scripts/extract_graph.py -s MI -w
 
+$ scripts/extract_graph.py -s KS -w -z
+
 $ scripts/extract_graph.py -s OR -w
 
 $ scripts/extract_graph.py -s NY -w -a
@@ -51,6 +53,13 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-a", "--adds", dest="adds", action="store_true", help="Additional adjacencies"
     )
+    parser.add_argument(
+        "-z",
+        "--unpopulated",
+        dest="unpopulated",
+        action="store_true",
+        help="Unpopulated precincts",
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -77,6 +86,7 @@ def main() -> None:
     unit_label: str = "vtd20" if unit == "vtd" else unit
     water: bool = args.water
     adds: bool = args.adds
+    unpopulated: bool = args.unpopulated
     verbose: bool = args.verbose
 
     #

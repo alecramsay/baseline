@@ -166,6 +166,18 @@ class Graph:
         if node in self._data:
             del self._data[node]
 
+    def bridge(self, node: str | int) -> None:
+        """Bridge over a node, i.e., connect the neighbors directly."""
+
+        neighbors: list[str | int] = self._data[node]
+        for neighbor in neighbors:
+            for new_neighbor in neighbors:
+                if (
+                    new_neighbor != neighbor
+                    and new_neighbor not in self._data[neighbor]
+                ):
+                    self._data[neighbor].append(new_neighbor)
+
     def add_adjacency(self, node1: str | int, node2: str | int) -> None:
         """Connect two nodes in the graph."""
 
