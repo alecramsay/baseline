@@ -2,7 +2,7 @@ baseline:
 
 (1) Create output directories
 
-(2) scripts/extract_water_only.py -s NY > data/NY/NY_2020_water_only.csv
+(2) scripts/extract_water_only.py -s NY > data/NY/NY_2020_vtd_water_only.csv
 
 	Sixty seven water-only precincts!
 	

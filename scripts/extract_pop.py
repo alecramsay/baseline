@@ -169,6 +169,8 @@ def main() -> None:
             [f"{cycle}", "census", xx + iteration], "_", "csv"
         )
 
+        unpopulated_precincts: list = list()
+
         # Figure out the number of columns in the file
         ncols: int = 80
         abs_path: str = FileSpec(rel_path).abs_path
@@ -191,6 +193,9 @@ def main() -> None:
             if pop > max_vtd_pop:
                 max_vtd_pop = pop
 
+            if pop == 0:
+                unpopulated_precincts.append({"GEOID": vtd})
+
             nvtds += 1
 
         rel_path: str = path_to_file([temp_dir]) + file_name(
@@ -200,6 +205,12 @@ def main() -> None:
 
         nvtds: int = len(pop_by_vtd)
         del pop_by_vtd
+
+        if len(unpopulated_precincts) > 0:
+            rel_path: str = path_to_file([data_dir, xx]) + file_name(
+                [xx, cycle, "vtd", "unpopulated"], "_", "csv"
+            )
+            write_csv(rel_path, unpopulated_precincts, ["GEOID"])
 
     ### PRINT STATISTICS ###
 
