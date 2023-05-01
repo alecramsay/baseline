@@ -86,7 +86,7 @@ def main() -> None:
     unit_label: str = "vtd20" if unit == "vtd" else unit
     water: bool = args.water
     adds: bool = args.adds
-    unpopulated: bool = args.unpopulated
+    unpopulated: bool = False  # args.unpopulated
     verbose: bool = args.verbose
 
     #

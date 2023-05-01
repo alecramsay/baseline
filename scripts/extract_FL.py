@@ -22,7 +22,7 @@ def main() -> None:
     xx: str = "FL"
     # water: bool = True
     adds: bool = False
-    unpopulated: bool = True
+    unpopulated: bool = False  # True
 
     ### Read DRA's GeoJSON file of corrects Florida VTDs ###
 

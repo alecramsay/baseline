@@ -6,13 +6,14 @@ ADJACENCY/CONTIGUITY GRAPHS
 
 import os
 import sys
+import csv
 
 import geopandas
 from geopandas import GeoDataFrame
 
 from libpysal.weights import Rook, WSP
 from shapely.geometry import Polygon, MultiPolygon
-from typing import Any, Optional
+from typing import Any, Optional, Iterable
 
 from .readwrite import *
 

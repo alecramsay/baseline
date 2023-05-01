@@ -206,7 +206,8 @@ def main() -> None:
         nvtds: int = len(pop_by_vtd)
         del pop_by_vtd
 
-        if len(unpopulated_precincts) > 0:
+        unpopulated: bool = False  # True
+        if unpopulated and len(unpopulated_precincts) > 0:
             rel_path: str = path_to_file([data_dir, xx]) + file_name(
                 [xx, cycle, "vtd", "unpopulated"], "_", "csv"
             )

@@ -2,12 +2,13 @@ baseline:
 
 (1) Create output directories
 
-(2) scripts/extract_water_only.py -s MD > data/MD/MD_2020_water_only.csv
+(x) scripts/extract_water_only.py -s MD > data/MD/MD_2020_water_only.csv
 
 	Nine water-only precincts
 	
-(3) scripts/extract_data.py -s MD -w
-(4) scripts/extract_graph.py -s MD -w
+(3) scripts/extract_data.py -s MD {-w}
+(4) scripts/extract_graph.py -s MD {-w}
+
 (5) scripts/baseline_state.py -s MD -i 100 -c -v > intermediate/MD/MD20C_log_100.txt
 
 	* Review "WARNING" messages in the log.

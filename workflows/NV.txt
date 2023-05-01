@@ -7,7 +7,7 @@ baseline:
 	Two water-only precincts
 	
 (3) scripts/extract_data.py -s NV -w
-(4) scripts/extract_graph.py -s NV -w -z
+(4) scripts/extract_graph.py -s NV -w {-z}
 (5) scripts/baseline_state.py -s NV -i 100 -c -v > intermediate/NV/NV20C_log_100.txt
 
 	* Review "WARNING" messages in the log.
