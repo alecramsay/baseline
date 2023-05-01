@@ -132,6 +132,22 @@ def main() -> None:
                 print(f"Removing water-only precinct {w}.")
                 graph.remove(w)
 
+    # Bridge over unpopulated precincts
+
+    if unpopulated:
+        unpopulated_path: str = path_to_file([data_dir, xx]) + file_name(
+            [xx, cycle, "vtd", "unpopulated"], "_", "csv"
+        )  # NOTE - Only works for vtds right now
+        types: list = [str]
+        unpopulated_precincts = [
+            row["GEOID"] for row in read_csv(unpopulated_path, types)
+        ]
+
+        print("Bridging over unpopulated precincts.")
+        for z in unpopulated_precincts:
+            if z in graph.nodes():
+                graph.bridge(z)
+
     # Make sure the graph is consistent & fully connected
 
     if not graph.is_consistent():

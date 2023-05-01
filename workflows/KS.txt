@@ -7,7 +7,7 @@ baseline:
 	Three water-only precincts
 
 (3) scripts/extract_data.py -s KS -w
-(4) scripts/extract_graph.py -s KS -w
+(4) scripts/extract_graph.py -s KS -w -z
 (5) scripts/baseline_state.py -s KS -i 100 -c -v > intermediate/KS/KS20C_log_100.txt
 
 	* Review "WARNING" messages in the log.
