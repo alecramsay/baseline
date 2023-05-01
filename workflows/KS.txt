@@ -19,31 +19,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/KS directory as KS20C_baseline_100.csv.
 
---------
-
-Traceback (most recent call last):
-  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/redistricting.py", line 315, in <module>
-    main()
-  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/redistricting.py", line 40, in main
-    mk_contiguous(args.assignment, args.adjacent, args.output)
-  File "/Users/alecramsay/Documents/dev/dccvt/examples/redistricting/make_contiguous.py", line 86, in mk_contiguous
-    contig: list[Assignment] = get_contiguous(assignments, adjacents)
-  File "/Users/alecramsay/Documents/dev/dccvt/examples/redistricting/make_contiguous.py", line 66, in get_contiguous
-    assert len(counter) > 0, f"no neighboring blocks for {smallest}"
-AssertionError: no neighboring blocks for {3890}
-
---------
-
-3888: 20177001490,596,-95.75032388670721,39.03191865013589
-3889: 20091900160,6,-94.93956416434575,38.82197980320377
-3890: 2016100039B,112,-96.63676352200713,39.21662246950677
-3891: 20161600001,243,-96.63890215153643,39.16372243225364
-
-WARNING: 2 disconnected non-zero population points regions, including: {'20173130390'}
-
-20173130390,20173131460
-
-20173130390,439 Precinct
+	KS20C_I000K01N04
 
 --------
 

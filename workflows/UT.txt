@@ -7,7 +7,7 @@ baseline:
 	One water-only precinct
 	
 (3) scripts/extract_data.py -s UT -w
-(4) scripts/extract_graph.py -s UT -w
+(4) scripts/extract_graph.py -s UT -w -z
 (5) scripts/baseline_state.py -s UT -i 100 -c -v > intermediate/UT/UT20C_log_100.txt
 
 	* Review "WARNING" messages in the log.
