@@ -1,3 +1,5 @@
+NOTE - Exclude from the study, because of contiguity issues?
+--------
 baseline:
 
 (1) Create output directories
@@ -7,7 +9,13 @@ baseline:
 	One water-only precinct
 	
 (3) scripts/extract_data.py -s UT -w
-(4) scripts/extract_graph.py -s UT -w -z
+(4) scripts/extract_graph.py -s UT -w -a
+
+	Use adds/mods, as opposed to bridging over unpopulated precincts:
+	
+	+, 490450WENDI, 49045IBA000
+	+, 490450WENDI, 49003GC0000
+
 (5) scripts/baseline_state.py -s UT -i 100 -c -v > intermediate/UT/UT20C_log_100.txt
 
 	* Review "WARNING" messages in the log.
@@ -23,15 +31,32 @@ baseline:
 
 --------
 
+
+
+--------
+
+Traceback (most recent call last):
+  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/redistricting.py", line 315, in <module>
+    main()
+  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/redistricting.py", line 40, in main
+    mk_contiguous(args.assignment, args.adjacent, args.output)
+  File "/Users/alecramsay/Documents/dev/dccvt/examples/redistricting/make_contiguous.py", line 86, in mk_contiguous
+    contig: list[Assignment] = get_contiguous(assignments, adjacents)
+  File "/Users/alecramsay/Documents/dev/dccvt/examples/redistricting/make_contiguous.py", line 66, in get_contiguous
+    assert len(counter) > 0, f"no neighboring blocks for {smallest}"
+AssertionError: no neighboring blocks for {316}
+
+--------
+
 The map is not contiguous!?!
 
 Wendover I
 
 490450WENDI,Wendover I
-49045WENDUN,Wendover U N
+49045WENDUN,Wendover U N <= This is the problematic unpopulated precinct. DON'T bridge over it!
 49045WENDUS,Wendover U S
 
-Adjacencies:
+Bridging over Wendover U N creates all these unexpected adjacencies:
 49011DC0010,490450WENDI
 490450WENDI,49045IBA000
 49035SLC002,490450WENDI

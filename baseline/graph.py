@@ -4,6 +4,9 @@
 ADJACENCY/CONTIGUITY GRAPHS
 """
 
+import os
+import sys
+
 import geopandas
 from geopandas import GeoDataFrame
 

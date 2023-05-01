@@ -7,66 +7,28 @@ DEBUG
 from baseline import *
 
 
-xx: str = "FL"
+xx: str = "UT"
 unit: str = "vtd"
 id: str = unit_id(unit)
 
 #
 
-feature_xy: dict[str, Coordinate] = dict()
+unit_label: str = "vtd20" if unit == "vtd" else unit
 
-rel_path: str = path_to_file([rawdata_dir, xx]) + file_name(
-    ["tabblock.vtd"], "_", "geojson"
+fips_map: dict[str, str] = STATE_FIPS
+fips: str = fips_map[xx]
+
+#
+
+shp_dir: str = file_name(["tl_2020", fips, unit_label], "_")
+shp_path: str = path_to_file([rawdata_dir, xx, shp_dir]) + file_name(
+    ["tl_2020", fips, unit_label], "_", "shp"
 )
-vtds: GeoDataFrame = geopandas.read_file(rel_path)
 
+#
 
-for index, row in vtds.iterrows():
-    pass
+graph: Graph = Graph(shp_path, id)
 
 pass
-
-# print(vtds.columns.tolist())
-
-# g: Graph = Graph(vtds, id)
-
-# TODO - Inspect the graph for the water-only precincts
-
-"""
-12115000107,0,29730193
-12115000109,0,945575575
-12129ZZZZZZ,0,597913826
-12033000194,0,7957018
-12033000182,0,4202589
-12033000174,0,12229974
-12033000061,0,380846812
-12033000213,0,6015420
-12033000004,0,14272996
-12033000015,0,4073606
-12033000067,0,24789980
-12033000063,0,2987095
-12033000203,0,669278966
-12033000225,0,4494881
-12033000079,0,5119042
-12033000028,0,3156278
-12033000023,0,3995717
-12033000084,0,8594133
-12033000217,0,8377254
-12033000010,0,8674732
-12075000ZZZ,0,1009758429
-12086000ZZZ,0,135839064
-12103000286,0,51132336
-12061ZZZZZZ,23652,198907565
-12081000155,0,13757645
-12011ZZZZZZ,2078781550,200885749
-12101101000,0,63678
-12101000219,0,83064
-12035009980,0,139355686
-12071000144,0,3654982
-12071000140,0,1636571
-12071000017,0,2138428
-12071000135,0,3971534
-12071000294,0,2556223
-"""
 
 ### END ###

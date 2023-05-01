@@ -10,7 +10,7 @@ This note captures some of the intellectual history of my work with Todd Proebst
 - Then I realized I was forgetting a redistricting fundamental -- that precincts (VTDs) are basically the atomic unit of assignment, except when a few are split to achieve extreme population equality.
 - With that realization in hand, I updated my scripts to iterate (100x) with precincts and then also use precincts in the finish run. This resolved the split precincts problem, but introduced another one: stray precincts from one district embedded within another adjacent one (near the shared boundary). IOW, the resulting districts for states were frequently not fully contiguous.
 - Another related issue was that, in a few cases -- notably LA and WA -- the shapes of states were significantly concave and districts spanned the concavity.
-- These issues caused us to try modifying the pure Balzer approach of randomly assigning the precincts to districts to assigning them based on a real, contiguous map and then running Balzer on the units (points) maintaining contiguity across all swaps. It seemed that this approach was very sensitive to the map chosen to establish the initial precinct-to-district assignments.
+- These issues caused us modify the pure Balzer approach of randomly assigning the precincts to districts to assigning them based on a real, contiguous map and then running Balzer on the units (points) maintaining contiguity across all swaps. It seemed that this approach was very sensitive to the map chosen to establish the initial precinct-to-district assignments.
 - TODO - Describe the current approach.
 
 We are here.
