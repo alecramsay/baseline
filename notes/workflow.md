@@ -1,6 +1,8 @@
 # Processing Steps
 
-Test initially on states that don't have any water-only precincts: XX, AZ, VA, and GA.
+TODO - REVISE
+
+Test initially on states that don't have any water-only precincts: NC, AZ, VA, and GA.
 Then generalize for states with water-only precincts but no connectivity issues.
 Finally, generalize to states with connectivity issues, like CA.
 

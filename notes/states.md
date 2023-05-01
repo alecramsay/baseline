@@ -2,58 +2,59 @@
 
 There are 37 states with three or more congressional districts.
 
-## Category 1
+## Initial States
 
-- NC: 4/24/23
-- AZ: 4/24/23
-- GA: 4/24/23
-- IL: 4/24/23
-- LA: 4/24/23
-- MI: 4/24/23
-- VA: 4/24/23
-- WA: 4/24/23
+- NC
+- AZ*
+- GA
+- VA
+- WA*
 
-- AL: 4/24/23
-- AR: 4/24/23
-- CO: 4/24/23
+## Water-only Precincts
 
-- CT: 4/25/23
-- IA: 4/25/23
-- IN: 4/25/23
-- KS: 4/25/23 <= FAILED
-- KY: 4/25/23
-- MA: 4/25/23
-- MD: 4/25/23
-- MN: 4/25/23
-- MO: 4/25/23
-- MS: 4/25/23
-- NE: 4/25/23
+- IL*
+- LA*
+- MD*
+- MI*
+- NJ*
 
-- NJ: 4/25/23 <= Tweak the map by hand to reassign (or unassign) Berkeley township Island Beach State Park (34029025000).
-- NM: 4/25/23
-- NV: 4/25/23 <= FAILED
-- OH: 4/25/23
-- OK: 4/25/23
-- PA: 4/25/23
-- SC: 4/25/23
-- TN: 4/25/23
-- TX: 4/25/23
-- UT: 4/25/23 <= FAILED
-- WI: 4/25/23
+## Unpopulated Precincts
 
-## Category 2
+- KS*
+- NV*
+- UT*
 
-Connectivity issues:
+## Runtime Issues
 
-- NY: "There are 2 disconnected components. There is 1 island with id: 36061000084." (effectively almost equal populations)
+- NY* -- Has connectivity issues.
+- CA* -- Uses tracts & BGs and has connectivity issues.
 
-## Category 3
+## Data Issues
 
-Special cases for one reason or another (all almost exactly equal populations):
+- FL* -- The census shapes are bad. Use a custom script to ingest DRA's corrected shapes & data.
 
-- CA: Uses tracts & BGs and has connectivity issues
-- OR: Uses BGs instead of VTDs
-- FL: Some missing xy data
+## Other States
 
-In DRA, we only addressed operational contiguity issues for only two states with three or more congressional districts: CA & FL.
-AK, HI, ME, NH, and RI -- all states with just two congressional districts -- also had contiguity issues which we didn't fix.
+- AL
+- AR
+- CO
+
+- CT
+- IA
+- IN*
+- KY*
+- MA*
+- MN*
+- MO*
+- MS
+- NE
+
+- NM
+- OH*
+- OK*
+- OR* -- Uses BGs instead of VTDs.
+- PA*
+- SC
+- TN*
+- TX*
+- WI*
