@@ -2,7 +2,7 @@ baseline:
 
 (1) Create output directories
 
-(2) scripts/extract_water_only.py -s VA > data/VA/VA_2020_water_only.csv
+(x) scripts/extract_water_only.py -s VA > data/VA/VA_2020_water_only.csv
 
 	No water-only VTDs (precincts)
 

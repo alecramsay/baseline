@@ -2,12 +2,12 @@ baseline:
 
 (1) Create output directories
 
-(2) scripts/extract_water_only.py -s KS > data/KS/KS_2020_vtd_water_only.csv
+(x) scripts/extract_water_only.py -s KS > data/KS/KS_2020_vtd_water_only.csv
 
 	Three water-only precincts
 
-(3) scripts/extract_data.py -s KS -w
-(4) scripts/extract_graph.py -s KS -w {-z}
+(3) scripts/extract_data.py -s KS {-w}
+(4) scripts/extract_graph.py -s KS {-w} {-z}
 (5) scripts/baseline_state.py -s KS -i 100 -c -v > intermediate/KS/KS20C_log_100.txt
 
 	* Review "WARNING" messages in the log.
