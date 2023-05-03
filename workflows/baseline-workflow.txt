@@ -34,7 +34,9 @@ pg:
 	* Export the block-assignment file
 	* Rename it to XX_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 	* Move it to the data/XX/ folder
-(7) scripts/pull_map_ratings.sh XX Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+	
+(x) scripts/pull_map_ratings.sh XX Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx <= DUP
+
 (8) Tweak each duplicated Official and Notable map in DRA
 	* XX_2022_Congress_Compact_map.png
 	* XX_2022_Congress_Competitive_map.png

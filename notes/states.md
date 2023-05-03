@@ -58,3 +58,5 @@ There are 37 states with three or more congressional districts.
 - TN*
 - TX*
 - WI*
+
+An asterisk (*) indicates that the state has water-only precincts.
