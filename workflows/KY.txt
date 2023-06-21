@@ -3,13 +3,13 @@ baseline:
 (1) Create output directories
 (2) scripts/extract_water_only.py -s KY > data/KY/KY_2020_water_only.csv
 
-	Three water-only precincts
+		Three water-only precincts
 	
 (3) scripts/extract_data.py -s KY
 (4) scripts/extract_graph.py -s KY
 
 		Ran through here 06/21/23.
-		
+
 (5) scripts/baseline_state.py -s KY -i 100 -c -v > intermediate/KY/KY20C_log_100.txt
 
 	* Review "WARNING" messages in the log.

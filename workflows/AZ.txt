@@ -4,7 +4,7 @@ baseline:
 
 (2) scripts/extract_water_only.py -s AZ > data/AZ/AZ_2020_water_only.csv
 
-	There is one ZZZZZZ "water-only" precinct
+		There is one ZZZZZZ "water-only" precinct
 
 (3) scripts/extract_data.py -s AZ
 (4) scripts/extract_graph.py -s AZ
