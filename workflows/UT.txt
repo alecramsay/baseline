@@ -10,12 +10,14 @@ baseline:
 (3) scripts/extract_data.py -s UT
 (4) scripts/extract_graph.py -s UT
 
-	NOTE - I *didn't* use these adds/mods -or bridge over unpopulated precincts:
-	
-	+, 490450WENDI, 49045IBA000
-	+, 490450WENDI, 49003GC0000
+		Ran through here 06/21/23.
 
-	I probably explored using both strategies at one point in time.
+		NOTE - I *didn't* use these adds/mods -or bridge over unpopulated precincts:
+		
+		+, 490450WENDI, 49045IBA000
+		+, 490450WENDI, 49003GC0000
+
+		I probably explored using both strategies at one point in time.
 
 (5) scripts/baseline_state.py -s UT -i 100 -c -v > intermediate/UT/UT20C_log_100.txt
 
