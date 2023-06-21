@@ -9,6 +9,7 @@ baseline:
 		NOTE - Run this step but *don't* use the output (-w flag) in steps 3 & 4.
 (3) scripts/extract_data.py -s XX
 (4) scripts/extract_graph.py -s XX
+
 (5) scripts/baseline_state.py -s XX -i 100 -c -v > intermediate/XX/XX20C_log_100.txt
 
 	* Review "WARNING" & "AUDIT" messages in the log.
