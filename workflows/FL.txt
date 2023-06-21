@@ -1,14 +1,13 @@
 baseline:
 
 (1) Create output directories
+(2) SKIP finding water-only precincts *from the census shapes*, i.e., don't do this:
 
-(x) SKIP finding water-only precincts *from the census shapes*, i.e., don't do this:
-
-	scripts/extract_water_only.py -s FL > data/FL/FL_2020_vtd_water_only.csv
+		scripts/extract_water_only.py -s FL > data/FL/FL_2020_vtd_water_only.csv
 
 (3) Extracted data & graph, using custom code 
 (4)
-	scripts/extract_FL.py
+		scripts/extract_FL.py
 
 (5) scripts/baseline_state.py -s FL -i 100 -c -v > intermediate/FL/FL20C_log_100.txt
 
