@@ -3,18 +3,19 @@ NOTE - Exclude from the study, because of contiguity issues?
 baseline:
 
 (1) Create output directories
+(2) scripts/extract_water_only.py -s UT > data/UT/UT_2020_vtd_water_only.csv
 
-(x) scripts/extract_water_only.py -s UT > data/UT/UT_2020_vtd_water_only.csv
-
-	One water-only precinct
+		There is one water-only precinct
 	
-(3) scripts/extract_data.py -s UT {-w}
-(4) scripts/extract_graph.py -s UT {-w} {-a}
+(3) scripts/extract_data.py -s UT
+(4) scripts/extract_graph.py -s UT
 
-	Use adds/mods, as opposed to bridging over unpopulated precincts:
+	NOTE - I *didn't* use these adds/mods -or bridge over unpopulated precincts:
 	
 	+, 490450WENDI, 49045IBA000
 	+, 490450WENDI, 49003GC0000
+
+	I probably explored using both strategies at one point in time.
 
 (5) scripts/baseline_state.py -s UT -i 100 -c -v > intermediate/UT/UT20C_log_100.txt
 
