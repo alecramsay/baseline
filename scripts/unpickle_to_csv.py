@@ -68,6 +68,12 @@ def main() -> None:
 
     water: bool = args.water
 
+    #
+
+    assert not water  # NOTE - Water-only precincts handled in baseline code.
+
+    #
+
     ### DEBUG ###
 
     ### LOAD DATA ###
@@ -76,6 +82,8 @@ def main() -> None:
         [xx, cycle, unit, "data"], "_", "pickle"
     )
     collection: FeatureCollection = FeatureCollection(rel_path)
+
+    # Log # of water-only precincts -- DELETE
 
     water_precincts: list = list()
     if water:
@@ -96,8 +104,7 @@ def main() -> None:
             "X": f["xy"].x,
             "Y": f["xy"].y,
         }
-        # NOTE - We could *not* remove water-only precincts that have + population,
-        # but we'd have to do the same when generating the graph/adjacencies.
+        # Remove water-only precincts -- DELETE
         if f["geoid"] in water_precincts:
             print(f"Removing water-only precinct {f['geoid']}")
             continue

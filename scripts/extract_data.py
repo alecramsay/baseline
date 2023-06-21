@@ -54,8 +54,13 @@ def main() -> None:
     args: Namespace = parse_args()
     xx: str = args.state
     water: bool = args.water
-
     verbose: bool = args.verbose
+
+    #
+
+    assert not water  # NOTE - Water-only precincts handled in baseline code.
+
+    #
 
     water_flag: str = "-w" if water else ""
 

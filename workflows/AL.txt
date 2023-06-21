@@ -8,6 +8,9 @@ baseline:
 
 (3) scripts/extract_data.py -s AL
 (4) scripts/extract_graph.py -s AL
+
+Ran through here 06/21/23.
+
 (5) scripts/baseline_state.py -s AL -i 100 -c -v > intermediate/AL/AL20C_log_100.txt
 
 	* Review "WARNING" messages in the log.

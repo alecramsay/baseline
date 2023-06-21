@@ -86,8 +86,13 @@ def main() -> None:
     unit_label: str = "vtd20" if unit == "vtd" else unit
     water: bool = args.water
     adds: bool = args.adds
-    unpopulated: bool = False  # args.unpopulated
+    unpopulated: bool = args.unpopulated
     verbose: bool = args.verbose
+
+    #
+
+    assert not water  # NOTE - Water-only precincts handled in baseline code.
+    assert not unpopulated  # NOTE - Unpopulated precincts handled in baseline code.
 
     #
 
@@ -117,7 +122,7 @@ def main() -> None:
         for mod in mods:
             graph.add_adjacency(mod[1], mod[2])
 
-    # Remove water-only precincts
+    # Remove water-only precincts -- DELETE
 
     water_precincts: list = list()
     if water:
@@ -132,7 +137,7 @@ def main() -> None:
                 print(f"Removing water-only precinct {w}.")
                 graph.remove(w)
 
-    # Bridge over unpopulated precincts
+    # Bridge over unpopulated precincts -- DELETE
 
     if unpopulated:
         unpopulated_path: str = path_to_file([data_dir, xx]) + file_name(
