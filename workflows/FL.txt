@@ -9,6 +9,8 @@ baseline:
 (4)
 		scripts/extract_FL.py
 
+		Ran through here 06/21/23.
+
 (5) scripts/baseline_state.py -s FL -i 100 -c -v > intermediate/FL/FL20C_log_100.txt
 
 	* Review "WARNING" messages in the log.
