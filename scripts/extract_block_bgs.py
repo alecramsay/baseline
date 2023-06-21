@@ -3,6 +3,7 @@
 
 """
 Create a dict of blocks and their associated BGs (for CA & OR).
+TODO - What do I need this for? Do I still need it?
 
 For example:
 

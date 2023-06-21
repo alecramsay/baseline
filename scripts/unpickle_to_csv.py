@@ -61,6 +61,8 @@ def main() -> None:
 
     xx: str = args.state
     unit: str = args.unit
+
+    # NOTE - These override the command-line arguments.
     if xx in ["OR"]:
         unit = "bg"
     elif xx in ["CA"]:

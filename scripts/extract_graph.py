@@ -79,10 +79,13 @@ def main() -> None:
     unit: str = args.unit
     # if unit != "vtd":
     #     raise ValueError(f"Unit {unit} not recognized.")
+
+    # NOTE - These override the command-line arguments.
     if xx in ["OR"]:
         unit = "bg"
     elif xx in ["CA"]:
         unit = "tract"
+
     unit_label: str = "vtd20" if unit == "vtd" else unit
     water: bool = args.water
     adds: bool = args.adds
