@@ -2,32 +2,43 @@
 
 There are 37 states with three or more congressional districts.
 
+TODO: We seemed to have stopped when were working on:
+- Perf for NY, CA, and TX; and
+- Water and land zero-population precincts, e.g., LA, MD, NJ, and UT
+
+In extract_pop.py, I have the code to write out a CSV of unpopulated precincts,
+but it's disabled. In extract_graph.py, I have the code to bridge over unpopulated
+precincts, but it's implicitly disabled because I'm not logging them.
+
+Current strategy: Leave all precincts in the data & adjacencies/graph and let Todd do the right thing.
+Once everything is verified, clean up the code and ream out unused capabilities.
+
 ## Initial States
 
-- NC
-- AZ*
-- GA
+- NC <<< Run 6/21/23
+- AZ* <<< TODO
+- GA <<< TODO
 - VA
-- WA*
+- WA* <<< TODO
 
 ## Water-only Precincts
 
-- IL*
-- LA*
-- MD*
-- MI*
-- NJ*
+- IL* <<< TODO
+- LA* <<< TODO
+- MD* <<< TODO
+- MI* <<< TODO
+- NJ* <<< TODO
 
 ## Unpopulated Precincts
 
-- KS*
-- NV*
-- UT*
+- KS* <<< TODO
+- NV* <<< TODO
+- UT* <<< TODO
 
 ## Runtime Issues
 
-- NY* -- Has connectivity issues.
-- CA* -- Uses tracts & BGs and has connectivity issues.
+- NY* -- Has connectivity issues. <<< TODO
+- CA* -- Uses tracts & BGs and has connectivity issues. <<< TODO
 
 ## Data Issues
 

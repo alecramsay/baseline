@@ -143,6 +143,7 @@ def main() -> None:
             row["GEOID"] for row in read_csv(unpopulated_path, types)
         ]
 
+        # TODO: Remove this?
         print("Bridging over unpopulated precincts.")
         for z in unpopulated_precincts:
             if z in graph.nodes():

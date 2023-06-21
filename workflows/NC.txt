@@ -2,7 +2,7 @@ baseline:
 
 (1) Create output directories
 
-(x) scripts/extract_water_only.py -s NC > data/NC/NC_2020_water_only.csv
+(x) scripts/extract_water_only.py -s NC > data/NC/NC_2020_water_only.csv <<< TODO: Obsolete?
 
 	None
 	
@@ -14,6 +14,8 @@ baseline:
 	* Review "WARNING" messages in the log.
 
 (6) scripts/compare_maps.py -s NC -i 100 -v
+
+	>>> HERE <<< 
 
 	* Copy any missing maps output to maps/NC/NC20C_missing.txt.
 	* Import NC20C_candidates.csv into a spreadheet, and verify that the results are OK.
