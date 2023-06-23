@@ -75,7 +75,9 @@ def main() -> None:
     plan_type: str = args.map
     iterations: int = args.iterations
     unit: str = "vtd"
-    if xx in ["CA", "OR"]:
+    if xx == "CA":
+        unit = "tract"
+    if xx == "OR":
         unit = "bg"
 
     verbose: bool = args.verbose

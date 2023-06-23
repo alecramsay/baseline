@@ -33,11 +33,11 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 
 - KS* <<< baselined
 - NV* <<< baselined
-- UT* <<< TODO
+- UT* <<< baselined
 
 ## Runtime Issues
 
-- NY* -- Has connectivity issues that had to be addressed by hand. <<< baselined
+- NY* -- Has connectivity issues that had to be addressed by hand. <<< baselined: TODO - reported not contiguous
 - CA* -- Uses tracts & BGs and has connectivity issues. <<< TODO
 
 ## Data Issues

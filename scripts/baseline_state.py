@@ -84,9 +84,14 @@ def main() -> None:
     debug: bool = args.debug
 
     unit: str = "vtd"
-    if xx in ["CA", "OR"]:
+    unit_label: str = "vtd20"
+
+    if xx == "CA":
+        unit = "tract"
+        unit_label = "tract"
+    if xx == "OR":
         unit = "bg"
-    unit_label: str = "vtd20" if unit == "vtd" else "bg"
+        unit_label = "bg"
 
     # DEBUG
 
