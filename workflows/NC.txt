@@ -23,7 +23,7 @@ baseline:
 
 (7) Copy the lowest energy contiguous map with acceptable population deviation to the maps/NC directory as NC20C_baseline_100.csv.
 
-		NC20C_I079K01N14
+		NC20C_I079K01N14 => NC20C_I022K01N14
 
 --------
 

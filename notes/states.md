@@ -15,7 +15,7 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 
 ## Initial States
 
-- NC <<< Run 6/21/23
+- NC <<< baselined
 - AZ* <<< TODO
 - GA <<< TODO
 - VA
