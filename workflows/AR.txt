@@ -17,7 +17,7 @@ baseline:
 (6) scripts/compare_maps.py -s AR -i 100 -v
 
 	* Copy any missing maps output to maps/AR/AR20C_missing.txt.
-	* Import AR20C_energies.csv into a spreadheet, and verify that the results are OK.
+	* Import AR20C_candidates.csv into a spreadheet, and verify that the results are OK.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/AR directory as AR20C_baseline_100.csv.
 

@@ -17,7 +17,7 @@ baseline:
 (6) scripts/compare_maps.py -s MI -i 100 -v
 
 	* Copy any missing maps output to maps/MI/MI20C_missing.txt.
-	* Import MI20C_energies.csv into a spreadheet, and verify that the results are OK.
+	* Import MI20C_candidates.csv into a spreadheet, and verify that the results are OK.
 	
 (7) Copy the lowest energy baseline map to the maps/MI directory as MI20C_baseline_100.csv.
 
