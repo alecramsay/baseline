@@ -1,1 +1,2 @@
-None
+Missing iterations: Expected 100; got 99.
+Map NJ20C_I018K01N12 not in log.

@@ -14,7 +14,7 @@ baseline:
 
 (5) scripts/baseline_state.py -s NJ -i 100 -c -v > intermediate/NJ/NJ20C_log_100.txt
 
-		* Review "WARNING" messages in the log.
+		* Review "WARNING" & "AUDIT" messages in the log.
 
 (6) scripts/compare_maps.py -s NJ -i 100 -v
 
@@ -23,7 +23,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NJ directory as NJ20C_baseline_100.csv.
 
-		NJ20C_I081K01N12
+		NJ20C_I067K01N12
 
 --------
 

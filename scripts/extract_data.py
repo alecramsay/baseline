@@ -71,7 +71,7 @@ def main() -> None:
         "scripts/join_feature_data.py -s {xx} -p",
         "scripts/unpickle_to_csv.py -s {xx} -u vtd {w}",
         "scripts/unpickle_to_csv.py -s {xx} -u block",
-        "scripts/extract_block_vtds.py -s {xx}",
+        "scripts/extract_block_vtds.py -s {xx}",  # TODO - Do I use this for anything?
         "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
     ]
 
@@ -93,7 +93,7 @@ def main() -> None:
             "scripts/join_feature_data.py -s {xx} -t",
             "scripts/unpickle_to_csv.py -s {xx} -u tract {w}",
             "scripts/unpickle_to_csv.py -s {xx} -u block",
-            "scripts/map_tracts_to_blocks.py -s {xx}",
+            # "scripts/map_tracts_to_blocks.py -s {xx}", TODO
             # "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
         ]
 
