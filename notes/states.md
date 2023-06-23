@@ -18,7 +18,7 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 - NC <<< baselined
 - AZ* <<< baselined
 - GA <<< baselined
-- VA <<< TODO
+- VA <<< baselined
 - WA* <<< baselined
 
 ## Water-only Precincts
