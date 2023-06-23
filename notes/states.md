@@ -17,7 +17,7 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 
 - NC <<< baselined
 - AZ* <<< baselined
-- GA <<< TODO
+- GA <<< baselined
 - VA
 - WA* <<< TODO
 
