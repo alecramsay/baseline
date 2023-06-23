@@ -1,16 +1,19 @@
-Missing iterations: Expected 100; got 85.
+Missing iterations: Expected 100; got 82.
+Map AZ20C_I004K01N09 not in log.
+Map AZ20C_I010K01N09 not in log.
 Map AZ20C_I013K01N09 not in log.
-Map AZ20C_I016K01N09 not in log.
-Map AZ20C_I025K01N09 not in log.
-Map AZ20C_I032K01N09 not in log.
+Map AZ20C_I021K01N09 not in log.
+Map AZ20C_I024K01N09 not in log.
 Map AZ20C_I037K01N09 not in log.
 Map AZ20C_I041K01N09 not in log.
+Map AZ20C_I046K01N09 not in log.
 Map AZ20C_I049K01N09 not in log.
-Map AZ20C_I052K01N09 not in log.
-Map AZ20C_I069K01N09 not in log.
-Map AZ20C_I073K01N09 not in log.
+Map AZ20C_I058K01N09 not in log.
+Map AZ20C_I059K01N09 not in log.
+Map AZ20C_I064K01N09 not in log.
+Map AZ20C_I067K01N09 not in log.
+Map AZ20C_I071K01N09 not in log.
 Map AZ20C_I076K01N09 not in log.
-Map AZ20C_I077K01N09 not in log.
-Map AZ20C_I084K01N09 not in log.
-Map AZ20C_I087K01N09 not in log.
-Map AZ20C_I096K01N09 not in log.
+Map AZ20C_I080K01N09 not in log.
+Map AZ20C_I090K01N09 not in log.
+Map AZ20C_I095K01N09 not in log.
