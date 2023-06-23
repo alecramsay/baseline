@@ -2,16 +2,17 @@
 #
 
 """
-Create a dict of blocks and their associated BGs (for CA & OR).
-TODO - What do I need this for? Do I still need it?
+Create a dict of tracts and their associated blocks for CA.
+Use this translate a tract-assignment file to a block-assignment file.
 
 For example:
 
-$ scripts/extract_block_bgs.py -s CA
+$ scripts/map_tracts_to_blocks.py -s CA
 
 For documentation, type:
 
-$ scripts/extract_block_bgs.py -h
+$ scripts/map_tracts_to_blocks.py -h
+
 """
 
 import argparse
@@ -22,7 +23,7 @@ from baseline import *
 
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
-        description="Create a mapping of BGs to blocks."
+        description="Create a mapping of tracts to blocks."
     )
 
     parser.add_argument(
@@ -47,6 +48,8 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
+    assert xx == "CA"
+
     verbose: bool = args.verbose
 
     ### READ A BAF & CREATE THE MAPPINGS ###
@@ -57,18 +60,27 @@ def main() -> None:
     types: list = [str, int, float, float]
     blocks: list = read_csv(rel_path, types)  # A list of dicts
 
-    block_bg: dict[str, str] = dict()
+    blocks_by_tract: dict[str, list] = dict()
     for row in blocks:
         block: str = row["GEOID"]
-        bg: str = GeoID(block).bg
-        block_bg[block] = bg
+        tract: str = GeoID(block).tract
+
+        if tract not in blocks_by_tract:
+            blocks_by_tract[tract] = list()
+
+        # TODO - HERE
+
+        assert tract is not None
+        assert block is not None
+
+        blocks_by_tract[tract] = blocks_by_tract[tract].append(block)
 
     ### PICKLE THE RESULTS ###
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
-        [xx, cycle, "block", "bg"], "_", "pickle"
+        [xx, cycle, "tract", "blocks"], "_", "pickle"
     )
-    write_pickle(rel_path, block_bg)
+    write_pickle(rel_path, blocks_by_tract)
 
     pass
 

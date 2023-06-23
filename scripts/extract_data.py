@@ -82,7 +82,7 @@ def main() -> None:
             "scripts/join_feature_data.py -s {xx} -g",
             "scripts/unpickle_to_csv.py -s {xx} -u bg {w}",
             "scripts/unpickle_to_csv.py -s {xx} -u block",
-            # "scripts/extract_block_bgs.py -s {xx}",
+            # "scripts/extract_block_map.py -s {xx}",
             # "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
         ]
 
@@ -93,7 +93,7 @@ def main() -> None:
             "scripts/join_feature_data.py -s {xx} -t",
             "scripts/unpickle_to_csv.py -s {xx} -u tract {w}",
             "scripts/unpickle_to_csv.py -s {xx} -u block",
-            # "scripts/extract_block_bgs.py -s {xx}",
+            "scripts/map_tracts_to_blocks.py -s {xx}",
             # "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
         ]
 

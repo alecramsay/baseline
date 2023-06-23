@@ -38,11 +38,11 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 ## Runtime Issues
 
 - NY* -- Has connectivity issues that had to be addressed by hand. <<< baselined: TODO - reported not contiguous
-- CA* -- Uses tracts & BGs and has connectivity issues. <<< TODO
+- CA* -- Uses tracts & BGs and has connectivity issues. <<< TODO - translate tract-assignment file to a BAF
 
 ## Data Issues
 
-- FL* -- The census shapes are bad. Use a custom script to ingest DRA's corrected shapes & data.
+- FL* -- The census shapes are bad. Use a custom script to ingest DRA's corrected shapes & data. <<< baselined
 
 ## Other States
 
