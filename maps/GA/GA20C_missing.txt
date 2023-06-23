@@ -1,3 +1,5 @@
-Missing iterations: Expected 100; got 98.
-Map GA20C_I006K01N14 not in log.
-Map GA20C_I043K01N14 not in log.
+Missing iterations: Expected 100; got 96.
+Map GA20C_I033K01N14 not in log.
+Map GA20C_I052K01N14 not in log.
+Map GA20C_I054K01N14 not in log.
+Map GA20C_I098K01N14 not in log.
