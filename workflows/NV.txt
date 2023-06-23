@@ -1,6 +1,7 @@
 baseline:
 
 (1) Create output directories
+
 (2) scripts/extract_water_only.py -s NV > data/NV/NV_2020_vtd_water_only.csv
 
 		There are two water-only precincts
@@ -12,23 +13,16 @@ baseline:
 
 (5) scripts/baseline_state.py -s NV -i 100 -c -v > intermediate/NV/NV20C_log_100.txt
 
-	* Review "WARNING" messages in the log.
+		* Review "WARNING" messages in the log.
 
 (6) scripts/compare_maps.py -s NV -i 100 -v
 
-	* Copy any missing maps output to maps/NV/NV20C_missing.txt.
-	* Import NV20C_candidates.csv into a spreadheet, and verify that the results are OK.
+		* Copy any missing maps output to maps/NV/NV20C_missing.txt.
+		* Import NV20C_candidates.csv into a spreadheet, and verify that the results are OK.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NV directory as NV20C_baseline_100.csv.
 
-	NV20C_I055K01N04
-
---------
-
-NOTE - One precinct at the western vertex with 5 people it is not assigned.
-
-It's 32005ZZZZZZ, i.e., a water-only precinct ... with people in it!?!
-Just assign this one precinct by hand.
+		NV20C_I065K01N04
 
 --------
 
@@ -36,34 +30,38 @@ pg:
 
 (5) scripts/import_base_map.sh NV
 
-	Verify the map in DRA.
+		Ran through here 06/22/23.
+		TODO: do from here downA.
 
 (6) Open the map in DRA:
-	* Set the Colors and Overlays -- 'Change Palette' to Plasma
-	* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
-	* Export the block-assignment file
-	* Rename it to NV_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
-	* Move it to the data/NV/ folder
+		* Set the Colors and Overlays -- 'Change Palette' to Plasma
+		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
+		* Export the block-assignment file
+		* Rename it to NV_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
+		* Move it to the data/NV/ folder
+
 (7) scripts/pull_map_ratings.sh NV Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
 (8) Tweak each duplicated Official and Notable map in DRA
-	* NV_2022_Congress_Compact_map.png
-	* NV_2022_Congress_Competitive_map.png
-	* NV_2022_Congress_Minority_map.png
-	* NV_2022_Congress_Official_map.png
-	* NV_2022_Congress_Proportional_map.png
-	* NV_2022_Congress_Splitting_map.png
-	* Move them to the docs/assets/images/ folder
-	* Add the maps to the Group
+		* NV_2022_Congress_Compact_map.png
+		* NV_2022_Congress_Competitive_map.png
+		* NV_2022_Congress_Minority_map.png
+		* NV_2022_Congress_Official_map.png
+		* NV_2022_Congress_Proportional_map.png
+		* NV_2022_Congress_Splitting_map.png
+		* Move them to the docs/assets/images/ folder
+		* Add the maps to the Group
+
 (9) scripts/analyze_state.py NV
 
 
 (10) Add population deviation & runtime to the abstract spreadsheet
 
-	cat intermediate/NV/NV20C_log_100.txt | awk 'END{print}'
+		cat intermediate/NV/NV20C_log_100.txt | awk 'END{print}'
 	
 (11) Turn the state on in the website
 
-	* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
-	* On the state's page in docs/_pages/pages/NV.markdown, change the layout to 'state' and remove the NYI one-liner
+		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
+		* On the state's page in docs/_pages/pages/NV.markdown, change the layout to 'state' and remove the NYI one-liner
 	
 --------

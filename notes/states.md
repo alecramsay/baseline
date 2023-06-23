@@ -31,8 +31,8 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 
 ## Unpopulated Precincts
 
-- KS* <<< TODO
-- NV* <<< TODO
+- KS* <<< baselined
+- NV* <<< baselined
 - UT* <<< TODO
 
 ## Runtime Issues
