@@ -18,7 +18,7 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 - NC <<< baselined
 - AZ* <<< baselined
 - GA <<< baselined
-- VA
+- VA <<< TODO
 - WA* <<< baselined
 
 ## Water-only Precincts
@@ -26,8 +26,8 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 - IL* <<< baselined
 - LA* <<< baselined but TODO issue to resolve wrto population deviation
 - MD* <<< baselined
-- MI* <<< TODO
-- NJ* <<< TODO
+- MI* <<< baselined
+- NJ* <<< baselined
 
 ## Unpopulated Precincts
 
