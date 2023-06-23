@@ -22,7 +22,7 @@ baseline:
 
 (5) scripts/baseline_state.py -s UT -i 100 -c -v > intermediate/UT/UT20C_log_100.txt
 
-		* Review "WARNING" messages in the log.
+		* Review "WARNING" & "AUDIT" messages in the log.
 
 (6) scripts/compare_maps.py -s UT -i 100 -v
 
@@ -31,66 +31,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/UT directory as UT20C_baseline_100.csv.
 
-		UT20C_I010K01N04
-
---------
-
-
-
---------
-
-Traceback (most recent call last):
-  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/redistricting.py", line 315, in <module>
-    main()
-  File "/Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/redistricting.py", line 40, in main
-    mk_contiguous(args.assignment, args.adjacent, args.output)
-  File "/Users/alecramsay/Documents/dev/dccvt/examples/redistricting/make_contiguous.py", line 86, in mk_contiguous
-    contig: list[Assignment] = get_contiguous(assignments, adjacents)
-  File "/Users/alecramsay/Documents/dev/dccvt/examples/redistricting/make_contiguous.py", line 66, in get_contiguous
-    assert len(counter) > 0, f"no neighboring blocks for {smallest}"
-AssertionError: no neighboring blocks for {316}
-
---------
-
-The map is not contiguous!?!
-
-Wendover I
-
-490450WENDI,Wendover I
-49045WENDUN,Wendover U N <= This is the problematic unpopulated precinct. DON'T bridge over it!
-49045WENDUS,Wendover U S
-
-Bridging over Wendover U N creates all these unexpected adjacencies:
-49011DC0010,490450WENDI
-490450WENDI,49045IBA000
-49035SLC002,490450WENDI
-490450WENDI,49057WCW01W
-490450WENDI,49045WENDUS <= Expected
-490450WENDI,49057HPR01E
-49003BC0001,490450WENDI
-490450WENDI,49057WCW02C
-490450WENDI,49057HPR01W
-49035NRV001,490450WENDI
-490450WENDI,49045LP0001
-490450WENDI,49057WCW01C
-49003PER04I,490450WENDI
-49003WLRD0I,490450WENDI
-490450WENDI,49057WCW02W
-490450WENDI,49045WENDUN <= Expected
-49035GSL001,490450WENDI
-49003PARK00,490450WENDI
-49003LAKE00,490450WENDI
-49003COR1US,490450WENDI
-49011SY002U,490450WENDI
-49003WLRD0U,490450WENDI
-49011FA012U,490450WENDI
-49003PROM00,490450WENDI
-49035MANRV1,490450WENDI
-49003SWIL00,490450WENDI
-49003SNOWUS,490450WENDI
-49011DC0020,490450WENDI
-490450WENDI,49045TERRA0
-49003GC0000,490450WENDI
+		UT20C_I081K01N04
 
 --------
 
