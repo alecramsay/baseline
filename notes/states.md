@@ -24,8 +24,8 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 ## Water-only Precincts
 
 - IL* <<< baselined
-- LA* <<< TODO
-- MD* <<< TODO
+- LA* <<< baselined but TODO issue to resolve wrto population deviation
+- MD* <<< baselined
 - MI* <<< TODO
 - NJ* <<< TODO
 
