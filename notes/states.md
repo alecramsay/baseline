@@ -23,7 +23,7 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 
 ## Water-only Precincts
 
-- IL* <<< TODO
+- IL* <<< baselined
 - LA* <<< TODO
 - MD* <<< TODO
 - MI* <<< TODO
