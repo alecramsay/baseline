@@ -23,7 +23,7 @@ baseline:
 
 (7) Copy the lowest energy baseline map to the maps/GA directory as GA20C_baseline_100.csv.
 
-		GA20C_I051K01N14
+		GA20C_I058K01N14
 
 --------
 

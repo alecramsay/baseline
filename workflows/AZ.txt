@@ -23,7 +23,7 @@ baseline:
 
 (7) Copy the lowest energy baseline map to the maps/AZ directory as AZ20C_baseline_100.csv.
 
-		AZ20C_I097K01N09
+		AZ20C_I001K01N09
 
 --------
 
