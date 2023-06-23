@@ -37,7 +37,7 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 
 ## Runtime Issues
 
-- NY* -- Has connectivity issues. <<< TODO
+- NY* -- Has connectivity issues that had to be addressed by hand. <<< baselined
 - CA* -- Uses tracts & BGs and has connectivity issues. <<< TODO
 
 ## Data Issues
