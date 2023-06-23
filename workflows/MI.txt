@@ -22,7 +22,7 @@ baseline:
 	
 (7) Copy the lowest energy baseline map to the maps/MI directory as MI20C_baseline_100.csv.
 
-		MI20C_I056K01N13
+		MI20C_I004K01N13
 	
 --------
 

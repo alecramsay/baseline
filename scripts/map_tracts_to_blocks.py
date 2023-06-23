@@ -68,12 +68,7 @@ def main() -> None:
         if tract not in blocks_by_tract:
             blocks_by_tract[tract] = list()
 
-        # TODO - HERE
-
-        assert tract is not None
-        assert block is not None
-
-        blocks_by_tract[tract] = blocks_by_tract[tract].append(block)
+        blocks_by_tract[tract].append(block)
 
     ### PICKLE THE RESULTS ###
 
