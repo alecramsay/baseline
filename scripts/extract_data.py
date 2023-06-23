@@ -93,7 +93,7 @@ def main() -> None:
             "scripts/join_feature_data.py -s {xx} -t",
             "scripts/unpickle_to_csv.py -s {xx} -u tract {w}",
             "scripts/unpickle_to_csv.py -s {xx} -u block",
-            "scripts/map_tracts_to_blocks.py -s {xx}",
+            "scripts/map_blocks_to_tracts.py -s {xx}",
             # "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
         ]
 
