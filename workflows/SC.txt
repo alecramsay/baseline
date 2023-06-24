@@ -23,7 +23,7 @@ baseline:
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/SC directory as SC20C_baseline_100.csv.
 
-		SC20C_I051K01N07
+		SC20C_I076K01N07
 
 --------
 
