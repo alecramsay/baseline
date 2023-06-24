@@ -23,7 +23,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/IA directory as IA20C_baseline_100.csv.
 
-		IA20C_I000K01N04
+		IA20C_I035K01N04
 
 --------
 
