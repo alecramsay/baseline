@@ -23,7 +23,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/OH directory as OH20C_baseline_100.csv.
 
-		OH20C_I083K01N15
+		OH20C_I042K01N15
 
 --------
 
