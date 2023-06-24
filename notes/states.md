@@ -58,9 +58,9 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 - MN* <<< baselined
 - MO* <<< baselined
 - MS <<< baselined
-- NE
+- NE <<< baselined
 
-- NM
+- NM <<< baselined
 - OH*
 - OK*
 - OR* -- Uses BGs instead of VTDs. <<< baselined
