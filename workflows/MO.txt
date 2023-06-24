@@ -1,9 +1,10 @@
 baseline:
 
 (1) Create output directories
+
 (2) scripts/extract_water_only.py -s MO > data/MO/MO_2020_water_only.csv
 
-	There are four water-only precincts
+		There are four water-only precincts
 	
 (3) scripts/extract_data.py -s MO
 (4) scripts/extract_graph.py -s MO
@@ -12,16 +13,16 @@ baseline:
 		
 (5) scripts/baseline_state.py -s MO -i 100 -c -v > intermediate/MO/MO20C_log_100.txt
 
-	* Review "WARNING" messages in the log.
+		* Review "WARNING" & "AUDIT" messages in the log.
 
 (6) scripts/compare_maps.py -s MO -i 100 -v
 
-	* Copy any missing maps output to maps/MO/MO20C_missing.txt.
-	* Import MO20C_candidates.csv into a spreadheet, and verify that the results are OK.
+		* Copy any missing maps output to maps/MO/MO20C_missing.txt.
+		* Import MO20C_candidates.csv into a spreadheet, and verify that the results are OK.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/MO directory as MO20C_baseline_100.csv.
 
-	MO20C_I019K01N08
+		MO20C_I019K01N08
 
 --------
 
@@ -29,34 +30,37 @@ pg:
 
 (5) scripts/import_base_map.sh MO
 
-	Verify the map in DRA.
+		Ran through here 06/24/23.
+		TODO: do from here down	
 
 (6) Open the map in DRA:
-	* Set the Colors and Overlays -- 'Change Palette' to Plasma
-	* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
-	* Export the block-assignment file
-	* Rename it to MO_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
-	* Move it to the data/MO/ folder
-(7) scripts/pull_map_ratings.sh MO Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
-(8) Tweak each duplicated Official and Notable map in DRA
-	* MO_2022_Congress_Compact_map.png
-	* MO_2022_Congress_Competitive_map.png
-	* MO_2022_Congress_Minority_map.png
-	* MO_2022_Congress_Official_map.png
-	* MO_2022_Congress_Proportional_map.png
-	* MO_2022_Congress_Splitting_map.png
-	* Move them to the docs/assets/images/ folder
-	* Add the maps to the Group
-(9) scripts/analyze_state.py MO
+		* Set the Colors and Overlays -- 'Change Palette' to Plasma
+		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
+		* Export the block-assignment file
+		* Rename it to MO_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
+		* Move it to the data/MO/ folder
 
+(7) scripts/pull_map_ratings.sh MO Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+(8) Tweak each duplicated Official and Notable map in DRA
+		* MO_2022_Congress_Compact_map.png
+		* MO_2022_Congress_Competitive_map.png
+		* MO_2022_Congress_Minority_map.png
+		* MO_2022_Congress_Official_map.png
+		* MO_2022_Congress_Proportional_map.png
+		* MO_2022_Congress_Splitting_map.png
+		* Move them to the docs/assets/images/ folder
+		* Add the maps to the Group
+
+(9) scripts/analyze_state.py MO
 
 (10) Add population deviation & runtime to the abstract spreadsheet
 
-	cat intermediate/MO/MO20C_log_100.txt | awk 'END{print}'
+		cat intermediate/MO/MO20C_log_100.txt | awk 'END{print}'
 	
 (11) Turn the state on in the website
 
-	* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
-	* On the state's page in docs/_pages/pages/MO.markdown, change the layout to 'state' and remove the NYI one-liner
-	
+		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
+		* On the state's page in docs/_pages/pages/MO.markdown, change the layout to 'state' and remove the NYI one-liner
+		
 --------
