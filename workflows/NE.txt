@@ -23,7 +23,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NE directory as NE20C_baseline_100.csv.
 
-		NE20C_I015K01N03
+		NE20C_I001K01N03
 
 --------
 
