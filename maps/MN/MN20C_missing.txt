@@ -1,2 +1,3 @@
-Missing iterations: Expected 100; got 99.
-Map MN20C_I048K01N08 not in log.
+Missing iterations: Expected 100; got 98.
+Map MN20C_I065K01N08 not in log.
+Map MN20C_I078K01N08 not in log.

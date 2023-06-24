@@ -23,7 +23,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/MN directory as MN20C_baseline_100.csv.
 
-		MN20C_I043K01N08 <= NOTE - Not the lowest energy map!
+		MN20C_I007K01N08
 
 --------
 
