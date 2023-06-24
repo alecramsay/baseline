@@ -67,7 +67,7 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 - PA* <<< baselined
 - SC <<< baselined
 - TN* <<< baselined
-- TX*
+- TX* <<< baselined
 - WI* <<< baselined
 
 An asterisk (*) indicates that the state has water-only precincts.
