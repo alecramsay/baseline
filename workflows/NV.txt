@@ -30,7 +30,7 @@ pg:
 
 (5) scripts/import_base_map.sh NV
 
-		Ran through here 06/24/23.
+		Ran through here 06/23/23.
 		TODO: do from here downA.
 
 (6) Open the map in DRA:

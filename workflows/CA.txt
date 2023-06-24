@@ -31,6 +31,8 @@ baseline:
 
 		CA20C_I064K01N52
 
+		Ran through here 06/23/23.
+
 		Then convert it into a BAF using:
 
 		scripts/map_tracts_to_blocks.py -s CA
