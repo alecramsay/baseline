@@ -23,7 +23,7 @@ baseline:
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/IN directory as IN20C_baseline_100.csv.
 	
-		IN20C_I023K01N09
+		IN20C_I088K01N09
 
 --------
 

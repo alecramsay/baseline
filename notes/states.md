@@ -50,9 +50,9 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 - AR <<< baselined
 - CO <<< baselined
 
-- CT <<<
-- IA <<<
-- IN*
+- CT <<< baselined
+- IA <<< baselined
+- IN* <<<
 - KY*
 - MA*
 - MN*
