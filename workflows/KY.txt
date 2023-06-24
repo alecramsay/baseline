@@ -23,7 +23,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/KY directory as KY20C_baseline_100.csv.
 
-		KY20C_I046K01N06
+		KY20C_I017K01N06
 
 --------
 

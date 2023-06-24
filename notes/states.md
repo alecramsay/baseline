@@ -52,8 +52,8 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 
 - CT <<< baselined
 - IA <<< baselined
-- IN* <<<
-- KY*
+- IN* <<< baselined
+- KY* <<<
 - MA*
 - MN*
 - MO*
