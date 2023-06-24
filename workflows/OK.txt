@@ -23,7 +23,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/OK directory as OK20C_baseline_100.csv.
 
-		OK20C_I062K01N05
+		OK20C_I016K01N05
 
 --------
 
