@@ -31,7 +31,7 @@ pg:
 
 (5) scripts/import_base_map.sh AZ
 
-		Ran through here 06/22/23.
+		Ran through here 06/24/23.
 		TODO: do from here down
 
 (6) Open the map in DRA:

@@ -7,11 +7,11 @@ Use this to translate a tract-assignment file to a block-assignment file.
 
 For example:
 
-$ scripts/map_blocks_to_tracts -s CA
+$ scripts/map_tracts_to_blocks.py -s CA
 
 For documentation, type:
 
-$ scripts/map_blocks_to_tracts.py -h
+$ scripts/map_tracts_to_blocks.py -h
 
 """
 
@@ -19,8 +19,6 @@ import argparse
 from argparse import ArgumentParser, Namespace
 
 from baseline import *
-
-# 06 | 001 | 400100
 
 
 def parse_args() -> Namespace:
@@ -50,45 +48,43 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    assert xx == "CA"
-
+    assert xx == "CA"  # for CA only
+    plan_type: str = "congress"  # for congress only
     verbose: bool = args.verbose
 
-    ### UNPICKLE BLOCKS BY TRACT ###
+    # Constants
+
+    map_label: str = label_map(xx, plan_type)
+
+    # Unpickle blocks by tract
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
         [xx, cycle, "tract", "blocks"], "_", "pickle"
     )
     blocks_by_tract: dict = read_pickle(rel_path)
 
-    # TODO - HERE
+    # Read the tract-assignment file
 
-    # ### READ A BAF & CREATE THE MAPPINGS ###
+    rel_path: str = path_to_file([maps_dir, xx]) + file_name(
+        [map_label, "baseline", "100", "tracts"], "_", "csv"
+    )
+    types: list = [str, int]
+    tract_assignments: list = read_csv(rel_path, types)  # A list of dicts
 
-    # rel_path: str = path_to_file([data_dir, xx]) + file_name(
-    #     [xx, cycle, "block", "data"], "_", "csv"
-    # )
-    # types: list = [str, int, float, float]
-    # blocks: list = read_csv(rel_path, types)  # A list of dicts
+    # Map tract assignments to block assignments
 
-    # blocks_by_tract: dict[str, list] = dict()
-    # for row in blocks:
-    #     block: str = row["GEOID"]
-    #     tract: str = GeoID(block).tract
+    block_assignments: list = list()
+    for tract_assignment in tract_assignments:
+        tract: str = tract_assignment["GEOID"]
+        district: int = tract_assignment["DISTRICT"]
 
-    #     if tract not in blocks_by_tract:
-    #         blocks_by_tract[tract] = list()
+        for block in blocks_by_tract[tract]:
+            block_assignments.append({"GEOID": block, "DISTRICT": district})
 
-    #     blocks_by_tract[tract].append(block)
-
-    # ### PICKLE THE RESULTS ###
-
-    # rel_path: str = path_to_file([temp_dir]) + file_name(
-    #     [xx, cycle, "tract", "blocks"], "_", "pickle"
-    # )
-    # write_pickle(rel_path, blocks_by_tract)
-
-    pass
+    rel_path: str = path_to_file([maps_dir, xx]) + file_name(
+        [map_label, "baseline", "100"], "_", "csv"
+    )
+    write_csv(rel_path, block_assignments, ["GEOID", "DISTRICT"])
 
 
 if __name__ == "__main__":

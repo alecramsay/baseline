@@ -6,7 +6,7 @@ Convert a tract-assignment file for CA to a block-assignment file.
 
 For example:
 
-$ scripts/map_tracts_to_blocks -s CA
+$ scripts/map_tracts_to_blocks.py -s CA
 
 For documentation, type:
 
