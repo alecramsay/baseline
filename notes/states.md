@@ -65,9 +65,9 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 - OK* <<< baselined
 - OR* -- Uses BGs instead of VTDs. <<< baselined
 - PA* <<< baselined
-- SC
-- TN*
+- SC <<< baselined
+- TN* <<< baselined
 - TX*
-- WI*
+- WI* <<< baselined
 
 An asterisk (*) indicates that the state has water-only precincts.

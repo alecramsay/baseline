@@ -23,7 +23,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/WI directory as WI20C_baseline_100.csv.
 
-		WI20C_I094K01N08 <= NOTE - Not the lowest energy map.
+		WI20C_I021K01N08
 
 --------
 

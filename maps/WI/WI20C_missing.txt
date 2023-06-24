@@ -1,1 +1,7 @@
-None
+Missing iterations: Expected 100; got 94.
+Map WI20C_I005K01N08 not in log.
+Map WI20C_I018K01N08 not in log.
+Map WI20C_I041K01N08 not in log.
+Map WI20C_I057K01N08 not in log.
+Map WI20C_I066K01N08 not in log.
+Map WI20C_I094K01N08 not in log.
