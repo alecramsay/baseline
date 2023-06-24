@@ -23,7 +23,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/PA directory as PA20C_baseline_100.csv.
 
-		PA20C_I022K01N17
+		PA20C_I094K01N17
 
 --------
 

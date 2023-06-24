@@ -62,7 +62,7 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 
 - NM <<< baselined
 - OH* <<< baselined
-- OK*
+- OK* <<< baselined
 - OR* -- Uses BGs instead of VTDs. <<< baselined
 - PA*
 - SC
