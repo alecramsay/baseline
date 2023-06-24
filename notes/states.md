@@ -46,8 +46,8 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 
 ## Other States
 
-- AL
-- AR
+- AL <<<
+- AR <<<
 - CO
 
 - CT
@@ -63,7 +63,7 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 - NM
 - OH*
 - OK*
-- OR* -- Uses BGs instead of VTDs.
+- OR* -- Uses BGs instead of VTDs. <<< baselined
 - PA*
 - SC
 - TN*
