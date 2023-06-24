@@ -22,7 +22,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/MO directory as MO20C_baseline_100.csv.
 
-		MO20C_I019K01N08
+		MO20C_I004K01N08
 
 --------
 
