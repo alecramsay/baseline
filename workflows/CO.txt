@@ -14,7 +14,7 @@ baseline:
 
 (5) scripts/baseline_state.py -s CO -i 100 -c -v > intermediate/CO/CO20C_log_100.txt
 
-		* Review "WARNING" messages in the log.
+		* Review "WARNING" & "AUDIT" messages in the log.
 
 (6) scripts/compare_maps.py -s CO -i 100 -v
 
@@ -23,7 +23,7 @@ baseline:
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/CO directory as CO20C_baseline_100.csv.
 
-		CO20C_I045K01N08
+		CO20C_I070K01N08
 
 --------
 
