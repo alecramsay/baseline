@@ -23,7 +23,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/TX directory as TX20C_baseline_100.csv.
 
-		TX20C_I097K01N38 <= NOTE - Not the lowest energy map.
+		TX20C_I057K01N38
 
 --------
 
