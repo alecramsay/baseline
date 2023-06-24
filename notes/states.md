@@ -46,7 +46,7 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 
 ## Other States
 
-- AL <<<
+- AL <<< baselined
 - AR <<<
 - CO
 
