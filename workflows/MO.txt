@@ -19,10 +19,14 @@ baseline:
 
 		* Copy any missing maps output to maps/MO/MO20C_missing.txt.
 		* Import MO20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s MO
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/MO directory as MO20C_baseline_100.csv.
 
-		MO20C_I004K01N08
+		MO20C_I004K01N08 => MO20C_I063K01N08 <<< TODO
 
 --------
 
