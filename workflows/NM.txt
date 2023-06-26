@@ -20,10 +20,14 @@ baseline:
 
 		* Copy any missing maps output to maps/NM/NM20C_missing.txt.
 		* Import NM20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s NM
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NM directory as NM20C_baseline_100.csv.
 
-		NM20C_I055K01N03
+		NM20C_I055K01N03 => NM20C_I056K01N03 <<< TODO
 
 --------
 
