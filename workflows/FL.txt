@@ -20,10 +20,14 @@ baseline:
 
 		* Copy any missing maps output to maps/FL/FL20C_missing.txt.
 		* Import FL20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s FL
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/FL directory as FL20C_baseline_100.csv.
 
-		FL20C_I065K01N28
+		FL20C_I065K01N28 => FL20C_I027K01N28 <<< TODO
 
 --------
 
