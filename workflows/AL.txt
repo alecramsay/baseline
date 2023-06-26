@@ -20,10 +20,14 @@ baseline:
 
 		* Copy any missing maps output to maps/AL/AL20C_missing.txt.
 		* Import AL20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s AL
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/AL directory as AL20C_baseline_100.csv.
 
-		AL20C_I022K01N07	
+		AL20C_I022K01N07 => AL20C_I046K01N07 <<< Updated 06/26/23	
 
 --------
 
@@ -31,7 +35,7 @@ pg:
 
 (5) scripts/import_base_map.sh AL
 
-		Ran through here 06/24/23.
+		Ran through here 06/26/23.
 		TODO: do from here down	
 
 (6) Open the map in DRA:

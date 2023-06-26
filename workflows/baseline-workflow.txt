@@ -22,6 +22,10 @@ baseline:
 
 		* Copy any missing maps output to maps/XX/XX20C_missing.txt.
 		* Import XX20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		If necessary, update the energies:
+
+		scripts/update_energies.py -s XX
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/XX directory as XX20C_baseline_100.csv.
 
