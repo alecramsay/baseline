@@ -20,10 +20,14 @@ baseline:
 
 		* Copy any missing maps output to maps/IA/IA20C_missing.txt.
 		* Import IA20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s IA
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/IA directory as IA20C_baseline_100.csv.
 
-		IA20C_I035K01N04
+		IA20C_I035K01N04 => IA20C_I011K01N04 <<< TODO
 
 --------
 
