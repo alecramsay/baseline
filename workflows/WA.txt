@@ -19,9 +19,13 @@ baseline:
 		* Copy any missing maps output to maps/WA/WA20C_missing.txt.
 		* Import WA20C_candidates.csv into a spreadheet, and verify that the results are OK.
 
+		Update the energies:
+
+		scripts/update_energies.py -s WA
+
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/WA directory as WA20C_baseline_100.csv.
 
-		WA20C_I013K01N10
+		WA20C_I013K01N10 => WA20C_I054K01N10 <<< TODO
 
 --------
 
