@@ -20,6 +20,10 @@ baseline:
 
 		* Copy any missing maps output to maps/MS/MS20C_missing.txt.
 		* Import MS20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s MS
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/MS directory as MS20C_baseline_100.csv.
 
