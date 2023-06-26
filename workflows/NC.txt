@@ -23,11 +23,11 @@ baseline:
 
 		Update the energies:
 
-		scripts/update_energies.py -s MS
+		scripts/update_energies.py -s NC
 
 (7) Copy the lowest energy contiguous map with acceptable population deviation to the maps/NC directory as NC20C_baseline_100.csv.
 
-		NC20C_I022K01N14 => MS20C_I046K01N04 <<< TODO
+		NC20C_I022K01N14 => NC20C_I092K01N14
 
 --------
 
