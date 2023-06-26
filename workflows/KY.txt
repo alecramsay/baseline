@@ -20,10 +20,14 @@ baseline:
 
 		* Copy any missing maps output to maps/KY/KY20C_missing.txt.
 		* Import KY20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s KY
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/KY directory as KY20C_baseline_100.csv.
 
-		KY20C_I017K01N06
+		KY20C_I017K01N06 => KY20C_I015K01N06 <<< TODO
 
 --------
 
