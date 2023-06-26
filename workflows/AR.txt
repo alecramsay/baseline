@@ -20,10 +20,14 @@ baseline:
 
 		* Copy any missing maps output to maps/AR/AR20C_missing.txt.
 		* Import AR20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s AR
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/AR directory as AR20C_baseline_100.csv.
 
-		AR20C_I097K01N04
+		AR20C_I097K01N04 => AR20C_I015K01N04 <<< TODO
 
 --------
 

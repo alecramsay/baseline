@@ -26,10 +26,14 @@ baseline:
 
 		* Copy any missing maps output to maps/CA/CA20C_missing.txt.
 		* Import CA20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s CA
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/CA directory as CA20C_baseline_100_tracts.csv.
 
-		CA20C_I064K01N52
+		CA20C_I064K01N52 <<< verfied 06/26/23
 
 		Ran through here 06/23/23.
 

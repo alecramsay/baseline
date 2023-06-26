@@ -6,6 +6,7 @@ Log energies for all the maps generated for a state
 For example:
 
 $ scripts/log_energies.py -s AZ -v > intermediate/AZ/AZ20C_log_energies.txt
+$ scripts/log_energies.py -s CA -v > intermediate/Ca/CA20C_log_energies.txt
 
 For documentation, type:
 
@@ -61,6 +62,10 @@ def main() -> None:
     xx: str = args.state
     plan_type: str = "congress"
     unit: str = "vtd"
+    if xx == "CA":
+        unit = "tract"
+    if xx == "OR":
+        unit = "bg"
     iterations: int = 100
 
     verbose: bool = args.verbose
