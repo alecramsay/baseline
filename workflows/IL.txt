@@ -21,9 +21,13 @@ baseline:
 		* Copy any missing maps output to maps/IL/IL20C_missing.txt.
 		* Import IL20C_candidates.csv into a spreadheet, and verify that the results are OK.
 
+		Update the energies:
+
+		scripts/update_energies.py -s IL
+
 (7) Copy the lowest energy baseline map to the maps/IL directory as IL20C_baseline_100.csv.
 
-		IL20C_I050K01N17
+		IL20C_I050K01N17 => IL20C_I079K01N17 <<< TODO
 	
 --------
 
