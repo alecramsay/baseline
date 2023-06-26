@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 
 """
-Report energies for all the maps generated for a state
+Log energies for all the maps generated for a state
 
 For example:
 
-$ scripts/report_energies.py -s AZ -v > intermediate/AZ/AZ20C_log_energies.txt
+$ scripts/log_energies.py -s AZ -v > intermediate/AZ/AZ20C_log_energies.txt
 
 For documentation, type:
 
-$ scripts/report_energies.py -h
+$ scripts/log_energies.py -h
 """
 
 import argparse
@@ -54,7 +54,7 @@ def parse_args() -> Namespace:
 
 
 def main() -> None:
-    """Report energies for all the maps generated for a state."""
+    """Log energies for all the maps generated for a state."""
 
     args: Namespace = parse_args()
 
@@ -64,7 +64,6 @@ def main() -> None:
     iterations: int = 100
 
     verbose: bool = args.verbose
-    verbose = False  # TODO - Remove this line
 
     # Constants
 
