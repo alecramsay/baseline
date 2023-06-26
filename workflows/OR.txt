@@ -20,10 +20,14 @@ baseline:
 
 		* Copy any missing maps output to maps/OR/OR20C_missing.txt.
 		* Import OR20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s OR
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/OR directory as OR20C_baseline_100.csv.
 
-		OR20C_I051K01N06
+		OR20C_I051K01N06 => OR20C_I015K01N06 <<< TODO
 
 --------
 
