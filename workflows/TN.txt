@@ -20,10 +20,14 @@ baseline:
 
 		* Copy any missing maps output to maps/TN/TN20C_missing.txt.
 		* Import TN20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s TN
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/TN directory as TN20C_baseline_100.csv.
 
-		TN20C_I098K01N09
+		TN20C_I098K01N09 => TN20C_I089K01N09 <<< TODO
 
 --------
 
