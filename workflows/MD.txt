@@ -20,10 +20,14 @@ baseline:
 
 		* Copy any missing maps output to maps/MD/MD20C_missing.txt.
 		* Import MD20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s MD
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/MD directory as MD20C_baseline_100.csv.
 
-		MD20C_I093K01N08
+		MD20C_I093K01N08 => MD20C_I034K01N08 <<< TODO
 
 --------
 
