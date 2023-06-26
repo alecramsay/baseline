@@ -27,7 +27,7 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/MA directory as MA20C_baseline_100.csv.
 
-		MA20C_I071K01N09
+		MA20C_I071K01N09 => MA20C_I075K01N09 <<< TODO
 
 --------
 
