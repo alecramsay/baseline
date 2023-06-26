@@ -20,10 +20,14 @@ baseline:
 
 		* Copy any missing maps output to maps/NE/NE20C_missing.txt.
 		* Import NE20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s NE
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NE directory as NE20C_baseline_100.csv.
 
-		NE20C_I001K01N03
+		NE20C_I001K01N03 => NE20C_I039K01N03 <<< TODO
 
 --------
 
