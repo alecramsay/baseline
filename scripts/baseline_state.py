@@ -95,6 +95,8 @@ def main() -> None:
         unit = "bg"
         unit_label = "bg"
 
+    assert create_sh
+
     # DEBUG
 
     # Add dccvt to the path
@@ -142,19 +144,20 @@ def main() -> None:
                 output=output_csv,
                 verbose=verbose,
             )
-        else:
-            create_baseline_candidate(
-                tmpdir=tmpdir,
-                N=N,
-                seed=seed,
-                prefix=map_label,
-                data=data_csv,
-                adjacencies=adjacencies_csv,
-                label=label,
-                output=output_csv,
-                verbose=verbose,
-                debug=debug,
-            )
+        # NOTE - Commented out alternative to using create.sh.
+        # else:
+        #     create_baseline_candidate(
+        #         tmpdir=tmpdir,
+        #         N=N,
+        #         seed=seed,
+        #         prefix=map_label,
+        #         data=data_csv,
+        #         adjacencies=adjacencies_csv,
+        #         label=label,
+        #         output=output_csv,
+        #         verbose=verbose,
+        #         debug=debug,
+        #     )
 
         pass  # for a breakpoint
 

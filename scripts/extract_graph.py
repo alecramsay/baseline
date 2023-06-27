@@ -126,37 +126,39 @@ def main() -> None:
         for mod in mods:
             graph.add_adjacency(mod[1], mod[2])
 
-    # Remove water-only precincts -- DELETE
+    # NOTE - Water-only precincts are handled in Todd's baseline code.
+    # # Remove water-only precincts
 
-    water_precincts: list = list()
-    if water:
-        water_path: str = path_to_file([data_dir, xx]) + file_name(
-            [xx, cycle, unit, "water_only"], "_", "csv"
-        )  # GEOID,ALAND,AWATER
-        types: list = [str, int, int]
-        water_precincts = [row["GEOID"] for row in read_csv(water_path, types)]
+    # water_precincts: list = list()
+    # if water:
+    #     water_path: str = path_to_file([data_dir, xx]) + file_name(
+    #         [xx, cycle, unit, "water_only"], "_", "csv"
+    #     )  # GEOID,ALAND,AWATER
+    #     types: list = [str, int, int]
+    #     water_precincts = [row["GEOID"] for row in read_csv(water_path, types)]
 
-        for w in water_precincts:
-            if w in graph.nodes():
-                print(f"Removing water-only precinct {w}.")
-                graph.remove(w)
+    #     for w in water_precincts:
+    #         if w in graph.nodes():
+    #             print(f"Removing water-only precinct {w}.")
+    #             graph.remove(w)
 
-    # Bridge over unpopulated precincts -- DELETE
+    # NOTE - Unpopulated precincts are handled in Todd's baseline code.
+    # # Bridge over unpopulated precincts
 
-    if unpopulated:
-        unpopulated_path: str = path_to_file([data_dir, xx]) + file_name(
-            [xx, cycle, "vtd", "unpopulated"], "_", "csv"
-        )  # NOTE - Only works for vtds right now
-        types: list = [str]
-        unpopulated_precincts = [
-            row["GEOID"] for row in read_csv(unpopulated_path, types)
-        ]
+    # if unpopulated:
+    #     unpopulated_path: str = path_to_file([data_dir, xx]) + file_name(
+    #         [xx, cycle, "vtd", "unpopulated"], "_", "csv"
+    #     )  # NOTE - Only works for vtds right now
+    #     types: list = [str]
+    #     unpopulated_precincts = [
+    #         row["GEOID"] for row in read_csv(unpopulated_path, types)
+    #     ]
 
-        # TODO: Remove this?
-        print("Bridging over unpopulated precincts.")
-        for z in unpopulated_precincts:
-            if z in graph.nodes():
-                graph.bridge(z)
+    #     # TODO: Remove this?
+    #     print("Bridging over unpopulated precincts.")
+    #     for z in unpopulated_precincts:
+    #         if z in graph.nodes():
+    #             graph.bridge(z)
 
     # Make sure the graph is consistent & fully connected
 
