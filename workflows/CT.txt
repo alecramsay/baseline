@@ -36,16 +36,18 @@ pg:
 (5) scripts/import_base_map.sh CT
 
 		Ran through here 06/24/23.
-		TODO: do from here down	
 
 (6) Open the map in DRA:
-			* Set the Colors and Overlays -- 'Change Palette' to Plasma
-			* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
-			* Export the block-assignment file
-			* Rename it to CT_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
-			* Move it to the data/CT/ folder
+		* Set the Colors and Overlays -- 'Change Palette' to Plasma
+		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
+		* Export the block-assignment file
+		* Rename it to CT_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
+		* Move it to the data/CT/ folder
 
-(7) scripts/pull_map_ratings.sh CT Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/27/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh CT Congress Baseline 22da131b-f4c7-47d0-b2c7-07a9f97cefb8
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* CT_2022_Congress_Compact_map.png
