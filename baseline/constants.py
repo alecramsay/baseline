@@ -146,7 +146,7 @@ baseline_maps: dict[str, str] = {
     "IN": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "KS": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "KY": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
-    "LA": "c1bbd7f1-ce04-4bb4-bdff-963bc92ff340",  # 04/07/23
+    "LA": "e59f8d73-e552-4fd3-98d0-368722302720",  # 06/27/23
     "MA": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "MD": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "MI": "be025e39-40e6-40ce-87a1-87270b188a50",  # 04/23/23

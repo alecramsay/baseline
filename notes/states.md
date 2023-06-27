@@ -15,59 +15,59 @@ Once everything is verified, clean up the code and ream out unused capabilities.
 
 ## Initial States
 
-- NC <<< baselined
-- AZ* <<< baselined
-- GA <<< baselined
-- VA <<< baselined
-- WA* <<< baselined
+- NC
+- AZ*
+- GA
+- VA
+- WA*
 
 ## Water-only Precincts
 
-- IL* <<< baselined
-- LA* <<< baselined but TODO issue to resolve wrto population deviation
-- MD* <<< baselined
-- MI* <<< baselined
-- NJ* <<< baselined
+- IL*
+- LA* 
+- MD*
+- MI*
+- NJ*
 
 ## Unpopulated Precincts
 
-- KS* <<< baselined
-- NV* <<< baselined
-- UT* <<< baselined
+- KS*
+- NV*
+- UT*
 
 ## Runtime Issues
 
-- NY* -- Has connectivity issues that had to be addressed by hand. <<< baselined: TODO - reported not contiguous
-- CA* -- Uses tracts & BGs and has connectivity issues. <<< baselined
+- NY* -- Has connectivity issues that had to be addressed by hand.
+- CA* -- Uses tracts & BGs and has connectivity issues.
 
 ## Data Issues
 
-- FL* -- The census shapes are bad. Use a custom script to ingest DRA's corrected shapes & data. <<< baselined
+- FL* -- The census shapes are bad. Use a custom script to ingest DRA's corrected shapes & data.
 
 ## Other States
 
-- AL <<< baselined
-- AR <<< baselined
-- CO <<< baselined
+- AL
+- AR
+- CO
 
-- CT <<< baselined
-- IA <<< baselined
-- IN* <<< baselined
-- KY* <<< baselined
-- MA* <<< baselined
-- MN* <<< baselined
-- MO* <<< baselined
-- MS <<< baselined
-- NE <<< baselined
+- CT
+- IA
+- IN*
+- KY*
+- MA*
+- MN*
+- MO*
+- MS
+- NE
 
-- NM <<< baselined
-- OH* <<< baselined
-- OK* <<< baselined
-- OR* -- Uses BGs instead of VTDs. <<< baselined
-- PA* <<< baselined
-- SC <<< baselined
-- TN* <<< baselined
-- TX* <<< baselined
-- WI* <<< baselined
+- NM
+- OH*
+- OK*
+- OR* -- Uses BGs instead of VTDs.
+- PA*
+- SC
+- TN*
+- TX*
+- WI*
 
 An asterisk (*) indicates that the state has water-only precincts.
