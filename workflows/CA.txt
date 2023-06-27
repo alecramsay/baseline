@@ -5,12 +5,17 @@ baseline:
 (2) scripts/extract_water_only.py -s CA > data/CA/CA_2020_tract_water_only.csv
 
 		There are 22 water-only tracts.
+
+		scripts/extract_water_only.py -s CA > data/CA/CA_2020_bg_water_only.csv
+
+		There are 23 water-only blockgroups.
 	
 (3) scripts/extract_data.py -s CA
 
 (4) scripts/extract_graph.py -s CA -a
 
-		Ran through here 06/21/23, using tracts.
+		Ran through here 06/21/23 using tracts.
+		Re-ran through here 06/27/23 using BG again.
 	
 		Adds to achieve contiguity:
 		

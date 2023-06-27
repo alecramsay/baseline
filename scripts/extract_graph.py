@@ -84,7 +84,8 @@ def main() -> None:
     if xx in ["OR"]:
         unit = "bg"
     elif xx in ["CA"]:
-        unit = "tract"
+        unit = "bg"
+        # unit = "tract"
 
     unit_label: str = "vtd20" if unit == "vtd" else unit
     water: bool = args.water

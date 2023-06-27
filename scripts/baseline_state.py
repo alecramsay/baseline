@@ -86,10 +86,12 @@ def main() -> None:
     unit: str = "vtd"
     unit_label: str = "vtd20"
 
-    if xx == "CA":
-        unit = "tract"
-        unit_label = "tract"
-    if xx == "OR":
+    if xx in ["CA"]:
+        unit = "bg"
+        unit_label = "bg"
+        # unit = "tract"
+        # unit_label = "tract"
+    elif xx in ["OR"]:
         unit = "bg"
         unit_label = "bg"
 
