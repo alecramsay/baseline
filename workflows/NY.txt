@@ -20,10 +20,14 @@ baseline:
 
 		* Copy any missing maps output to maps/NY/NY20C_missing.txt.
 		* Import NY20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		Update the energies:
+
+		scripts/update_energies.py -s NY
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NY directory as NY20C_baseline_100.csv.
 
-		NY20C_I071K01N26
+		NY20C_I071K01N26 => NY20C_I059K01N26
 	
 --------
 
@@ -31,8 +35,8 @@ pg:
 
 (5) scripts/import_base_map.sh NY
 
-		x - Ran through here 06/23/23.
-		x - TODO: do from here downA.
+		Ran through here 06/27/23.
+		TODO: do from here down.
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -65,3 +69,21 @@ pg:
 		* On the state's page in docs/_pages/pages/NY.markdown, change the layout to 'state' and remove the NYI one-liner
 	
 --------
+DRA reports the baseline map as not contiguous, because I left off a connection when I patched
+the graph used by DRA for operational contiguity.
+
++, 36061000084, 36061000082 <= DRA has this adjacency
++, 36061000084, 36047000935 <= but not this one
+
+---
+
+36061000084 = 84
+
+36061000082 = 82	: 5
+36047000935 = 935	: 0
+
+36047000934 = 934	: 0
+36047001840 = 1840	: 0
+36085000054 = 54	: 2395
+
+---
