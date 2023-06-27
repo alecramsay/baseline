@@ -35,8 +35,7 @@ pg:
 
 (5) scripts/import_base_map.sh IN
 
-		Ran through here 06/24/23.
-		TODO: do from here down	
+		Ran through here 06/27/23.
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -44,7 +43,11 @@ pg:
 		* Export the block-assignment file
 		* Rename it to IN_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/IN/ folder
-(7) scripts/pull_map_ratings.sh IN Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+		Ran through here 06/27/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh IN Congress Baseline 75a78afd-46b9-427f-9410-62204c3c5939
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* IN_2022_Congress_Compact_map.png
