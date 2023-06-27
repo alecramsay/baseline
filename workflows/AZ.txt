@@ -35,9 +35,6 @@ pg:
 
 (5) scripts/import_base_map.sh AZ
 
-		Ran through here 06/23/23.
-		TODO: do from here down
-
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
 		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
@@ -47,7 +44,10 @@ pg:
 		
 		Reassigned the one stray (unassigned) precinct.
 
-(7) scripts/pull_map_ratings.sh AZ Congress Baseline 83e28203-c0c9-4034-bc99-9aa024945b3a
+		Ran through here 06/27/23.
+		TODO: do from here down
+
+(7) scripts/pull_map_ratings.sh AZ Congress Baseline af634bcc-d843-4a17-a917-f36aef71b18a
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* AZ_2022_Congress_Compact_map.png
