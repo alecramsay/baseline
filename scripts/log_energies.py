@@ -63,8 +63,9 @@ def main() -> None:
     plan_type: str = "congress"
     unit: str = "vtd"
     if xx == "CA":
-        unit = "tract"
-    if xx == "OR":
+        unit = "bg"
+        # unit = "tract"
+    elif xx == "OR":
         unit = "bg"
     iterations: int = 100
 

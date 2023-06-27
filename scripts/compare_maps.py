@@ -76,8 +76,9 @@ def main() -> None:
     iterations: int = args.iterations
     unit: str = "vtd"
     if xx == "CA":
-        unit = "tract"
-    if xx == "OR":
+        unit = "bg"
+        # unit = "tract"
+    elif xx == "OR":
         unit = "bg"
 
     verbose: bool = args.verbose

@@ -66,7 +66,8 @@ class Plan:
         self._pop_by_district = defaultdict(int)
         for district, geoids in self._geoids_by_district.items():
             for geoid in geoids:
-                self._pop_by_district[district] += self._pop_by_geoid[geoid]
+                if geoid in self._pop_by_geoid:
+                    self._pop_by_district[district] += self._pop_by_geoid[geoid]
 
     @property
     def district_ids(self) -> set[int]:
@@ -84,7 +85,8 @@ class Plan:
     def population_for_split(self, geoids: set[str]) -> int:
         pop: int = 0
         for geoid in geoids:
-            pop += self._pop_by_geoid[geoid]
+            if geoid in self._pop_by_geoid:
+                pop += self._pop_by_geoid[geoid]
 
         return pop
 
