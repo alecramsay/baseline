@@ -27,16 +27,13 @@ baseline:
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/CO directory as CO20C_baseline_100.csv.
 
-		CO20C_I070K01N08 => CO20C_I044K01N08 <<< TODO
+		CO20C_I070K01N08 => CO20C_I044K01N08 <<< Updated 06/27/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh CO
-
-		Ran through here 06/24/23.
-		TODO: do from here down	
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -45,7 +42,10 @@ pg:
 		* Rename it to CO_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/CO/ folder
 
-(7) scripts/pull_map_ratings.sh CO Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/27/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh CO Congress Baseline 867ed109-5f5b-4aa7-bc21-36f5d8b122c9
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* CO_2022_Congress_Compact_map.png
