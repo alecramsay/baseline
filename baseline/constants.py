@@ -134,7 +134,7 @@ districts_by_state: dict[str, Any] = {
 
 baseline_maps: dict[str, str] = {
     "AL": "d16848f7-22a0-41a5-b19e-719923c54ee3",  # 06/27/23
-    "AR": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "AR": "c82e8e31-bd27-4f10-bf28-cf92a67a6c79",  # 06/27/23
     "AZ": "83e28203-c0c9-4034-bc99-9aa024945b3a",  # 04/24/23
     "CA": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "CO": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
