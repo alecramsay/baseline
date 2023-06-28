@@ -27,16 +27,13 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/FL directory as FL20C_baseline_100.csv.
 
-		FL20C_I065K01N28 => FL20C_I027K01N28 <<< TODO
+		FL20C_I065K01N28 => FL20C_I027K01N28 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh FL
-
-		Ran through here 06/23/23.
-		TODO: do from here down	
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -45,7 +42,10 @@ pg:
 		* Rename it to FL_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/FL/ folder
 
-(7) scripts/pull_map_ratings.sh FL Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh FL Congress Baseline 25a30adb-d32e-4f5e-a45a-42b2e08183ef
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* FL_2022_Congress_Compact_map.png
