@@ -169,7 +169,7 @@ baseline_maps: dict[str, str] = {
     "UT": "e1d41beb-0f2f-4029-b31f-ffa1593e2d9e",  # 06/28/23
     "VA": "c7cba809-9d12-428c-b013-9b4b9f9a5a91",  # 06/28/23
     "WA": "989ac5b1-debe-4960-b7ca-d29d089c858d",  # 06/28/23
-    "WI": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "WI": "4d17758d-3a3b-4b62-87a9-bac8da1fd645",  # 06/28/23
 }
 
 ### END ###
