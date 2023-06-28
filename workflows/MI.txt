@@ -23,19 +23,18 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s MI
+
+		Ran through here 06/23/23.
 	
 (7) Copy the lowest energy baseline map to the maps/MI directory as MI20C_baseline_100.csv.
 
-		MI20C_I004K01N13 => MI20C_I000K01N13 <<< TODO
+		MI20C_I004K01N13 => MI20C_I000K01N13 <<< Updated 06/28/23
 	
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh MI
-
-		Ran through here 06/23/23.
-		TODO: do from here down
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -44,7 +43,10 @@ pg:
 		* Rename it to MI_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/MI/ folder
 
-(7) scripts/pull_map_ratings.sh MI Congress Baseline be025e39-40e6-40ce-87a1-87270b188a50
+		Ran through here 06/28/23.
+		TODO: do from here down
+
+(7) scripts/pull_map_ratings.sh MI Congress Baseline 0e074091-d3a7-4a79-bec7-a6c4641db018
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* MI_2022_Congress_Compact_map.png
