@@ -25,18 +25,17 @@ baseline:
 
 		scripts/update_energies.py -s NC
 
+		Ran through here 06/23/23.
+
 (7) Copy the lowest energy contiguous map with acceptable population deviation to the maps/NC directory as NC20C_baseline_100.csv.
 
-		NC20C_I022K01N14 => NC20C_I092K01N14
+		NC20C_I022K01N14 => NC20C_I092K01N14 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh NC
-
-		Ran through here 06/23/23.
-		TODO: re-do from here down
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -45,7 +44,10 @@ pg:
 		* Rename it to NC_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/NC/ folder
 
-(7) scripts/pull_map_ratings.sh NC Congress Baseline 3fa75c2e-3790-483a-8664-2cc5e38250dc
+		Ran through here 06/28/23.
+		TODO: re-do from here down
+
+(7) scripts/pull_map_ratings.sh NC Congress Baseline 5e651803-4c40-4b04-a5ca-0c4e267b7036
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* NC_2022_Congress_Compact_map.png
