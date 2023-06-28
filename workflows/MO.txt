@@ -28,16 +28,13 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/MO directory as MO20C_baseline_100.csv.
 
-		MO20C_I004K01N08 => MO20C_I063K01N08 <<< TODO
+		MO20C_I004K01N08 => MO20C_I063K01N08 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh MO
-
-		Ran through here 06/24/23.
-		TODO: do from here down	
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -46,7 +43,10 @@ pg:
 		* Rename it to MO_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/MO/ folder
 
-(7) scripts/pull_map_ratings.sh MO Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh MO Congress Baseline d1fdc45c-7d5e-45f5-af95-832094008465
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* MO_2022_Congress_Compact_map.png
