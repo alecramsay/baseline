@@ -24,10 +24,12 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s MA
+
+		Ran through here 06/24/23.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/MA directory as MA20C_baseline_100.csv.
 
-		MA20C_I071K01N09 => MA20C_I075K01N09 <<< TODO
+		MA20C_I071K01N09 => MA20C_I075K01N09 <<< Updated 06/28/23
 
 --------
 
@@ -35,16 +37,17 @@ pg:
 
 (5) scripts/import_base_map.sh MA
 
-		Ran through here 06/24/23.
-		TODO: do from here down	
-
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
 		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
 		* Export the block-assignment file
 		* Rename it to MA_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/MA/ folder
-(7) scripts/pull_map_ratings.sh MA Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+
+		Ran through here 06/28/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh MA Congress Baseline cfc4a446-c1d1-451e-affa-a79c52ea671e
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* MA_2022_Congress_Compact_map.png
