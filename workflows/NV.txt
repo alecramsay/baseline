@@ -23,19 +23,18 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s NV
+
+		Ran through here 06/23/23.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NV directory as NV20C_baseline_100.csv.
 
-		NV20C_I065K01N04 => NV20C_I098K01N04 <<< TODO
+		NV20C_I065K01N04 => NV20C_I098K01N04 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh NV
-
-		Ran through here 06/23/23.
-		TODO: do from here downA.
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -44,7 +43,10 @@ pg:
 		* Rename it to NV_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/NV/ folder
 
-(7) scripts/pull_map_ratings.sh NV Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here downA.
+
+(7) scripts/pull_map_ratings.sh NV Congress Baseline b11b591a-94cf-475f-bb54-8f186e2cf12a
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* NV_2022_Congress_Compact_map.png
