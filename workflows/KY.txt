@@ -24,19 +24,18 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s KY
+
+		Ran through here 06/24/23.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/KY directory as KY20C_baseline_100.csv.
 
-		KY20C_I017K01N06 => KY20C_I015K01N06 <<< TODO
+		KY20C_I017K01N06 => KY20C_I015K01N06 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh KY
-
-		Ran through here 06/24/23.
-		TODO: do from here down	
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -45,7 +44,10 @@ pg:
 		* Rename it to KY_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/KY/ folder
 
-(7) scripts/pull_map_ratings.sh KY Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh KY Congress Baseline a3a061bc-3178-4ae6-bdf0-a525ad6639b2
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* KY_2022_Congress_Compact_map.png
