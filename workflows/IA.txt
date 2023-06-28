@@ -24,19 +24,18 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s IA
+
+		Ran through here 06/24/23.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/IA directory as IA20C_baseline_100.csv.
 
-		IA20C_I035K01N04 => IA20C_I011K01N04 <<< TODO
+		IA20C_I035K01N04 => IA20C_I011K01N04 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh IA
-
-		Ran through here 06/24/23.
-		TODO: do from here down	
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -45,7 +44,10 @@ pg:
 		* Rename it to IA_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/IA/ folder
 
-(7) scripts/pull_map_ratings.sh IA Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh IA Congress Baseline 7292b0dc-4911-4878-9960-68ae3a6abc10
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* IA_2022_Congress_Compact_map.png
