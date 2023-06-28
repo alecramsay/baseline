@@ -25,18 +25,17 @@ baseline:
 
 		scripts/update_energies.py -s IL
 
+		Ran through here 06/23/23.
+
 (7) Copy the lowest energy baseline map to the maps/IL directory as IL20C_baseline_100.csv.
 
-		IL20C_I050K01N17 => IL20C_I079K01N17 <<< TODO
+		IL20C_I050K01N17 => IL20C_I079K01N17 <<< Updated 06/28/23
 	
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh IL
-
-		Ran through here 06/23/23.
-		TODO: do from here down	
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -45,7 +44,10 @@ pg:
 		* Rename it to IL_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/IL/ folder
 
-(7) scripts/pull_map_ratings.sh IL Congress Baseline ed830071-22bf-4a30-92ce-a4d2f9a7dd8a
+		Ran through here 06/28/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh IL Congress Baseline 4dd9fe52-b38b-4f63-a041-36e3cd7afde0
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* IL_2022_Congress_Compact_map.png
