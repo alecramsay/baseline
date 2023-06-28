@@ -24,19 +24,18 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s NM
+
+		Ran through here 06/24/23.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NM directory as NM20C_baseline_100.csv.
 
-		NM20C_I055K01N03 => NM20C_I056K01N03 <<< TODO
+		NM20C_I055K01N03 => NM20C_I056K01N03 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh NM
-
-		Ran through here 06/24/23.
-		TODO: do from here down	
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -45,7 +44,10 @@ pg:
 		* Rename it to NM_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/NM/ folder
 
-(7) scripts/pull_map_ratings.sh NM Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh NM Congress Baseline ce4101f0-3fed-4902-88d0-170b7d0e3ca9
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* NM_2022_Congress_Compact_map.png
