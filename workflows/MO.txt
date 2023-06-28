@@ -23,6 +23,8 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s MO
+
+		Ran through here 06/24/23.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/MO directory as MO20C_baseline_100.csv.
 
