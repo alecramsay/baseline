@@ -23,19 +23,18 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s KS
+
+		Ran through here 06/23/23.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/KS directory as KS20C_baseline_100.csv.
 
-	KS20C_I064K01N04 => KS20C_I007K01N04 <<< TODO
+	KS20C_I064K01N04 => KS20C_I007K01N04 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh KS
-
-		Ran through here 06/23/23.
-		TODO: do from here downA.
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -44,7 +43,10 @@ pg:
 		* Rename it to KS_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/KS/ folder
 
-(7) scripts/pull_map_ratings.sh KS Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down.
+
+(7) scripts/pull_map_ratings.sh KS Congress Baseline 9901f45d-6169-4577-ba9b-43c2fe2893d8
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* KS_2022_Congress_Compact_map.png
