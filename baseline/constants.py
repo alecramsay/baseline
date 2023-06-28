@@ -160,7 +160,7 @@ baseline_maps: dict[str, str] = {
     "NV": "b11b591a-94cf-475f-bb54-8f186e2cf12a",  # 06/28/23
     "NY": "bea0efc4-52e7-4bbb-b942-67637ed4ab8a",  # 06/28/23
     "OH": "82aca24a-0bf3-4e3d-abb2-ff51d934be01",  # 06/28/23
-    "OK": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "OK": "09062ff7-ce80-42ad-bb8d-74cb9815e974",  # 06/28/23
     "OR": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "PA": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
     "SC": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
