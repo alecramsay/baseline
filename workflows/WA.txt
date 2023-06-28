@@ -23,18 +23,17 @@ baseline:
 
 		scripts/update_energies.py -s WA
 
+		Ran through here 06/23/23.
+
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/WA directory as WA20C_baseline_100.csv.
 
-		WA20C_I013K01N10 => WA20C_I054K01N10 <<< TODO
+		WA20C_I013K01N10 => WA20C_I054K01N10 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh WA
-
-		Ran through here 06/23/23.
-		TODO: do from here down	
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -43,7 +42,10 @@ pg:
 		* Rename it to WA_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/WA/ folder
 
-(7) scripts/pull_map_ratings.sh WA Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh WA Congress Baseline 989ac5b1-debe-4960-b7ca-d29d089c858d
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* WA_2022_Congress_Compact_map.png
