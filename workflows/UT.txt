@@ -32,19 +32,18 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s UT
+
+		Ran through here 06/23/23.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/UT directory as UT20C_baseline_100.csv.
 
-		UT20C_I081K01N04 => UT20C_I002K01N04 <<< TODO
+		UT20C_I081K01N04 => UT20C_I002K01N04 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh UT
-
-		Ran through here 06/23/23.
-		TODO: do from here downA.
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -53,7 +52,10 @@ pg:
 		* Rename it to UT_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/UT/ folder
 
-(7) scripts/pull_map_ratings.sh UT Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down.
+
+(7) scripts/pull_map_ratings.sh UT Congress Baseline e1d41beb-0f2f-4029-b31f-ffa1593e2d9e
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* UT_2022_Congress_Compact_map.png
