@@ -24,19 +24,18 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s OH
+
+		Ran through here 06/24/23.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/OH directory as OH20C_baseline_100.csv.
 
-		OH20C_I042K01N15 => OH20C_I078K01N15 <<< TODO
+		OH20C_I042K01N15 => OH20C_I078K01N15 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh OH
-
-		Ran through here 06/24/23.
-		TODO: do from here down	
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -45,7 +44,10 @@ pg:
 		* Rename it to OH_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/OH/ folder
 
-(7) scripts/pull_map_ratings.sh OH Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh OH Congress Baseline 82aca24a-0bf3-4e3d-abb2-ff51d934be01
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* OH_2022_Congress_Compact_map.png
