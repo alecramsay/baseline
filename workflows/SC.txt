@@ -24,19 +24,18 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s SC
+
+		Ran through here 06/24/23.
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/SC directory as SC20C_baseline_100.csv.
 
-		SC20C_I076K01N07 => SC20C_I080K01N07 <<< TODO
+		SC20C_I076K01N07 => SC20C_I080K01N07 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh SC
-
-		Ran through here 06/24/23.
-		TODO: do from here down	
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -45,7 +44,10 @@ pg:
 		* Rename it to SC_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/SC/ folder
 
-(7) scripts/pull_map_ratings.sh SC Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down	
+
+(7) scripts/pull_map_ratings.sh SC Congress Baseline adb40672-45a8-43ba-bf72-a73bef7c98ab
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* SC_2022_Congress_Compact_map.png
