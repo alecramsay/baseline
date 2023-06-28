@@ -27,16 +27,13 @@ baseline:
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NY directory as NY20C_baseline_100.csv.
 
-		NY20C_I071K01N26 => NY20C_I059K01N26
+		NY20C_I071K01N26 => NY20C_I059K01N26 <<< Updated 06/27/23
 	
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh NY
-
-		Ran through here 06/27/23.
-		TODO: do from here down.
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -45,7 +42,10 @@ pg:
 		* Rename it to NY_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/NY/ folder
 
-(7) scripts/pull_map_ratings.sh NY Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down.
+
+(7) scripts/pull_map_ratings.sh NY Congress Baseline bea0efc4-52e7-4bbb-b942-67637ed4ab8a
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* NY_2022_Congress_Compact_map.png
