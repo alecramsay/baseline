@@ -24,32 +24,18 @@ baseline:
 		Update the energies:
 
 		scripts/update_energies.py -s NJ
+
+		Ran through here 06/23/23.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NJ directory as NJ20C_baseline_100.csv.
 
-		NJ20C_I067K01N12 => NJ20C_I009K01N12 <<< TODO
-
---------
-
-Assigned away from the rest of District 3, because of intervening water-only precincts:
-34029025000,Berkeley township Island Beach State Park
-34029025000,0,-74.09064102444029,39.83416263428525
-
-This precinct has no population and only causes a problem because of it's unique location.
-	1. We could just manually fix this up, i.e., just handle this has a zero population landed precinct, or
-	2. We could cull zero-population landed precincts too.
-	
-The latter would introduce a change to what Todd's code sees, so #1 seems like the way to go. It handles "normal"
-zero population landed precincts.
+		NJ20C_I067K01N12 => NJ20C_I009K01N12 <<< Updated 06/28/23
 
 --------
 
 pg:
 
 (5) scripts/import_base_map.sh NJ
-
-		Ran through here 06/23/23.
-		TODO: do from here down
 
 (6) Open the map in DRA:
 		* Set the Colors and Overlays -- 'Change Palette' to Plasma
@@ -58,7 +44,10 @@ pg:
 		* Rename it to NJ_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/NJ/ folder
 
-(7) scripts/pull_map_ratings.sh NJ Congress Baseline xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+		Ran through here 06/28/23.
+		TODO: do from here down
+
+(7) scripts/pull_map_ratings.sh NJ Congress Baseline b687ee33-5fae-43ce-b161-d49a1ddfab98
 
 (8) Tweak each duplicated Official and Notable map in DRA
 		* NJ_2022_Congress_Compact_map.png
