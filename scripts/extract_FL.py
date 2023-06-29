@@ -24,7 +24,7 @@ def main() -> None:
     adds: bool = False
     unpopulated: bool = False  # True
 
-    ### Read DRA's GeoJSON file of corrects Florida VTDs ###
+    ### Read DRA's GeoJSON file of corrected Florida VTDs ###
 
     print("Reading the GeoJSON file ...")
 
