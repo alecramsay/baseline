@@ -47,9 +47,7 @@ pg:
 		Ran through here 06/28/23.
 		TODO: re-do from here down
 
-(7) scripts/pull_map_ratings.sh NC Congress Baseline 5e651803-4c40-4b04-a5ca-0c4e267b7036
-
-(8) Tweak each duplicated Official and Notable map in DRA
+(7) Tweak each duplicated Official and Notable map in DRA
 		* NC_2022_Congress_Compact_map.png
 		* NC_2022_Congress_Competitive_map.png
 		* NC_2022_Congress_Minority_map.png
@@ -59,13 +57,13 @@ pg:
 		* Move them to the docs/assets/images/ folder
 		* Add the maps to the Group
 
-(9) scripts/analyze_state.py NC
+(8) scripts/analyze_state.py NC
 
-(10) Add population deviation & runtime to the abstract spreadsheet
+(9) Add population deviation & runtime to the abstract spreadsheet
 
 		cat intermediate/NC/NC20C_log_100.txt | awk 'END{print}'
 	
-(11) Turn the state on in the website
+(10) Turn the state on in the website
 
 		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
 		* On the state's page in docs/_pages/pages/NC.markdown, change the layout to 'state' and remove the NYI one-liner
