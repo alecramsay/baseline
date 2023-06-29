@@ -47,7 +47,6 @@ pg:
 		Reassigned the one stray (unassigned) precinct.
 
 		Ran through here 06/27/23.
-		TODO: do from here down
 
 (7) Tweak each duplicated Official and Notable map in DRA
 		* AZ_2022_Congress_Compact_map.png

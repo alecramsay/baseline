@@ -45,7 +45,6 @@ pg:
 		* Move it to the data/NC/ folder
 
 		Ran through here 06/28/23.
-		TODO: re-do from here down
 
 (7) Tweak each duplicated Official and Notable map in DRA
 		* NC_2022_Congress_Compact_map.png
