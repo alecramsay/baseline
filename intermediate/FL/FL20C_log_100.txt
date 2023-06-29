@@ -1,0 +1,1424 @@
+Fri Jun 23 13:02:28 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=336 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I000K01N28_vtd_assignments.csv --label=FL20C_I000K01N28
+Fri Jun 23 13:02:28 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I000K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=336 --N=28 --prefix=FL20C
+Fri Jun 23 13:02:28 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:02:29 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:02:29 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:02:29 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:02:30 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:02:31 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:02:32 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:02:34 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I000K01N28 = Contiguous 28
+Map FL20C_I000K01N28 = 766189 to 772273, Diff = 6084, Percent = 0.791%
+Fri Jun 23 13:02:38 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:02:38 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I000K01N28 = 4520350.890218954
+Fri Jun 23 13:02:38 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:02:39 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I000K01N28_vtd_assignments.csv
+Fri Jun 23 13:02:39 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=337 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I001K01N28_vtd_assignments.csv --label=FL20C_I001K01N28
+Fri Jun 23 13:02:39 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I001K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=337 --N=28 --prefix=FL20C
+Fri Jun 23 13:02:39 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:02:39 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:02:39 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:02:40 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:02:40 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:02:42 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+Fri Jun 23 13:02:43 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:02:51 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:02:55 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:02:55 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=338 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I002K01N28_vtd_assignments.csv --label=FL20C_I002K01N28
+Fri Jun 23 13:02:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I002K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=338 --N=28 --prefix=FL20C
+Fri Jun 23 13:02:55 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:02:55 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:02:55 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:02:56 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:02:57 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:02:57 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:02:58 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:03:01 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I002K01N28 = Contiguous 28
+Map FL20C_I002K01N28 = 765848 to 772466, Diff = 6618, Percent = 0.860%
+Fri Jun 23 13:03:05 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:03:05 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I002K01N28 = 4444266.382555348
+Fri Jun 23 13:03:05 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:03:06 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I002K01N28_vtd_assignments.csv
+Fri Jun 23 13:03:06 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=339 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I003K01N28_vtd_assignments.csv --label=FL20C_I003K01N28
+Fri Jun 23 13:03:06 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I003K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=339 --N=28 --prefix=FL20C
+Fri Jun 23 13:03:06 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:03:06 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:03:06 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:03:07 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:03:07 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:03:08 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:03:09 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:03:13 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I003K01N28 = Contiguous 28
+Map FL20C_I003K01N28 = 754626 to 786419, Diff = 31793, Percent = 4.133%
+Fri Jun 23 13:03:17 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:03:17 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I003K01N28 = 4181566.0720475605
+Fri Jun 23 13:03:17 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:03:18 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I003K01N28_vtd_assignments.csv
+Fri Jun 23 13:03:18 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=340 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I004K01N28_vtd_assignments.csv --label=FL20C_I004K01N28
+Fri Jun 23 13:03:18 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I004K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=340 --N=28 --prefix=FL20C
+Fri Jun 23 13:03:18 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:03:18 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:03:18 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:03:19 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:03:19 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:03:35 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:03:35 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=341 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I005K01N28_vtd_assignments.csv --label=FL20C_I005K01N28
+Fri Jun 23 13:03:35 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I005K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=341 --N=28 --prefix=FL20C
+Fri Jun 23 13:03:35 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:03:35 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:03:35 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:03:36 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:03:36 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:03:51 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:03:51 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=342 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I006K01N28_vtd_assignments.csv --label=FL20C_I006K01N28
+Fri Jun 23 13:03:51 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I006K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=342 --N=28 --prefix=FL20C
+Fri Jun 23 13:03:51 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:03:51 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:03:52 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:03:52 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:03:53 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:03:54 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:03:55 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:03:58 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:04:01 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:04:01 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=343 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I007K01N28_vtd_assignments.csv --label=FL20C_I007K01N28
+Fri Jun 23 13:04:01 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I007K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=343 --N=28 --prefix=FL20C
+Fri Jun 23 13:04:01 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:04:01 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:04:01 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:04:02 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:04:02 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:04:17 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:04:17 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=344 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I008K01N28_vtd_assignments.csv --label=FL20C_I008K01N28
+Fri Jun 23 13:04:17 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I008K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=344 --N=28 --prefix=FL20C
+Fri Jun 23 13:04:17 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:04:17 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:04:18 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:04:18 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:04:19 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:04:19 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:04:20 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:04:22 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I008K01N28 = Contiguous 28
+Map FL20C_I008K01N28 = 766441 to 773613, Diff = 7172, Percent = 0.932%
+Fri Jun 23 13:04:27 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:04:27 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I008K01N28 = 4337187.095244981
+Fri Jun 23 13:04:27 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:04:27 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I008K01N28_vtd_assignments.csv
+Fri Jun 23 13:04:27 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=345 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I009K01N28_vtd_assignments.csv --label=FL20C_I009K01N28
+Fri Jun 23 13:04:27 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I009K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=345 --N=28 --prefix=FL20C
+Fri Jun 23 13:04:27 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:04:28 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:04:28 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:04:28 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:04:29 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:04:30 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+Fri Jun 23 13:04:31 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:04:34 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I009K01N28 = Contiguous 28
+Map FL20C_I009K01N28 = 766113 to 773605, Diff = 7492, Percent = 0.974%
+Fri Jun 23 13:04:37 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:04:38 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I009K01N28 = 4666685.97884104
+Fri Jun 23 13:04:38 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:04:38 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I009K01N28_vtd_assignments.csv
+Fri Jun 23 13:04:38 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=346 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I010K01N28_vtd_assignments.csv --label=FL20C_I010K01N28
+Fri Jun 23 13:04:38 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I010K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=346 --N=28 --prefix=FL20C
+Fri Jun 23 13:04:38 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:04:39 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:04:39 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:04:39 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:04:40 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:04:55 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:04:55 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=347 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I011K01N28_vtd_assignments.csv --label=FL20C_I011K01N28
+Fri Jun 23 13:04:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I011K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=347 --N=28 --prefix=FL20C
+Fri Jun 23 13:04:55 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:04:55 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:04:55 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:04:56 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:04:56 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:05:11 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:05:11 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=348 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I012K01N28_vtd_assignments.csv --label=FL20C_I012K01N28
+Fri Jun 23 13:05:11 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I012K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=348 --N=28 --prefix=FL20C
+Fri Jun 23 13:05:11 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:05:11 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:05:12 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:05:12 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:05:13 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:05:13 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:05:15 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:05:44 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:05:44 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=349 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I013K01N28_vtd_assignments.csv --label=FL20C_I013K01N28
+Fri Jun 23 13:05:44 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I013K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=349 --N=28 --prefix=FL20C
+Fri Jun 23 13:05:44 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:05:45 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:05:45 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:05:45 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:05:46 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:05:47 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+Fri Jun 23 13:05:48 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:06:09 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:06:11 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:06:11 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=350 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I014K01N28_vtd_assignments.csv --label=FL20C_I014K01N28
+Fri Jun 23 13:06:11 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I014K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=350 --N=28 --prefix=FL20C
+Fri Jun 23 13:06:11 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:06:11 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:06:11 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:06:11 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:06:12 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:06:27 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:06:27 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=351 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I015K01N28_vtd_assignments.csv --label=FL20C_I015K01N28
+Fri Jun 23 13:06:27 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I015K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=351 --N=28 --prefix=FL20C
+Fri Jun 23 13:06:27 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:06:27 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:06:28 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:06:28 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:06:29 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:06:29 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:06:30 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:06:32 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I015K01N28 = Contiguous 28
+Map FL20C_I015K01N28 = 764552 to 773142, Diff = 8590, Percent = 1.117%
+Fri Jun 23 13:06:37 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:06:37 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I015K01N28 = 4908469.62239591
+Fri Jun 23 13:06:37 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:06:38 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I015K01N28_vtd_assignments.csv
+Fri Jun 23 13:06:38 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=352 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I016K01N28_vtd_assignments.csv --label=FL20C_I016K01N28
+Fri Jun 23 13:06:38 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I016K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=352 --N=28 --prefix=FL20C
+Fri Jun 23 13:06:38 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:06:38 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:06:38 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:06:39 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:06:39 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:06:40 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:06:42 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:06:44 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:06:46 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:06:46 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=353 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I017K01N28_vtd_assignments.csv --label=FL20C_I017K01N28
+Fri Jun 23 13:06:46 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I017K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=353 --N=28 --prefix=FL20C
+Fri Jun 23 13:06:46 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:06:46 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:06:47 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:06:47 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:06:48 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:06:48 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:06:49 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:07:31 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:07:31 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=354 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I018K01N28_vtd_assignments.csv --label=FL20C_I018K01N28
+Fri Jun 23 13:07:31 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I018K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=354 --N=28 --prefix=FL20C
+Fri Jun 23 13:07:31 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:07:31 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:07:31 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:07:31 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:07:32 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:07:36 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+Fri Jun 23 13:07:37 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:07:50 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I018K01N28 = Contiguous 28
+Map FL20C_I018K01N28 = 764620 to 775119, Diff = 10499, Percent = 1.365%
+Fri Jun 23 13:07:54 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:07:54 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I018K01N28 = 4717577.44852406
+Fri Jun 23 13:07:54 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:07:55 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I018K01N28_vtd_assignments.csv
+Fri Jun 23 13:07:55 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=355 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I019K01N28_vtd_assignments.csv --label=FL20C_I019K01N28
+Fri Jun 23 13:07:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I019K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=355 --N=28 --prefix=FL20C
+Fri Jun 23 13:07:55 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:07:55 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:07:56 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:07:56 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:07:57 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:08:11 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:08:11 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=356 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I020K01N28_vtd_assignments.csv --label=FL20C_I020K01N28
+Fri Jun 23 13:08:11 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I020K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=356 --N=28 --prefix=FL20C
+Fri Jun 23 13:08:12 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:08:12 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:08:12 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:08:12 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:08:13 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:08:28 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:08:28 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=357 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I021K01N28_vtd_assignments.csv --label=FL20C_I021K01N28
+Fri Jun 23 13:08:28 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I021K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=357 --N=28 --prefix=FL20C
+Fri Jun 23 13:08:28 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:08:28 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:08:29 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:08:29 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:08:30 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:08:31 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:08:32 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:08:36 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I021K01N28 = Contiguous 28
+Map FL20C_I021K01N28 = 765750 to 773394, Diff = 7644, Percent = 0.994%
+Fri Jun 23 13:08:40 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:08:40 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I021K01N28 = 4533843.393188982
+Fri Jun 23 13:08:40 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:08:41 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I021K01N28_vtd_assignments.csv
+Fri Jun 23 13:08:41 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=358 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I022K01N28_vtd_assignments.csv --label=FL20C_I022K01N28
+Fri Jun 23 13:08:41 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I022K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=358 --N=28 --prefix=FL20C
+Fri Jun 23 13:08:41 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:08:41 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:08:41 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:08:42 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:08:42 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:08:44 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:08:45 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:08:49 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I022K01N28 = Contiguous 28
+Map FL20C_I022K01N28 = 767357 to 772509, Diff = 5152, Percent = 0.670%
+Fri Jun 23 13:08:53 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:08:54 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I022K01N28 = 4416943.126686769
+Fri Jun 23 13:08:54 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:08:54 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I022K01N28_vtd_assignments.csv
+Fri Jun 23 13:08:54 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=359 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I023K01N28_vtd_assignments.csv --label=FL20C_I023K01N28
+Fri Jun 23 13:08:54 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I023K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=359 --N=28 --prefix=FL20C
+Fri Jun 23 13:08:54 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:08:55 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:08:55 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:08:55 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:08:56 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:08:57 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:08:58 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:09:02 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:09:04 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:09:04 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=360 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I024K01N28_vtd_assignments.csv --label=FL20C_I024K01N28
+Fri Jun 23 13:09:04 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I024K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=360 --N=28 --prefix=FL20C
+Fri Jun 23 13:09:04 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:09:04 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:09:05 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:09:05 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:09:06 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:09:07 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:09:08 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:09:13 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:09:14 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:09:14 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=361 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I025K01N28_vtd_assignments.csv --label=FL20C_I025K01N28
+Fri Jun 23 13:09:14 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I025K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=361 --N=28 --prefix=FL20C
+Fri Jun 23 13:09:14 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:09:14 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:09:15 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:09:15 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:09:16 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:09:17 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:09:18 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:09:23 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I025K01N28 = Contiguous 28
+Map FL20C_I025K01N28 = 766091 to 773926, Diff = 7835, Percent = 1.019%
+Fri Jun 23 13:09:27 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:09:27 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I025K01N28 = 4615750.61151205
+Fri Jun 23 13:09:27 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:09:27 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I025K01N28_vtd_assignments.csv
+Fri Jun 23 13:09:27 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=362 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I026K01N28_vtd_assignments.csv --label=FL20C_I026K01N28
+Fri Jun 23 13:09:27 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I026K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=362 --N=28 --prefix=FL20C
+Fri Jun 23 13:09:27 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:09:28 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:09:28 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:09:28 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:09:29 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:09:30 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:09:31 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:09:33 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I026K01N28 = Contiguous 28
+Map FL20C_I026K01N28 = 749928 to 774829, Diff = 24901, Percent = 3.237%
+Fri Jun 23 13:09:38 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:09:38 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I026K01N28 = 4817479.037033722
+Fri Jun 23 13:09:38 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:09:38 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I026K01N28_vtd_assignments.csv
+Fri Jun 23 13:09:38 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=363 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I027K01N28_vtd_assignments.csv --label=FL20C_I027K01N28
+Fri Jun 23 13:09:38 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I027K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=363 --N=28 --prefix=FL20C
+Fri Jun 23 13:09:38 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:09:39 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:09:39 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:09:40 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:09:40 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:09:43 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:09:44 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:09:45 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I027K01N28 = Contiguous 28
+Map FL20C_I027K01N28 = 765347 to 772661, Diff = 7314, Percent = 0.951%
+Fri Jun 23 13:09:49 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:09:50 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I027K01N28 = 4152318.559606776
+Fri Jun 23 13:09:50 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:09:50 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I027K01N28_vtd_assignments.csv
+Fri Jun 23 13:09:50 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=364 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I028K01N28_vtd_assignments.csv --label=FL20C_I028K01N28
+Fri Jun 23 13:09:50 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I028K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=364 --N=28 --prefix=FL20C
+Fri Jun 23 13:09:50 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:09:51 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:09:51 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:09:51 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:09:52 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:09:55 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:09:56 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:10:07 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:10:12 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:10:12 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=365 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I029K01N28_vtd_assignments.csv --label=FL20C_I029K01N28
+Fri Jun 23 13:10:12 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I029K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=365 --N=28 --prefix=FL20C
+Fri Jun 23 13:10:12 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:10:12 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:10:13 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:10:13 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:10:14 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:10:29 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:10:29 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=366 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I030K01N28_vtd_assignments.csv --label=FL20C_I030K01N28
+Fri Jun 23 13:10:29 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I030K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=366 --N=28 --prefix=FL20C
+Fri Jun 23 13:10:29 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:10:29 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:10:29 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:10:30 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:10:30 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:10:45 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:10:45 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=367 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I031K01N28_vtd_assignments.csv --label=FL20C_I031K01N28
+Fri Jun 23 13:10:45 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I031K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=367 --N=28 --prefix=FL20C
+Fri Jun 23 13:10:45 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:10:45 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:10:46 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:10:46 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:10:47 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:10:51 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:10:52 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:10:54 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I031K01N28 = Contiguous 28
+Map FL20C_I031K01N28 = 764815 to 772232, Diff = 7417, Percent = 0.964%
+Fri Jun 23 13:10:59 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:10:59 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I031K01N28 = 4628479.447812659
+Fri Jun 23 13:10:59 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:11:00 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I031K01N28_vtd_assignments.csv
+Fri Jun 23 13:11:00 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=368 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I032K01N28_vtd_assignments.csv --label=FL20C_I032K01N28
+Fri Jun 23 13:11:00 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I032K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=368 --N=28 --prefix=FL20C
+Fri Jun 23 13:11:00 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:11:00 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:11:00 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:11:01 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:11:01 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:11:16 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:11:16 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=369 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I033K01N28_vtd_assignments.csv --label=FL20C_I033K01N28
+Fri Jun 23 13:11:16 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I033K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=369 --N=28 --prefix=FL20C
+Fri Jun 23 13:11:16 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:11:16 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:11:17 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:11:17 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:11:18 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:11:18 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:11:20 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:11:22 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I033K01N28 = Contiguous 28
+Map FL20C_I033K01N28 = 764164 to 772461, Diff = 8297, Percent = 1.079%
+Fri Jun 23 13:11:26 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:11:26 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I033K01N28 = 4230554.764733196
+Fri Jun 23 13:11:26 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:11:27 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I033K01N28_vtd_assignments.csv
+Fri Jun 23 13:11:27 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=370 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I034K01N28_vtd_assignments.csv --label=FL20C_I034K01N28
+Fri Jun 23 13:11:27 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I034K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=370 --N=28 --prefix=FL20C
+Fri Jun 23 13:11:27 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:11:27 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:11:27 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:11:28 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:11:28 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:11:43 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:11:43 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=371 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I035K01N28_vtd_assignments.csv --label=FL20C_I035K01N28
+Fri Jun 23 13:11:43 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I035K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=371 --N=28 --prefix=FL20C
+Fri Jun 23 13:11:43 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:11:43 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:11:44 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:11:44 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:11:45 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:11:46 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:11:47 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:11:55 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I035K01N28 = Contiguous 28
+Map FL20C_I035K01N28 = 766966 to 773529, Diff = 6563, Percent = 0.853%
+Fri Jun 23 13:11:59 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:12:00 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I035K01N28 = 4460049.068447609
+Fri Jun 23 13:12:00 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:12:00 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I035K01N28_vtd_assignments.csv
+Fri Jun 23 13:12:00 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=372 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I036K01N28_vtd_assignments.csv --label=FL20C_I036K01N28
+Fri Jun 23 13:12:00 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I036K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=372 --N=28 --prefix=FL20C
+Fri Jun 23 13:12:00 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:12:01 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:12:01 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:12:01 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:12:02 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:12:02 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:12:04 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:12:06 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:12:10 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:12:10 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=373 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I037K01N28_vtd_assignments.csv --label=FL20C_I037K01N28
+Fri Jun 23 13:12:10 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I037K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=373 --N=28 --prefix=FL20C
+Fri Jun 23 13:12:10 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:12:10 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:12:11 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:12:11 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:12:12 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:12:27 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:12:27 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=374 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I038K01N28_vtd_assignments.csv --label=FL20C_I038K01N28
+Fri Jun 23 13:12:27 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I038K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=374 --N=28 --prefix=FL20C
+Fri Jun 23 13:12:27 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:12:27 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:12:27 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:12:28 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:12:28 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:12:30 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:12:32 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:12:37 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I038K01N28 = Contiguous 28
+Map FL20C_I038K01N28 = 762154 to 779054, Diff = 16900, Percent = 2.197%
+Fri Jun 23 13:12:41 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:12:41 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I038K01N28 = 4315202.753341234
+Fri Jun 23 13:12:42 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:12:42 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I038K01N28_vtd_assignments.csv
+Fri Jun 23 13:12:42 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=375 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I039K01N28_vtd_assignments.csv --label=FL20C_I039K01N28
+Fri Jun 23 13:12:42 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I039K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=375 --N=28 --prefix=FL20C
+Fri Jun 23 13:12:42 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:12:42 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:12:43 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:12:43 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:12:44 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:12:48 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:12:50 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:12:53 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:12:57 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:12:57 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=376 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I040K01N28_vtd_assignments.csv --label=FL20C_I040K01N28
+Fri Jun 23 13:12:57 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I040K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=376 --N=28 --prefix=FL20C
+Fri Jun 23 13:12:57 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:12:57 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:12:57 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:12:58 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:12:58 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:13:13 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:13:13 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=377 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I041K01N28_vtd_assignments.csv --label=FL20C_I041K01N28
+Fri Jun 23 13:13:13 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I041K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=377 --N=28 --prefix=FL20C
+Fri Jun 23 13:13:13 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:13:13 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:13:14 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:13:14 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:13:15 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:13:15 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+Fri Jun 23 13:13:16 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:13:29 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I041K01N28 = Contiguous 28
+Map FL20C_I041K01N28 = 765042 to 773627, Diff = 8585, Percent = 1.116%
+Fri Jun 23 13:13:33 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:13:33 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I041K01N28 = 4703230.524522498
+Fri Jun 23 13:13:33 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:13:33 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I041K01N28_vtd_assignments.csv
+Fri Jun 23 13:13:33 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=378 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I042K01N28_vtd_assignments.csv --label=FL20C_I042K01N28
+Fri Jun 23 13:13:33 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I042K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=378 --N=28 --prefix=FL20C
+Fri Jun 23 13:13:33 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:13:34 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:13:34 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:13:34 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:13:35 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:13:50 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:13:50 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=379 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I043K01N28_vtd_assignments.csv --label=FL20C_I043K01N28
+Fri Jun 23 13:13:50 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I043K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=379 --N=28 --prefix=FL20C
+Fri Jun 23 13:13:50 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:13:50 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:13:51 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:13:51 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:13:52 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:13:55 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:13:56 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:13:58 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I043K01N28 = Contiguous 28
+Map FL20C_I043K01N28 = 765882 to 771740, Diff = 5858, Percent = 0.762%
+Fri Jun 23 13:14:02 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:14:02 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I043K01N28 = 4277757.8378640395
+Fri Jun 23 13:14:03 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:14:03 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I043K01N28_vtd_assignments.csv
+Fri Jun 23 13:14:03 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=380 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I044K01N28_vtd_assignments.csv --label=FL20C_I044K01N28
+Fri Jun 23 13:14:03 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I044K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=380 --N=28 --prefix=FL20C
+Fri Jun 23 13:14:03 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:14:03 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:14:04 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:14:04 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:14:05 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:14:20 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:14:20 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=381 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I045K01N28_vtd_assignments.csv --label=FL20C_I045K01N28
+Fri Jun 23 13:14:20 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I045K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=381 --N=28 --prefix=FL20C
+Fri Jun 23 13:14:20 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:14:20 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:14:20 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:14:21 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:14:21 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:14:36 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:14:36 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=382 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I046K01N28_vtd_assignments.csv --label=FL20C_I046K01N28
+Fri Jun 23 13:14:36 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I046K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=382 --N=28 --prefix=FL20C
+Fri Jun 23 13:14:36 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:14:37 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:14:37 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:14:37 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:14:38 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:14:50 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:14:51 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:14:54 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:14:59 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:14:59 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=383 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I047K01N28_vtd_assignments.csv --label=FL20C_I047K01N28
+Fri Jun 23 13:14:59 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I047K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=383 --N=28 --prefix=FL20C
+Fri Jun 23 13:14:59 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:14:59 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:15:00 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:15:00 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:15:01 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:15:16 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:15:16 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=384 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I048K01N28_vtd_assignments.csv --label=FL20C_I048K01N28
+Fri Jun 23 13:15:16 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I048K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=384 --N=28 --prefix=FL20C
+Fri Jun 23 13:15:16 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:15:16 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:15:16 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:15:17 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:15:17 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:15:18 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:15:19 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:15:27 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I048K01N28 = Contiguous 28
+Map FL20C_I048K01N28 = 766023 to 773511, Diff = 7488, Percent = 0.973%
+Fri Jun 23 13:15:33 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:15:33 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I048K01N28 = 4748163.764366338
+Fri Jun 23 13:15:33 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:15:34 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I048K01N28_vtd_assignments.csv
+Fri Jun 23 13:15:34 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=385 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I049K01N28_vtd_assignments.csv --label=FL20C_I049K01N28
+Fri Jun 23 13:15:34 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I049K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=385 --N=28 --prefix=FL20C
+Fri Jun 23 13:15:34 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:15:34 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:15:34 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:15:35 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:15:35 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:15:36 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:15:37 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:15:40 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I049K01N28 = Contiguous 28
+Map FL20C_I049K01N28 = 766152 to 773204, Diff = 7052, Percent = 0.917%
+Fri Jun 23 13:15:44 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:15:44 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I049K01N28 = 4616959.695755491
+Fri Jun 23 13:15:44 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:15:45 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I049K01N28_vtd_assignments.csv
+Fri Jun 23 13:15:45 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=386 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I050K01N28_vtd_assignments.csv --label=FL20C_I050K01N28
+Fri Jun 23 13:15:45 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I050K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=386 --N=28 --prefix=FL20C
+Fri Jun 23 13:15:45 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:15:45 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:15:45 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:15:45 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:15:46 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:15:48 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:15:49 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:15:52 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I050K01N28 = Contiguous 28
+Map FL20C_I050K01N28 = 764434 to 774805, Diff = 10371, Percent = 1.348%
+Fri Jun 23 13:15:56 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:15:56 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I050K01N28 = 4248375.220091003
+Fri Jun 23 13:15:57 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:15:57 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I050K01N28_vtd_assignments.csv
+Fri Jun 23 13:15:57 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=387 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I051K01N28_vtd_assignments.csv --label=FL20C_I051K01N28
+Fri Jun 23 13:15:57 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I051K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=387 --N=28 --prefix=FL20C
+Fri Jun 23 13:15:57 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:15:57 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:15:58 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:15:58 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:15:59 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:15:59 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:16:00 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:16:03 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:16:05 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:16:05 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=388 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I052K01N28_vtd_assignments.csv --label=FL20C_I052K01N28
+Fri Jun 23 13:16:05 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I052K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=388 --N=28 --prefix=FL20C
+Fri Jun 23 13:16:05 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:16:05 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:16:06 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:16:06 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:16:07 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:16:22 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:16:22 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=389 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I053K01N28_vtd_assignments.csv --label=FL20C_I053K01N28
+Fri Jun 23 13:16:22 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I053K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=389 --N=28 --prefix=FL20C
+Fri Jun 23 13:16:22 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:16:22 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:16:22 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:16:23 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:16:23 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:16:30 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:16:32 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:16:36 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:16:37 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:16:37 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=390 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I054K01N28_vtd_assignments.csv --label=FL20C_I054K01N28
+Fri Jun 23 13:16:37 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I054K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=390 --N=28 --prefix=FL20C
+Fri Jun 23 13:16:37 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:16:38 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:16:38 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:16:38 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:16:39 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:16:40 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:16:41 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:16:43 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I054K01N28 = Contiguous 28
+Map FL20C_I054K01N28 = 766442 to 774346, Diff = 7904, Percent = 1.028%
+Fri Jun 23 13:16:47 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:16:48 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I054K01N28 = 4264429.531161603
+Fri Jun 23 13:16:48 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:16:49 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I054K01N28_vtd_assignments.csv
+Fri Jun 23 13:16:49 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=391 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I055K01N28_vtd_assignments.csv --label=FL20C_I055K01N28
+Fri Jun 23 13:16:49 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I055K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=391 --N=28 --prefix=FL20C
+Fri Jun 23 13:16:49 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:16:49 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:16:49 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:16:49 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:16:50 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:16:51 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+Fri Jun 23 13:16:52 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:16:56 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I055K01N28 = Contiguous 28
+Map FL20C_I055K01N28 = 766170 to 774298, Diff = 8128, Percent = 1.057%
+Fri Jun 23 13:17:00 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:17:01 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I055K01N28 = 4261782.2628292795
+Fri Jun 23 13:17:01 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:17:01 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I055K01N28_vtd_assignments.csv
+Fri Jun 23 13:17:01 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=392 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I056K01N28_vtd_assignments.csv --label=FL20C_I056K01N28
+Fri Jun 23 13:17:01 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I056K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=392 --N=28 --prefix=FL20C
+Fri Jun 23 13:17:01 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:17:02 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:17:02 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:17:02 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:17:03 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:17:05 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:17:06 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:17:08 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I056K01N28 = Contiguous 28
+Map FL20C_I056K01N28 = 766036 to 771568, Diff = 5532, Percent = 0.719%
+Fri Jun 23 13:17:12 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:17:12 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I056K01N28 = 4629880.753430387
+Fri Jun 23 13:17:13 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:17:13 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I056K01N28_vtd_assignments.csv
+Fri Jun 23 13:17:13 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=393 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I057K01N28_vtd_assignments.csv --label=FL20C_I057K01N28
+Fri Jun 23 13:17:13 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I057K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=393 --N=28 --prefix=FL20C
+Fri Jun 23 13:17:13 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:17:13 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:17:14 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:17:14 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:17:15 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:17:30 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:17:30 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=394 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I058K01N28_vtd_assignments.csv --label=FL20C_I058K01N28
+Fri Jun 23 13:17:30 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I058K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=394 --N=28 --prefix=FL20C
+Fri Jun 23 13:17:30 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:17:30 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:17:30 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:17:31 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:17:31 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:17:46 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:17:46 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=395 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I059K01N28_vtd_assignments.csv --label=FL20C_I059K01N28
+Fri Jun 23 13:17:46 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I059K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=395 --N=28 --prefix=FL20C
+Fri Jun 23 13:17:46 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:17:46 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:17:47 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:17:47 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:17:48 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:17:49 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:17:50 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:17:54 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I059K01N28 = Contiguous 28
+Map FL20C_I059K01N28 = 762469 to 781167, Diff = 18698, Percent = 2.431%
+Fri Jun 23 13:17:58 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:17:59 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I059K01N28 = 4272643.291401218
+Fri Jun 23 13:17:59 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:17:59 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I059K01N28_vtd_assignments.csv
+Fri Jun 23 13:17:59 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=396 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I060K01N28_vtd_assignments.csv --label=FL20C_I060K01N28
+Fri Jun 23 13:17:59 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I060K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=396 --N=28 --prefix=FL20C
+Fri Jun 23 13:17:59 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:17:59 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:18:00 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:18:00 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:18:01 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:18:02 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:18:03 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:18:11 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I060K01N28 = Contiguous 28
+Map FL20C_I060K01N28 = 765196 to 772686, Diff = 7490, Percent = 0.974%
+Fri Jun 23 13:18:16 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:18:16 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I060K01N28 = 4239290.156405102
+Fri Jun 23 13:18:16 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:18:17 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I060K01N28_vtd_assignments.csv
+Fri Jun 23 13:18:17 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=397 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I061K01N28_vtd_assignments.csv --label=FL20C_I061K01N28
+Fri Jun 23 13:18:17 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I061K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=397 --N=28 --prefix=FL20C
+Fri Jun 23 13:18:17 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:18:17 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:18:17 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:18:17 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:18:18 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:18:19 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:18:20 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:18:22 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I061K01N28 = Contiguous 28
+Map FL20C_I061K01N28 = 766429 to 773312, Diff = 6883, Percent = 0.895%
+Fri Jun 23 13:18:26 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:18:26 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I061K01N28 = 4946710.918448994
+Fri Jun 23 13:18:26 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:18:27 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I061K01N28_vtd_assignments.csv
+Fri Jun 23 13:18:27 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=398 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I062K01N28_vtd_assignments.csv --label=FL20C_I062K01N28
+Fri Jun 23 13:18:27 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I062K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=398 --N=28 --prefix=FL20C
+Fri Jun 23 13:18:27 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:18:27 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:18:27 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:18:28 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:18:28 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:18:29 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:18:30 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:18:33 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I062K01N28 = Contiguous 28
+Map FL20C_I062K01N28 = 767327 to 772823, Diff = 5496, Percent = 0.714%
+Fri Jun 23 13:18:37 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:18:37 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I062K01N28 = 4302458.770688741
+Fri Jun 23 13:18:38 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:18:38 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I062K01N28_vtd_assignments.csv
+Fri Jun 23 13:18:38 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=399 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I063K01N28_vtd_assignments.csv --label=FL20C_I063K01N28
+Fri Jun 23 13:18:38 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I063K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=399 --N=28 --prefix=FL20C
+Fri Jun 23 13:18:38 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:18:38 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:18:39 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:18:39 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:18:40 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:18:41 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:18:42 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:18:46 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I063K01N28 = Contiguous 28
+Map FL20C_I063K01N28 = 767174 to 772502, Diff = 5328, Percent = 0.693%
+Fri Jun 23 13:18:50 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:18:51 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I063K01N28 = 4240713.980970157
+Fri Jun 23 13:18:51 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:18:51 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I063K01N28_vtd_assignments.csv
+Fri Jun 23 13:18:51 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=400 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I064K01N28_vtd_assignments.csv --label=FL20C_I064K01N28
+Fri Jun 23 13:18:51 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I064K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=400 --N=28 --prefix=FL20C
+Fri Jun 23 13:18:51 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:18:52 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:18:52 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:18:52 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:18:53 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:18:54 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+Fri Jun 23 13:18:55 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:18:58 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I064K01N28 = Contiguous 28
+Map FL20C_I064K01N28 = 765871 to 772576, Diff = 6705, Percent = 0.872%
+Fri Jun 23 13:19:02 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:19:02 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I064K01N28 = 4560197.85643896
+Fri Jun 23 13:19:03 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:19:03 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I064K01N28_vtd_assignments.csv
+Fri Jun 23 13:19:03 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=401 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I065K01N28_vtd_assignments.csv --label=FL20C_I065K01N28
+Fri Jun 23 13:19:03 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I065K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=401 --N=28 --prefix=FL20C
+Fri Jun 23 13:19:03 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:19:03 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:19:04 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:19:04 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:19:05 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:19:15 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:19:17 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:19:19 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I065K01N28 = Contiguous 28
+Map FL20C_I065K01N28 = 765493 to 771584, Diff = 6091, Percent = 0.792%
+Fri Jun 23 13:19:24 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:19:24 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I065K01N28 = 4142753.900960001
+Fri Jun 23 13:19:24 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:19:25 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I065K01N28_vtd_assignments.csv
+Fri Jun 23 13:19:25 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=402 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I066K01N28_vtd_assignments.csv --label=FL20C_I066K01N28
+Fri Jun 23 13:19:25 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I066K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=402 --N=28 --prefix=FL20C
+Fri Jun 23 13:19:25 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:19:25 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:19:25 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:19:26 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:19:26 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:19:27 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:19:29 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:20:06 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:20:06 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=403 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I067K01N28_vtd_assignments.csv --label=FL20C_I067K01N28
+Fri Jun 23 13:20:06 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I067K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=403 --N=28 --prefix=FL20C
+Fri Jun 23 13:20:06 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:20:06 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:20:07 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:20:07 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:20:08 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:20:08 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:20:09 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:20:12 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I067K01N28 = Contiguous 28
+Map FL20C_I067K01N28 = 765482 to 772077, Diff = 6595, Percent = 0.857%
+Fri Jun 23 13:20:16 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:20:16 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I067K01N28 = 4456216.864190924
+Fri Jun 23 13:20:16 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:20:17 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I067K01N28_vtd_assignments.csv
+Fri Jun 23 13:20:17 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=404 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I068K01N28_vtd_assignments.csv --label=FL20C_I068K01N28
+Fri Jun 23 13:20:17 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I068K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=404 --N=28 --prefix=FL20C
+Fri Jun 23 13:20:17 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:20:17 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:20:17 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:20:18 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:20:18 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:20:19 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:20:21 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:20:23 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I068K01N28 = Contiguous 28
+Map FL20C_I068K01N28 = 764546 to 774313, Diff = 9767, Percent = 1.270%
+Fri Jun 23 13:20:27 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:20:27 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I068K01N28 = 4174706.716443411
+Fri Jun 23 13:20:28 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:20:28 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I068K01N28_vtd_assignments.csv
+Fri Jun 23 13:20:28 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=405 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I069K01N28_vtd_assignments.csv --label=FL20C_I069K01N28
+Fri Jun 23 13:20:28 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I069K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=405 --N=28 --prefix=FL20C
+Fri Jun 23 13:20:28 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:20:28 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:20:29 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:20:29 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:20:30 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:20:30 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:20:31 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:20:33 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I069K01N28 = Contiguous 28
+Map FL20C_I069K01N28 = 763874 to 773965, Diff = 10091, Percent = 1.312%
+Fri Jun 23 13:20:38 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:20:38 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I069K01N28 = 4322975.29425335
+Fri Jun 23 13:20:39 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:20:39 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I069K01N28_vtd_assignments.csv
+Fri Jun 23 13:20:39 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=406 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I070K01N28_vtd_assignments.csv --label=FL20C_I070K01N28
+Fri Jun 23 13:20:39 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I070K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=406 --N=28 --prefix=FL20C
+Fri Jun 23 13:20:39 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:20:39 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:20:40 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:20:40 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:20:40 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:20:55 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:20:55 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=407 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I071K01N28_vtd_assignments.csv --label=FL20C_I071K01N28
+Fri Jun 23 13:20:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I071K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=407 --N=28 --prefix=FL20C
+Fri Jun 23 13:20:55 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:20:56 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:20:56 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:20:56 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:20:57 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:20:58 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:20:59 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:21:02 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I071K01N28 = Contiguous 28
+Map FL20C_I071K01N28 = 764448 to 772494, Diff = 8046, Percent = 1.046%
+Fri Jun 23 13:21:07 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:21:07 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I071K01N28 = 4426418.066540446
+Fri Jun 23 13:21:07 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:21:08 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I071K01N28_vtd_assignments.csv
+Fri Jun 23 13:21:08 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=408 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I072K01N28_vtd_assignments.csv --label=FL20C_I072K01N28
+Fri Jun 23 13:21:08 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I072K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=408 --N=28 --prefix=FL20C
+Fri Jun 23 13:21:08 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:21:08 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:21:08 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:21:09 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:21:09 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:21:24 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:21:24 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=409 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I073K01N28_vtd_assignments.csv --label=FL20C_I073K01N28
+Fri Jun 23 13:21:24 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I073K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=409 --N=28 --prefix=FL20C
+Fri Jun 23 13:21:24 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:21:24 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:21:25 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:21:25 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:21:26 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:21:28 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+Fri Jun 23 13:21:29 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:21:32 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I073K01N28 = Contiguous 28
+Map FL20C_I073K01N28 = 764078 to 774318, Diff = 10240, Percent = 1.331%
+Fri Jun 23 13:21:36 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:21:37 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I073K01N28 = 4487947.991466146
+Fri Jun 23 13:21:37 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:21:37 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I073K01N28_vtd_assignments.csv
+Fri Jun 23 13:21:37 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=410 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I074K01N28_vtd_assignments.csv --label=FL20C_I074K01N28
+Fri Jun 23 13:21:37 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I074K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=410 --N=28 --prefix=FL20C
+Fri Jun 23 13:21:37 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:21:37 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:21:38 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:21:38 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:21:39 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:21:54 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:21:54 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=411 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I075K01N28_vtd_assignments.csv --label=FL20C_I075K01N28
+Fri Jun 23 13:21:54 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I075K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=411 --N=28 --prefix=FL20C
+Fri Jun 23 13:21:54 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:21:54 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:21:54 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:21:55 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:21:55 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:21:56 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:21:57 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:22:00 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I075K01N28 = Contiguous 28
+Map FL20C_I075K01N28 = 761039 to 773042, Diff = 12003, Percent = 1.560%
+Fri Jun 23 13:22:04 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:22:05 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I075K01N28 = 4212079.147048978
+Fri Jun 23 13:22:05 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:22:05 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I075K01N28_vtd_assignments.csv
+Fri Jun 23 13:22:05 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=412 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I076K01N28_vtd_assignments.csv --label=FL20C_I076K01N28
+Fri Jun 23 13:22:05 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I076K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=412 --N=28 --prefix=FL20C
+Fri Jun 23 13:22:05 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:22:05 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:22:06 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:22:06 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:22:07 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:22:22 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:22:22 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=413 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I077K01N28_vtd_assignments.csv --label=FL20C_I077K01N28
+Fri Jun 23 13:22:22 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I077K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=413 --N=28 --prefix=FL20C
+Fri Jun 23 13:22:22 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:22:22 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:22:22 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:22:23 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:22:23 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:22:24 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:22:25 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:22:30 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I077K01N28 = Contiguous 28
+Map FL20C_I077K01N28 = 765589 to 772408, Diff = 6819, Percent = 0.886%
+Fri Jun 23 13:22:34 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:22:34 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I077K01N28 = 4451242.527453364
+Fri Jun 23 13:22:35 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:22:35 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I077K01N28_vtd_assignments.csv
+Fri Jun 23 13:22:35 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=414 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I078K01N28_vtd_assignments.csv --label=FL20C_I078K01N28
+Fri Jun 23 13:22:35 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I078K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=414 --N=28 --prefix=FL20C
+Fri Jun 23 13:22:35 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:22:35 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:22:36 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:22:36 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:22:37 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:22:37 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:22:38 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:22:43 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:22:44 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:22:44 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=415 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I079K01N28_vtd_assignments.csv --label=FL20C_I079K01N28
+Fri Jun 23 13:22:44 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I079K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=415 --N=28 --prefix=FL20C
+Fri Jun 23 13:22:44 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:22:45 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:22:45 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:22:45 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:22:46 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:22:47 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:22:48 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:22:51 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I079K01N28 = Contiguous 28
+Map FL20C_I079K01N28 = 758637 to 773947, Diff = 15310, Percent = 1.990%
+Fri Jun 23 13:22:55 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:22:55 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I079K01N28 = 4449048.489842939
+Fri Jun 23 13:22:56 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:22:56 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I079K01N28_vtd_assignments.csv
+Fri Jun 23 13:22:56 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=416 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I080K01N28_vtd_assignments.csv --label=FL20C_I080K01N28
+Fri Jun 23 13:22:56 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I080K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=416 --N=28 --prefix=FL20C
+Fri Jun 23 13:22:56 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:22:56 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:22:57 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:22:57 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:22:58 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:22:59 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:23:00 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:23:48 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:23:49 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:23:49 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=417 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I081K01N28_vtd_assignments.csv --label=FL20C_I081K01N28
+Fri Jun 23 13:23:49 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I081K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=417 --N=28 --prefix=FL20C
+Fri Jun 23 13:23:49 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:23:49 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:23:50 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:23:50 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:23:51 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:23:51 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:23:52 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:24:21 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:24:21 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=418 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I082K01N28_vtd_assignments.csv --label=FL20C_I082K01N28
+Fri Jun 23 13:24:21 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I082K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=418 --N=28 --prefix=FL20C
+Fri Jun 23 13:24:21 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:24:22 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:24:22 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:24:22 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:24:23 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:24:33 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+Fri Jun 23 13:24:34 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:24:37 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I082K01N28 = Contiguous 28
+Map FL20C_I082K01N28 = 765929 to 772878, Diff = 6949, Percent = 0.903%
+Fri Jun 23 13:24:41 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:24:42 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I082K01N28 = 4698040.309001455
+Fri Jun 23 13:24:42 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:24:42 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I082K01N28_vtd_assignments.csv
+Fri Jun 23 13:24:42 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=419 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I083K01N28_vtd_assignments.csv --label=FL20C_I083K01N28
+Fri Jun 23 13:24:42 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I083K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=419 --N=28 --prefix=FL20C
+Fri Jun 23 13:24:42 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:24:42 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:24:43 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:24:43 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:24:44 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:24:45 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:24:46 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:25:20 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I083K01N28 = Contiguous 28
+Map FL20C_I083K01N28 = 763859 to 773405, Diff = 9546, Percent = 1.241%
+Fri Jun 23 13:25:25 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:25:25 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I083K01N28 = 4311782.071232762
+Fri Jun 23 13:25:25 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:25:25 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I083K01N28_vtd_assignments.csv
+Fri Jun 23 13:25:25 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=420 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I084K01N28_vtd_assignments.csv --label=FL20C_I084K01N28
+Fri Jun 23 13:25:25 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I084K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=420 --N=28 --prefix=FL20C
+Fri Jun 23 13:25:25 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:25:26 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:25:26 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:25:26 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:25:27 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:25:42 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:25:42 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=421 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I085K01N28_vtd_assignments.csv --label=FL20C_I085K01N28
+Fri Jun 23 13:25:42 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I085K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=421 --N=28 --prefix=FL20C
+Fri Jun 23 13:25:42 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:25:42 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:25:43 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:25:43 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:25:44 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:25:46 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:25:47 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:25:49 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I085K01N28 = Contiguous 28
+Map FL20C_I085K01N28 = 765152 to 776343, Diff = 11191, Percent = 1.455%
+Fri Jun 23 13:25:54 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:25:54 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I085K01N28 = 4691368.334120432
+Fri Jun 23 13:25:54 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:25:55 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I085K01N28_vtd_assignments.csv
+Fri Jun 23 13:25:55 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=422 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I086K01N28_vtd_assignments.csv --label=FL20C_I086K01N28
+Fri Jun 23 13:25:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I086K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=422 --N=28 --prefix=FL20C
+Fri Jun 23 13:25:55 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:25:55 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:25:56 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:25:56 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:25:57 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:25:57 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:25:59 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:26:01 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I086K01N28 = Contiguous 28
+Map FL20C_I086K01N28 = 754444 to 777045, Diff = 22601, Percent = 2.938%
+Fri Jun 23 13:26:06 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:26:06 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I086K01N28 = 4689284.579549287
+Fri Jun 23 13:26:06 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:26:07 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I086K01N28_vtd_assignments.csv
+Fri Jun 23 13:26:07 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=423 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I087K01N28_vtd_assignments.csv --label=FL20C_I087K01N28
+Fri Jun 23 13:26:07 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I087K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=423 --N=28 --prefix=FL20C
+Fri Jun 23 13:26:07 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:26:07 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:26:07 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:26:08 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:26:08 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:26:24 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:26:24 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=424 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I088K01N28_vtd_assignments.csv --label=FL20C_I088K01N28
+Fri Jun 23 13:26:24 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I088K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=424 --N=28 --prefix=FL20C
+Fri Jun 23 13:26:24 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:26:24 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:26:24 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:26:24 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:26:25 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:26:26 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:26:27 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:26:30 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I088K01N28 = Contiguous 28
+Map FL20C_I088K01N28 = 758837 to 772532, Diff = 13695, Percent = 1.780%
+Fri Jun 23 13:26:34 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:26:35 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I088K01N28 = 4202359.127963903
+Fri Jun 23 13:26:35 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:26:35 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I088K01N28_vtd_assignments.csv
+Fri Jun 23 13:26:35 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=425 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I089K01N28_vtd_assignments.csv --label=FL20C_I089K01N28
+Fri Jun 23 13:26:35 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I089K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=425 --N=28 --prefix=FL20C
+Fri Jun 23 13:26:35 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:26:36 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:26:36 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:26:36 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:26:37 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:26:39 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:26:40 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:26:57 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I089K01N28 = Contiguous 28
+Map FL20C_I089K01N28 = 767363 to 772999, Diff = 5636, Percent = 0.733%
+Fri Jun 23 13:27:01 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:27:01 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I089K01N28 = 4723631.384083412
+Fri Jun 23 13:27:01 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:27:02 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I089K01N28_vtd_assignments.csv
+Fri Jun 23 13:27:02 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=426 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I090K01N28_vtd_assignments.csv --label=FL20C_I090K01N28
+Fri Jun 23 13:27:02 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I090K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=426 --N=28 --prefix=FL20C
+Fri Jun 23 13:27:02 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:27:02 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:27:02 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:27:03 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:27:03 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:27:18 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:27:18 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=427 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I091K01N28_vtd_assignments.csv --label=FL20C_I091K01N28
+Fri Jun 23 13:27:18 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I091K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=427 --N=28 --prefix=FL20C
+Fri Jun 23 13:27:18 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:27:18 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:27:19 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:27:19 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:27:20 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:27:20 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+Fri Jun 23 13:27:21 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:27:24 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I091K01N28 = Contiguous 28
+Map FL20C_I091K01N28 = 766087 to 773212, Diff = 7125, Percent = 0.926%
+Fri Jun 23 13:27:29 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:27:29 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I091K01N28 = 4436411.8923679935
+Fri Jun 23 13:27:30 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:27:30 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I091K01N28_vtd_assignments.csv
+Fri Jun 23 13:27:30 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=428 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I092K01N28_vtd_assignments.csv --label=FL20C_I092K01N28
+Fri Jun 23 13:27:30 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I092K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=428 --N=28 --prefix=FL20C
+Fri Jun 23 13:27:30 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:27:30 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:27:31 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:27:31 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:27:32 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:27:33 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:27:34 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:27:37 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I092K01N28 = Contiguous 28
+Map FL20C_I092K01N28 = 761203 to 785029, Diff = 23826, Percent = 3.097%
+Fri Jun 23 13:27:42 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:27:42 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I092K01N28 = 4233007.500919526
+Fri Jun 23 13:27:42 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:27:42 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I092K01N28_vtd_assignments.csv
+Fri Jun 23 13:27:42 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=429 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I093K01N28_vtd_assignments.csv --label=FL20C_I093K01N28
+Fri Jun 23 13:27:42 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I093K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=429 --N=28 --prefix=FL20C
+Fri Jun 23 13:27:42 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:27:43 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:27:43 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:27:43 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:27:44 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:27:46 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:27:47 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:27:51 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:27:52 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:27:52 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=430 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I094K01N28_vtd_assignments.csv --label=FL20C_I094K01N28
+Fri Jun 23 13:27:52 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I094K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=430 --N=28 --prefix=FL20C
+Fri Jun 23 13:27:52 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:27:52 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:27:53 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:27:53 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:27:54 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:27:55 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:27:56 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:27:59 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I094K01N28 = Contiguous 28
+Map FL20C_I094K01N28 = 756561 to 778176, Diff = 21615, Percent = 2.810%
+Fri Jun 23 13:28:03 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:28:03 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I094K01N28 = 4532277.665976045
+Fri Jun 23 13:28:03 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:28:04 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I094K01N28_vtd_assignments.csv
+Fri Jun 23 13:28:04 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=431 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I095K01N28_vtd_assignments.csv --label=FL20C_I095K01N28
+Fri Jun 23 13:28:04 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I095K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=431 --N=28 --prefix=FL20C
+Fri Jun 23 13:28:04 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:28:04 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:28:04 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:28:05 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:28:05 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:28:06 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:28:07 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:28:16 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I095K01N28 = Contiguous 28
+Map FL20C_I095K01N28 = 763681 to 772480, Diff = 8799, Percent = 1.144%
+Fri Jun 23 13:28:20 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:28:20 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I095K01N28 = 4694173.624763456
+Fri Jun 23 13:28:20 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:28:21 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I095K01N28_vtd_assignments.csv
+Fri Jun 23 13:28:21 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=432 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I096K01N28_vtd_assignments.csv --label=FL20C_I096K01N28
+Fri Jun 23 13:28:21 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I096K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=432 --N=28 --prefix=FL20C
+Fri Jun 23 13:28:21 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:28:21 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:28:21 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:28:22 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:28:22 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:28:23 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:28:24 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:28:26 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+Map FL20C_I096K01N28 = Contiguous 28
+Map FL20C_I096K01N28 = 765673 to 772617, Diff = 6944, Percent = 0.903%
+Fri Jun 23 13:28:30 PDT 2023 Creating complete file: intermediate/FL/FL20C.complete.csv
+Fri Jun 23 13:28:30 PDT 2023 Computing energy of: intermediate/FL/FL20C.complete.csv
+Energy for map FL20C_I096K01N28 = 4258704.527458908
+Fri Jun 23 13:28:30 PDT 2023 Creating output file: intermediate/FL/FL20C.out.csv
+Fri Jun 23 13:28:31 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I096K01N28_vtd_assignments.csv
+Fri Jun 23 13:28:31 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=433 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I097K01N28_vtd_assignments.csv --label=FL20C_I097K01N28
+Fri Jun 23 13:28:31 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I097K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=433 --N=28 --prefix=FL20C
+Fri Jun 23 13:28:31 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:28:31 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:28:31 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:28:32 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:28:32 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 13:28:47 PDT 2023 Failed to create balzer file
+Fri Jun 23 13:28:47 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=434 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I098K01N28_vtd_assignments.csv --label=FL20C_I098K01N28
+Fri Jun 23 13:28:47 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I098K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=434 --N=28 --prefix=FL20C
+Fri Jun 23 13:28:47 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:28:47 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:28:48 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:28:48 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:28:49 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:28:50 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:28:51 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:29:00 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:29:03 PDT 2023 Failed to create consolidated file
+Fri Jun 23 13:29:03 PDT 2023 Args as invoked: --tmpdir=intermediate/FL --N=28 --seed=435 --prefix=FL20C --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I099K01N28_vtd_assignments.csv --label=FL20C_I099K01N28
+Fri Jun 23 13:29:03 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/FL/FL_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/FL/FL20C_I099K01N28_vtd_assignments.csv --tmpdir=intermediate/FL --seed=435 --N=28 --prefix=FL20C
+Fri Jun 23 13:29:03 PDT 2023 Creating points file: intermediate/FL/FL20C.points.csv
+Fri Jun 23 13:29:03 PDT 2023 Creating adjacencies file: intermediate/FL/FL20C.adjacencies.csv
+Fri Jun 23 13:29:03 PDT 2023 Creating random sites file: intermediate/FL/FL20C.randomsites.csv
+Fri Jun 23 13:29:04 PDT 2023 Creating initial assignment file intermediate/FL/FL20C.initialized.csv
+Fri Jun 23 13:29:04 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/FL/FL20C.balzer.csv
+Fri Jun 23 13:29:05 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/FL/FL20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 13:29:06 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/FL/FL20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 13:29:09 PDT 2023 Creating consolidated file: intermediate/FL/FL20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 13:29:10 PDT 2023 Failed to create consolidated file
+
+>>> GENERATING BASELINE CANDIDATES FOR FL <<<
+
+main =  1601.7 seconds

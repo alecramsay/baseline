@@ -1,0 +1,1410 @@
+Fri Jun 23 09:33:09 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=936 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I000K01N26_vtd_assignments.csv --label=NY20C_I000K01N26
+Fri Jun 23 09:33:09 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I000K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=936 --N=26 --prefix=NY20C
+Fri Jun 23 09:33:09 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:33:10 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:33:10 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:33:11 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:33:12 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:33:37 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:33:37 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=937 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I001K01N26_vtd_assignments.csv --label=NY20C_I001K01N26
+Fri Jun 23 09:33:37 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I001K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=937 --N=26 --prefix=NY20C
+Fri Jun 23 09:33:37 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:33:37 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:33:38 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:33:38 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:33:39 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:34:04 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:34:04 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=938 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I002K01N26_vtd_assignments.csv --label=NY20C_I002K01N26
+Fri Jun 23 09:34:04 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I002K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=938 --N=26 --prefix=NY20C
+Fri Jun 23 09:34:04 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:34:04 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:34:05 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:34:05 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:34:06 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:34:08 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:34:09 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:34:12 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I002K01N26 = Contiguous 26
+Map NY20C_I002K01N26 = 775326 to 778720, Diff = 3394, Percent = 0.437%
+Fri Jun 23 09:34:18 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:34:18 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I002K01N26 = 3640442.165162916
+Fri Jun 23 09:34:19 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:34:19 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I002K01N26_vtd_assignments.csv
+Fri Jun 23 09:34:19 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=939 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I003K01N26_vtd_assignments.csv --label=NY20C_I003K01N26
+Fri Jun 23 09:34:19 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I003K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=939 --N=26 --prefix=NY20C
+Fri Jun 23 09:34:19 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:34:19 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:34:20 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:34:20 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:34:21 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:34:23 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:34:24 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:34:27 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I003K01N26 = Contiguous 26
+Map NY20C_I003K01N26 = 758128 to 793459, Diff = 35331, Percent = 4.547%
+Fri Jun 23 09:34:33 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:34:34 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I003K01N26 = 3633943.643231981
+Fri Jun 23 09:34:34 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:34:34 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I003K01N26_vtd_assignments.csv
+Fri Jun 23 09:34:34 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=940 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I004K01N26_vtd_assignments.csv --label=NY20C_I004K01N26
+Fri Jun 23 09:34:34 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I004K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=940 --N=26 --prefix=NY20C
+Fri Jun 23 09:34:34 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:34:35 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:34:35 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:34:36 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:34:37 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:34:38 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:34:39 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:34:47 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I004K01N26 = Contiguous 26
+Map NY20C_I004K01N26 = 775467 to 778899, Diff = 3432, Percent = 0.442%
+Fri Jun 23 09:34:53 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:34:54 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I004K01N26 = 3855974.4968335577
+Fri Jun 23 09:34:54 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:34:55 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I004K01N26_vtd_assignments.csv
+Fri Jun 23 09:34:55 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=941 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I005K01N26_vtd_assignments.csv --label=NY20C_I005K01N26
+Fri Jun 23 09:34:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I005K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=941 --N=26 --prefix=NY20C
+Fri Jun 23 09:34:55 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:34:55 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:34:55 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:34:56 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:34:57 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:35:21 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:35:21 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=942 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I006K01N26_vtd_assignments.csv --label=NY20C_I006K01N26
+Fri Jun 23 09:35:21 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I006K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=942 --N=26 --prefix=NY20C
+Fri Jun 23 09:35:21 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:35:22 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:35:22 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:35:23 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:35:23 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:35:26 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 09:35:27 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:35:52 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I006K01N26 = Contiguous 26
+Map NY20C_I006K01N26 = 774707 to 778688, Diff = 3981, Percent = 0.512%
+Fri Jun 23 09:35:59 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:35:59 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I006K01N26 = 3643124.7231781995
+Fri Jun 23 09:35:59 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:36:00 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I006K01N26_vtd_assignments.csv
+Fri Jun 23 09:36:00 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=943 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I007K01N26_vtd_assignments.csv --label=NY20C_I007K01N26
+Fri Jun 23 09:36:00 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I007K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=943 --N=26 --prefix=NY20C
+Fri Jun 23 09:36:00 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:36:00 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:36:01 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:36:01 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:36:02 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:36:27 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:36:27 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=944 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I008K01N26_vtd_assignments.csv --label=NY20C_I008K01N26
+Fri Jun 23 09:36:27 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I008K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=944 --N=26 --prefix=NY20C
+Fri Jun 23 09:36:27 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:36:27 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:36:28 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:36:28 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:36:29 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:36:31 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:36:33 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:36:39 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I008K01N26 = Contiguous 26
+Map NY20C_I008K01N26 = 762503 to 793907, Diff = 31404, Percent = 4.042%
+Fri Jun 23 09:36:46 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:36:46 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I008K01N26 = 3646070.2888535783
+Fri Jun 23 09:36:47 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:36:47 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I008K01N26_vtd_assignments.csv
+Fri Jun 23 09:36:47 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=945 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I009K01N26_vtd_assignments.csv --label=NY20C_I009K01N26
+Fri Jun 23 09:36:47 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I009K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=945 --N=26 --prefix=NY20C
+Fri Jun 23 09:36:47 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:36:47 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:36:48 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:36:48 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:36:49 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:36:51 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:36:52 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:37:36 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:37:36 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=946 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I010K01N26_vtd_assignments.csv --label=NY20C_I010K01N26
+Fri Jun 23 09:37:36 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I010K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=946 --N=26 --prefix=NY20C
+Fri Jun 23 09:37:36 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:37:36 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:37:37 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:37:37 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:37:38 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:37:40 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 09:37:41 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:37:46 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I010K01N26 = Contiguous 26
+Map NY20C_I010K01N26 = 773915 to 778696, Diff = 4781, Percent = 0.615%
+Fri Jun 23 09:37:51 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:37:52 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I010K01N26 = 3636277.779317127
+Fri Jun 23 09:37:52 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:37:52 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I010K01N26_vtd_assignments.csv
+Fri Jun 23 09:37:52 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=947 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I011K01N26_vtd_assignments.csv --label=NY20C_I011K01N26
+Fri Jun 23 09:37:52 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I011K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=947 --N=26 --prefix=NY20C
+Fri Jun 23 09:37:52 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:37:53 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:37:53 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:37:54 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:37:54 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:37:56 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 09:37:57 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:38:01 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I011K01N26 = Contiguous 26
+Map NY20C_I011K01N26 = 768375 to 789009, Diff = 20634, Percent = 2.656%
+Fri Jun 23 09:38:08 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:38:08 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I011K01N26 = 3688906.99416066
+Fri Jun 23 09:38:08 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:38:09 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I011K01N26_vtd_assignments.csv
+Fri Jun 23 09:38:09 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=948 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I012K01N26_vtd_assignments.csv --label=NY20C_I012K01N26
+Fri Jun 23 09:38:09 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I012K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=948 --N=26 --prefix=NY20C
+Fri Jun 23 09:38:09 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:38:09 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:38:10 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:38:10 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:38:11 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:38:13 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:38:14 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:38:21 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I012K01N26 = Contiguous 26
+Map NY20C_I012K01N26 = 759496 to 787075, Diff = 27579, Percent = 3.550%
+Fri Jun 23 09:38:27 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:38:27 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I012K01N26 = 3671499.4854670316
+Fri Jun 23 09:38:28 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:38:28 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I012K01N26_vtd_assignments.csv
+Fri Jun 23 09:38:28 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=949 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I013K01N26_vtd_assignments.csv --label=NY20C_I013K01N26
+Fri Jun 23 09:38:28 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I013K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=949 --N=26 --prefix=NY20C
+Fri Jun 23 09:38:28 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:38:29 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:38:29 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:38:29 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:38:30 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:38:32 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:38:33 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:38:37 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I013K01N26 = Contiguous 26
+Map NY20C_I013K01N26 = 774060 to 778627, Diff = 4567, Percent = 0.588%
+Fri Jun 23 09:38:43 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:38:44 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I013K01N26 = 3684298.7159919036
+Fri Jun 23 09:38:44 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:38:44 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I013K01N26_vtd_assignments.csv
+Fri Jun 23 09:38:44 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=950 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I014K01N26_vtd_assignments.csv --label=NY20C_I014K01N26
+Fri Jun 23 09:38:44 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I014K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=950 --N=26 --prefix=NY20C
+Fri Jun 23 09:38:44 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:38:45 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:38:45 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:38:45 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:38:46 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:39:12 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:39:12 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=951 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I015K01N26_vtd_assignments.csv --label=NY20C_I015K01N26
+Fri Jun 23 09:39:12 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I015K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=951 --N=26 --prefix=NY20C
+Fri Jun 23 09:39:12 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:39:12 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:39:12 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:39:13 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:39:14 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:39:15 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 09:39:17 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:39:33 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I015K01N26 = Contiguous 26
+Map NY20C_I015K01N26 = 775969 to 777821, Diff = 1852, Percent = 0.238%
+Fri Jun 23 09:39:39 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:39:40 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I015K01N26 = 3675843.9405611884
+Fri Jun 23 09:39:40 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:39:40 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I015K01N26_vtd_assignments.csv
+Fri Jun 23 09:39:40 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=952 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I016K01N26_vtd_assignments.csv --label=NY20C_I016K01N26
+Fri Jun 23 09:39:40 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I016K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=952 --N=26 --prefix=NY20C
+Fri Jun 23 09:39:40 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:39:41 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:39:41 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:39:41 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:39:42 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:40:08 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:40:08 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=953 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I017K01N26_vtd_assignments.csv --label=NY20C_I017K01N26
+Fri Jun 23 09:40:08 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I017K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=953 --N=26 --prefix=NY20C
+Fri Jun 23 09:40:08 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:40:08 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:40:08 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:40:09 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:40:10 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:40:11 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:40:12 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:40:15 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I017K01N26 = Contiguous 26
+Map NY20C_I017K01N26 = 760951 to 793003, Diff = 32052, Percent = 4.125%
+Fri Jun 23 09:40:22 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:40:22 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I017K01N26 = 3688167.028885844
+Fri Jun 23 09:40:23 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:40:23 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I017K01N26_vtd_assignments.csv
+Fri Jun 23 09:40:23 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=954 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I018K01N26_vtd_assignments.csv --label=NY20C_I018K01N26
+Fri Jun 23 09:40:23 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I018K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=954 --N=26 --prefix=NY20C
+Fri Jun 23 09:40:23 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:40:23 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:40:24 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:40:24 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:40:25 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:40:26 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:40:28 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:40:31 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I018K01N26 = Contiguous 26
+Map NY20C_I018K01N26 = 774179 to 778212, Diff = 4033, Percent = 0.519%
+Fri Jun 23 09:40:37 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:40:37 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I018K01N26 = 3620221.267351801
+Fri Jun 23 09:40:38 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:40:38 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I018K01N26_vtd_assignments.csv
+Fri Jun 23 09:40:38 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=955 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I019K01N26_vtd_assignments.csv --label=NY20C_I019K01N26
+Fri Jun 23 09:40:38 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I019K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=955 --N=26 --prefix=NY20C
+Fri Jun 23 09:40:38 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:40:38 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:40:39 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:40:39 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:40:40 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:40:43 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:40:44 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:40:48 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I019K01N26 = Contiguous 26
+Map NY20C_I019K01N26 = 775310 to 779540, Diff = 4230, Percent = 0.544%
+Fri Jun 23 09:40:54 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:40:54 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I019K01N26 = 3639493.6138699464
+Fri Jun 23 09:40:54 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:40:55 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I019K01N26_vtd_assignments.csv
+Fri Jun 23 09:40:55 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=956 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I020K01N26_vtd_assignments.csv --label=NY20C_I020K01N26
+Fri Jun 23 09:40:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I020K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=956 --N=26 --prefix=NY20C
+Fri Jun 23 09:40:55 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:40:55 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:40:56 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:40:56 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:40:57 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:41:22 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:41:22 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=957 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I021K01N26_vtd_assignments.csv --label=NY20C_I021K01N26
+Fri Jun 23 09:41:22 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I021K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=957 --N=26 --prefix=NY20C
+Fri Jun 23 09:41:22 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:41:22 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:41:23 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:41:23 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:41:24 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:41:34 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:41:36 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:41:39 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I021K01N26 = Contiguous 26
+Map NY20C_I021K01N26 = 775912 to 778018, Diff = 2106, Percent = 0.271%
+Fri Jun 23 09:41:45 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:41:46 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I021K01N26 = 3637066.4879338653
+Fri Jun 23 09:41:46 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:41:46 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I021K01N26_vtd_assignments.csv
+Fri Jun 23 09:41:46 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=958 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I022K01N26_vtd_assignments.csv --label=NY20C_I022K01N26
+Fri Jun 23 09:41:47 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I022K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=958 --N=26 --prefix=NY20C
+Fri Jun 23 09:41:47 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:41:47 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:41:47 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:41:48 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:41:49 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:41:51 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:41:53 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:41:57 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I022K01N26 = Contiguous 26
+Map NY20C_I022K01N26 = 773996 to 780455, Diff = 6459, Percent = 0.831%
+Fri Jun 23 09:42:03 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:42:04 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I022K01N26 = 3680608.9433537605
+Fri Jun 23 09:42:04 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:42:05 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I022K01N26_vtd_assignments.csv
+Fri Jun 23 09:42:05 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=959 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I023K01N26_vtd_assignments.csv --label=NY20C_I023K01N26
+Fri Jun 23 09:42:05 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I023K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=959 --N=26 --prefix=NY20C
+Fri Jun 23 09:42:05 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:42:05 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:42:05 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:42:06 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:42:07 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:42:09 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:42:11 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:42:14 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I023K01N26 = Contiguous 26
+Map NY20C_I023K01N26 = 758624 to 793728, Diff = 35104, Percent = 4.518%
+Fri Jun 23 09:42:21 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:42:21 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I023K01N26 = 3689482.8992756237
+Fri Jun 23 09:42:21 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:42:22 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I023K01N26_vtd_assignments.csv
+Fri Jun 23 09:42:22 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=960 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I024K01N26_vtd_assignments.csv --label=NY20C_I024K01N26
+Fri Jun 23 09:42:22 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I024K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=960 --N=26 --prefix=NY20C
+Fri Jun 23 09:42:22 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:42:22 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:42:23 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:42:23 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:42:24 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:42:49 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:42:49 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=961 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I025K01N26_vtd_assignments.csv --label=NY20C_I025K01N26
+Fri Jun 23 09:42:49 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I025K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=961 --N=26 --prefix=NY20C
+Fri Jun 23 09:42:49 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:42:50 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:42:50 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:42:50 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:42:51 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:42:53 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 09:42:55 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:42:59 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I025K01N26 = Contiguous 26
+Map NY20C_I025K01N26 = 775834 to 777988, Diff = 2154, Percent = 0.277%
+Fri Jun 23 09:43:05 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:43:05 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I025K01N26 = 3629070.8590547442
+Fri Jun 23 09:43:06 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:43:06 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I025K01N26_vtd_assignments.csv
+Fri Jun 23 09:43:06 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=962 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I026K01N26_vtd_assignments.csv --label=NY20C_I026K01N26
+Fri Jun 23 09:43:06 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I026K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=962 --N=26 --prefix=NY20C
+Fri Jun 23 09:43:06 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:43:07 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:43:07 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:43:07 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:43:08 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:43:34 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:43:34 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=963 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I027K01N26_vtd_assignments.csv --label=NY20C_I027K01N26
+Fri Jun 23 09:43:34 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I027K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=963 --N=26 --prefix=NY20C
+Fri Jun 23 09:43:34 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:43:34 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:43:34 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:43:35 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:43:36 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:43:37 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:43:39 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:43:43 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I027K01N26 = Contiguous 26
+Map NY20C_I027K01N26 = 776308 to 777881, Diff = 1573, Percent = 0.202%
+Fri Jun 23 09:43:49 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:43:49 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I027K01N26 = 3679675.531483065
+Fri Jun 23 09:43:50 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:43:50 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I027K01N26_vtd_assignments.csv
+Fri Jun 23 09:43:50 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=964 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I028K01N26_vtd_assignments.csv --label=NY20C_I028K01N26
+Fri Jun 23 09:43:50 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I028K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=964 --N=26 --prefix=NY20C
+Fri Jun 23 09:43:50 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:43:50 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:43:51 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:43:51 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:43:52 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:43:55 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 09:43:56 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:44:03 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I028K01N26 = Contiguous 26
+Map NY20C_I028K01N26 = 774087 to 780878, Diff = 6791, Percent = 0.874%
+Fri Jun 23 09:44:09 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:44:09 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I028K01N26 = 3689228.0465171644
+Fri Jun 23 09:44:09 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:44:10 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I028K01N26_vtd_assignments.csv
+Fri Jun 23 09:44:10 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=965 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I029K01N26_vtd_assignments.csv --label=NY20C_I029K01N26
+Fri Jun 23 09:44:10 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I029K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=965 --N=26 --prefix=NY20C
+Fri Jun 23 09:44:10 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:44:10 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:44:10 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:44:11 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:44:12 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:44:37 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:44:37 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=966 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I030K01N26_vtd_assignments.csv --label=NY20C_I030K01N26
+Fri Jun 23 09:44:37 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I030K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=966 --N=26 --prefix=NY20C
+Fri Jun 23 09:44:37 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:44:37 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:44:38 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:44:38 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:44:39 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:44:41 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:44:42 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:44:53 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I030K01N26 = Contiguous 26
+Map NY20C_I030K01N26 = 775688 to 778191, Diff = 2503, Percent = 0.322%
+Fri Jun 23 09:44:59 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:44:59 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I030K01N26 = 3635154.9632755043
+Fri Jun 23 09:45:00 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:45:00 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I030K01N26_vtd_assignments.csv
+Fri Jun 23 09:45:00 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=967 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I031K01N26_vtd_assignments.csv --label=NY20C_I031K01N26
+Fri Jun 23 09:45:00 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I031K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=967 --N=26 --prefix=NY20C
+Fri Jun 23 09:45:00 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:45:00 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:45:01 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:45:01 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:45:02 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:45:28 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:45:28 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=968 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I032K01N26_vtd_assignments.csv --label=NY20C_I032K01N26
+Fri Jun 23 09:45:28 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I032K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=968 --N=26 --prefix=NY20C
+Fri Jun 23 09:45:28 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:45:28 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:45:28 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:45:29 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:45:29 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:45:31 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:45:32 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:45:39 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I032K01N26 = Contiguous 26
+Map NY20C_I032K01N26 = 774272 to 780225, Diff = 5953, Percent = 0.766%
+Fri Jun 23 09:45:45 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:45:45 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I032K01N26 = 3655680.5100629297
+Fri Jun 23 09:45:46 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:45:46 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I032K01N26_vtd_assignments.csv
+Fri Jun 23 09:45:46 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=969 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I033K01N26_vtd_assignments.csv --label=NY20C_I033K01N26
+Fri Jun 23 09:45:46 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I033K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=969 --N=26 --prefix=NY20C
+Fri Jun 23 09:45:46 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:45:46 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:45:47 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:45:47 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:45:48 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:45:50 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:45:52 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:45:54 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I033K01N26 = Contiguous 26
+Map NY20C_I033K01N26 = 775622 to 778746, Diff = 3124, Percent = 0.402%
+Fri Jun 23 09:46:01 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:46:01 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I033K01N26 = 3667753.9202179727
+Fri Jun 23 09:46:01 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:46:02 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I033K01N26_vtd_assignments.csv
+Fri Jun 23 09:46:02 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=970 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I034K01N26_vtd_assignments.csv --label=NY20C_I034K01N26
+Fri Jun 23 09:46:02 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I034K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=970 --N=26 --prefix=NY20C
+Fri Jun 23 09:46:02 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:46:02 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:46:02 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:46:03 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:46:04 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:46:05 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:46:06 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:46:14 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I034K01N26 = Contiguous 26
+Map NY20C_I034K01N26 = 772393 to 782452, Diff = 10059, Percent = 1.295%
+Fri Jun 23 09:46:21 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:46:21 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I034K01N26 = 3657704.6243591197
+Fri Jun 23 09:46:22 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:46:22 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I034K01N26_vtd_assignments.csv
+Fri Jun 23 09:46:22 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=971 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I035K01N26_vtd_assignments.csv --label=NY20C_I035K01N26
+Fri Jun 23 09:46:22 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I035K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=971 --N=26 --prefix=NY20C
+Fri Jun 23 09:46:22 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:46:22 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:46:23 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:46:23 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:46:24 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:46:26 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:46:28 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:46:57 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I035K01N26 = Contiguous 26
+Map NY20C_I035K01N26 = 775157 to 778052, Diff = 2895, Percent = 0.373%
+Fri Jun 23 09:47:04 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:47:04 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I035K01N26 = 3659258.902747359
+Fri Jun 23 09:47:04 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:47:05 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I035K01N26_vtd_assignments.csv
+Fri Jun 23 09:47:05 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=972 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I036K01N26_vtd_assignments.csv --label=NY20C_I036K01N26
+Fri Jun 23 09:47:05 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I036K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=972 --N=26 --prefix=NY20C
+Fri Jun 23 09:47:05 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:47:05 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:47:06 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:47:06 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:47:07 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:47:08 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:47:09 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:47:14 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I036K01N26 = Contiguous 26
+Map NY20C_I036K01N26 = 763728 to 790310, Diff = 26582, Percent = 3.421%
+Fri Jun 23 09:47:21 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:47:21 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I036K01N26 = 3663149.214333158
+Fri Jun 23 09:47:22 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:47:22 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I036K01N26_vtd_assignments.csv
+Fri Jun 23 09:47:22 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=973 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I037K01N26_vtd_assignments.csv --label=NY20C_I037K01N26
+Fri Jun 23 09:47:22 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I037K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=973 --N=26 --prefix=NY20C
+Fri Jun 23 09:47:22 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:47:22 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:47:23 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:47:23 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:47:24 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:47:49 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:47:49 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=974 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I038K01N26_vtd_assignments.csv --label=NY20C_I038K01N26
+Fri Jun 23 09:47:49 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I038K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=974 --N=26 --prefix=NY20C
+Fri Jun 23 09:47:49 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:47:50 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:47:50 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:47:50 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:47:51 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:47:53 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:47:55 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:47:57 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I038K01N26 = Contiguous 26
+Map NY20C_I038K01N26 = 775882 to 778289, Diff = 2407, Percent = 0.310%
+Fri Jun 23 09:48:03 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:48:04 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I038K01N26 = 3663339.146129978
+Fri Jun 23 09:48:04 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:48:04 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I038K01N26_vtd_assignments.csv
+Fri Jun 23 09:48:04 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=975 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I039K01N26_vtd_assignments.csv --label=NY20C_I039K01N26
+Fri Jun 23 09:48:04 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I039K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=975 --N=26 --prefix=NY20C
+Fri Jun 23 09:48:04 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:48:05 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:48:05 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:48:05 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:48:06 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:48:13 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:48:14 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:48:17 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I039K01N26 = Contiguous 26
+Map NY20C_I039K01N26 = 775514 to 777881, Diff = 2367, Percent = 0.305%
+Fri Jun 23 09:48:23 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:48:23 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I039K01N26 = 3662657.508881169
+Fri Jun 23 09:48:23 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:48:24 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I039K01N26_vtd_assignments.csv
+Fri Jun 23 09:48:24 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=976 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I040K01N26_vtd_assignments.csv --label=NY20C_I040K01N26
+Fri Jun 23 09:48:24 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I040K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=976 --N=26 --prefix=NY20C
+Fri Jun 23 09:48:24 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:48:24 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:48:24 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:48:25 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:48:26 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:48:27 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 09:48:29 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:48:33 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 09:48:36 PDT 2023 Failed to create consolidated file
+Fri Jun 23 09:48:36 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=977 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I041K01N26_vtd_assignments.csv --label=NY20C_I041K01N26
+Fri Jun 23 09:48:36 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I041K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=977 --N=26 --prefix=NY20C
+Fri Jun 23 09:48:36 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:48:36 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:48:37 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:48:37 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:48:38 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:48:40 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:48:42 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:48:59 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I041K01N26 = Contiguous 26
+Map NY20C_I041K01N26 = 775806 to 778139, Diff = 2333, Percent = 0.300%
+Fri Jun 23 09:49:05 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:49:05 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I041K01N26 = 3664322.0685496964
+Fri Jun 23 09:49:06 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:49:06 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I041K01N26_vtd_assignments.csv
+Fri Jun 23 09:49:06 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=978 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I042K01N26_vtd_assignments.csv --label=NY20C_I042K01N26
+Fri Jun 23 09:49:06 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I042K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=978 --N=26 --prefix=NY20C
+Fri Jun 23 09:49:06 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:49:06 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:49:07 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:49:07 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:49:08 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:49:33 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:49:33 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=979 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I043K01N26_vtd_assignments.csv --label=NY20C_I043K01N26
+Fri Jun 23 09:49:33 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I043K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=979 --N=26 --prefix=NY20C
+Fri Jun 23 09:49:33 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:49:34 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:49:34 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:49:35 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:49:35 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:49:37 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 09:49:39 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:49:43 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I043K01N26 = Contiguous 26
+Map NY20C_I043K01N26 = 762107 to 792931, Diff = 30824, Percent = 3.967%
+Fri Jun 23 09:49:49 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:49:50 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I043K01N26 = 3697566.292311272
+Fri Jun 23 09:49:50 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:49:50 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I043K01N26_vtd_assignments.csv
+Fri Jun 23 09:49:50 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=980 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I044K01N26_vtd_assignments.csv --label=NY20C_I044K01N26
+Fri Jun 23 09:49:50 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I044K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=980 --N=26 --prefix=NY20C
+Fri Jun 23 09:49:50 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:49:51 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:49:51 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:49:52 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:49:53 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:49:55 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:49:56 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:50:35 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:50:35 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=981 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I045K01N26_vtd_assignments.csv --label=NY20C_I045K01N26
+Fri Jun 23 09:50:35 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I045K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=981 --N=26 --prefix=NY20C
+Fri Jun 23 09:50:35 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:50:36 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:50:36 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:50:36 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:50:37 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:50:41 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:50:43 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:50:46 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 09:50:47 PDT 2023 Failed to create consolidated file
+Fri Jun 23 09:50:47 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=982 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I046K01N26_vtd_assignments.csv --label=NY20C_I046K01N26
+Fri Jun 23 09:50:47 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I046K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=982 --N=26 --prefix=NY20C
+Fri Jun 23 09:50:47 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:50:48 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:50:48 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:50:48 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:50:49 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:50:52 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:50:53 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:51:34 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:51:34 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=983 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I047K01N26_vtd_assignments.csv --label=NY20C_I047K01N26
+Fri Jun 23 09:51:34 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I047K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=983 --N=26 --prefix=NY20C
+Fri Jun 23 09:51:34 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:51:35 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:51:35 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:51:35 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:51:36 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:52:01 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:52:01 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=984 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I048K01N26_vtd_assignments.csv --label=NY20C_I048K01N26
+Fri Jun 23 09:52:01 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I048K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=984 --N=26 --prefix=NY20C
+Fri Jun 23 09:52:01 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:52:02 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:52:02 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:52:02 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:52:03 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:52:05 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 09:52:06 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:52:12 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I048K01N26 = Contiguous 26
+Map NY20C_I048K01N26 = 774087 to 780653, Diff = 6566, Percent = 0.845%
+Fri Jun 23 09:52:19 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:52:19 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I048K01N26 = 3651069.810259986
+Fri Jun 23 09:52:19 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:52:20 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I048K01N26_vtd_assignments.csv
+Fri Jun 23 09:52:20 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=985 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I049K01N26_vtd_assignments.csv --label=NY20C_I049K01N26
+Fri Jun 23 09:52:20 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I049K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=985 --N=26 --prefix=NY20C
+Fri Jun 23 09:52:20 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:52:20 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:52:20 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:52:21 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:52:22 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:52:30 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:52:32 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:52:34 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I049K01N26 = Contiguous 26
+Map NY20C_I049K01N26 = 775874 to 778056, Diff = 2182, Percent = 0.281%
+Fri Jun 23 09:52:40 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:52:40 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I049K01N26 = 3630243.9109685724
+Fri Jun 23 09:52:40 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:52:41 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I049K01N26_vtd_assignments.csv
+Fri Jun 23 09:52:41 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=986 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I050K01N26_vtd_assignments.csv --label=NY20C_I050K01N26
+Fri Jun 23 09:52:41 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I050K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=986 --N=26 --prefix=NY20C
+Fri Jun 23 09:52:41 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:52:41 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:52:42 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:52:42 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:52:43 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:52:45 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:52:46 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:53:36 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:53:36 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=987 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I051K01N26_vtd_assignments.csv --label=NY20C_I051K01N26
+Fri Jun 23 09:53:36 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I051K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=987 --N=26 --prefix=NY20C
+Fri Jun 23 09:53:36 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:53:36 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:53:36 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:53:37 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:53:37 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:54:03 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:54:03 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=988 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I052K01N26_vtd_assignments.csv --label=NY20C_I052K01N26
+Fri Jun 23 09:54:03 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I052K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=988 --N=26 --prefix=NY20C
+Fri Jun 23 09:54:03 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:54:03 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:54:03 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:54:04 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:54:05 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:54:06 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:54:07 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:54:12 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I052K01N26 = Contiguous 26
+Map NY20C_I052K01N26 = 774272 to 779892, Diff = 5620, Percent = 0.723%
+Fri Jun 23 09:54:18 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:54:19 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I052K01N26 = 3671342.5483976738
+Fri Jun 23 09:54:19 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:54:19 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I052K01N26_vtd_assignments.csv
+Fri Jun 23 09:54:19 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=989 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I053K01N26_vtd_assignments.csv --label=NY20C_I053K01N26
+Fri Jun 23 09:54:19 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I053K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=989 --N=26 --prefix=NY20C
+Fri Jun 23 09:54:19 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:54:20 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:54:20 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:54:21 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:54:21 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:54:47 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:54:47 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=990 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I054K01N26_vtd_assignments.csv --label=NY20C_I054K01N26
+Fri Jun 23 09:54:47 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I054K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=990 --N=26 --prefix=NY20C
+Fri Jun 23 09:54:47 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:54:47 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:54:47 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:54:48 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:54:49 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:54:52 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 09:54:53 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:54:57 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I054K01N26 = Contiguous 26
+Map NY20C_I054K01N26 = 775470 to 778531, Diff = 3061, Percent = 0.394%
+Fri Jun 23 09:55:03 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:55:04 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I054K01N26 = 3665247.2796798185
+Fri Jun 23 09:55:04 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:55:05 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I054K01N26_vtd_assignments.csv
+Fri Jun 23 09:55:05 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=991 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I055K01N26_vtd_assignments.csv --label=NY20C_I055K01N26
+Fri Jun 23 09:55:05 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I055K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=991 --N=26 --prefix=NY20C
+Fri Jun 23 09:55:05 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:55:05 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:55:05 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:55:06 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:55:06 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:55:08 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:55:10 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:55:13 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 09:55:16 PDT 2023 Failed to create consolidated file
+Fri Jun 23 09:55:16 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=992 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I056K01N26_vtd_assignments.csv --label=NY20C_I056K01N26
+Fri Jun 23 09:55:16 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I056K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=992 --N=26 --prefix=NY20C
+Fri Jun 23 09:55:16 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:55:16 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:55:17 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:55:17 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:55:18 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:55:43 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:55:43 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=993 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I057K01N26_vtd_assignments.csv --label=NY20C_I057K01N26
+Fri Jun 23 09:55:43 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I057K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=993 --N=26 --prefix=NY20C
+Fri Jun 23 09:55:43 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:55:44 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:55:44 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:55:44 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:55:45 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:55:49 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:55:50 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:56:00 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I057K01N26 = Contiguous 26
+Map NY20C_I057K01N26 = 772124 to 785296, Diff = 13172, Percent = 1.695%
+Fri Jun 23 09:56:07 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:56:07 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I057K01N26 = 3702592.311776561
+Fri Jun 23 09:56:08 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:56:08 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I057K01N26_vtd_assignments.csv
+Fri Jun 23 09:56:08 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=994 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I058K01N26_vtd_assignments.csv --label=NY20C_I058K01N26
+Fri Jun 23 09:56:08 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I058K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=994 --N=26 --prefix=NY20C
+Fri Jun 23 09:56:08 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:56:08 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:56:09 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:56:09 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:56:10 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:56:35 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:56:35 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=995 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I059K01N26_vtd_assignments.csv --label=NY20C_I059K01N26
+Fri Jun 23 09:56:35 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I059K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=995 --N=26 --prefix=NY20C
+Fri Jun 23 09:56:35 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:56:36 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:56:36 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:56:36 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:56:37 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:56:42 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:56:44 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:56:48 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I059K01N26 = Contiguous 26
+Map NY20C_I059K01N26 = 775075 to 780464, Diff = 5389, Percent = 0.694%
+Fri Jun 23 09:56:54 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:56:55 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I059K01N26 = 3648149.878316989
+Fri Jun 23 09:56:55 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:56:55 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I059K01N26_vtd_assignments.csv
+Fri Jun 23 09:56:55 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=996 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I060K01N26_vtd_assignments.csv --label=NY20C_I060K01N26
+Fri Jun 23 09:56:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I060K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=996 --N=26 --prefix=NY20C
+Fri Jun 23 09:56:55 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:56:56 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:56:56 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:56:56 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:56:57 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:57:04 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 09:57:05 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:57:12 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I060K01N26 = Contiguous 26
+Map NY20C_I060K01N26 = 775061 to 778144, Diff = 3083, Percent = 0.397%
+Fri Jun 23 09:57:18 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:57:18 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I060K01N26 = 3615409.2946860357
+Fri Jun 23 09:57:19 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:57:19 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I060K01N26_vtd_assignments.csv
+Fri Jun 23 09:57:19 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=997 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I061K01N26_vtd_assignments.csv --label=NY20C_I061K01N26
+Fri Jun 23 09:57:19 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I061K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=997 --N=26 --prefix=NY20C
+Fri Jun 23 09:57:19 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:57:19 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:57:20 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:57:20 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:57:21 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:57:46 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:57:46 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=998 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I062K01N26_vtd_assignments.csv --label=NY20C_I062K01N26
+Fri Jun 23 09:57:46 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I062K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=998 --N=26 --prefix=NY20C
+Fri Jun 23 09:57:46 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:57:47 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:57:47 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:57:47 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:57:48 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:58:13 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:58:13 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=999 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I063K01N26_vtd_assignments.csv --label=NY20C_I063K01N26
+Fri Jun 23 09:58:13 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I063K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=999 --N=26 --prefix=NY20C
+Fri Jun 23 09:58:13 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:58:14 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:58:14 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:58:14 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:58:15 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:58:40 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:58:40 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1000 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I064K01N26_vtd_assignments.csv --label=NY20C_I064K01N26
+Fri Jun 23 09:58:40 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I064K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1000 --N=26 --prefix=NY20C
+Fri Jun 23 09:58:40 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:58:41 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:58:41 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:58:41 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:58:42 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:59:07 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:59:07 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1001 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I065K01N26_vtd_assignments.csv --label=NY20C_I065K01N26
+Fri Jun 23 09:59:07 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I065K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1001 --N=26 --prefix=NY20C
+Fri Jun 23 09:59:07 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:59:08 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:59:08 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:59:08 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:59:09 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 09:59:34 PDT 2023 Failed to create balzer file
+Fri Jun 23 09:59:34 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1002 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I066K01N26_vtd_assignments.csv --label=NY20C_I066K01N26
+Fri Jun 23 09:59:34 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I066K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1002 --N=26 --prefix=NY20C
+Fri Jun 23 09:59:34 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:59:35 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 09:59:35 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 09:59:35 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 09:59:36 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 09:59:42 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 09:59:43 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 09:59:52 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I066K01N26 = Contiguous 26
+Map NY20C_I066K01N26 = 775763 to 778440, Diff = 2677, Percent = 0.345%
+Fri Jun 23 09:59:58 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 09:59:58 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I066K01N26 = 3671059.0672391728
+Fri Jun 23 09:59:59 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 09:59:59 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I066K01N26_vtd_assignments.csv
+Fri Jun 23 09:59:59 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1003 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I067K01N26_vtd_assignments.csv --label=NY20C_I067K01N26
+Fri Jun 23 09:59:59 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I067K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1003 --N=26 --prefix=NY20C
+Fri Jun 23 09:59:59 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 09:59:59 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:00:00 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:00:00 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:00:01 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:00:03 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:00:05 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:00:09 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I067K01N26 = Contiguous 26
+Map NY20C_I067K01N26 = 776246 to 778245, Diff = 1999, Percent = 0.257%
+Fri Jun 23 10:00:15 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:00:15 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I067K01N26 = 3623994.5698131295
+Fri Jun 23 10:00:16 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:00:16 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I067K01N26_vtd_assignments.csv
+Fri Jun 23 10:00:16 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1004 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I068K01N26_vtd_assignments.csv --label=NY20C_I068K01N26
+Fri Jun 23 10:00:16 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I068K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1004 --N=26 --prefix=NY20C
+Fri Jun 23 10:00:16 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:00:16 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:00:17 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:00:17 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:00:18 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:00:43 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:00:43 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1005 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I069K01N26_vtd_assignments.csv --label=NY20C_I069K01N26
+Fri Jun 23 10:00:43 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I069K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1005 --N=26 --prefix=NY20C
+Fri Jun 23 10:00:43 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:00:44 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:00:44 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:00:44 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:00:45 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:00:47 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:00:49 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:00:52 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I069K01N26 = Contiguous 26
+Map NY20C_I069K01N26 = 775597 to 778204, Diff = 2607, Percent = 0.336%
+Fri Jun 23 10:00:58 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:00:58 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I069K01N26 = 3708920.463810591
+Fri Jun 23 10:00:59 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:00:59 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I069K01N26_vtd_assignments.csv
+Fri Jun 23 10:00:59 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1006 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I070K01N26_vtd_assignments.csv --label=NY20C_I070K01N26
+Fri Jun 23 10:00:59 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I070K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1006 --N=26 --prefix=NY20C
+Fri Jun 23 10:00:59 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:00:59 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:01:00 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:01:00 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:01:01 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:01:05 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 10:01:06 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:01:10 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I070K01N26 = Contiguous 26
+Map NY20C_I070K01N26 = 775928 to 777949, Diff = 2021, Percent = 0.260%
+Fri Jun 23 10:01:15 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:01:16 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I070K01N26 = 3632771.440563022
+Fri Jun 23 10:01:16 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:01:16 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I070K01N26_vtd_assignments.csv
+Fri Jun 23 10:01:16 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1007 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I071K01N26_vtd_assignments.csv --label=NY20C_I071K01N26
+Fri Jun 23 10:01:16 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I071K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1007 --N=26 --prefix=NY20C
+Fri Jun 23 10:01:16 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:01:17 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:01:17 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:01:17 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:01:18 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:01:20 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 10:01:22 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:01:26 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I071K01N26 = Contiguous 26
+Map NY20C_I071K01N26 = 775926 to 777881, Diff = 1955, Percent = 0.252%
+Fri Jun 23 10:01:33 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:01:33 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I071K01N26 = 3609116.536560587
+Fri Jun 23 10:01:33 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:01:34 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I071K01N26_vtd_assignments.csv
+Fri Jun 23 10:01:34 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1008 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I072K01N26_vtd_assignments.csv --label=NY20C_I072K01N26
+Fri Jun 23 10:01:34 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I072K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1008 --N=26 --prefix=NY20C
+Fri Jun 23 10:01:34 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:01:34 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:01:34 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:01:35 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:01:36 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:02:01 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:02:01 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1009 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I073K01N26_vtd_assignments.csv --label=NY20C_I073K01N26
+Fri Jun 23 10:02:01 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I073K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1009 --N=26 --prefix=NY20C
+Fri Jun 23 10:02:01 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:02:01 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:02:02 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:02:02 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:02:03 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:02:28 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:02:28 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1010 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I074K01N26_vtd_assignments.csv --label=NY20C_I074K01N26
+Fri Jun 23 10:02:28 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I074K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1010 --N=26 --prefix=NY20C
+Fri Jun 23 10:02:28 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:02:28 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:02:29 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:02:29 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:02:30 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:02:55 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:02:55 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1011 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I075K01N26_vtd_assignments.csv --label=NY20C_I075K01N26
+Fri Jun 23 10:02:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I075K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1011 --N=26 --prefix=NY20C
+Fri Jun 23 10:02:55 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:02:55 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:02:56 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:02:56 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:02:57 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:03:22 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:03:22 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1012 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I076K01N26_vtd_assignments.csv --label=NY20C_I076K01N26
+Fri Jun 23 10:03:22 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I076K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1012 --N=26 --prefix=NY20C
+Fri Jun 23 10:03:22 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:03:22 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:03:23 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:03:23 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:03:24 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:03:26 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:03:28 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:03:31 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I076K01N26 = Contiguous 26
+Map NY20C_I076K01N26 = 775787 to 778430, Diff = 2643, Percent = 0.340%
+Fri Jun 23 10:03:38 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:03:38 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I076K01N26 = 3609992.3008105303
+Fri Jun 23 10:03:39 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:03:39 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I076K01N26_vtd_assignments.csv
+Fri Jun 23 10:03:39 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1013 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I077K01N26_vtd_assignments.csv --label=NY20C_I077K01N26
+Fri Jun 23 10:03:39 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I077K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1013 --N=26 --prefix=NY20C
+Fri Jun 23 10:03:39 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:03:39 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:03:40 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:03:40 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:03:41 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:03:43 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:03:44 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:03:47 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I077K01N26 = Contiguous 26
+Map NY20C_I077K01N26 = 775810 to 778245, Diff = 2435, Percent = 0.313%
+Fri Jun 23 10:03:53 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:03:54 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I077K01N26 = 3695000.3657040014
+Fri Jun 23 10:03:54 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:03:54 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I077K01N26_vtd_assignments.csv
+Fri Jun 23 10:03:54 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1014 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I078K01N26_vtd_assignments.csv --label=NY20C_I078K01N26
+Fri Jun 23 10:03:54 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I078K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1014 --N=26 --prefix=NY20C
+Fri Jun 23 10:03:54 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:03:55 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:03:55 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:03:55 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:03:56 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:04:22 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:04:22 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1015 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I079K01N26_vtd_assignments.csv --label=NY20C_I079K01N26
+Fri Jun 23 10:04:22 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I079K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1015 --N=26 --prefix=NY20C
+Fri Jun 23 10:04:22 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:04:22 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:04:22 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:04:23 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:04:24 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:04:49 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:04:49 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1016 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I080K01N26_vtd_assignments.csv --label=NY20C_I080K01N26
+Fri Jun 23 10:04:49 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I080K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1016 --N=26 --prefix=NY20C
+Fri Jun 23 10:04:49 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:04:49 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:04:49 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:04:50 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:04:51 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:04:52 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:04:54 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:04:56 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I080K01N26 = Contiguous 26
+Map NY20C_I080K01N26 = 775888 to 778013, Diff = 2125, Percent = 0.273%
+Fri Jun 23 10:05:02 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:05:03 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I080K01N26 = 3644675.32178378
+Fri Jun 23 10:05:03 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:05:03 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I080K01N26_vtd_assignments.csv
+Fri Jun 23 10:05:03 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1017 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I081K01N26_vtd_assignments.csv --label=NY20C_I081K01N26
+Fri Jun 23 10:05:03 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I081K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1017 --N=26 --prefix=NY20C
+Fri Jun 23 10:05:03 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:05:04 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:05:04 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:05:04 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:05:05 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:05:30 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:05:30 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1018 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I082K01N26_vtd_assignments.csv --label=NY20C_I082K01N26
+Fri Jun 23 10:05:30 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I082K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1018 --N=26 --prefix=NY20C
+Fri Jun 23 10:05:30 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:05:31 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:05:31 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:05:31 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:05:32 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:05:34 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 10:05:36 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:05:38 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I082K01N26 = Contiguous 26
+Map NY20C_I082K01N26 = 775633 to 777882, Diff = 2249, Percent = 0.289%
+Fri Jun 23 10:05:44 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:05:45 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I082K01N26 = 3644246.5663169078
+Fri Jun 23 10:05:45 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:05:45 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I082K01N26_vtd_assignments.csv
+Fri Jun 23 10:05:45 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1019 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I083K01N26_vtd_assignments.csv --label=NY20C_I083K01N26
+Fri Jun 23 10:05:45 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I083K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1019 --N=26 --prefix=NY20C
+Fri Jun 23 10:05:45 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:05:46 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:05:46 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:05:46 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:05:47 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:05:50 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 10:05:51 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:05:54 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I083K01N26 = Contiguous 26
+Map NY20C_I083K01N26 = 774272 to 779892, Diff = 5620, Percent = 0.723%
+Fri Jun 23 10:06:00 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:06:00 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I083K01N26 = 3676458.8998315367
+Fri Jun 23 10:06:01 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:06:01 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I083K01N26_vtd_assignments.csv
+Fri Jun 23 10:06:01 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1020 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I084K01N26_vtd_assignments.csv --label=NY20C_I084K01N26
+Fri Jun 23 10:06:01 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I084K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1020 --N=26 --prefix=NY20C
+Fri Jun 23 10:06:01 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:06:01 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:06:02 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:06:02 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:06:03 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:06:28 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:06:28 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1021 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I085K01N26_vtd_assignments.csv --label=NY20C_I085K01N26
+Fri Jun 23 10:06:28 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I085K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1021 --N=26 --prefix=NY20C
+Fri Jun 23 10:06:28 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:06:29 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:06:29 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:06:29 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:06:30 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:06:32 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:06:34 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:06:37 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I085K01N26 = Contiguous 26
+Map NY20C_I085K01N26 = 775691 to 778253, Diff = 2562, Percent = 0.330%
+Fri Jun 23 10:06:42 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:06:42 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I085K01N26 = 3628758.1728744567
+Fri Jun 23 10:06:43 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:06:43 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I085K01N26_vtd_assignments.csv
+Fri Jun 23 10:06:43 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1022 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I086K01N26_vtd_assignments.csv --label=NY20C_I086K01N26
+Fri Jun 23 10:06:43 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I086K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1022 --N=26 --prefix=NY20C
+Fri Jun 23 10:06:43 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:06:43 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:06:44 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:06:44 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:06:45 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:06:47 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 10:06:48 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:06:55 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I086K01N26 = Contiguous 26
+Map NY20C_I086K01N26 = 775881 to 778022, Diff = 2141, Percent = 0.276%
+Fri Jun 23 10:07:02 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:07:02 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I086K01N26 = 3617797.9139424944
+Fri Jun 23 10:07:02 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:07:03 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I086K01N26_vtd_assignments.csv
+Fri Jun 23 10:07:03 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1023 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I087K01N26_vtd_assignments.csv --label=NY20C_I087K01N26
+Fri Jun 23 10:07:03 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I087K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1023 --N=26 --prefix=NY20C
+Fri Jun 23 10:07:03 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:07:03 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:07:03 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:07:04 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:07:05 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:07:06 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+Fri Jun 23 10:07:08 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:07:13 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I087K01N26 = Contiguous 26
+Map NY20C_I087K01N26 = 774179 to 777935, Diff = 3756, Percent = 0.483%
+Fri Jun 23 10:07:19 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:07:20 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I087K01N26 = 3636226.77726434
+Fri Jun 23 10:07:20 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:07:21 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I087K01N26_vtd_assignments.csv
+Fri Jun 23 10:07:21 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1024 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I088K01N26_vtd_assignments.csv --label=NY20C_I088K01N26
+Fri Jun 23 10:07:21 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I088K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1024 --N=26 --prefix=NY20C
+Fri Jun 23 10:07:21 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:07:21 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:07:21 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:07:22 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:07:23 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:07:24 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:07:26 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:07:31 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Fri Jun 23 10:07:35 PDT 2023 Failed to create consolidated file
+Fri Jun 23 10:07:35 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1025 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I089K01N26_vtd_assignments.csv --label=NY20C_I089K01N26
+Fri Jun 23 10:07:35 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I089K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1025 --N=26 --prefix=NY20C
+Fri Jun 23 10:07:35 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:07:35 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:07:36 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:07:36 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:07:37 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:07:38 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:07:40 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:07:48 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I089K01N26 = Contiguous 26
+Map NY20C_I089K01N26 = 775939 to 778322, Diff = 2383, Percent = 0.307%
+Fri Jun 23 10:07:55 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:07:56 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I089K01N26 = 3703243.632277465
+Fri Jun 23 10:07:56 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:07:56 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I089K01N26_vtd_assignments.csv
+Fri Jun 23 10:07:56 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1026 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I090K01N26_vtd_assignments.csv --label=NY20C_I090K01N26
+Fri Jun 23 10:07:56 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I090K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1026 --N=26 --prefix=NY20C
+Fri Jun 23 10:07:56 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:07:57 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:07:57 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:07:57 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:07:58 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:08:00 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:08:01 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:08:04 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I090K01N26 = Contiguous 26
+Map NY20C_I090K01N26 = 775551 to 778283, Diff = 2732, Percent = 0.352%
+Fri Jun 23 10:08:10 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:08:10 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I090K01N26 = 3642929.338415283
+Fri Jun 23 10:08:10 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:08:11 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I090K01N26_vtd_assignments.csv
+Fri Jun 23 10:08:11 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1027 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I091K01N26_vtd_assignments.csv --label=NY20C_I091K01N26
+Fri Jun 23 10:08:11 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I091K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1027 --N=26 --prefix=NY20C
+Fri Jun 23 10:08:11 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:08:11 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:08:12 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:08:12 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:08:13 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:08:15 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:08:16 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:08:32 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I091K01N26 = Contiguous 26
+Map NY20C_I091K01N26 = 761709 to 788649, Diff = 26940, Percent = 3.467%
+Fri Jun 23 10:08:38 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:08:38 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I091K01N26 = 3649259.933371999
+Fri Jun 23 10:08:39 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:08:39 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I091K01N26_vtd_assignments.csv
+Fri Jun 23 10:08:39 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1028 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I092K01N26_vtd_assignments.csv --label=NY20C_I092K01N26
+Fri Jun 23 10:08:39 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I092K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1028 --N=26 --prefix=NY20C
+Fri Jun 23 10:08:39 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:08:39 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:08:40 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:08:40 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:08:41 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:08:44 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:08:46 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:08:52 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I092K01N26 = Contiguous 26
+Map NY20C_I092K01N26 = 760315 to 787856, Diff = 27541, Percent = 3.545%
+Fri Jun 23 10:08:59 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:08:59 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I092K01N26 = 3885810.9597260035
+Fri Jun 23 10:08:59 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:09:00 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I092K01N26_vtd_assignments.csv
+Fri Jun 23 10:09:00 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1029 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I093K01N26_vtd_assignments.csv --label=NY20C_I093K01N26
+Fri Jun 23 10:09:00 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I093K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1029 --N=26 --prefix=NY20C
+Fri Jun 23 10:09:00 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:09:00 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:09:00 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:09:01 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:09:02 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:09:03 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:09:04 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:09:07 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I093K01N26 = Contiguous 26
+Map NY20C_I093K01N26 = 774179 to 778593, Diff = 4414, Percent = 0.568%
+Fri Jun 23 10:09:13 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:09:14 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I093K01N26 = 3879774.5958795454
+Fri Jun 23 10:09:14 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:09:14 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I093K01N26_vtd_assignments.csv
+Fri Jun 23 10:09:14 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1030 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I094K01N26_vtd_assignments.csv --label=NY20C_I094K01N26
+Fri Jun 23 10:09:14 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I094K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1030 --N=26 --prefix=NY20C
+Fri Jun 23 10:09:14 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:09:15 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:09:15 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:09:15 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:09:16 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:09:42 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:09:42 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1031 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I095K01N26_vtd_assignments.csv --label=NY20C_I095K01N26
+Fri Jun 23 10:09:42 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I095K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1031 --N=26 --prefix=NY20C
+Fri Jun 23 10:09:42 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:09:42 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:09:42 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:09:43 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:09:44 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:10:09 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:10:09 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1032 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I096K01N26_vtd_assignments.csv --label=NY20C_I096K01N26
+Fri Jun 23 10:10:09 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I096K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1032 --N=26 --prefix=NY20C
+Fri Jun 23 10:10:09 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:10:09 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:10:10 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:10:10 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:10:11 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:10:36 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:10:36 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1033 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I097K01N26_vtd_assignments.csv --label=NY20C_I097K01N26
+Fri Jun 23 10:10:36 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I097K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1033 --N=26 --prefix=NY20C
+Fri Jun 23 10:10:36 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:10:37 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:10:37 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:10:37 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:10:38 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:11:03 PDT 2023 Failed to create balzer file
+Fri Jun 23 10:11:03 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1034 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I098K01N26_vtd_assignments.csv --label=NY20C_I098K01N26
+Fri Jun 23 10:11:03 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I098K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1034 --N=26 --prefix=NY20C
+Fri Jun 23 10:11:03 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:11:04 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:11:04 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:11:04 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:11:05 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Fri Jun 23 10:11:07 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/NY/NY20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Fri Jun 23 10:11:08 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/NY/NY20C.balzerunbalancedcontiguous.csv
+Fri Jun 23 10:11:12 PDT 2023 Creating consolidated file: intermediate/NY/NY20C.consolidated.csv
+Map NY20C_I098K01N26 = Contiguous 26
+Map NY20C_I098K01N26 = 774087 to 781474, Diff = 7387, Percent = 0.951%
+Fri Jun 23 10:11:18 PDT 2023 Creating complete file: intermediate/NY/NY20C.complete.csv
+Fri Jun 23 10:11:18 PDT 2023 Computing energy of: intermediate/NY/NY20C.complete.csv
+Energy for map NY20C_I098K01N26 = 3673307.288489667
+Fri Jun 23 10:11:18 PDT 2023 Creating output file: intermediate/NY/NY20C.out.csv
+Fri Jun 23 10:11:19 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I098K01N26_vtd_assignments.csv
+Fri Jun 23 10:11:19 PDT 2023 Args as invoked: --tmpdir=intermediate/NY --N=26 --seed=1035 --prefix=NY20C --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I099K01N26_vtd_assignments.csv --label=NY20C_I099K01N26
+Fri Jun 23 10:11:19 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/NY/NY_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/NY/NY20C_I099K01N26_vtd_assignments.csv --tmpdir=intermediate/NY --seed=1035 --N=26 --prefix=NY20C
+Fri Jun 23 10:11:19 PDT 2023 Creating points file: intermediate/NY/NY20C.points.csv
+Fri Jun 23 10:11:19 PDT 2023 Creating adjacencies file: intermediate/NY/NY20C.adjacencies.csv
+Fri Jun 23 10:11:19 PDT 2023 Creating random sites file: intermediate/NY/NY20C.randomsites.csv
+Fri Jun 23 10:11:20 PDT 2023 Creating initial assignment file intermediate/NY/NY20C.initialized.csv
+Fri Jun 23 10:11:21 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/NY/NY20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Fri Jun 23 10:11:46 PDT 2023 Failed to create balzer file
+
+>>> GENERATING BASELINE CANDIDATES FOR NY <<<
+
+main =  2316.8 seconds

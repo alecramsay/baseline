@@ -1,0 +1,1291 @@
+Sat Jun 24 10:14:32 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1824 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I000K01N38_vtd_assignments.csv --label=TX20C_I000K01N38
+Sat Jun 24 10:14:32 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I000K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1824 --N=38 --prefix=TX20C
+Sat Jun 24 10:14:32 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:14:32 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:14:33 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:14:33 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:14:34 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:14:42 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 10:14:43 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:14:47 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I000K01N38 = Contiguous 38
+Map TX20C_I000K01N38 = 758272 to 771276, Diff = 13004, Percent = 1.695%
+Sat Jun 24 10:14:56 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:14:56 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I000K01N38 = 9526267.482416159
+Sat Jun 24 10:14:56 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:14:57 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I000K01N38_vtd_assignments.csv
+Sat Jun 24 10:14:57 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1825 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I001K01N38_vtd_assignments.csv --label=TX20C_I001K01N38
+Sat Jun 24 10:14:57 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I001K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1825 --N=38 --prefix=TX20C
+Sat Jun 24 10:14:57 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:14:57 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:14:57 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:14:58 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:14:58 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:15:30 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:15:30 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1826 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I002K01N38_vtd_assignments.csv --label=TX20C_I002K01N38
+Sat Jun 24 10:15:30 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I002K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1826 --N=38 --prefix=TX20C
+Sat Jun 24 10:15:30 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:15:30 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:15:31 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:15:31 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:15:32 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:15:41 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:15:42 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:15:46 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I002K01N38 = Contiguous 38
+Map TX20C_I002K01N38 = 764205 to 770436, Diff = 6231, Percent = 0.812%
+Sat Jun 24 10:15:55 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:15:55 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I002K01N38 = 9493397.400656246
+Sat Jun 24 10:15:55 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:15:56 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I002K01N38_vtd_assignments.csv
+Sat Jun 24 10:15:56 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1827 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I003K01N38_vtd_assignments.csv --label=TX20C_I003K01N38
+Sat Jun 24 10:15:56 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I003K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1827 --N=38 --prefix=TX20C
+Sat Jun 24 10:15:56 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:15:56 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:15:57 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:15:57 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:15:58 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:16:00 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:16:02 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:16:47 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:16:47 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1828 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I004K01N38_vtd_assignments.csv --label=TX20C_I004K01N38
+Sat Jun 24 10:16:47 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I004K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1828 --N=38 --prefix=TX20C
+Sat Jun 24 10:16:47 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:16:48 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:16:48 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:16:48 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:16:49 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:16:54 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:16:55 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:17:41 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:17:41 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1829 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I005K01N38_vtd_assignments.csv --label=TX20C_I005K01N38
+Sat Jun 24 10:17:41 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I005K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1829 --N=38 --prefix=TX20C
+Sat Jun 24 10:17:41 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:17:42 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:17:42 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:17:42 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:17:43 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:18:14 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:18:14 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1830 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I006K01N38_vtd_assignments.csv --label=TX20C_I006K01N38
+Sat Jun 24 10:18:14 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I006K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1830 --N=38 --prefix=TX20C
+Sat Jun 24 10:18:14 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:18:14 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:18:15 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:18:15 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:18:16 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:18:35 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 10:18:36 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:18:39 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I006K01N38 = Contiguous 38
+Map TX20C_I006K01N38 = 762749 to 770921, Diff = 8172, Percent = 1.065%
+Sat Jun 24 10:18:47 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:18:47 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I006K01N38 = 9680673.02490871
+Sat Jun 24 10:18:47 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:18:48 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I006K01N38_vtd_assignments.csv
+Sat Jun 24 10:18:48 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1831 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I007K01N38_vtd_assignments.csv --label=TX20C_I007K01N38
+Sat Jun 24 10:18:48 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I007K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1831 --N=38 --prefix=TX20C
+Sat Jun 24 10:18:48 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:18:48 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:18:48 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:18:49 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:18:50 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:19:21 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:19:21 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1832 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I008K01N38_vtd_assignments.csv --label=TX20C_I008K01N38
+Sat Jun 24 10:19:21 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I008K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1832 --N=38 --prefix=TX20C
+Sat Jun 24 10:19:21 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:19:21 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:19:21 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:19:22 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:19:22 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:19:24 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 10:19:25 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:19:26 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I008K01N38 = Contiguous 38
+Map TX20C_I008K01N38 = 763803 to 772387, Diff = 8584, Percent = 1.119%
+Sat Jun 24 10:19:31 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:19:32 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I008K01N38 = 9715898.389644673
+Sat Jun 24 10:19:32 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:19:32 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I008K01N38_vtd_assignments.csv
+Sat Jun 24 10:19:32 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1833 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I009K01N38_vtd_assignments.csv --label=TX20C_I009K01N38
+Sat Jun 24 10:19:32 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I009K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1833 --N=38 --prefix=TX20C
+Sat Jun 24 10:19:32 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:19:33 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:19:33 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:19:33 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:19:34 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:19:38 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 10:19:40 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:19:44 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I009K01N38 = Contiguous 38
+Map TX20C_I009K01N38 = 763285 to 772155, Diff = 8870, Percent = 1.156%
+Sat Jun 24 10:19:52 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:19:52 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I009K01N38 = 9711660.788966887
+Sat Jun 24 10:19:53 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:19:53 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I009K01N38_vtd_assignments.csv
+Sat Jun 24 10:19:53 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1834 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I010K01N38_vtd_assignments.csv --label=TX20C_I010K01N38
+Sat Jun 24 10:19:53 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I010K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1834 --N=38 --prefix=TX20C
+Sat Jun 24 10:19:53 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:19:53 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:19:54 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:19:54 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:19:55 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:19:59 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:20:01 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:20:05 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Sat Jun 24 10:20:08 PDT 2023 Failed to create consolidated file
+Sat Jun 24 10:20:08 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1835 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I011K01N38_vtd_assignments.csv --label=TX20C_I011K01N38
+Sat Jun 24 10:20:08 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I011K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1835 --N=38 --prefix=TX20C
+Sat Jun 24 10:20:08 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:20:08 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:20:08 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:20:09 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:20:10 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:20:40 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:20:40 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1836 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I012K01N38_vtd_assignments.csv --label=TX20C_I012K01N38
+Sat Jun 24 10:20:40 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I012K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1836 --N=38 --prefix=TX20C
+Sat Jun 24 10:20:40 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:20:41 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:20:41 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:20:41 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:20:42 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:20:48 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:20:49 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:20:52 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I012K01N38 = Contiguous 38
+Map TX20C_I012K01N38 = 763187 to 772681, Diff = 9494, Percent = 1.238%
+Sat Jun 24 10:21:01 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:21:01 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I012K01N38 = 9345526.212726714
+Sat Jun 24 10:21:01 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:21:02 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I012K01N38_vtd_assignments.csv
+Sat Jun 24 10:21:02 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1837 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I013K01N38_vtd_assignments.csv --label=TX20C_I013K01N38
+Sat Jun 24 10:21:02 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I013K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1837 --N=38 --prefix=TX20C
+Sat Jun 24 10:21:02 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:21:02 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:21:02 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:21:03 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:21:04 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:21:06 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:21:07 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:21:54 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:21:54 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1838 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I014K01N38_vtd_assignments.csv --label=TX20C_I014K01N38
+Sat Jun 24 10:21:54 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I014K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1838 --N=38 --prefix=TX20C
+Sat Jun 24 10:21:54 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:21:54 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:21:54 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:21:54 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:21:55 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:22:26 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:22:26 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1839 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I015K01N38_vtd_assignments.csv --label=TX20C_I015K01N38
+Sat Jun 24 10:22:26 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I015K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1839 --N=38 --prefix=TX20C
+Sat Jun 24 10:22:26 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:22:27 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:22:27 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:22:27 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:22:28 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:22:59 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:22:59 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1840 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I016K01N38_vtd_assignments.csv --label=TX20C_I016K01N38
+Sat Jun 24 10:22:59 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I016K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1840 --N=38 --prefix=TX20C
+Sat Jun 24 10:22:59 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:22:59 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:23:00 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:23:00 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:23:01 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:23:12 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:23:13 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:23:16 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I016K01N38 = Contiguous 38
+Map TX20C_I016K01N38 = 763648 to 773892, Diff = 10244, Percent = 1.336%
+Sat Jun 24 10:23:25 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:23:25 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I016K01N38 = 9644510.147338355
+Sat Jun 24 10:23:25 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:23:26 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I016K01N38_vtd_assignments.csv
+Sat Jun 24 10:23:26 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1841 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I017K01N38_vtd_assignments.csv --label=TX20C_I017K01N38
+Sat Jun 24 10:23:26 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I017K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1841 --N=38 --prefix=TX20C
+Sat Jun 24 10:23:26 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:23:26 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:23:26 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:23:27 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:23:28 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:23:33 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:23:34 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:23:37 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Sat Jun 24 10:23:42 PDT 2023 Failed to create consolidated file
+Sat Jun 24 10:23:42 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1842 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I018K01N38_vtd_assignments.csv --label=TX20C_I018K01N38
+Sat Jun 24 10:23:42 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I018K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1842 --N=38 --prefix=TX20C
+Sat Jun 24 10:23:42 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:23:42 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:23:42 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:23:43 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:23:43 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:24:14 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:24:14 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1843 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I019K01N38_vtd_assignments.csv --label=TX20C_I019K01N38
+Sat Jun 24 10:24:14 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I019K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1843 --N=38 --prefix=TX20C
+Sat Jun 24 10:24:14 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:24:15 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:24:15 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:24:15 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:24:16 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:24:47 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:24:47 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1844 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I020K01N38_vtd_assignments.csv --label=TX20C_I020K01N38
+Sat Jun 24 10:24:47 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I020K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1844 --N=38 --prefix=TX20C
+Sat Jun 24 10:24:47 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:24:47 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:24:47 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:24:48 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:24:49 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:24:54 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:24:55 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:24:58 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I020K01N38 = Contiguous 38
+Map TX20C_I020K01N38 = 762744 to 772063, Diff = 9319, Percent = 1.215%
+Sat Jun 24 10:25:06 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:25:06 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I020K01N38 = 9246030.866759814
+Sat Jun 24 10:25:07 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:25:07 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I020K01N38_vtd_assignments.csv
+Sat Jun 24 10:25:07 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1845 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I021K01N38_vtd_assignments.csv --label=TX20C_I021K01N38
+Sat Jun 24 10:25:07 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I021K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1845 --N=38 --prefix=TX20C
+Sat Jun 24 10:25:07 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:25:07 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:25:08 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:25:08 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:25:09 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:25:40 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:25:40 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1846 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I022K01N38_vtd_assignments.csv --label=TX20C_I022K01N38
+Sat Jun 24 10:25:40 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I022K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1846 --N=38 --prefix=TX20C
+Sat Jun 24 10:25:40 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:25:40 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:25:40 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:25:41 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:25:42 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:25:45 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:25:46 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:25:49 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I022K01N38 = Contiguous 38
+Map TX20C_I022K01N38 = 764489 to 770525, Diff = 6036, Percent = 0.787%
+Sat Jun 24 10:25:57 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:25:58 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I022K01N38 = 9405647.477125993
+Sat Jun 24 10:25:58 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:25:58 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I022K01N38_vtd_assignments.csv
+Sat Jun 24 10:25:58 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1847 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I023K01N38_vtd_assignments.csv --label=TX20C_I023K01N38
+Sat Jun 24 10:25:58 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I023K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1847 --N=38 --prefix=TX20C
+Sat Jun 24 10:25:58 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:25:59 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:25:59 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:25:59 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:26:00 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:26:31 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:26:31 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1848 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I024K01N38_vtd_assignments.csv --label=TX20C_I024K01N38
+Sat Jun 24 10:26:31 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I024K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1848 --N=38 --prefix=TX20C
+Sat Jun 24 10:26:31 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:26:31 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:26:32 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:26:32 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:26:33 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:26:38 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:26:39 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:26:43 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I024K01N38 = Contiguous 38
+Map TX20C_I024K01N38 = 760217 to 772827, Diff = 12610, Percent = 1.644%
+Sat Jun 24 10:26:51 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:26:51 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I024K01N38 = 9717698.40515164
+Sat Jun 24 10:26:52 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:26:52 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I024K01N38_vtd_assignments.csv
+Sat Jun 24 10:26:52 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1849 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I025K01N38_vtd_assignments.csv --label=TX20C_I025K01N38
+Sat Jun 24 10:26:52 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I025K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1849 --N=38 --prefix=TX20C
+Sat Jun 24 10:26:52 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:26:52 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:26:53 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:26:53 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:26:54 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:27:03 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:27:05 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:27:55 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:27:55 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1850 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I026K01N38_vtd_assignments.csv --label=TX20C_I026K01N38
+Sat Jun 24 10:27:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I026K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1850 --N=38 --prefix=TX20C
+Sat Jun 24 10:27:55 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:27:55 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:27:56 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:27:56 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:27:57 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:28:28 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:28:28 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1851 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I027K01N38_vtd_assignments.csv --label=TX20C_I027K01N38
+Sat Jun 24 10:28:28 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I027K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1851 --N=38 --prefix=TX20C
+Sat Jun 24 10:28:28 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:28:28 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:28:29 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:28:29 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:28:30 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:29:00 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:29:00 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1852 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I028K01N38_vtd_assignments.csv --label=TX20C_I028K01N38
+Sat Jun 24 10:29:00 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I028K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1852 --N=38 --prefix=TX20C
+Sat Jun 24 10:29:01 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:29:01 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:29:01 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:29:01 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:29:02 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:29:04 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:29:05 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:29:54 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:29:54 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1853 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I029K01N38_vtd_assignments.csv --label=TX20C_I029K01N38
+Sat Jun 24 10:29:54 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I029K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1853 --N=38 --prefix=TX20C
+Sat Jun 24 10:29:54 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:29:54 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:29:54 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:29:55 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:29:56 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:30:26 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:30:26 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1854 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I030K01N38_vtd_assignments.csv --label=TX20C_I030K01N38
+Sat Jun 24 10:30:26 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I030K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1854 --N=38 --prefix=TX20C
+Sat Jun 24 10:30:26 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:30:27 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:30:27 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:30:27 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:30:28 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:30:59 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:30:59 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1855 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I031K01N38_vtd_assignments.csv --label=TX20C_I031K01N38
+Sat Jun 24 10:30:59 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I031K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1855 --N=38 --prefix=TX20C
+Sat Jun 24 10:30:59 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:30:59 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:31:00 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:31:00 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:31:01 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:31:32 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:31:32 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1856 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I032K01N38_vtd_assignments.csv --label=TX20C_I032K01N38
+Sat Jun 24 10:31:32 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I032K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1856 --N=38 --prefix=TX20C
+Sat Jun 24 10:31:32 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:31:32 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:31:32 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:31:32 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:31:33 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:31:35 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:31:37 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:31:40 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I032K01N38 = Contiguous 38
+Map TX20C_I032K01N38 = 763294 to 772192, Diff = 8898, Percent = 1.160%
+Sat Jun 24 10:31:48 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:31:48 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I032K01N38 = 9706509.22093109
+Sat Jun 24 10:31:49 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:31:49 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I032K01N38_vtd_assignments.csv
+Sat Jun 24 10:31:49 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1857 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I033K01N38_vtd_assignments.csv --label=TX20C_I033K01N38
+Sat Jun 24 10:31:49 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I033K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1857 --N=38 --prefix=TX20C
+Sat Jun 24 10:31:49 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:31:49 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:31:50 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:31:50 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:31:51 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:31:53 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 10:31:54 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:31:57 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I033K01N38 = Contiguous 38
+Map TX20C_I033K01N38 = 764069 to 771385, Diff = 7316, Percent = 0.954%
+Sat Jun 24 10:32:05 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:32:06 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I033K01N38 = 9512650.654663824
+Sat Jun 24 10:32:06 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:32:06 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I033K01N38_vtd_assignments.csv
+Sat Jun 24 10:32:06 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1858 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I034K01N38_vtd_assignments.csv --label=TX20C_I034K01N38
+Sat Jun 24 10:32:06 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I034K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1858 --N=38 --prefix=TX20C
+Sat Jun 24 10:32:06 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:32:07 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:32:07 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:32:07 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:32:08 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:32:10 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 10:32:11 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:32:14 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I034K01N38 = Contiguous 38
+Map TX20C_I034K01N38 = 762207 to 770905, Diff = 8698, Percent = 1.134%
+Sat Jun 24 10:32:22 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:32:22 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I034K01N38 = 9697634.718437023
+Sat Jun 24 10:32:23 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:32:23 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I034K01N38_vtd_assignments.csv
+Sat Jun 24 10:32:23 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1859 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I035K01N38_vtd_assignments.csv --label=TX20C_I035K01N38
+Sat Jun 24 10:32:23 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I035K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1859 --N=38 --prefix=TX20C
+Sat Jun 24 10:32:23 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:32:23 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:32:24 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:32:24 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:32:25 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:32:56 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:32:56 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1860 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I036K01N38_vtd_assignments.csv --label=TX20C_I036K01N38
+Sat Jun 24 10:32:56 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I036K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1860 --N=38 --prefix=TX20C
+Sat Jun 24 10:32:56 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:32:56 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:32:56 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:32:57 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:32:58 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:32:59 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:33:00 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:33:04 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I036K01N38 = Contiguous 38
+Map TX20C_I036K01N38 = 763449 to 770962, Diff = 7513, Percent = 0.980%
+Sat Jun 24 10:33:13 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:33:13 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I036K01N38 = 9578881.529242145
+Sat Jun 24 10:33:13 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:33:14 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I036K01N38_vtd_assignments.csv
+Sat Jun 24 10:33:14 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1861 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I037K01N38_vtd_assignments.csv --label=TX20C_I037K01N38
+Sat Jun 24 10:33:14 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I037K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1861 --N=38 --prefix=TX20C
+Sat Jun 24 10:33:14 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:33:14 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:33:14 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:33:15 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:33:16 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:33:19 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+AUDIT WARNING: 40 clusters, 38 sites, ignoring shared points
+Sat Jun 24 10:33:20 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+AUDIT WARNING: 40 clusters, 38 sites, ignoring shared points
+Sat Jun 24 10:33:21 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I037K01N38 = Contiguous 38
+Map TX20C_I037K01N38 = 763628 to 770415, Diff = 6787, Percent = 0.885%
+Sat Jun 24 10:33:26 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:33:27 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I037K01N38 = 9567996.697012575
+Sat Jun 24 10:33:27 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:33:27 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I037K01N38_vtd_assignments.csv
+Sat Jun 24 10:33:27 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1862 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I038K01N38_vtd_assignments.csv --label=TX20C_I038K01N38
+Sat Jun 24 10:33:27 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I038K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1862 --N=38 --prefix=TX20C
+Sat Jun 24 10:33:27 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:33:27 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:33:28 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:33:28 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:33:29 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:33:36 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:33:37 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:33:43 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I038K01N38 = Contiguous 38
+Map TX20C_I038K01N38 = 764160 to 770547, Diff = 6387, Percent = 0.833%
+Sat Jun 24 10:33:52 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:33:52 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I038K01N38 = 9509509.696621887
+Sat Jun 24 10:33:53 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:33:53 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I038K01N38_vtd_assignments.csv
+Sat Jun 24 10:33:53 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1863 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I039K01N38_vtd_assignments.csv --label=TX20C_I039K01N38
+Sat Jun 24 10:33:53 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I039K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1863 --N=38 --prefix=TX20C
+Sat Jun 24 10:33:53 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:33:53 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:33:54 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:33:54 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:33:55 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:34:26 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:34:26 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1864 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I040K01N38_vtd_assignments.csv --label=TX20C_I040K01N38
+Sat Jun 24 10:34:26 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I040K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1864 --N=38 --prefix=TX20C
+Sat Jun 24 10:34:26 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:34:26 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:34:26 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:34:27 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:34:28 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:34:48 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:34:50 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:35:46 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:35:46 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1865 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I041K01N38_vtd_assignments.csv --label=TX20C_I041K01N38
+Sat Jun 24 10:35:46 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I041K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1865 --N=38 --prefix=TX20C
+Sat Jun 24 10:35:46 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:35:47 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:35:47 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:35:47 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:35:48 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:35:50 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:35:52 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:35:54 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I041K01N38 = Contiguous 38
+Map TX20C_I041K01N38 = 763768 to 773055, Diff = 9287, Percent = 1.211%
+Sat Jun 24 10:36:04 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:36:04 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I041K01N38 = 9502396.504475769
+Sat Jun 24 10:36:04 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:36:04 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I041K01N38_vtd_assignments.csv
+Sat Jun 24 10:36:04 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1866 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I042K01N38_vtd_assignments.csv --label=TX20C_I042K01N38
+Sat Jun 24 10:36:04 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I042K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1866 --N=38 --prefix=TX20C
+Sat Jun 24 10:36:04 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:36:05 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:36:05 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:36:05 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:36:06 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:36:11 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:36:12 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:36:16 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I042K01N38 = Contiguous 38
+Map TX20C_I042K01N38 = 764158 to 771061, Diff = 6903, Percent = 0.900%
+Sat Jun 24 10:36:24 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:36:25 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I042K01N38 = 9786297.393849043
+Sat Jun 24 10:36:25 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:36:25 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I042K01N38_vtd_assignments.csv
+Sat Jun 24 10:36:25 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1867 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I043K01N38_vtd_assignments.csv --label=TX20C_I043K01N38
+Sat Jun 24 10:36:25 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I043K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1867 --N=38 --prefix=TX20C
+Sat Jun 24 10:36:25 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:36:26 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:36:26 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:36:26 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:36:27 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:36:29 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:36:31 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:37:17 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:37:17 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1868 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I044K01N38_vtd_assignments.csv --label=TX20C_I044K01N38
+Sat Jun 24 10:37:17 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I044K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1868 --N=38 --prefix=TX20C
+Sat Jun 24 10:37:17 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:37:17 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:37:18 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:37:18 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:37:19 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:37:50 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:37:50 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1869 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I045K01N38_vtd_assignments.csv --label=TX20C_I045K01N38
+Sat Jun 24 10:37:50 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I045K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1869 --N=38 --prefix=TX20C
+Sat Jun 24 10:37:50 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:37:50 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:37:50 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:37:51 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:37:52 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:37:57 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:37:58 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:38:01 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I045K01N38 = Contiguous 38
+Map TX20C_I045K01N38 = 763632 to 770825, Diff = 7193, Percent = 0.938%
+Sat Jun 24 10:38:09 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:38:10 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I045K01N38 = 9616479.818306496
+Sat Jun 24 10:38:10 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:38:10 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I045K01N38_vtd_assignments.csv
+Sat Jun 24 10:38:10 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1870 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I046K01N38_vtd_assignments.csv --label=TX20C_I046K01N38
+Sat Jun 24 10:38:10 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I046K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1870 --N=38 --prefix=TX20C
+Sat Jun 24 10:38:10 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:38:11 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:38:11 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:38:11 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:38:12 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:38:16 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:38:17 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:39:01 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:39:01 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1871 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I047K01N38_vtd_assignments.csv --label=TX20C_I047K01N38
+Sat Jun 24 10:39:01 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I047K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1871 --N=38 --prefix=TX20C
+Sat Jun 24 10:39:01 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:39:01 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:39:02 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:39:02 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:39:03 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:39:10 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:39:11 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:39:59 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:39:59 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1872 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I048K01N38_vtd_assignments.csv --label=TX20C_I048K01N38
+Sat Jun 24 10:39:59 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I048K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1872 --N=38 --prefix=TX20C
+Sat Jun 24 10:39:59 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:39:59 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:40:00 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:40:00 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:40:01 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:40:10 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 10:40:11 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:40:14 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I048K01N38 = Contiguous 38
+Map TX20C_I048K01N38 = 764073 to 770889, Diff = 6816, Percent = 0.889%
+Sat Jun 24 10:40:23 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:40:23 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I048K01N38 = 9695865.018791957
+Sat Jun 24 10:40:24 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:40:24 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I048K01N38_vtd_assignments.csv
+Sat Jun 24 10:40:24 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1873 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I049K01N38_vtd_assignments.csv --label=TX20C_I049K01N38
+Sat Jun 24 10:40:24 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I049K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1873 --N=38 --prefix=TX20C
+Sat Jun 24 10:40:24 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:40:24 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:40:25 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:40:25 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:40:26 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:40:29 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:40:31 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:40:34 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I049K01N38 = Contiguous 38
+Map TX20C_I049K01N38 = 763927 to 769976, Diff = 6049, Percent = 0.789%
+Sat Jun 24 10:40:43 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:40:43 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I049K01N38 = 9412032.476929205
+Sat Jun 24 10:40:44 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:40:44 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I049K01N38_vtd_assignments.csv
+Sat Jun 24 10:40:44 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1874 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I050K01N38_vtd_assignments.csv --label=TX20C_I050K01N38
+Sat Jun 24 10:40:44 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I050K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1874 --N=38 --prefix=TX20C
+Sat Jun 24 10:40:44 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:40:44 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:40:45 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:40:45 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:40:46 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:41:17 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:41:17 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1875 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I051K01N38_vtd_assignments.csv --label=TX20C_I051K01N38
+Sat Jun 24 10:41:17 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I051K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1875 --N=38 --prefix=TX20C
+Sat Jun 24 10:41:17 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:41:17 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:41:17 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:41:18 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:41:18 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:41:49 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:41:49 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1876 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I052K01N38_vtd_assignments.csv --label=TX20C_I052K01N38
+Sat Jun 24 10:41:49 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I052K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1876 --N=38 --prefix=TX20C
+Sat Jun 24 10:41:49 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:41:50 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:41:50 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:41:50 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:41:51 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:41:55 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:41:56 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:41:59 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I052K01N38 = Contiguous 38
+Map TX20C_I052K01N38 = 764091 to 770862, Diff = 6771, Percent = 0.883%
+Sat Jun 24 10:42:08 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:42:08 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I052K01N38 = 9626649.277562702
+Sat Jun 24 10:42:08 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:42:09 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I052K01N38_vtd_assignments.csv
+Sat Jun 24 10:42:09 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1877 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I053K01N38_vtd_assignments.csv --label=TX20C_I053K01N38
+Sat Jun 24 10:42:09 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I053K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1877 --N=38 --prefix=TX20C
+Sat Jun 24 10:42:09 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:42:09 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:42:09 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:42:10 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:42:11 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:42:15 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:42:16 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:42:19 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I053K01N38 = Contiguous 38
+Map TX20C_I053K01N38 = 763489 to 771582, Diff = 8093, Percent = 1.055%
+Sat Jun 24 10:42:27 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:42:27 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I053K01N38 = 9524248.674944611
+Sat Jun 24 10:42:28 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:42:28 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I053K01N38_vtd_assignments.csv
+Sat Jun 24 10:42:28 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1878 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I054K01N38_vtd_assignments.csv --label=TX20C_I054K01N38
+Sat Jun 24 10:42:28 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I054K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1878 --N=38 --prefix=TX20C
+Sat Jun 24 10:42:28 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:42:28 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:42:29 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:42:29 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:42:30 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:42:40 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:42:41 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:42:46 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I054K01N38 = Contiguous 38
+Map TX20C_I054K01N38 = 763202 to 770477, Diff = 7275, Percent = 0.949%
+Sat Jun 24 10:42:54 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:42:54 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I054K01N38 = 9653614.496329369
+Sat Jun 24 10:42:54 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:42:55 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I054K01N38_vtd_assignments.csv
+Sat Jun 24 10:42:55 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1879 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I055K01N38_vtd_assignments.csv --label=TX20C_I055K01N38
+Sat Jun 24 10:42:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I055K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1879 --N=38 --prefix=TX20C
+Sat Jun 24 10:42:55 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:42:55 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:42:56 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:42:56 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:42:57 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:42:59 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:43:00 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:43:04 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I055K01N38 = Contiguous 38
+Map TX20C_I055K01N38 = 761850 to 772458, Diff = 10608, Percent = 1.383%
+Sat Jun 24 10:43:13 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:43:13 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I055K01N38 = 9541561.347805459
+Sat Jun 24 10:43:14 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:43:14 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I055K01N38_vtd_assignments.csv
+Sat Jun 24 10:43:14 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1880 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I056K01N38_vtd_assignments.csv --label=TX20C_I056K01N38
+Sat Jun 24 10:43:14 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I056K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1880 --N=38 --prefix=TX20C
+Sat Jun 24 10:43:14 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:43:14 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:43:15 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:43:15 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:43:16 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:43:18 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:43:19 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:44:06 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:44:06 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1881 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I057K01N38_vtd_assignments.csv --label=TX20C_I057K01N38
+Sat Jun 24 10:44:06 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I057K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1881 --N=38 --prefix=TX20C
+Sat Jun 24 10:44:06 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:44:06 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:44:06 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:44:07 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:44:08 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:44:13 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:44:14 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:44:22 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I057K01N38 = Contiguous 38
+Map TX20C_I057K01N38 = 762017 to 770783, Diff = 8766, Percent = 1.143%
+Sat Jun 24 10:44:30 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:44:31 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I057K01N38 = 9109748.915679203
+Sat Jun 24 10:44:31 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:44:31 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I057K01N38_vtd_assignments.csv
+Sat Jun 24 10:44:31 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1882 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I058K01N38_vtd_assignments.csv --label=TX20C_I058K01N38
+Sat Jun 24 10:44:31 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I058K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1882 --N=38 --prefix=TX20C
+Sat Jun 24 10:44:31 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:44:32 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:44:32 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:44:32 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:44:33 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:44:37 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 10:44:38 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:45:23 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:45:23 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1883 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I059K01N38_vtd_assignments.csv --label=TX20C_I059K01N38
+Sat Jun 24 10:45:23 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I059K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1883 --N=38 --prefix=TX20C
+Sat Jun 24 10:45:23 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:45:23 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:45:23 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:45:24 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:45:25 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:45:55 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:45:55 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1884 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I060K01N38_vtd_assignments.csv --label=TX20C_I060K01N38
+Sat Jun 24 10:45:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I060K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1884 --N=38 --prefix=TX20C
+Sat Jun 24 10:45:55 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:45:56 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:45:56 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:45:56 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:45:57 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:46:02 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:46:04 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:46:07 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I060K01N38 = Contiguous 38
+Map TX20C_I060K01N38 = 763538 to 771258, Diff = 7720, Percent = 1.007%
+Sat Jun 24 10:46:15 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:46:16 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I060K01N38 = 9748623.38328416
+Sat Jun 24 10:46:16 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:46:16 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I060K01N38_vtd_assignments.csv
+Sat Jun 24 10:46:16 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1885 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I061K01N38_vtd_assignments.csv --label=TX20C_I061K01N38
+Sat Jun 24 10:46:16 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I061K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1885 --N=38 --prefix=TX20C
+Sat Jun 24 10:46:16 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:46:17 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:46:17 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:46:17 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:46:18 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:46:49 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:46:49 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1886 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I062K01N38_vtd_assignments.csv --label=TX20C_I062K01N38
+Sat Jun 24 10:46:49 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I062K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1886 --N=38 --prefix=TX20C
+Sat Jun 24 10:46:49 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:46:50 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:46:50 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:46:50 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:46:51 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:47:22 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:47:22 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1887 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I063K01N38_vtd_assignments.csv --label=TX20C_I063K01N38
+Sat Jun 24 10:47:22 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I063K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1887 --N=38 --prefix=TX20C
+Sat Jun 24 10:47:22 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:47:22 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:47:23 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:47:23 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:47:24 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:47:55 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:47:55 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1888 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I064K01N38_vtd_assignments.csv --label=TX20C_I064K01N38
+Sat Jun 24 10:47:55 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I064K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1888 --N=38 --prefix=TX20C
+Sat Jun 24 10:47:55 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:47:55 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:47:55 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:47:56 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:47:56 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:48:27 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:48:27 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1889 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I065K01N38_vtd_assignments.csv --label=TX20C_I065K01N38
+Sat Jun 24 10:48:27 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I065K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1889 --N=38 --prefix=TX20C
+Sat Jun 24 10:48:27 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:48:27 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:48:28 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:48:28 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:48:29 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:48:33 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 10:48:34 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:48:39 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I065K01N38 = Contiguous 38
+Map TX20C_I065K01N38 = 764157 to 770320, Diff = 6163, Percent = 0.804%
+Sat Jun 24 10:48:47 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:48:48 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I065K01N38 = 9598174.669305276
+Sat Jun 24 10:48:48 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:48:48 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I065K01N38_vtd_assignments.csv
+Sat Jun 24 10:48:48 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1890 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I066K01N38_vtd_assignments.csv --label=TX20C_I066K01N38
+Sat Jun 24 10:48:48 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I066K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1890 --N=38 --prefix=TX20C
+Sat Jun 24 10:48:48 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:48:49 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:48:49 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:48:49 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:48:50 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:48:55 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:48:56 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:48:59 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+FAILURE: Could not find a way to make consolidated map contiguous
+Sat Jun 24 10:49:07 PDT 2023 Failed to create consolidated file
+Sat Jun 24 10:49:07 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1891 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I067K01N38_vtd_assignments.csv --label=TX20C_I067K01N38
+Sat Jun 24 10:49:07 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I067K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1891 --N=38 --prefix=TX20C
+Sat Jun 24 10:49:07 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:49:07 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:49:07 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:49:08 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:49:09 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:49:39 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:49:39 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1892 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I068K01N38_vtd_assignments.csv --label=TX20C_I068K01N38
+Sat Jun 24 10:49:39 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I068K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1892 --N=38 --prefix=TX20C
+Sat Jun 24 10:49:39 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:49:40 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:49:40 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:49:40 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:49:41 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:49:44 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:49:46 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:49:49 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I068K01N38 = Contiguous 38
+Map TX20C_I068K01N38 = 763426 to 773780, Diff = 10354, Percent = 1.350%
+Sat Jun 24 10:49:57 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:49:58 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I068K01N38 = 9583585.21202519
+Sat Jun 24 10:49:58 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:49:58 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I068K01N38_vtd_assignments.csv
+Sat Jun 24 10:49:58 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1893 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I069K01N38_vtd_assignments.csv --label=TX20C_I069K01N38
+Sat Jun 24 10:49:58 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I069K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1893 --N=38 --prefix=TX20C
+Sat Jun 24 10:49:58 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:49:59 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:49:59 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:49:59 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:50:00 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:50:31 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:50:31 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1894 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I070K01N38_vtd_assignments.csv --label=TX20C_I070K01N38
+Sat Jun 24 10:50:31 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I070K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1894 --N=38 --prefix=TX20C
+Sat Jun 24 10:50:31 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:50:31 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:50:32 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:50:32 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:50:33 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:50:40 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:50:41 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:50:44 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I070K01N38 = Contiguous 38
+Map TX20C_I070K01N38 = 762854 to 770167, Diff = 7313, Percent = 0.953%
+Sat Jun 24 10:50:53 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:50:53 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I070K01N38 = 9145180.538968967
+Sat Jun 24 10:50:53 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:50:54 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I070K01N38_vtd_assignments.csv
+Sat Jun 24 10:50:54 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1895 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I071K01N38_vtd_assignments.csv --label=TX20C_I071K01N38
+Sat Jun 24 10:50:54 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I071K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1895 --N=38 --prefix=TX20C
+Sat Jun 24 10:50:54 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:50:54 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:50:54 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:50:55 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:50:56 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:51:26 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:51:26 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1896 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I072K01N38_vtd_assignments.csv --label=TX20C_I072K01N38
+Sat Jun 24 10:51:26 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I072K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1896 --N=38 --prefix=TX20C
+Sat Jun 24 10:51:26 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:51:27 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:51:27 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:51:27 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:51:28 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:51:30 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:51:32 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:51:35 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I072K01N38 = Contiguous 38
+Map TX20C_I072K01N38 = 763121 to 772938, Diff = 9817, Percent = 1.280%
+Sat Jun 24 10:51:43 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:51:43 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I072K01N38 = 9429262.178474227
+Sat Jun 24 10:51:44 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:51:44 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I072K01N38_vtd_assignments.csv
+Sat Jun 24 10:51:44 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1897 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I073K01N38_vtd_assignments.csv --label=TX20C_I073K01N38
+Sat Jun 24 10:51:44 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I073K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1897 --N=38 --prefix=TX20C
+Sat Jun 24 10:51:44 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:51:44 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:51:45 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:51:45 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:51:46 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:51:53 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 10:51:54 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:51:57 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I073K01N38 = Contiguous 38
+Map TX20C_I073K01N38 = 764005 to 771128, Diff = 7123, Percent = 0.929%
+Sat Jun 24 10:52:06 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:52:07 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I073K01N38 = 9630866.185930323
+Sat Jun 24 10:52:07 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:52:07 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I073K01N38_vtd_assignments.csv
+Sat Jun 24 10:52:07 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1898 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I074K01N38_vtd_assignments.csv --label=TX20C_I074K01N38
+Sat Jun 24 10:52:07 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I074K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1898 --N=38 --prefix=TX20C
+Sat Jun 24 10:52:07 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:52:08 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:52:08 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:52:08 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:52:09 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:52:11 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 10:52:12 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:52:17 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I074K01N38 = Contiguous 38
+Map TX20C_I074K01N38 = 763238 to 770970, Diff = 7732, Percent = 1.008%
+Sat Jun 24 10:52:25 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:52:25 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I074K01N38 = 9690478.865086855
+Sat Jun 24 10:52:25 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:52:25 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I074K01N38_vtd_assignments.csv
+Sat Jun 24 10:52:25 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1899 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I075K01N38_vtd_assignments.csv --label=TX20C_I075K01N38
+Sat Jun 24 10:52:25 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I075K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1899 --N=38 --prefix=TX20C
+Sat Jun 24 10:52:25 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:52:26 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:52:26 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:52:26 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:52:27 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:52:58 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:52:58 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1900 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I076K01N38_vtd_assignments.csv --label=TX20C_I076K01N38
+Sat Jun 24 10:52:58 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I076K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1900 --N=38 --prefix=TX20C
+Sat Jun 24 10:52:58 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:52:58 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:52:59 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:52:59 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:53:00 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:53:30 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:53:30 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1901 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I077K01N38_vtd_assignments.csv --label=TX20C_I077K01N38
+Sat Jun 24 10:53:30 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I077K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1901 --N=38 --prefix=TX20C
+Sat Jun 24 10:53:30 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:53:31 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:53:31 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:53:31 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:53:32 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:54:03 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:54:03 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1902 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I078K01N38_vtd_assignments.csv --label=TX20C_I078K01N38
+Sat Jun 24 10:54:03 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I078K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1902 --N=38 --prefix=TX20C
+Sat Jun 24 10:54:03 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:54:03 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:54:04 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:54:04 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:54:05 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:54:35 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:54:35 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1903 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I079K01N38_vtd_assignments.csv --label=TX20C_I079K01N38
+Sat Jun 24 10:54:35 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I079K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1903 --N=38 --prefix=TX20C
+Sat Jun 24 10:54:35 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:54:36 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:54:36 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:54:36 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:54:37 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:55:08 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:55:08 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1904 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I080K01N38_vtd_assignments.csv --label=TX20C_I080K01N38
+Sat Jun 24 10:55:08 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I080K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1904 --N=38 --prefix=TX20C
+Sat Jun 24 10:55:08 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:55:08 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:55:09 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:55:09 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:55:10 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:55:40 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:55:40 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1905 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I081K01N38_vtd_assignments.csv --label=TX20C_I081K01N38
+Sat Jun 24 10:55:40 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I081K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1905 --N=38 --prefix=TX20C
+Sat Jun 24 10:55:40 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:55:41 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:55:41 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:55:41 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:55:42 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:55:44 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:55:45 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:56:36 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:56:36 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1906 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I082K01N38_vtd_assignments.csv --label=TX20C_I082K01N38
+Sat Jun 24 10:56:36 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I082K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1906 --N=38 --prefix=TX20C
+Sat Jun 24 10:56:36 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:56:36 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:56:36 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:56:37 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:56:38 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:56:47 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:56:48 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:56:52 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I082K01N38 = Contiguous 38
+Map TX20C_I082K01N38 = 763117 to 770837, Diff = 7720, Percent = 1.007%
+Sat Jun 24 10:57:01 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:57:01 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I082K01N38 = 9308105.732795194
+Sat Jun 24 10:57:01 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:57:02 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I082K01N38_vtd_assignments.csv
+Sat Jun 24 10:57:02 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1907 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I083K01N38_vtd_assignments.csv --label=TX20C_I083K01N38
+Sat Jun 24 10:57:02 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I083K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1907 --N=38 --prefix=TX20C
+Sat Jun 24 10:57:02 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:57:02 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:57:02 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:57:02 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:57:03 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:57:34 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:57:34 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1908 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I084K01N38_vtd_assignments.csv --label=TX20C_I084K01N38
+Sat Jun 24 10:57:34 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I084K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1908 --N=38 --prefix=TX20C
+Sat Jun 24 10:57:34 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:57:34 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:57:35 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:57:35 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:57:36 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:58:06 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:58:06 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1909 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I085K01N38_vtd_assignments.csv --label=TX20C_I085K01N38
+Sat Jun 24 10:58:06 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I085K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1909 --N=38 --prefix=TX20C
+Sat Jun 24 10:58:06 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:58:07 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:58:07 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:58:07 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:58:08 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:58:39 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:58:39 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1910 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I086K01N38_vtd_assignments.csv --label=TX20C_I086K01N38
+Sat Jun 24 10:58:39 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I086K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1910 --N=38 --prefix=TX20C
+Sat Jun 24 10:58:39 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:58:39 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:58:40 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:58:40 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:58:41 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 10:59:11 PDT 2023 Failed to create balzer file
+Sat Jun 24 10:59:11 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1911 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I087K01N38_vtd_assignments.csv --label=TX20C_I087K01N38
+Sat Jun 24 10:59:11 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I087K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1911 --N=38 --prefix=TX20C
+Sat Jun 24 10:59:11 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:59:12 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:59:12 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:59:12 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:59:13 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 10:59:15 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 10:59:17 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 10:59:22 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I087K01N38 = Contiguous 38
+Map TX20C_I087K01N38 = 762428 to 769614, Diff = 7186, Percent = 0.937%
+Sat Jun 24 10:59:30 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 10:59:30 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I087K01N38 = 9591043.45813401
+Sat Jun 24 10:59:31 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 10:59:31 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I087K01N38_vtd_assignments.csv
+Sat Jun 24 10:59:31 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1912 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I088K01N38_vtd_assignments.csv --label=TX20C_I088K01N38
+Sat Jun 24 10:59:31 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I088K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1912 --N=38 --prefix=TX20C
+Sat Jun 24 10:59:31 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 10:59:32 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 10:59:32 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 10:59:32 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 10:59:33 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 11:00:04 PDT 2023 Failed to create balzer file
+Sat Jun 24 11:00:04 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1913 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I089K01N38_vtd_assignments.csv --label=TX20C_I089K01N38
+Sat Jun 24 11:00:04 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I089K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1913 --N=38 --prefix=TX20C
+Sat Jun 24 11:00:04 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 11:00:04 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 11:00:04 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 11:00:05 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 11:00:06 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 11:00:08 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+WARNING: significant shared points in assignments
+Sat Jun 24 11:00:10 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 11:00:13 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I089K01N38 = Contiguous 38
+Map TX20C_I089K01N38 = 762841 to 769888, Diff = 7047, Percent = 0.919%
+Sat Jun 24 11:00:21 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 11:00:21 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I089K01N38 = 9367093.531023117
+Sat Jun 24 11:00:21 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 11:00:22 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I089K01N38_vtd_assignments.csv
+Sat Jun 24 11:00:22 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1914 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I090K01N38_vtd_assignments.csv --label=TX20C_I090K01N38
+Sat Jun 24 11:00:22 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I090K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1914 --N=38 --prefix=TX20C
+Sat Jun 24 11:00:22 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 11:00:22 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 11:00:22 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 11:00:23 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 11:00:24 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 11:00:54 PDT 2023 Failed to create balzer file
+Sat Jun 24 11:00:54 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1915 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I091K01N38_vtd_assignments.csv --label=TX20C_I091K01N38
+Sat Jun 24 11:00:54 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I091K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1915 --N=38 --prefix=TX20C
+Sat Jun 24 11:00:54 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 11:00:54 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 11:00:55 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 11:00:55 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 11:00:56 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 11:00:58 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 11:00:59 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 11:01:02 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I091K01N38 = Contiguous 38
+Map TX20C_I091K01N38 = 763028 to 771388, Diff = 8360, Percent = 1.090%
+Sat Jun 24 11:01:10 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 11:01:11 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I091K01N38 = 9539316.072901849
+Sat Jun 24 11:01:11 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 11:01:11 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I091K01N38_vtd_assignments.csv
+Sat Jun 24 11:01:11 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1916 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I092K01N38_vtd_assignments.csv --label=TX20C_I092K01N38
+Sat Jun 24 11:01:11 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I092K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1916 --N=38 --prefix=TX20C
+Sat Jun 24 11:01:11 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 11:01:12 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 11:01:12 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 11:01:12 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 11:01:13 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 11:01:16 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 11:01:17 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 11:01:20 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I092K01N38 = Contiguous 38
+Map TX20C_I092K01N38 = 764199 to 770052, Diff = 5853, Percent = 0.763%
+Sat Jun 24 11:01:29 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 11:01:29 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I092K01N38 = 9483579.26466964
+Sat Jun 24 11:01:30 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 11:01:30 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I092K01N38_vtd_assignments.csv
+Sat Jun 24 11:01:30 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1917 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I093K01N38_vtd_assignments.csv --label=TX20C_I093K01N38
+Sat Jun 24 11:01:30 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I093K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1917 --N=38 --prefix=TX20C
+Sat Jun 24 11:01:30 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 11:01:30 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 11:01:31 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 11:01:31 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 11:01:32 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 11:02:03 PDT 2023 Failed to create balzer file
+Sat Jun 24 11:02:03 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1918 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I094K01N38_vtd_assignments.csv --label=TX20C_I094K01N38
+Sat Jun 24 11:02:03 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I094K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1918 --N=38 --prefix=TX20C
+Sat Jun 24 11:02:03 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 11:02:03 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 11:02:03 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 11:02:04 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 11:02:05 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 11:02:35 PDT 2023 Failed to create balzer file
+Sat Jun 24 11:02:35 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1919 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I095K01N38_vtd_assignments.csv --label=TX20C_I095K01N38
+Sat Jun 24 11:02:35 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I095K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1919 --N=38 --prefix=TX20C
+Sat Jun 24 11:02:35 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 11:02:36 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 11:02:36 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 11:02:36 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 11:02:37 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 11:03:08 PDT 2023 Failed to create balzer file
+Sat Jun 24 11:03:08 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1920 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I096K01N38_vtd_assignments.csv --label=TX20C_I096K01N38
+Sat Jun 24 11:03:08 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I096K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1920 --N=38 --prefix=TX20C
+Sat Jun 24 11:03:08 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 11:03:08 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 11:03:08 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 11:03:09 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 11:03:10 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Sat Jun 24 11:03:13 PDT 2023 Creating unbalanced contiguous assignment file: intermediate/TX/TX20C.unbalancedcontiguous.csv
+Sat Jun 24 11:03:14 PDT 2023 Creating unbalanced, contiguous, balzer file: intermediate/TX/TX20C.balzerunbalancedcontiguous.csv
+Sat Jun 24 11:03:17 PDT 2023 Creating consolidated file: intermediate/TX/TX20C.consolidated.csv
+Map TX20C_I096K01N38 = Contiguous 38
+Map TX20C_I096K01N38 = 763246 to 770787, Diff = 7541, Percent = 0.983%
+Sat Jun 24 11:03:26 PDT 2023 Creating complete file: intermediate/TX/TX20C.complete.csv
+Sat Jun 24 11:03:26 PDT 2023 Computing energy of: intermediate/TX/TX20C.complete.csv
+Energy for map TX20C_I096K01N38 = 9217278.584089037
+Sat Jun 24 11:03:26 PDT 2023 Creating output file: intermediate/TX/TX20C.out.csv
+Sat Jun 24 11:03:26 PDT 2023 Copying output file to /Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I096K01N38_vtd_assignments.csv
+Sat Jun 24 11:03:26 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1921 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I097K01N38_vtd_assignments.csv --label=TX20C_I097K01N38
+Sat Jun 24 11:03:26 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I097K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1921 --N=38 --prefix=TX20C
+Sat Jun 24 11:03:26 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 11:03:27 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 11:03:27 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 11:03:27 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 11:03:28 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 11:03:59 PDT 2023 Failed to create balzer file
+Sat Jun 24 11:03:59 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1922 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I098K01N38_vtd_assignments.csv --label=TX20C_I098K01N38
+Sat Jun 24 11:03:59 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I098K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1922 --N=38 --prefix=TX20C
+Sat Jun 24 11:03:59 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 11:04:00 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 11:04:00 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 11:04:00 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 11:04:01 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 11:04:33 PDT 2023 Failed to create balzer file
+Sat Jun 24 11:04:33 PDT 2023 Args as invoked: --tmpdir=intermediate/TX --N=38 --seed=1923 --prefix=TX20C --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I099K01N38_vtd_assignments.csv --label=TX20C_I099K01N38
+Sat Jun 24 11:04:33 PDT 2023 Running command: /Users/alecramsay/iCloud/dev/dccvt/examples/redistricting/create.sh --data=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_data.csv --adjacencies=/Users/alecramsay/Documents/dev/baseline/data/TX/TX_2020_vtd_adjacencies.csv --output=/Users/alecramsay/Documents/dev/baseline/intermediate/TX/TX20C_I099K01N38_vtd_assignments.csv --tmpdir=intermediate/TX --seed=1923 --N=38 --prefix=TX20C
+Sat Jun 24 11:04:33 PDT 2023 Creating points file: intermediate/TX/TX20C.points.csv
+Sat Jun 24 11:04:33 PDT 2023 Creating adjacencies file: intermediate/TX/TX20C.adjacencies.csv
+Sat Jun 24 11:04:33 PDT 2023 Creating random sites file: intermediate/TX/TX20C.randomsites.csv
+Sat Jun 24 11:04:33 PDT 2023 Creating initial assignment file intermediate/TX/TX20C.initialized.csv
+Sat Jun 24 11:04:34 PDT 2023 Creating initial, balanced, noncontiguous balzer file: intermediate/TX/TX20C.balzer.csv
+Balzer iterations exceeded threshold 1000
+Sat Jun 24 11:05:05 PDT 2023 Failed to create balzer file
+
+>>> GENERATING BASELINE CANDIDATES FOR TX <<<
+
+main =  3033.0 seconds
