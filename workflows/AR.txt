@@ -43,11 +43,8 @@ pg:
 		* Move it to the data/AR/ folder
 
 		Ran through here 06/27/23.
-		TODO: do from here down	
 
-(7) scripts/pull_map_ratings.sh AR Congress Baseline c82e8e31-bd27-4f10-bf28-cf92a67a6c79
-
-(8) Tweak each duplicated Official and Notable map in DRA
+(7) Tweak each duplicated Official and Notable map in DRA
 		* AR_2022_Congress_Compact_map.png
 		* AR_2022_Congress_Competitive_map.png
 		* AR_2022_Congress_Minority_map.png
@@ -57,15 +54,17 @@ pg:
 		* Move them to the docs/assets/images/ folder
 		* Add the maps to the Group
 
-(9) scripts/analyze_state.py AR
+(8) scripts/analyze_state.py AR
 
-(10) Add population deviation & runtime to the abstract spreadsheet
+(9) Add population deviation & runtime to the abstract spreadsheet
 
 		cat intermediate/AR/AR20C_log_100.txt | awk 'END{print}'
 	
-(11) Turn the state on in the website
+(10) Turn the state on in the website
 
 		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
 		* On the state's page in docs/_pages/pages/AR.markdown, change the layout to 'state' and remove the NYI one-liner
 	
+		Ran through here 07/01/23.
+
 --------

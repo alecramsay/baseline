@@ -43,7 +43,6 @@ pg:
 		* Move it to the data/AL/ folder
 
 		Ran through here 06/27/23.
-		TODO: do from here down	
 
 (7) Tweak each duplicated Official and Notable map in DRA
 		* AL_2022_Congress_Compact_map.png
@@ -66,4 +65,6 @@ pg:
 		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
 		* On the state's page in docs/_pages/pages/AL.markdown, change the layout to 'state' and remove the NYI one-liner
 	
+		Ran through here 07/01/23.
+
 --------
