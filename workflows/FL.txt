@@ -43,11 +43,8 @@ pg:
 		* Move it to the data/FL/ folder
 
 		Ran through here 06/28/23.
-		TODO: do from here down	
 
-(7) scripts/pull_map_ratings.sh FL Congress Baseline 25a30adb-d32e-4f5e-a45a-42b2e08183ef
-
-(8) Tweak each duplicated Official and Notable map in DRA
+(7) Tweak each duplicated Official and Notable map in DRA
 		* FL_2022_Congress_Compact_map.png
 		* FL_2022_Congress_Competitive_map.png
 		* FL_2022_Congress_Minority_map.png
@@ -57,13 +54,13 @@ pg:
 		* Move them to the docs/assets/images/ folder
 		* Add the maps to the Group
 
-(9) scripts/analyze_state.py FL
+(8) scripts/analyze_state.py FL
 
-(10) Add population deviation & runtime to the abstract spreadsheet
+(9) Add population deviation & runtime to the abstract spreadsheet
 
 		cat intermediate/FL/FL20C_log_100.txt | awk 'END{print}'
 	
-(11) Turn the state on in the website
+(10) Turn the state on in the website
 
 		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
 		* On the state's page in docs/_pages/pages/FL.markdown, change the layout to 'state' and remove the NYI one-liner
