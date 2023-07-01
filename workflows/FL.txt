@@ -68,4 +68,6 @@ pg:
 		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
 		* On the state's page in docs/_pages/pages/FL.markdown, change the layout to 'state' and remove the NYI one-liner
 	
+		Ran through here 07/01/23.
+
 --------
