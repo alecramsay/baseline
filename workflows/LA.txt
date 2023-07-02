@@ -43,11 +43,8 @@ pg:
 		* Move it to the data/LA/ folder
 
 		Ran through here 06/27/23.
-		TODO: do from here down	
 
-(7) scripts/pull_map_ratings.sh LA Congress Baseline e59f8d73-e552-4fd3-98d0-368722302720
-
-(8) Tweak each duplicated Official and Notable map in DRA
+(7) Tweak each duplicated Official and Notable map in DRA
 		* LA_2022_Congress_Compact_map.png
 		* LA_2022_Congress_Competitive_map.png
 		* LA_2022_Congress_Minority_map.png
@@ -57,15 +54,17 @@ pg:
 		* Move them to the docs/assets/images/ folder
 		* Add the maps to the Group
 
-(9) scripts/analyze_state.py LA
+(8) scripts/analyze_state.py LA
 
-(10) Add population deviation & runtime to the abstract spreadsheet
+(9) Add population deviation & runtime to the abstract spreadsheet
 
 		cat intermediate/LA/LA20C_log_100.txt | awk 'END{print}'
 	
-(11) Turn the state on in the website
+(10) Turn the state on in the website
 
 		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
 		* On the state's page in docs/_pages/pages/LA.markdown, change the layout to 'state' and remove the NYI one-liner
 		
+		Ran through here 07/02/23.
+
 --------
