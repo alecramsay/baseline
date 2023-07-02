@@ -1,3 +1,9 @@
+TODO
+
+- Review competitive map
+
+--------
+
 baseline:
 
 (1) Create output directories
@@ -45,11 +51,8 @@ pg:
 		* Move it to the data/IN/ folder
 
 		Ran through here 06/27/23.
-		TODO: do from here down	
 
-(7) scripts/pull_map_ratings.sh IN Congress Baseline 75a78afd-46b9-427f-9410-62204c3c5939
-
-(8) Tweak each duplicated Official and Notable map in DRA
+(7) Tweak each duplicated Official and Notable map in DRA
 		* IN_2022_Congress_Compact_map.png
 		* IN_2022_Congress_Competitive_map.png
 		* IN_2022_Congress_Minority_map.png
@@ -59,15 +62,17 @@ pg:
 		* Move them to the docs/assets/images/ folder
 		* Add the maps to the Group
 
-(9) scripts/analyze_state.py IN
+(8) scripts/analyze_state.py IN
 
-(10) Add population deviation & runtime to the abstract spreadsheet
+(9) Add population deviation & runtime to the abstract spreadsheet
 
 		cat intermediate/IN/IN20C_log_100.txt | awk 'END{print}'
 	
-(11) Turn the state on in the website
+(10) Turn the state on in the website
 
 		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
 		* On the state's page in docs/_pages/pages/IN.markdown, change the layout to 'state' and remove the NYI one-liner
 	
+		Ran through here 07/02/23.
+
 --------
