@@ -1,3 +1,7 @@
+TODO
+- Review minority map
+
+--------
 baseline:
 
 (1) Create output directories
@@ -45,11 +49,8 @@ pg:
 		* Move it to the data/NJ/ folder
 
 		Ran through here 06/28/23.
-		TODO: do from here down
 
-(7) scripts/pull_map_ratings.sh NJ Congress Baseline b687ee33-5fae-43ce-b161-d49a1ddfab98
-
-(8) Tweak each duplicated Official and Notable map in DRA
+(7) Tweak each duplicated Official and Notable map in DRA
 		* NJ_2022_Congress_Compact_map.png
 		* NJ_2022_Congress_Competitive_map.png
 		* NJ_2022_Congress_Minority_map.png
@@ -59,15 +60,17 @@ pg:
 		* Move them to the docs/assets/images/ folder
 		* Add the maps to the Group
 
-(9) scripts/analyze_state.py NJ
+(8) scripts/analyze_state.py NJ
 
-(10) Add population deviation & runtime to the abstract spreadsheet
+(9) Add population deviation & runtime to the abstract spreadsheet
 
 		cat intermediate/NJ/NJ20C_log_100.txt | awk 'END{print}'
 	
-(11) Turn the state on in the website
+(10) Turn the state on in the website
 
 		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
 		* On the state's page in docs/_pages/pages/NJ.markdown, change the layout to 'state' and remove the NYI one-liner
 		
+		Ran through here 07/03/23.
+
 --------
