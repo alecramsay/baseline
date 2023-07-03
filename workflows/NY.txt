@@ -42,12 +42,9 @@ pg:
 		* Rename it to NY_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/NY/ folder
 
-		Ran through here 06/28/23.
-		TODO: do from here down.
+		Ran through here 06/28/23. See Notes below.
 
-(7) scripts/pull_map_ratings.sh NY Congress Baseline bea0efc4-52e7-4bbb-b942-67637ed4ab8a
-
-(8) Tweak each duplicated Official and Notable map in DRA
+(7) Tweak each duplicated Official and Notable map in DRA
 		* NY_2022_Congress_Compact_map.png
 		* NY_2022_Congress_Competitive_map.png
 		* NY_2022_Congress_Minority_map.png
@@ -57,18 +54,22 @@ pg:
 		* Move them to the docs/assets/images/ folder
 		* Add the maps to the Group
 
-(9) scripts/analyze_state.py NY
+(8) scripts/analyze_state.py NY
 
-(10) Add population deviation & runtime to the abstract spreadsheet
+(9) Add population deviation & runtime to the abstract spreadsheet
 
 		cat intermediate/NY/NY20C_log_100.txt | awk 'END{print}'
 	
-(11) Turn the state on in the website
+(10) Turn the state on in the website
 
 		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
 		* On the state's page in docs/_pages/pages/NY.markdown, change the layout to 'state' and remove the NYI one-liner
+
+		Ran through here 07/03/23.
 	
 --------
+NOTES
+
 DRA reports the baseline map as not contiguous, because I left off a connection when I patched
 the graph used by DRA for operational contiguity.
 
