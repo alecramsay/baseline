@@ -10,10 +10,6 @@ For documentation, type:
 
 $ scripts/unpickle_to_csv.py -h
 
-TODO
-
-- Rationalize water-only precincts between data & shapes
-
 """
 
 import argparse
@@ -66,7 +62,7 @@ def main() -> None:
 
     #
 
-    assert not water  # NOTE - Water-only precincts handled in baseline code.
+    assert not water  # NOTE - Water-only precincts handled in Todd's baseline code.
 
     #
 

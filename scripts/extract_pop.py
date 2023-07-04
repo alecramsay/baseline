@@ -206,12 +206,12 @@ def main() -> None:
         nvtds: int = len(pop_by_vtd)
         del pop_by_vtd
 
-        unpopulated: bool = False  # True TODO: Remove this?
-        if unpopulated and len(unpopulated_precincts) > 0:
-            rel_path: str = path_to_file([data_dir, xx]) + file_name(
-                [xx, cycle, "vtd", "unpopulated"], "_", "csv"
-            )
-            write_csv(rel_path, unpopulated_precincts, ["GEOID"])
+        # unpopulated: bool = False
+        # if unpopulated and len(unpopulated_precincts) > 0:
+        #     rel_path: str = path_to_file([data_dir, xx]) + file_name(
+        #         [xx, cycle, "vtd", "unpopulated"], "_", "csv"
+        #     )
+        #     write_csv(rel_path, unpopulated_precincts, ["GEOID"])
 
     ### PRINT STATISTICS ###
 
