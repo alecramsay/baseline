@@ -1,5 +1,6 @@
-TODO
-- Review proportional map
+NOTE
+
+- Notable proportional map replaced and analysis re-run 07/04/23.
 
 --------
 baseline:
