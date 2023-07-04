@@ -43,11 +43,8 @@ pg:
 		* Move it to the data/WA/ folder
 
 		Ran through here 06/28/23.
-		TODO: do from here down	
 
-(7) scripts/pull_map_ratings.sh WA Congress Baseline 989ac5b1-debe-4960-b7ca-d29d089c858d
-
-(8) Tweak each duplicated Official and Notable map in DRA
+(7) Tweak each duplicated Official and Notable map in DRA
 		* WA_2022_Congress_Compact_map.png
 		* WA_2022_Congress_Competitive_map.png
 		* WA_2022_Congress_Minority_map.png
@@ -57,15 +54,17 @@ pg:
 		* Move them to the docs/assets/images/ folder
 		* Add the maps to the Group
 
-(9) scripts/analyze_state.py WA
+(8) scripts/analyze_state.py WA
 
-(10) Add population deviation & runtime to the abstract spreadsheet
+(9) Add population deviation & runtime to the abstract spreadsheet
 
 	cat intermediate/WA/WA20C_log_100.txt | awk 'END{print}'
 	
-(11) Turn the state on in the website
+(10) Turn the state on in the website
 
 		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
 		* On the state's page in docs/_pages/pages/WA.markdown, change the layout to 'state' and remove the NYI one-liner
 	
+		Ran through here 07/04/23.
+
 --------
