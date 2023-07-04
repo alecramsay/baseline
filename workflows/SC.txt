@@ -1,5 +1,6 @@
-TODO
-- Review splitting map
+NOTE
+
+- Notable splitting map replaced and analysis re-run 07/04/23.
 
 --------
 baseline:
