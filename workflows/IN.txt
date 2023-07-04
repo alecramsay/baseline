@@ -1,6 +1,6 @@
-TODO
+NOTE
 
-- Review competitive map
+- Notable competitive map replaced and analysis re-run 07/04/23.
 
 --------
 
