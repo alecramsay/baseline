@@ -10,6 +10,14 @@ baseline:
 
 (4) scripts/extract_graph.py -s RI
 
+		UserWarning: The weights matrix is not fully connected: 
+		There are 2 disconnected components.
+		There is 1 island with id: 44009442201.
+			warnings.warn(message)
+		WARNING: Graph is not fully connected.
+
+		>>> TODO - HERE <<<
+
 (5) scripts/baseline_state.py -s RI -i 100 -c -v > intermediate/RI/RI20C_log_100.txt
 
 		* Review "WARNING" & "AUDIT" messages in the log.
