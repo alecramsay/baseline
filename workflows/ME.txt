@@ -1,0 +1,66 @@
+TODO
+- Are there issues with precincts?
+
+--------
+baseline:
+
+(1) Create output directories
+
+(2) scripts/extract_water_only.py -s ME > data/ME/ME_2020_vtd_water_only.csv
+
+		NOTE - Run this step but *don't* use the output (-w flag) in steps 3 & 4.
+
+(3) scripts/extract_data.py -s ME
+
+(4) scripts/extract_graph.py -s ME
+
+(5) scripts/baseline_state.py -s ME -i 100 -c -v > intermediate/ME/ME20C_log_100.txt
+
+		* Review "WARNING" & "AUDIT" messages in the log.
+
+(6) scripts/compare_maps.py -s ME -i 100 -v
+
+		* Copy any missing maps output to maps/ME/ME20C_missing.txt.
+		* Import ME20C_candidates.csv into a spreadheet, and verify that the results are OK.
+
+		If necessary, update the energies:
+
+		scripts/update_energies.py -s ME
+		
+(7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/ME directory as ME20C_baseline_100.csv.
+
+--------
+
+pg:
+
+(5) scripts/import_base_map.sh ME
+
+(6) Open the map in DRA:
+		* Set the Colors and Overlays -- 'Change Palette' to Plasma
+		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
+		* Export the block-assignment file
+		* Rename it to ME_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
+		* Move it to the data/ME/ folder
+
+(7) Tweak each duplicated Official and Notable map in DRA
+		* ME_2022_Congress_Compact_map.png
+		* ME_2022_Congress_Competitive_map.png
+		* ME_2022_Congress_Minority_map.png
+		* ME_2022_Congress_Official_map.png
+		* ME_2022_Congress_Proportional_map.png
+		* ME_2022_Congress_Splitting_map.png
+		* Move them to the docs/assets/images/ folder
+		* Add the maps to the Group
+
+(8) scripts/analyze_state.py ME
+
+(9) Add population deviation & runtime to the abstract spreadsheet
+
+		cat intermediate/ME/ME20C_log_100.txt | awk 'END{print}'
+	
+(10) Turn the state on in the website
+
+		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
+		* On the state's page in docs/_pages/pages/ME.markdown, change the layout to 'state' and remove the NYI one-liner
+	
+--------

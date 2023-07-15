@@ -1,6 +1,6 @@
 TODO
-- Review splitting map
-- Review competitive map
+- Review splitting map <<< I can't add the overlay to the replacement map.
+- Review competitive map <<< I can't add the overlay to the replacement map.
 
 --------
 baseline:
