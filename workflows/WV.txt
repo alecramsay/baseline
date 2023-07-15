@@ -1,3 +1,6 @@
+NOTE
+- Uses BG's
+--------
 baseline:
 
 (1) Create output directories

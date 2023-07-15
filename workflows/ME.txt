@@ -1,6 +1,5 @@
-TODO
-- Are there issues with precincts?
-
+NOTE
+- Uses VTDs + MCDs
 --------
 baseline:
 

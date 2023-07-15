@@ -1,5 +1,5 @@
-TODO
-- Does HI use BG's instead of VTD's?
+NOTE
+- Uses BG's
 --------
 baseline:
 
