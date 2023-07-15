@@ -25,6 +25,8 @@ baseline:
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/ID directory as ID20C_baseline_100.csv.
 
+		ID20C_I000K01N02 
+
 --------
 
 pg:
@@ -37,6 +39,8 @@ pg:
 		* Export the block-assignment file
 		* Rename it to ID_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/ID/ folder
+
+		Ran through here 07/15/23
 
 (7) Tweak each duplicated Official and Notable map in DRA
 		* ID_2022_Congress_Compact_map.png

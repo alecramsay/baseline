@@ -21,19 +21,24 @@ study_states: list[str] = [
     "CT",
     "FL",
     "GA",
+    "HI",
+    "ID",
     "IL",
     "IN",
     "IA",
     "KS",
     "KY",
     "LA",
-    "MD",
     "MA",
+    "MD",
+    "ME",
     "MI",
     "MN",
     "MS",
     "MO",
+    "MT",
     "NE",
+    "NH",
     "NV",
     "NJ",
     "NM",
@@ -43,6 +48,7 @@ study_states: list[str] = [
     "OK",
     "OR",
     "PA",
+    "RI",
     "SC",
     "TN",
     "TX",
@@ -50,7 +56,8 @@ study_states: list[str] = [
     "VA",
     "WA",
     "WI",
-]  # 37 states with > 2 congressional districts
+    "WV",
+]  # 37 states with > 2 congressional districts + the 7 states with 2 congressional districts
 
 
 ### ENVIRONMENT CONSTANTS ###
@@ -170,6 +177,8 @@ baseline_maps: dict[str, str] = {
     "VA": "c7cba809-9d12-428c-b013-9b4b9f9a5a91",  # 06/28/23
     "WA": "989ac5b1-debe-4960-b7ca-d29d089c858d",  # 06/28/23
     "WI": "4d17758d-3a3b-4b62-87a9-bac8da1fd645",  # 06/28/23
+    # States w/ 2 congressional districts
+    "ID": "e6f75d1c-4756-4ebe-99fe-9012d6777ed8",  # 07/15/23
 }
 
 ### END ###
