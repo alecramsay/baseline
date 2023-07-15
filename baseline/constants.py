@@ -179,6 +179,7 @@ baseline_maps: dict[str, str] = {
     "WI": "4d17758d-3a3b-4b62-87a9-bac8da1fd645",  # 06/28/23
     # States w/ 2 congressional districts
     "ID": "e6f75d1c-4756-4ebe-99fe-9012d6777ed8",  # 07/15/23
+    "NH": "9309e340-f8f7-46f3-81dc-69805f9fbeca",  # 07/15/23
 }
 
 ### END ###
