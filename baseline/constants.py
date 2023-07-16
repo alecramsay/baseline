@@ -57,7 +57,7 @@ study_states: list[str] = [
     "WA",
     "WI",
     "WV",
-]  # 42 states with 2 or congressional districts (except HI and ME)
+]  # 42 states with 2 or congressional districts (except HI and ME -- see above)
 
 
 ### ENVIRONMENT CONSTANTS ###
