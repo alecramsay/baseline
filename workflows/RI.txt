@@ -7,19 +7,14 @@ baseline:
 
 (2) scripts/extract_water_only.py -s RI > data/RI/RI_2020_vtd_water_only.csv
 
-		NOTE - Run this step but *don't* use the output (-w flag) in steps 3 & 4.
-
 (3) scripts/extract_data.py -s RI
 
-(4) scripts/extract_graph.py -s RI
+(4) scripts/extract_graph.py -s RI -a
 
-		UserWarning: The weights matrix is not fully connected: 
-		There are 2 disconnected components.
-		There is 1 island with id: 44009442201.
-			warnings.warn(message)
-		WARNING: Graph is not fully connected.
-
-		>>> TODO - HERE <<<
+		Modified contiguity:
+		+, 44009442201, 44009442005
+		+, 44009442201, 44009443209
+		+, 44009442201, 44009443210
 
 (5) scripts/baseline_state.py -s RI -i 100 -c -v > intermediate/RI/RI20C_log_100.txt
 
@@ -34,6 +29,8 @@ baseline:
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/RI directory as RI20C_baseline_100.csv.
 
+		RI20C_I000K01N02
+
 --------
 
 pg:
@@ -46,6 +43,8 @@ pg:
 		* Export the block-assignment file
 		* Rename it to RI_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/RI/ folder
+
+		Ran through here 07/16/23
 
 (7) Tweak each duplicated Official and Notable map in DRA
 		* RI_2022_Congress_Compact_map.png
