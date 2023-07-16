@@ -57,7 +57,7 @@ study_states: list[str] = [
     "WA",
     "WI",
     "WV",
-]  # 37 states with > 2 congressional districts + the 7 states with 2 congressional districts
+]  # 37 states with > 2 congressional districts + the 7 states with 2 congressional districts (except Maine)
 
 
 ### ENVIRONMENT CONSTANTS ###
@@ -181,6 +181,7 @@ baseline_maps: dict[str, str] = {
     "ID": "e6f75d1c-4756-4ebe-99fe-9012d6777ed8",  # 07/15/23
     "MT": "62590347-4639-4f63-b505-6bb2409c66eb",  # 07/15/23
     "NH": "9309e340-f8f7-46f3-81dc-69805f9fbeca",  # 07/15/23
+    "WV": "a0a0dbd0-e472-47c1-b3c6-e1e51219fabc",  # 07/16/23
 }
 
 ### END ###
