@@ -4,15 +4,11 @@ baseline:
 
 (2) scripts/extract_water_only.py -s NH > data/NH/NH_2020_vtd_water_only.csv
 
-		NOTE - Run this step but *don't* use the output (-w flag) in steps 3 & 4.
-
 (3) scripts/extract_data.py -s NH
 
 (4) scripts/extract_graph.py -s NH
 
 (5) scripts/baseline_state.py -s NH -i 100 -c -v > intermediate/NH/NH20C_log_100.txt
-
-		* Review "WARNING" & "AUDIT" messages in the log.
 
 (6) scripts/compare_maps.py -s NH -i 100 -v
 

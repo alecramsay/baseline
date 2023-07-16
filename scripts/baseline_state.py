@@ -83,7 +83,7 @@ def main() -> None:
         unit_label = "bg"
         # unit = "tract"
         # unit_label = "tract"
-    elif xx in ["OR"]:
+    elif xx in ["OR", "WV", "HI"]:
         unit = "bg"
         unit_label = "bg"
 

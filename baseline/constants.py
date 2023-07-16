@@ -31,7 +31,7 @@ study_states: list[str] = [
     "LA",
     "MA",
     "MD",
-    "ME",
+    # "ME", # Maine data is irregular.
     "MI",
     "MN",
     "MS",

@@ -1,3 +1,6 @@
+TODO
+- Modify contiguity
+--------
 baseline:
 
 (1) Create output directories
@@ -19,8 +22,6 @@ baseline:
 		>>> TODO - HERE <<<
 
 (5) scripts/baseline_state.py -s RI -i 100 -c -v > intermediate/RI/RI20C_log_100.txt
-
-		* Review "WARNING" & "AUDIT" messages in the log.
 
 (6) scripts/compare_maps.py -s RI -i 100 -v
 

@@ -81,7 +81,7 @@ def main() -> None:
     #     raise ValueError(f"Unit {unit} not recognized.")
 
     # NOTE - These override the command-line arguments.
-    if xx in ["OR"]:
+    if xx in ["OR", "WV", "HI"]:
         unit = "bg"
     elif xx in ["CA"]:
         unit = "bg"

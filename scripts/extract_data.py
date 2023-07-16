@@ -75,7 +75,7 @@ def main() -> None:
         "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
     ]
 
-    if xx in ["OR"]:
+    if xx in ["OR", "WV", "HI"]:
         commands = [
             "scripts/extract_pop.py -s {xx} -g -i 3 > data/{xx}/{xx}_census_log.txt",
             "scripts/extract_xy.py -s {xx} -g",

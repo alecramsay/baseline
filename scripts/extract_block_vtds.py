@@ -54,8 +54,8 @@ def main() -> None:
 
     ### READ THE CENSUS FILE & CREATE THE MAPPINGS ###
 
-    if xx in ["CA", "OR"]:
-        raise NotImplementedError("CA and OR do not have VTDs. Use BGs instead.")
+    if xx in ["CA", "OR", "WV", "HI"]:
+        raise NotImplementedError("This state does not have VTDs. Use BGs instead.")
 
     rel_path: str = path_to_file([rawdata_dir, xx]) + file_name(
         ["BlockAssign", f"ST{fips}", xx, "VTD"], "_", "txt"

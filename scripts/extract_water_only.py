@@ -62,7 +62,7 @@ def main() -> None:
     state_dir: str = xx
 
     unit: str = "vtd"
-    if xx in ["OR"]:
+    if xx in ["OR", "WV", "HI"]:
         unit = "bg"
     elif xx in ["CA"]:
         unit = "bg"

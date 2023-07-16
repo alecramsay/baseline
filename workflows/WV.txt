@@ -1,25 +1,17 @@
 NOTE
-- Uses BG's
+- Use BG's
 --------
 baseline:
 
 (1) Create output directories
 
-(2) scripts/extract_water_only.py -s WV > data/WV/WV_2020_vtd_water_only.csv
-
-		NOTE - Run this step but *don't* use the output (-w flag) in steps 3 & 4.
+(2) scripts/extract_water_only.py -s WV > data/WV/WV_2020_water_only.csv
 
 (3) scripts/extract_data.py -s WV
-
-		Missing xy data for ... lots of geos
-
-		>>> TODO - HERE <<<
 
 (4) scripts/extract_graph.py -s WV
 
 (5) scripts/baseline_state.py -s WV -i 100 -c -v > intermediate/WV/WV20C_log_100.txt
-
-		* Review "WARNING" & "AUDIT" messages in the log.
 
 (6) scripts/compare_maps.py -s WV -i 100 -v
 
@@ -31,6 +23,8 @@ baseline:
 		scripts/update_energies.py -s WV
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/WV directory as WV20C_baseline_100.csv.
+
+		WV20C_I000K01N02
 
 --------
 
@@ -44,6 +38,8 @@ pg:
 		* Export the block-assignment file
 		* Rename it to WV_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/WV/ folder
+
+		Ran through here 07/16/23
 
 (7) Tweak each duplicated Official and Notable map in DRA
 		* WV_2022_Congress_Compact_map.png

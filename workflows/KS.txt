@@ -13,8 +13,6 @@ baseline:
 
 (5) scripts/baseline_state.py -s KS -i 100 -c -v > intermediate/KS/KS20C_log_100.txt
 
-		* Review "WARNING" & "AUDIT" messages in the log.
-
 (6) scripts/compare_maps.py -s KS -i 100 -v
 
 	* Copy any missing maps output to maps/KS/KS20C_missing.txt.

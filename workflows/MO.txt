@@ -13,8 +13,6 @@ baseline:
 		
 (5) scripts/baseline_state.py -s MO -i 100 -c -v > intermediate/MO/MO20C_log_100.txt
 
-		* Review "WARNING" & "AUDIT" messages in the log.
-
 (6) scripts/compare_maps.py -s MO -i 100 -v
 
 		* Copy any missing maps output to maps/MO/MO20C_missing.txt.

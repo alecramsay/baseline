@@ -65,7 +65,7 @@ def main() -> None:
     if xx == "CA":
         unit = "bg"
         # unit = "tract"
-    elif xx == "OR":
+    elif xx in ["OR", "WV", "HI"]:
         unit = "bg"
     iterations: int = 100
 

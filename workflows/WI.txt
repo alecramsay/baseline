@@ -18,8 +18,6 @@ baseline:
 		
 (5) scripts/baseline_state.py -s WI -i 100 -c -v > intermediate/WI/WI20C_log_100.txt
 
-		* Review "WARNING" & "AUDIT" messages in the log.
-
 (6) scripts/compare_maps.py -s WI -i 100 -v
 
 		* Copy any missing maps output to maps/WI/WI20C_missing.txt.

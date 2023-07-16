@@ -1,5 +1,6 @@
 NOTE
-- Uses VTDs + MCDs
+- Skipping ME, because DRA has to use a combination of VTD's and MCD's, i.e.,
+	not either VTD's or BG's.
 --------
 baseline:
 
@@ -14,8 +15,6 @@ baseline:
 (4) scripts/extract_graph.py -s ME
 
 (5) scripts/baseline_state.py -s ME -i 100 -c -v > intermediate/ME/ME20C_log_100.txt
-
-		* Review "WARNING" & "AUDIT" messages in the log.
 
 (6) scripts/compare_maps.py -s ME -i 100 -v
 
