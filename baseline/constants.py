@@ -21,7 +21,7 @@ study_states: list[str] = [
     "CT",
     "FL",
     "GA",
-    "HI",
+    # "HI", # Hawaii BG's have contiguity issues that can't be corrected.
     "ID",
     "IL",
     "IN",
@@ -31,7 +31,7 @@ study_states: list[str] = [
     "LA",
     "MA",
     "MD",
-    # "ME", # Maine data is irregular.
+    # "ME", # Maine uses a mix of VTD's and BG's, which I can't easily handle.
     "MI",
     "MN",
     "MS",
@@ -57,7 +57,7 @@ study_states: list[str] = [
     "WA",
     "WI",
     "WV",
-]  # 37 states with > 2 congressional districts + the 7 states with 2 congressional districts (except Maine)
+]  # 42 states with 2 or congressional districts (except HI and ME)
 
 
 ### ENVIRONMENT CONSTANTS ###
@@ -140,6 +140,7 @@ districts_by_state: dict[str, Any] = {
 }
 
 baseline_maps: dict[str, str] = {
+    # States w/ 3 or more congressional districts
     "AL": "d16848f7-22a0-41a5-b19e-719923c54ee3",  # 06/27/23
     "AR": "c82e8e31-bd27-4f10-bf28-cf92a67a6c79",  # 06/27/23
     "AZ": "82cdf840-22b9-4af7-9e5a-0c6a17c4b88c",  # 06/27/23
@@ -177,13 +178,12 @@ baseline_maps: dict[str, str] = {
     "VA": "c7cba809-9d12-428c-b013-9b4b9f9a5a91",  # 06/28/23
     "WA": "989ac5b1-debe-4960-b7ca-d29d089c858d",  # 06/28/23
     "WI": "4d17758d-3a3b-4b62-87a9-bac8da1fd645",  # 06/28/23
-    # States w/ 2 congressional districts
+    # Additional states w/ 2 congressional districts
     "ID": "e6f75d1c-4756-4ebe-99fe-9012d6777ed8",  # 07/15/23
     "MT": "62590347-4639-4f63-b505-6bb2409c66eb",  # 07/15/23
     "NH": "9309e340-f8f7-46f3-81dc-69805f9fbeca",  # 07/15/23
     "WV": "a0a0dbd0-e472-47c1-b3c6-e1e51219fabc",  # 07/16/23
     "RI": "c7e73ead-eeb0-4a81-9708-caadff6428e6",  # 07/16/23
-    "HI": "",  # 07/16/23
 }
 
 ### END ###
