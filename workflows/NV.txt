@@ -1,7 +1,3 @@
-TODO
-- Review minority map <<< I can't add the overlay to the replacement map.
-
---------
 baseline:
 
 (1) Create output directories
@@ -58,7 +54,6 @@ pg:
 		* Add the maps to the Group
 
 (8) scripts/analyze_state.py NV
-
 
 (9) Add population deviation & runtime to the abstract spreadsheet
 
