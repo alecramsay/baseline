@@ -65,5 +65,6 @@ pg:
 		* On the state's page in docs/_pages/pages/NV.markdown, change the layout to 'state' and remove the NYI one-liner
 	
 		Ran through here 07/03/23.
+		Revised 07/19/23.
 
 --------
