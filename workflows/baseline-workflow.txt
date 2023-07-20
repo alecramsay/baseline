@@ -50,9 +50,21 @@ pg:
 		* XX_2022_Congress_Proportional_map.png
 		* XX_2022_Congress_Splitting_map.png
 		* Move them to the docs/assets/images/ folder
-		* Add the maps to the Group
 
-(8) scripts/analyze_state.py XX
+		* Add the maps to the Join Group
+
+(8) scripts/analyze_state.py -s XX ...
+
+(8b) Tweak each core map in DRA
+		* XX_2022_Congress_Compact_district_cores.png
+		* XX_2022_Congress_Competitive_district_cores.png
+		* XX_2022_Congress_Minority_district_cores.png
+		* XX_2022_Congress_Official_district_cores.png
+		* XX_2022_Congress_Proportional_district_cores.png
+		* XX_2022_Congress_Splitting_district_cores.png
+		* Move them to the docs/assets/images/ folder
+
+		* Add the maps to the Join Group
 
 (9) Add population deviation & runtime to the abstract spreadsheet
 
