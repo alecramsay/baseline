@@ -42,7 +42,7 @@ pg:
 		* Rename it to XX_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
 		* Move it to the data/XX/ folder
 
-(7) Tweak each duplicated Official and Notable map in DRA
+(7) Tweak each duplicated Official and Notable map in DRA, adding the baseline map as a custom overlay and saving tbe image
 		* XX_2022_Congress_Compact_map.png
 		* XX_2022_Congress_Competitive_map.png
 		* XX_2022_Congress_Minority_map.png
@@ -50,8 +50,6 @@ pg:
 		* XX_2022_Congress_Proportional_map.png
 		* XX_2022_Congress_Splitting_map.png
 		* Move them to the docs/assets/images/ folder
-
-		* Add the maps to the Join Group
 
 (8) scripts/analyze_state.py -s XX ...
 
@@ -72,6 +70,7 @@ pg:
 	
 (10) Turn the state on in the website
 
+		* Add the maps to the Join Group
 		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
 		* On the state's page in docs/_pages/pages/XX.markdown, change the layout to 'state' and remove the NYI one-liner
 	
