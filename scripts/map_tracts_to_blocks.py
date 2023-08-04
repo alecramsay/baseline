@@ -13,6 +13,8 @@ For documentation, type:
 
 $ scripts/map_tracts_to_blocks.py -h
 
+TODO - Rationalize this with extract_block_map.py.
+
 """
 
 import argparse

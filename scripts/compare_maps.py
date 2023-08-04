@@ -24,6 +24,7 @@ from baseline.constants import (
     maps_dir,
     districts_by_state,
     STATE_FIPS,
+    study_unit,
 )
 from baseline.readwrite import file_name, path_to_file, read_csv, write_csv
 from baseline.datatypes import Plan
@@ -74,12 +75,7 @@ def main() -> None:
     xx: str = args.state
     plan_type: str = args.map
     iterations: int = args.iterations
-    unit: str = "vtd"
-    if xx == "CA":
-        unit = "bg"
-        # unit = "tract"
-    elif xx in ["OR", "WV", "HI"]:
-        unit = "bg"
+    unit: str = study_unit(xx)
 
     verbose: bool = args.verbose
 

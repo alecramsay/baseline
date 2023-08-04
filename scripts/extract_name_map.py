@@ -57,7 +57,7 @@ def main() -> None:
 
     ### READ THE CENSUS FILE ###
 
-    unit: str = "bg" if xx in ["CA", "OR", "WV", "HI"] else "vtd"
+    unit: str = study_unit(xx)
 
     rel_path: str = path_to_file([rawdata_dir, state_dir]) + file_name(
         ["NAMES", f"ST{fips}", xx, unit.upper()], "_", "txt"

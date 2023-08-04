@@ -8,24 +8,30 @@ baseline:
 
 (2) scripts/extract_water_only.py -s XX > data/XX/XX_2020_vtd_water_only.csv
 
-		NOTE - Run this step but *don't* use the output (-w flag) in steps 3 & 4.
+	NOTE - Run this step but *don't* use the output (-w flag) in steps 3 & 4.
 
 (3) scripts/extract_data.py -s XX
 
+	TODO - Run this separately
+
+	scripts/extract_blocks_by_vtd.py -s XX
+
 (4) scripts/extract_graph.py -s XX
+
+--------
 
 (5) scripts/baseline_state.py -s XX -i 100 -c -v > intermediate/XX/XX20C_log_100.txt
 
-		* Review "WARNING" & "AUDIT" messages in the log.
+	* Review "WARNING" & "AUDIT" messages in the log.
 
 (6) scripts/compare_maps.py -s XX -i 100 -v
 
-		* Copy any missing maps output to maps/XX/XX20C_missing.txt.
-		* Import XX20C_candidates.csv into a spreadheet, and verify that the results are OK.
+	* Copy any missing maps output to maps/XX/XX20C_missing.txt.
+	* Import XX20C_candidates.csv into a spreadheet, and verify that the results are OK.
 
-		If necessary, update the energies:
+	If necessary, update the energies:
 
-		scripts/update_energies.py -s XX
+	scripts/update_energies.py -s XX
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/XX directory as XX20C_baseline_100.csv.
 
@@ -36,42 +42,42 @@ pg:
 (5) scripts/import_base_map.sh XX
 
 (6) Open the map in DRA:
-		* Set the Colors and Overlays -- 'Change Palette' to Plasma
-		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
-		* Export the block-assignment file
-		* Rename it to XX_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
-		* Move it to the data/XX/ folder
+	* Set the Colors and Overlays -- 'Change Palette' to Plasma
+	* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
+	* Export the block-assignment file
+	* Rename it to XX_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
+	* Move it to the data/XX/ folder
 
 (7) Tweak each duplicated Official and Notable map in DRA, adding the baseline map as a custom overlay and saving tbe image
-		* XX_2022_Congress_Compact_map.png
-		* XX_2022_Congress_Competitive_map.png
-		* XX_2022_Congress_Minority_map.png
-		* XX_2022_Congress_Official_map.png
-		* XX_2022_Congress_Proportional_map.png
-		* XX_2022_Congress_Splitting_map.png
-		* Move them to the docs/assets/images/ folder
+	* XX_2022_Congress_Compact_map.png
+	* XX_2022_Congress_Competitive_map.png
+	* XX_2022_Congress_Minority_map.png
+	* XX_2022_Congress_Official_map.png
+	* XX_2022_Congress_Proportional_map.png
+	* XX_2022_Congress_Splitting_map.png
+	* Move them to the docs/assets/images/ folder
 
 (8) scripts/analyze_state.py -s XX ...
 
 (8b) Tweak each core map in DRA
-		* XX_2022_Congress_Compact_district_cores.png
-		* XX_2022_Congress_Competitive_district_cores.png
-		* XX_2022_Congress_Minority_district_cores.png
-		* XX_2022_Congress_Official_district_cores.png
-		* XX_2022_Congress_Proportional_district_cores.png
-		* XX_2022_Congress_Splitting_district_cores.png
-		* Move them to the docs/assets/images/ folder
+	* XX_2022_Congress_Compact_district_cores.png
+	* XX_2022_Congress_Competitive_district_cores.png
+	* XX_2022_Congress_Minority_district_cores.png
+	* XX_2022_Congress_Official_district_cores.png
+	* XX_2022_Congress_Proportional_district_cores.png
+	* XX_2022_Congress_Splitting_district_cores.png
+	* Move them to the docs/assets/images/ folder
 
-		* Add the maps to the Join Group
+	* Add the maps to the Join Group
 
 (9) Add population deviation & runtime to the abstract spreadsheet
 
-		cat intermediate/XX/XX20C_log_100.txt | awk 'END{print}'
+	cat intermediate/XX/XX20C_log_100.txt | awk 'END{print}'
 	
 (10) Turn the state on in the website
 
-		* Add the maps to the Join Group
-		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
-		* On the state's page in docs/_pages/pages/XX.markdown, change the layout to 'state' and remove the NYI one-liner
+	* Add the maps to the Join Group
+	* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
+	* On the state's page in docs/_pages/pages/XX.markdown, change the layout to 'state' and remove the NYI one-liner
 	
 --------

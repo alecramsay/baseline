@@ -75,17 +75,7 @@ def main() -> None:
     verbose: bool = args.verbose
     debug: bool = args.debug
 
-    unit: str = "vtd"
-    unit_label: str = "vtd20"
-
-    if xx in ["CA"]:
-        unit = "bg"
-        unit_label = "bg"
-        # unit = "tract"
-        # unit_label = "tract"
-    elif xx in ["OR", "WV", "HI"]:
-        unit = "bg"
-        unit_label = "bg"
+    unit: str = study_unit(xx)
 
     assert create_sh
 

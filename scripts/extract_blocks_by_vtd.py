@@ -1,0 +1,101 @@
+#!/usr/bin/env python3
+#
+
+"""
+Create a dict of VTDs and their associated blocks.
+
+For example:
+
+$ scripts/extract_blocks_by_vtd.py -s NC
+
+For documentation, type:
+
+$ scripts/extract_blocks_by_vtd.py -h
+"""
+
+import argparse
+from argparse import ArgumentParser, Namespace
+
+from baseline import *
+
+
+def parse_args() -> Namespace:
+    parser: ArgumentParser = argparse.ArgumentParser(
+        description="Create a mapping of VTDs (precincts) to blocks."
+    )
+
+    parser.add_argument(
+        "-s",
+        "--state",
+        default="NC",
+        help="The two-character state code (e.g., NC)",
+        type=str,
+    )
+
+    parser.add_argument(
+        "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
+    )
+
+    args: Namespace = parser.parse_args()
+    return args
+
+
+def main() -> None:
+    """Create a dict of VTDs and their associated blocks."""
+
+    args: Namespace = parse_args()
+
+    fips_map: dict[str, str] = STATE_FIPS
+
+    xx: str = args.state
+    if not is_study_state(xx):
+        raise ValueError(f"State {xx} is not part of the study.")
+    fips: str = fips_map[xx]
+
+    verbose: bool = args.verbose
+
+    ### READ THE CENSUS FILE & CREATE THE MAPPINGS ###
+
+    if study_unit(xx) != "vtd":
+        raise NotImplementedError("This state does not have VTDs. Use BGs instead.")
+
+    rel_path: str = path_to_file([rawdata_dir, xx]) + file_name(
+        ["BlockAssign", f"ST{fips}", xx, "VTD"], "_", "txt"
+    )
+
+    vtd_blocks: dict[str, list[str]] = dict()
+
+    abs_path: str = FileSpec(rel_path).abs_path
+    with open(abs_path, "r", encoding="utf-8-sig") as f:
+        line: str = f.readline()  # skip header
+
+        while line:
+            line = f.readline()
+            if line == "":
+                break
+            fields: list[str] = line.rstrip().split("|")
+
+            block: str = fields[0]
+            vtd: str = "".join([fips, fields[1], fields[2]])
+
+            if vtd not in vtd_blocks:
+                vtd_blocks[vtd] = list()
+
+            vtd_blocks[vtd].append(block)
+
+    pass
+
+    ### PICKLE THE RESULTS ###
+
+    rel_path: str = path_to_file([data_dir, xx]) + file_name(
+        [xx, cycle, "vtd", "blocks"], "_", "pickle"
+    )
+    write_pickle(rel_path, vtd_blocks)
+
+    pass
+
+
+if __name__ == "__main__":
+    main()
+
+### END ###

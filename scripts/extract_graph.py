@@ -40,13 +40,13 @@ def parse_args() -> Namespace:
         help="The two-character state code (e.g., NC)",
         type=str,
     )
-    parser.add_argument(
-        "-u",
-        "--unit",
-        default="vtd",
-        help="The geographic unit (e.g., vtd)",
-        type=str,
-    )
+    # parser.add_argument(
+    #     "-u",
+    #     "--unit",
+    #     default="vtd",
+    #     help="The geographic unit (e.g., vtd)",
+    #     type=str,
+    # )
     parser.add_argument(
         "-w", "--water", dest="water", action="store_true", help="Water-only precincts"
     )
@@ -76,16 +76,10 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    unit: str = args.unit
-    # if unit != "vtd":
-    #     raise ValueError(f"Unit {unit} not recognized.")
+    # unit: str = args.unit
 
-    # NOTE - These override the command-line arguments.
-    if xx in ["OR", "WV", "HI"]:
-        unit = "bg"
-    elif xx in ["CA"]:
-        unit = "bg"
-        # unit = "tract"
+    # NOTE - This replaces the command-line argument.
+    unit = study_unit(xx)
 
     unit_label: str = "vtd20" if unit == "vtd" else unit
     water: bool = args.water

@@ -61,23 +61,13 @@ def main() -> None:
 
     xx: str = args.state
     plan_type: str = "congress"
-    unit: str = "vtd"
-    if xx == "CA":
-        unit = "bg"
-        # unit = "tract"
-    elif xx in ["OR", "WV", "HI"]:
-        unit = "bg"
-    iterations: int = 100
+    unit: str = study_unit(xx)
 
     verbose: bool = args.verbose
 
     # Constants
 
     map_label: str = label_map(xx, plan_type)
-    N: int = districts_by_state[xx][plan_type]
-    K: int = 1  # district multiplier
-    fips: str = STATE_FIPS[xx]
-    start: int = K * N * int(fips)
 
     # Get the list of candidate maps
 

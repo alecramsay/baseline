@@ -65,39 +65,40 @@ def main() -> None:
     water_flag: str = "-w" if water else ""
 
     commands: list[str]
-    commands = [
-        "scripts/extract_pop.py -s {xx} -p -i 3 > data/{xx}/{xx}_census_log.txt",
-        "scripts/extract_xy.py -s {xx} -p",
-        "scripts/join_feature_data.py -s {xx} -p",
-        "scripts/unpickle_to_csv.py -s {xx} -u vtd {w}",
-        "scripts/unpickle_to_csv.py -s {xx} -u block",
-        # "scripts/extract_block_vtds.py -s {xx}",
-        "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
-    ]
-
-    if xx in ["OR", "WV", "HI"]:
+    if study_unit(xx) == "vtd":
+        commands = [
+            "scripts/extract_pop.py -s {xx} -p -i 3 > data/{xx}/{xx}_census_log.txt",
+            "scripts/extract_xy.py -s {xx} -p",
+            "scripts/join_feature_data.py -s {xx} -p",
+            "scripts/unpickle_to_csv.py -s {xx} -u vtd {w}",
+            "scripts/unpickle_to_csv.py -s {xx} -u block",
+            # "scripts/extract_blocks_by_vtd.py -s {xx}",
+            "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
+        ]
+    else:
         commands = [
             "scripts/extract_pop.py -s {xx} -g -i 3 > data/{xx}/{xx}_census_log.txt",
             "scripts/extract_xy.py -s {xx} -g",
             "scripts/join_feature_data.py -s {xx} -g",
             "scripts/unpickle_to_csv.py -s {xx} -u bg {w}",
             "scripts/unpickle_to_csv.py -s {xx} -u block",
-            # "scripts/extract_block_map.py -s {xx}",
+            # "scripts/extract_blocks_by_bg.py -s {xx}",
             # "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
         ]
 
-    if xx in ["CA"]:
-        commands = [
-            "scripts/extract_pop.py -s {xx} -t -i 3 > data/{xx}/{xx}_census_log.txt",
-            "scripts/extract_xy.py -s {xx} -t",
-            "scripts/join_feature_data.py -s {xx} -t",
-            "scripts/unpickle_to_csv.py -s {xx} -u bg {w}",
-            "scripts/unpickle_to_csv.py -s {xx} -u block",
-            # "scripts/unpickle_to_csv.py -s {xx} -u tract {w}",
-            # "scripts/map_blocks_to_tracts.py -s {xx}",
-            # "scripts/extract_block_map.py -s {xx}",
-            # "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
-        ]
+        # TODO - What units did I use for CA?!?
+        # if xx in ["CA"]:
+        #     commands = [
+        #         "scripts/extract_pop.py -s {xx} -t -i 3 > data/{xx}/{xx}_census_log.txt",
+        #         "scripts/extract_xy.py -s {xx} -t",
+        #         "scripts/join_feature_data.py -s {xx} -t",
+        #         "scripts/unpickle_to_csv.py -s {xx} -u bg {w}",
+        #         "scripts/unpickle_to_csv.py -s {xx} -u block",
+        #         # "scripts/unpickle_to_csv.py -s {xx} -u tract {w}",
+        #         # "scripts/map_blocks_to_tracts.py -s {xx}",
+        #         # "scripts/extract_block_map.py -s {xx}",
+        #         # "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
+        #     ]
 
     for command in commands:
         command: str = command.format(xx=xx, w=water_flag)

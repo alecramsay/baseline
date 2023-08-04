@@ -11,6 +11,9 @@ from pyutils import STATES, STATE_NAMES, STATE_FIPS
 ### PROJECT CONSTANTS ###
 
 cycle: str = "2020"
+yyyy: str = "2022"
+yy: str = "22"
+plan_type: str = "Congress"
 
 study_states: list[str] = [
     "AL",
@@ -58,6 +61,17 @@ study_states: list[str] = [
     "WI",
     "WV",
 ]  # 42 states with 2 or congressional districts (except HI and ME -- see above)
+
+
+def is_study_state(state: str) -> bool:
+    return state in study_states
+
+
+def study_unit(state: str) -> str:
+    if state in ["CA", "OR", "WV"]:
+        return "bg"
+    else:
+        return "vtd"
 
 
 ### ENVIRONMENT CONSTANTS ###
