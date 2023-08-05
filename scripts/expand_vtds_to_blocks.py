@@ -6,7 +6,7 @@ Expand a precinct-assignment file into a block-assignment file
 
 For example:
 
-$ scripts/expand_vtds_to_blocks.py -s NC
+$ scripts/expand_vtds_to_blocks.py -s NC -d ~/Downloads/ -f NC20C_baseline_100.csv
 
 For documentation, type:
 
@@ -32,6 +32,27 @@ def parse_args() -> Namespace:
         help="The two-character state code (e.g., NC)",
         type=str,
     )
+    parser.add_argument(
+        "-d",
+        "--iodir",
+        default="~/Downloads/",
+        help="Path to input/output directory",
+        type=str,
+    )
+    parser.add_argument(
+        "-f",
+        "--file",
+        default="NC20C_baseline_100.csv",
+        help="Precinct-assignment file to expand",
+        type=str,
+    )
+    parser.add_argument(
+        "-l",
+        "--label",
+        default="Baseline",
+        help="The type of map (e.g., Baseline)",
+        type=str,
+    )
 
     parser.add_argument(
         "-v", "--verbose", dest="verbose", action="store_true", help="Verbose mode"
@@ -47,12 +68,11 @@ def main() -> None:
     args: Namespace = parse_args()
 
     xx: str = args.state
-    plan_type: str = "congress"
+    iodir: str = os.path.expanduser(args.iodir)
+    paf: str = args.file
+    label: str = args.label
+
     verbose: bool = args.verbose
-
-    # Constants
-
-    map_label: str = label_map(xx, plan_type)
 
     # Unpickle blocks by vtd
 
@@ -63,14 +83,10 @@ def main() -> None:
 
     # Read the precinct-assignment file
 
-    # TODO - Parameterize this
-    input: str = os.path.expanduser("~/Downloads")
-    input_root: str = FileSpec(input).abs_path
-    input_dir: str = os.path.join(input_root, xx) + "/"
+    io_root: str = FileSpec(iodir).abs_path
+    io_dir: str = os.path.join(io_root, xx) + "/"
 
-    # TODO - Parameterize this
-    rel_path: str = input_dir + file_name([map_label, "baseline", "100"], "_", "csv")
-    #
+    rel_path: str = io_dir + paf
 
     types: list = [str, int]
     vtd_assignments: list = read_csv(rel_path, types)  # A list of dicts
@@ -85,11 +101,7 @@ def main() -> None:
         for block in blocks_by_vtd[vtd]:
             block_assignments.append({"GEOID": block, "DISTRICT": district})
 
-    # TODO - Parameterize this
-    label: str = "Baseline"
-
-    output_dir: str = input_dir
-    rel_path: str = output_dir + file_name([xx, yyyy, plan_type, label], "_", "csv")
+    rel_path: str = io_dir + file_name([xx, yyyy, "Congress", label], "_", "csv")
     write_csv(rel_path, block_assignments, ["GEOID", "DISTRICT"])
 
     pass
