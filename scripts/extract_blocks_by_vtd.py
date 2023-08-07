@@ -6,11 +6,11 @@ Create block-to-VTD and VTD-to-block mappings.
 
 For example:
 
-$ scripts/extract_blocks_by_vtd.py -s NC
+$ scripts/map_blocks_to_vtds.py -s NC
 
 For documentation, type:
 
-$ scripts/extract_blocks_by_vtd.py -h
+$ scripts/map_blocks_to_vtds.py -h
 """
 
 import argparse

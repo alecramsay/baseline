@@ -14,7 +14,7 @@ baseline:
 
 	TODO - Run this separately
 
-	scripts/extract_blocks_by_vtd.py -s XX
+	scripts/map_blocks_to_vtds.py -s XX
 
 (4) scripts/extract_graph.py -s XX
 

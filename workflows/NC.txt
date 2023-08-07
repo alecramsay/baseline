@@ -10,7 +10,7 @@ baseline:
 
 	Ran this separately 08/04/23
 
-	scripts/extract_blocks_by_vtd.py -s NC
+	scripts/map_blocks_to_vtds.py -s NC
 
 (4) scripts/extract_graph.py -s NC
 
