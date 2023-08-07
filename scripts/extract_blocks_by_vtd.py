@@ -2,7 +2,7 @@
 #
 
 """
-Create a dict of VTDs and their associated blocks.
+Create block-to-VTD and VTD-to-block mappings.
 
 For example:
 
@@ -64,6 +64,7 @@ def main() -> None:
     )
 
     vtd_blocks: dict[str, list[str]] = dict()
+    block_vtd: list[dict] = list()
 
     abs_path: str = FileSpec(rel_path).abs_path
     with open(abs_path, "r", encoding="utf-8-sig") as f:
@@ -82,15 +83,35 @@ def main() -> None:
                 vtd_blocks[vtd] = list()
 
             vtd_blocks[vtd].append(block)
+            block_vtd.append(
+                {
+                    "BLOCK": block,
+                    "PRECINCT": vtd,
+                }
+            )
 
     pass
 
-    ### PICKLE THE RESULTS ###
+    ### PICKLE BLOCKS BY VTD ###
 
     rel_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, cycle, "vtd", "blocks"], "_", "pickle"
     )
     write_pickle(rel_path, vtd_blocks)
+
+    ### WRITE BLOCK-TO-VTD MAPPING TO A CSV ###
+
+    rel_path: str = path_to_file([data_dir, xx]) + file_name(
+        [xx, cycle, "block", "vtd"], "_", "csv"
+    )
+    write_csv(
+        rel_path,
+        block_vtd,
+        [
+            "BLOCK",
+            "PRECINCT",
+        ],
+    )
 
     pass
 
