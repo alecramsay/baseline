@@ -35,53 +35,29 @@ baseline:
 
 	NC20C_I022K01N14 => NC20C_I092K01N14 <<< Updated 06/28/23
 
+    Added population deviation & runtimes to the abstract spreadsheet
+
+    - cat intermediate/NC/NC20C_log_100.txt | awk 'END{print}'
+
 --------
 
 pg:
 
-(5) scripts/import_base_map.sh NC
+(5) Analyzed the official & notable maps relative to the baseline map
 
-(6) Open the map in DRA:
-	* Set the Colors and Overlays -- 'Change Palette' to Plasma
-	* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
-	* Export the block-assignment file
-	* Rename it to NC_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
-	* Move it to the data/NC/ folder
+    - scripts/analyze_state_part1.py -s NC
+    - scripts/analyze_state_part2.py -s NC
 
-	Ran through here 06/28/23.
+(6) Deployed the artifacts
 
-(7) Tweak each duplicated Official and Notable map in DRA
-	* NC_2022_Congress_Compact_map.png
-	* NC_2022_Congress_Competitive_map.png
-	* NC_2022_Congress_Minority_map.png
-	* NC_2022_Congress_Official_map.png
-	* NC_2022_Congress_Proportional_map.png
-	* NC_2022_Congress_Splitting_map.png
-	* Move them to the docs/assets/images/ folder
-	* Add the maps to the Group
+    - scripts/DEPLOY.py -s NC
 
-(8) scripts/analyze_state.py -s NC -r
+(7) Turned the state on in the website
 
-(8b) Tweak each core map in DRA
-	* NC_2022_Congress_Compact_district_cores.png
-	* NC_2022_Congress_Competitive_district_cores.png
-	* NC_2022_Congress_Minority_district_cores.png
-	* NC_2022_Congress_Official_district_cores.png
-	* NC_2022_Congress_Proportional_district_cores.png
-	* NC_2022_Congress_Splitting_district_cores.png
-	* Move them to the docs/assets/images/ folder
+    - Copy & paste the YAML fragment into the state.yml file. 
+    - Change the state.md layout from 'page' to 'state.
+    - Add qualitative analysis.
 
-	* Add the maps to the Join Group
+Ran through here 08/12/23.
 
-(9) Add population deviation & runtime to the abstract spreadsheet
-
-	cat intermediate/NC/NC20C_log_100.txt | awk 'END{print}'
-	
-(10) Turn the state on in the website
-
-	* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
-	* On the state's page in docs/_pages/pages/NC.markdown, change the layout to 'state' and remove the NYI one-liner
-
-	Ran through here 06/29/23.
-	
 --------
