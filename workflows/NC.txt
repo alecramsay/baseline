@@ -43,21 +43,21 @@ baseline:
 
 pg:
 
-(5) Analyzed the official & notable maps relative to the baseline map
+(4) Analyzed the official & notable maps relative to the baseline map
 
     - scripts/analyze_state_part1.py -s NC
     - scripts/analyze_state_part2.py -s NC
 
-(6) Deployed the artifacts
+(5) Deployed the artifacts
 
     - scripts/DEPLOY.py -s NC
 
-(7) Turned the state on in the website
+(6) Turned the state on in the website
 
     - Copy & paste the YAML fragment into the state.yml file. 
     - Change the state.md layout from 'page' to 'state.
     - Add qualitative analysis.
 
-Ran through here 08/12/23.
+Ran through here 08/19/23.
 
 --------

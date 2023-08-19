@@ -12,7 +12,7 @@ baseline:
 
 (3) scripts/extract_data.py -s XX
 
-	TODO - Run this separately
+	Run this separately
 
 	scripts/map_blocks_to_vtds.py -s XX
 
@@ -43,16 +43,16 @@ baseline:
 
 pg:
 
-(5) Analyze the official & notable maps relative to the baseline map
+(4) Analyze the official & notable maps relative to the baseline map
 
     - scripts/analyze_state_part1.py -s XX
     - scripts/analyze_state_part2.py -s XX
 
-(6) Deploy the artifacts
+(5) Deploy the artifacts
 
     - scripts/DEPLOY.py -s XX
 
-(7) Turn the state on in the website
+(6) Turn the state on in the website
 
     - Copy & paste the YAML fragment into the state.yml file. 
     - Change the state.md layout from 'page' to 'state.
