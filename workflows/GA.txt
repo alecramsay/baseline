@@ -4,65 +4,52 @@ baseline:
 
 (2) scripts/extract_water_only.py -s GA > data/GA/GA_2020_water_only.csv
 
-		No water-only VTDs (precincts) for GA
+	No water-only VTDs (precincts) for GA
 
 (3) scripts/extract_data.py -s GA
 
+	Ran this separately 08/20/23
+
+	scripts/extract_blocks_by_vtd.py -s GA
+
 (4) scripts/extract_graph.py -s GA
 
-		Ran through here 06/21/23.
+	Ran through here 06/21/23.
+
+--------
 		
 (5) scripts/baseline_state.py -s GA -i 100 -c -v > intermediate/GA/GA20C_log_100.txt
 
 (6) scripts/compare_maps.py -s GA -i 100 -v
 
-		* Copy any missing maps output to maps/GA/GA20C_missing.txt.
-		* Import GA20C_candidates.csv into a spreadheet, and verify that the results are OK.
+	* Copy any missing maps output to maps/GA/GA20C_missing.txt.
+	* Import GA20C_candidates.csv into a spreadheet, and verify that the results are OK.
 
-		Update the energies:
+	Update the energies:
 
-		scripts/update_energies.py -s GA
+	scripts/update_energies.py -s GA
 
 (7) Copy the lowest energy baseline map to the maps/GA directory as GA20C_baseline_100.csv.
 
-		GA20C_I058K01N14 => GA20C_I003K01N14 <<< Updated 06/28/23
+	GA20C_I058K01N14 => GA20C_I003K01N14 <<< Updated 06/28/23
 
 --------
 
 pg:
 
-(5) scripts/import_base_map.sh GA
+(4) Analyze the official & notable maps relative to the baseline map
 
-(6) Open the map in DRA:
-		* Set the Colors and Overlays -- 'Change Palette' to Plasma
-		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
-		* Export the block-assignment file
-		* Rename it to GA_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
-		* Move it to the data/GA/ folder
+    - scripts/analyze_state_part1.py -s GA
+    - scripts/analyze_state_part2.py -s GA
 
-		Ran through here 06/28/23.
+(5) Deploy the artifacts
 
-(7) Tweak each duplicated Official and Notable map in DRA
-		* GA_2022_Congress_Compact_map.png
-		* GA_2022_Congress_Competitive_map.png
-		* GA_2022_Congress_Minority_map.png
-		* GA_2022_Congress_Official_map.png
-		* GA_2022_Congress_Proportional_map.png
-		* GA_2022_Congress_Splitting_map.png
-		* Move them to the docs/assets/images/ folder
-		* Add the maps to the Group
+    - scripts/DEPLOY.py -s GA
 
-(8) scripts/analyze_state.py GA
+(6) Turn the state on in the website
 
-(9) Add population deviation & runtime to the abstract spreadsheet
-
-		cat intermediate/GA/GA20C_log_100.txt | awk 'END{print}'
-	
-(10) Turn the state on in the website
-
-		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
-		* On the state's page in docs/_pages/pages/GA.markdown, change the layout to 'state' and remove the NYI one-liner
-	
-		Ran through here 07/02/23.
+    - Copy & paste the YAML fragment into the state.yml file. 
+    - Change the state.md layout from 'page' to 'state.
+    - Add qualitative analysis.
 
 --------
