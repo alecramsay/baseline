@@ -8,6 +8,10 @@ baseline:
 	
 (3) scripts/extract_data.py -s MD
 
+	Ran this separately 08/20/23
+
+	scripts/extract_blocks_by_vtd.py -s MD
+
 (4) scripts/extract_graph.py -s MD
 
 		Ran through here 06/21/23.

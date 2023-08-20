@@ -155,6 +155,10 @@ districts_by_state: dict[str, Any] = {
     "WY": {"congress": 1, "upper": 31, "lower": 62},
 }
 
+"""
+NOTE 
+- Legacy metadata, before retooling the workflow at the command line.
+
 baseline_maps: dict[str, str] = {
     # States w/ 3 or more congressional districts
     "AL": "d16848f7-22a0-41a5-b19e-719923c54ee3",  # 06/27/23
@@ -202,4 +206,5 @@ baseline_maps: dict[str, str] = {
     "RI": "c7e73ead-eeb0-4a81-9708-caadff6428e6",  # 07/16/23
 }
 
+"""
 ### END ###
