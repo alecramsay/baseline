@@ -9,67 +9,52 @@ baseline:
 
 (2) scripts/extract_water_only.py -s SC > data/SC/SC_2020_water_only.csv
 
-		There are no water-only VTDs (precincts)
+	There are no water-only VTDs (precincts)
 	
 (3) scripts/extract_data.py -s SC
 
+	Ran this separately 08/21/23
+
+	scripts/extract_blocks_by_vtd.py -s SC
+
 (4) scripts/extract_graph.py -s SC
 
-		Ran through here 06/21/23.
+	Ran through here 06/21/23.
 		
 (5) scripts/baseline_state.py -s SC -i 100 -c -v > intermediate/SC/SC20C_log_100.txt
 
 (6) scripts/compare_maps.py -s SC -i 100 -v
 
-		* Copy any missing maps output to maps/SC/SC20C_missing.txt.
-		* Import SC20C_candidates.csv into a spreadheet, and verify that the results are OK.
+	* Copy any missing maps output to maps/SC/SC20C_missing.txt.
+	* Import SC20C_candidates.csv into a spreadheet, and verify that the results are OK.
 
-		Update the energies:
+	Update the energies:
 
-		scripts/update_energies.py -s SC
+	scripts/update_energies.py -s SC
 
-		Ran through here 06/24/23.
+	Ran through here 06/24/23.
 		
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/SC directory as SC20C_baseline_100.csv.
 
-		SC20C_I076K01N07 => SC20C_I080K01N07 <<< Updated 06/28/23
+	SC20C_I076K01N07 => SC20C_I080K01N07 <<< Updated 06/28/23
 
 --------
 
 pg:
 
-(5) scripts/import_base_map.sh SC
+(4) Analyze the official & notable maps relative to the baseline map
 
-(6) Open the map in DRA:
-		* Set the Colors and Overlays -- 'Change Palette' to Plasma
-		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
-		* Export the block-assignment file
-		* Rename it to SC_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
-		* Move it to the data/SC/ folder
+    - scripts/analyze_state_part1.py -s SC
+    - scripts/analyze_state_part2.py -s SC
 
-		Ran through here 06/28/23.
+(5) Deploy the artifacts
 
-(7) Tweak each duplicated Official and Notable map in DRA
-		* SC_2022_Congress_Compact_map.png
-		* SC_2022_Congress_Competitive_map.png
-		* SC_2022_Congress_Minority_map.png
-		* SC_2022_Congress_Official_map.png
-		* SC_2022_Congress_Proportional_map.png
-		* SC_2022_Congress_Splitting_map.png
-		* Move them to the docs/assets/images/ folder
-		* Add the maps to the Group
+    - scripts/DEPLOY.py -s SC
 
-(8) scripts/analyze_state.py SC
+(6) Turn the state on in the website
 
-(9) Add population deviation & runtime to the abstract spreadsheet
-
-		cat intermediate/SC/SC20C_log_100.txt | awk 'END{print}'
-	
-(10) Turn the state on in the website
-
-		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
-		* On the state's page in docs/_pages/pages/SC.markdown, change the layout to 'state' and remove the NYI one-liner
-	
-		Ran through here 07/04/23.
+    [ ] - Copy & paste the YAML fragment into the state.yml file. 
+    [ ] - Change the state.md layout from 'page' to 'state.
+    [ ] - Add qualitative analysis.
 
 --------
