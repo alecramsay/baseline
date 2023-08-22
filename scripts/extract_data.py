@@ -86,7 +86,8 @@ def main() -> None:
             # "scripts/extract_name_map.py -s {xx} > data/{xx}/{xx}_2020_vtd_names.txt",
         ]
 
-        # TODO - What units did I use for CA?!?
+        # What units did I use for CA?!?
+        # I think at the end of the day, I just used BGs.
         # if xx in ["CA"]:
         #     commands = [
         #         "scripts/extract_pop.py -s {xx} -t -i 3 > data/{xx}/{xx}_census_log.txt",

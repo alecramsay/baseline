@@ -2,22 +2,15 @@
 #
 
 """
-Create a dict of blocks and their associated coarser unit:
-- tracts for CA, and
-- blockgroups for OR
-
-Use this translate a tract-assignment file to a block-assignment file.
+Create block-to-bg and bg-to-block mappings (for CA, OR, and WV).
 
 For example:
 
-$ scripts/extract_block_map.py -s CA
+$ scripts/extract_blocks_by_bg.py -s OR
 
 For documentation, type:
 
-$ scripts/extract_block_bgs.py -h
-
-TODO - This is in an inconsistent state. Fix for CA, OR, and WV.
-TODO - Rationalize this with map_tracts_to_blocks.py.
+$ scripts/extract_blocks_by_bg.py -h
 """
 
 import argparse
@@ -28,14 +21,14 @@ from baseline import *
 
 def parse_args() -> Namespace:
     parser: ArgumentParser = argparse.ArgumentParser(
-        description="Create a mapping of BGs to blocks."
+        description="Create block-to-bg and bg-to-block mappings."
     )
 
     parser.add_argument(
         "-s",
         "--state",
-        default="CA",
-        help="The two-character state code (e.g., CA)",
+        default="OR",
+        help="The two-character state code (e.g., OR)",
         type=str,
     )
 
@@ -48,36 +41,67 @@ def parse_args() -> Namespace:
 
 
 def main() -> None:
-    """Create a dict of BGs and their associated blocks."""
+    """Create block-to-bg and bg-to-block mappings."""
 
     args: Namespace = parse_args()
 
     xx: str = args.state
-    assert xx == "CA"
+    unit: str = study_unit(xx)
 
     verbose: bool = args.verbose
 
     ### READ A BAF & CREATE THE MAPPINGS ###
 
+    if study_unit(xx) != "bg":
+        raise NotImplementedError("This state does not use BGs. Use VTDs instead.")
+
     rel_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, cycle, "block", "data"], "_", "csv"
     )
+
+    bg_blocks: dict[str, list[str]] = dict()
+    block_bg: list[dict] = list()
+
     types: list = [str, int, float, float]
     blocks: list = read_csv(rel_path, types)  # A list of dicts
 
-    block_bg: dict[str, str] = dict()
     for row in blocks:
         block: str = row["GEOID"]
         bg: str = GeoID(block).bg
-        block_bg[block] = bg
 
-    ### PICKLE THE RESULTS ###
+        if bg not in bg_blocks:
+            bg_blocks[bg] = list()
 
-    rel_path: str = path_to_file([temp_dir]) + file_name(
-        [xx, cycle, "block", "bg"], "_", "pickle"
+        bg_blocks[bg].append(block)
+        block_bg.append(
+            {
+                "BLOCK": block,
+                "PRECINCT": bg,
+            }
+        )
+
+    pass
+
+    ### PICKLE BLOCKS BY VTD ###
+
+    rel_path: str = path_to_file([data_dir, xx]) + file_name(
+        [xx, cycle, unit, "blocks"], "_", "pickle"
     )
-    write_pickle(rel_path, block_bg)
+    write_pickle(rel_path, bg_blocks)
 
+    ### WRITE BLOCK-TO-VTD MAPPING TO A CSV ###
+
+    rel_path: str = path_to_file([data_dir, xx]) + file_name(
+        [xx, cycle, "block", unit], "_", "csv"
+    )
+    write_csv(
+        rel_path,
+        block_bg,
+        [
+            "BLOCK",
+            "PRECINCT",
+        ],
+    )
     pass
 
 
