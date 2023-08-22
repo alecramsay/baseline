@@ -4,65 +4,52 @@ baseline:
 
 (2) scripts/extract_water_only.py -s AL > data/AL/AL_2020_water_only.csv
 
-		No water-only VTDs (precincts)
+	No water-only VTDs (precincts)
 
 (3) scripts/extract_data.py -s AL
 
+	Ran this separately 08/21/23
+
+	scripts/extract_blocks_by_vtd.py -s AL
+
 (4) scripts/extract_graph.py -s AL
 
-		Ran through here 06/21/23.
+	Ran through here 06/21/23.
+
+--------
 
 (5) scripts/baseline_state.py -s AL -i 100 -c -v > intermediate/AL/AL20C_log_100.txt
 
 (6) scripts/compare_maps.py -s AL -i 100 -v
 
-		* Copy any missing maps output to maps/AL/AL20C_missing.txt.
-		* Import AL20C_candidates.csv into a spreadheet, and verify that the results are OK.
+	* Copy any missing maps output to maps/AL/AL20C_missing.txt.
+	* Import AL20C_candidates.csv into a spreadheet, and verify that the results are OK.
 
-		Update the energies:
+	Update the energies:
 
-		scripts/update_energies.py -s AL
+	scripts/update_energies.py -s AL
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/AL directory as AL20C_baseline_100.csv.
 
-		AL20C_I022K01N07 => AL20C_I046K01N07 <<< Updated 06/26/23	
+	AL20C_I022K01N07 => AL20C_I046K01N07 <<< Updated 06/26/23	
 
 --------
 
 pg:
 
-(5) scripts/import_base_map.sh AL
+(4) Analyze the official & notable maps relative to the baseline map
 
-(6) Open the map in DRA:
-		* Set the Colors and Overlays -- 'Change Palette' to Plasma
-		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
-		* Export the block-assignment file
-		* Rename it to AL_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
-		* Move it to the data/AL/ folder
+    - scripts/analyze_state_part1.py -s AL
+    - scripts/analyze_state_part2.py -s AL
 
-		Ran through here 06/27/23.
+(5) Deploy the artifacts
 
-(7) Tweak each duplicated Official and Notable map in DRA
-		* AL_2022_Congress_Compact_map.png
-		* AL_2022_Congress_Competitive_map.png
-		* AL_2022_Congress_Minority_map.png
-		* AL_2022_Congress_Official_map.png
-		* AL_2022_Congress_Proportional_map.png
-		* AL_2022_Congress_Splitting_map.png
-		* Move them to the docs/assets/images/ folder
-		* Add the maps to the Group
+    - scripts/DEPLOY.py -s AL
 
-(8) scripts/analyze_state.py AL
+(6) Turn the state on in the website
 
-(9) Add population deviation & runtime to the abstract spreadsheet
-
-		cat intermediate/AL/AL20C_log_100.txt | awk 'END{print}'
-	
-(10) Turn the state on in the website
-
-		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
-		* On the state's page in docs/_pages/pages/AL.markdown, change the layout to 'state' and remove the NYI one-liner
-	
-		Ran through here 07/01/23.
+    - Copy & paste the YAML fragment into the state.yml file. 
+    - Change the state.md layout from 'page' to 'state.
+    - Add qualitative analysis.
 
 --------
