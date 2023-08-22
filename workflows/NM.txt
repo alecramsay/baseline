@@ -8,6 +8,10 @@ baseline:
 	
 (3) scripts/extract_data.py -s NM
 
+	Ran this separately 08/21/23
+
+	scripts/extract_blocks_by_vtd.py -s NM
+
 (4) scripts/extract_graph.py -s NM
 
 		Ran through here 06/21/23.
@@ -33,38 +37,19 @@ baseline:
 
 pg:
 
-(5) scripts/import_base_map.sh NM
+(4) Analyze the official & notable maps relative to the baseline map
 
-(6) Open the map in DRA:
-		* Set the Colors and Overlays -- 'Change Palette' to Plasma
-		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
-		* Export the block-assignment file
-		* Rename it to NM_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
-		* Move it to the data/NM/ folder
+    - scripts/analyze_state_part1.py -s NM
+    - scripts/analyze_state_part2.py -s NM
 
-		Ran through here 06/28/23.
+(5) Deploy the artifacts
 
-(7) Tweak each duplicated Official and Notable map in DRA
-		* NM_2022_Congress_Compact_map.png
-		* NM_2022_Congress_Competitive_map.png
-		* NM_2022_Congress_Minority_map.png
-		* NM_2022_Congress_Official_map.png
-		* NM_2022_Congress_Proportional_map.png
-		* NM_2022_Congress_Splitting_map.png
-		* Move them to the docs/assets/images/ folder
-		* Add the maps to the Group
+    - scripts/DEPLOY.py -s NM
 
-(8) scripts/analyze_state.py NM
+(6) Turn the state on in the website
 
-(9) Add population deviation & runtime to the abstract spreadsheet
-
-		cat intermediate/NM/NM20C_log_100.txt | awk 'END{print}'
-	
-(10) Turn the state on in the website
-
-		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
-		* On the state's page in docs/_pages/pages/NM.markdown, change the layout to 'state' and remove the NYI one-liner
-	
-		Ran through here 07/03/23.
+    [x] - Copy & paste the YAML fragment into the state.yml file. 
+    [ ] - Change the state.md layout from 'page' to 'state.
+    [ ] - Add qualitative analysis.
 
 --------
