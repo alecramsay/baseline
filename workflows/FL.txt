@@ -14,7 +14,7 @@ baseline:
 	
 	Ran this separately 08/27/23
 
-	scripts/extract_blocks_by_vtd.py -s FL
+	scripts/extract_blocks_by_vtd_FL.py
 
 -----
 
