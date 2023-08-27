@@ -41,17 +41,19 @@ pg:
 
 (4) Analyze the official & notable maps relative to the baseline map
 
-    - scripts/analyze_state_part1.py -s MD <<< TODO - Fails
+    - scripts/analyze_state_part1.py -s MD
     - scripts/analyze_state_part2.py -s MD
 
 (5) Deploy the artifacts
 
     - scripts/DEPLOY.py -s MD
 
+	Ran through here 8/27/23
+	
 (6) Turn the state on in the website
 
-    - Copy & paste the YAML fragment into the state.yml file. 
-    - Change the state.md layout from 'page' to 'state.
-    - Add qualitative analysis.
+    [x] - Copy & paste the YAML fragment into the state.yml file. 
+    [ ] - Change the state.md layout from 'page' to 'state.
+    [ ] - Add qualitative analysis.
 
 --------
