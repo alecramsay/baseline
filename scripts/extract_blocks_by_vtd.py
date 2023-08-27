@@ -45,14 +45,20 @@ def main() -> None:
 
     args: Namespace = parse_args()
 
-    fips_map: dict[str, str] = STATE_FIPS
-
     xx: str = args.state
     if not is_study_state(xx):
         raise ValueError(f"State {xx} is not part of the study.")
-    fips: str = fips_map[xx]
 
     verbose: bool = args.verbose
+
+    # Debug
+
+    # xx = "FL"
+
+    #
+
+    fips_map: dict[str, str] = STATE_FIPS
+    fips: str = fips_map[xx]
 
     ### READ THE CENSUS FILE & CREATE THE MAPPINGS ###
 

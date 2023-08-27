@@ -48,7 +48,7 @@ pg:
 
     - scripts/DEPLOY.py -s MD
 
-	Ran through here 8/27/23
+	Ran through here 08/27/23
 	
 (6) Turn the state on in the website
 

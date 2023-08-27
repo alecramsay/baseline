@@ -46,6 +46,8 @@ pg:
 
     - scripts/DEPLOY.py -s GA
 
+	Ran through here 08/27/23
+
 (6) Turn the state on in the website
 
     [x] - Copy & paste the YAML fragment into the state.yml file. 
