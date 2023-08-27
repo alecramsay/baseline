@@ -7,63 +7,51 @@ baseline:
 		There are 40 water-only precincts
 
 (3) scripts/extract_data.py -s MI
+
+	Ran this separately 08/21/23
+
+	scripts/extract_blocks_by_vtd.py -s MI
+
 (4) scripts/extract_graph.py -s MI
 
-		Ran through here 06/21/23.
+	Ran through here 06/21/23.
+
+-----
 
 (5) scripts/baseline_state.py -s MI -i 100 -c -v > intermediate/MI/MI20C_log_100.txt
 
 (6) scripts/compare_maps.py -s MI -i 100 -v
 
-		* Copy any missing maps output to maps/MI/MI20C_missing.txt.
-		* Import MI20C_candidates.csv into a spreadheet, and verify that the results are OK.
+	* Copy any missing maps output to maps/MI/MI20C_missing.txt.
+	* Import MI20C_candidates.csv into a spreadheet, and verify that the results are OK.
 
-		Update the energies:
+	Update the energies:
 
-		scripts/update_energies.py -s MI
+	scripts/update_energies.py -s MI
 
-		Ran through here 06/23/23.
+	Ran through here 06/23/23.
 	
 (7) Copy the lowest energy baseline map to the maps/MI directory as MI20C_baseline_100.csv.
 
-		MI20C_I004K01N13 => MI20C_I000K01N13 <<< Updated 06/28/23
+	MI20C_I004K01N13 => MI20C_I000K01N13 <<< Updated 06/28/23
 	
 --------
 
 pg:
 
-(5) scripts/import_base_map.sh MI
+(4) Analyze the official & notable maps relative to the baseline map
 
-(6) Open the map in DRA:
-		* Set the Colors and Overlays -- 'Change Palette' to Plasma
-		* Copy the Share link guid to constants.py in both the 'baseline' and 'pg' repos
-		* Export the block-assignment file
-		* Rename it to MI_2020_Congress_Baseline.csv <<< NOTE - 2020 not 2022, and 'Baseline' not 'baseline'
-		* Move it to the data/MI/ folder
+    - scripts/analyze_state_part1.py -s MI
+    - scripts/analyze_state_part2.py -s MI
 
-		Ran through here 06/28/23.
+(5) Deploy the artifacts
 
-(7) Tweak each duplicated Official and Notable map in DRA
-		* MI_2022_Congress_Compact_map.png
-		* MI_2022_Congress_Competitive_map.png
-		* MI_2022_Congress_Minority_map.png
-		* MI_2022_Congress_Official_map.png
-		* MI_2022_Congress_Proportional_map.png
-		* MI_2022_Congress_Splitting_map.png
-		* Move them to the docs/assets/images/ folder
-		* Add the maps to the Group
+    - scripts/DEPLOY.py -s MI
 
-(8) scripts/analyze_state.py MI
+(6) Turn the state on in the website
 
-(9) Add population deviation & runtime to the abstract spreadsheet
-
-		cat intermediate/MI/MI20C_log_100.txt | awk 'END{print}'
-	
-(10) Turn the state on in the website
-
-		* Add the Share link guid to states.yml and flip the 'ready' property for the state to 'true'
-		* On the state's page in docs/_pages/pages/MI.markdown, change the layout to 'state' and remove the NYI one-liner
-	
-		Ran through here 07/02/23.
+    [ ] - Copy & paste the YAML fragment into the state.yml file. 
+    [ ] - Change the state.md layout from 'page' to 'state.
+    [ ] - Add qualitative analysis.
 
 --------
