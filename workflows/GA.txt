@@ -48,8 +48,8 @@ pg:
 
 (6) Turn the state on in the website
 
-    - Copy & paste the YAML fragment into the state.yml file. 
-    - Change the state.md layout from 'page' to 'state.
-    - Add qualitative analysis.
+    [x] - Copy & paste the YAML fragment into the state.yml file. 
+    [ ] - Change the state.md layout from 'page' to 'state.
+    [ ] - Add qualitative analysis.
 
 --------
