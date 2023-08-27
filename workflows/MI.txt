@@ -4,7 +4,7 @@ baseline:
 
 (2) scripts/extract_water_only.py -s MI > data/MI/MI_2020_water_only.csv
 
-		There are 40 water-only precincts
+	There are 40 water-only precincts
 
 (3) scripts/extract_data.py -s MI
 
@@ -50,7 +50,7 @@ pg:
 
 (6) Turn the state on in the website
 
-    [ ] - Copy & paste the YAML fragment into the state.yml file. 
+    [x] - Copy & paste the YAML fragment into the state.yml file. 
     [ ] - Change the state.md layout from 'page' to 'state.
     [ ] - Add qualitative analysis.
 
