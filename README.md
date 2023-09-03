@@ -16,7 +16,8 @@ Baseline districts are discussed in more detail in the the [Redistricting Alaman
 
 ## Dependencies
 
-The code in this repository depends on two other repositories being installed locally in the same parent directory:
+The code in this repository depends on two other repositories being installed locally and
+being available on the `PYTHONPATH` environment variable:
 
 - [pyutils](https://github.com/alecramsay/pyutils) - a set of Python utilities
 - [dccvt](https://github.com/proebsting/dccvt) - Balzer's algorithm & associated redistricting utilities
