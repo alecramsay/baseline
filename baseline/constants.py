@@ -76,7 +76,7 @@ def study_unit(state: str) -> str:
 
 ### ENVIRONMENT CONSTANTS ###
 
-rawdata_dir: str = "../../../local/pg/rawdata"
+rawdata_dir: str = "../../../local/pg-rawdata"
 vtd_dir: str = "../../../local/vtd_data/2020_vtd"
 
 data_dir: str = "data"
