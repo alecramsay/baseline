@@ -16,8 +16,9 @@ import argparse
 from argparse import ArgumentParser, Namespace
 
 import csv
-
-# import statistics
+import itertools
+import collections
+import networkx as nx
 
 from baseline.constants import (
     cycle,
@@ -41,7 +42,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "-s",
         "--state",
-        default="NJ",  # TODO
+        default="NC",
         help="The two-character state code (e.g., NC)",
         type=str,
     )
@@ -93,14 +94,40 @@ def read_plan(name: str, plan_file: str) -> dict:
 def calc_edit_distance(plan1: dict, plan2: dict, populations: dict[str, int]) -> float:
     """Calculate the edit distance between two plans."""
 
+    xname: str = plan1["name"]
+    yname: str = plan2["name"]
+
+    if xname == yname:
+        return 0.0
+
+    overlap_populations: dict[tuple[str, str], int] = collections.defaultdict(int)
+    xmap: dict[str, str] = plan1["plan"]
+    ymap: dict[str, str] = plan2["plan"]
+
+    # Cloned from Todd's ensemble / all_pairs() code
+
+    for geoid in xmap.keys():
+        overlap = (xmap[geoid], ymap[geoid])
+        overlap_populations[overlap] += populations[geoid]
+
+    G = nx.Graph()
+    for node, population in overlap_populations.items():
+        G.add_node(node, weight=population)  # type: ignore
+    for node1, node2 in itertools.combinations(overlap_populations.keys(), 2):
+        if node1[0] != node2[0] and node1[1] != node2[1]:
+            G.add_edge(node1, node2)  # type: ignore
+
+    clique = nx.algorithms.clique.max_weight_clique(G)  # type: ignore
+    size = clique[1]
+
+    # End
+
     total_pop = sum(populations.values())
+    moved: int = total_pop - size
 
-    best_plan_name: str = plan1["name"]
-    compare_plan_name: str = plan2["name"]
+    edit_distance: float = moved / total_pop
 
-    print(f"TODO: Compare {best_plan_name} with {compare_plan_name}.")
-
-    return 42 / 100  # TODO
+    return edit_distance
 
 
 def main() -> None:
