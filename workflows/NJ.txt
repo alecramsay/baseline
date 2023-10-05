@@ -30,15 +30,15 @@ baseline:
 	* Copy any missing maps output to maps/NJ/NJ20C_missing.txt.
 	* Import NJ20C_candidates.csv into a spreadheet, and verify that the results are OK.
 
-	Update the energies:
+	Update the energies: <<< Skipped this 10/02/23
 
 	scripts/update_energies.py -s NJ
 
-	Ran through here 06/23/23.
+	Re-ran through here 10/02/23.
 	
 (7) Copy the lowest energy contiguous candidate with population deviation <= 2% to the maps/NJ directory as NJ20C_baseline_100.csv.
 
-	NJ20C_I067K01N12 => NJ20C_I009K01N12 <<< Updated 06/28/23
+	NJ20C_I009K01N12 <<< Updated 10/02/23
 
 --------
 
