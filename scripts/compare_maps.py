@@ -91,7 +91,9 @@ def read_plan(name: str, plan_file: str) -> dict:
     return {"name": name, "plan": plan}
 
 
-def calc_edit_distance(plan1: dict, plan2: dict, populations: dict[str, int]) -> float:
+def calc_edit_distance(
+    plan1: dict, plan2: dict, populations: dict[str, int], total_pop: int
+) -> float:
     """Calculate the edit distance between two plans."""
 
     xname: str = plan1["name"]
@@ -122,7 +124,6 @@ def calc_edit_distance(plan1: dict, plan2: dict, populations: dict[str, int]) ->
 
     # End
 
-    total_pop = sum(populations.values())
     moved: int = total_pop - size
 
     edit_distance: float = moved / total_pop
@@ -156,6 +157,7 @@ def main() -> None:
         [xx, cycle, unit, "data"], "_", "csv"
     )
     populations = read_populations(data_path)
+    total_pop: int = sum(populations.values())
 
     # Pull the energies from the log file
 
@@ -202,7 +204,9 @@ def main() -> None:
 
         # Compare the two plans
 
-        edit_distance: float = calc_edit_distance(best_plan, compare_plan, populations)
+        edit_distance: float = calc_edit_distance(
+            best_plan, compare_plan, populations, total_pop
+        )
 
         # Add a row to the list of plans
 
