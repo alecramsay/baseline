@@ -15,7 +15,10 @@ $ scripts/compare_maps.py -h
 import argparse
 from argparse import ArgumentParser, Namespace
 
-import statistics
+import csv
+import itertools
+import collections
+import networkx as nx
 
 from baseline.constants import (
     cycle,
@@ -27,8 +30,7 @@ from baseline.constants import (
     study_unit,
 )
 from baseline.readwrite import file_name, path_to_file, read_csv, write_csv
-from baseline.datatypes import Plan
-from baseline.compare import cull_energies, find_lowest_energies, PlanDiff
+from baseline.compare import cull_energies, find_best_plan
 from baseline.baseline import label_map, full_path, label_iteration
 
 
@@ -67,6 +69,68 @@ def parse_args() -> Namespace:
     return args
 
 
+def read_populations(populations_file: str) -> dict[str, int]:
+    populations: dict[str, int] = {}
+    with open(populations_file, "r") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            populations[row["GEOID"]] = int(row["POP"])
+    return populations
+
+
+def read_plan(name: str, plan_file: str) -> dict:
+    """Read a precinct-assignment file."""
+
+    types: list = [str, int]
+    precinct_assignments: list = read_csv(plan_file, types)  # A list of dicts
+
+    plan: dict = dict()
+    for assignment in precinct_assignments:
+        plan[assignment["GEOID"]] = assignment["DISTRICT"]
+
+    return {"name": name, "plan": plan}
+
+
+def calc_edit_distance(
+    plan1: dict, plan2: dict, populations: dict[str, int], total_pop: int
+) -> float:
+    """Calculate the edit distance between two plans."""
+
+    xname: str = plan1["name"]
+    yname: str = plan2["name"]
+
+    if xname == yname:
+        return 0.0
+
+    overlap_populations: dict[tuple[str, str], int] = collections.defaultdict(int)
+    xmap: dict[str, str] = plan1["plan"]
+    ymap: dict[str, str] = plan2["plan"]
+
+    # Cloned from Todd's ensemble / all_pairs() code
+
+    for geoid in xmap.keys():
+        overlap = (xmap[geoid], ymap[geoid])
+        overlap_populations[overlap] += populations[geoid]
+
+    G = nx.Graph()
+    for node, population in overlap_populations.items():
+        G.add_node(node, weight=population)  # type: ignore
+    for node1, node2 in itertools.combinations(overlap_populations.keys(), 2):
+        if node1[0] != node2[0] and node1[1] != node2[1]:
+            G.add_edge(node1, node2)  # type: ignore
+
+    clique = nx.algorithms.clique.max_weight_clique(G)  # type: ignore
+    size = clique[1]
+
+    # End
+
+    moved: int = total_pop - size
+
+    edit_distance: float = moved / total_pop
+
+    return edit_distance
+
+
 def main() -> None:
     """Compare all the iteration maps with the one with the lowest energy."""
 
@@ -87,13 +151,13 @@ def main() -> None:
     fips: str = STATE_FIPS[xx]
     start: int = K * N * int(fips)
 
-    # Load the feature data
+    # Load populations by precinct
 
     data_path: str = path_to_file([data_dir, xx]) + file_name(
         [xx, cycle, unit, "data"], "_", "csv"
     )
-    data: list[dict] = read_csv(data_path, [str, int, float, float])
-    pop_by_geoid: dict[str, int] = {row["GEOID"]: row["POP"] for row in data}
+    populations = read_populations(data_path)
+    total_pop: int = sum(populations.values())
 
     # Pull the energies from the log file
 
@@ -109,77 +173,45 @@ def main() -> None:
             if map_name not in plan_energies:
                 print(f"Map {map_name} not in log.")
 
-    # Find the lowest energy maps
+    # Find the lowest energy, contiguous map, with 'roughly equal' populations
 
-    lowest_energies: dict[str, float]
-    lowest_plans: dict[str, str]
-    lowest_plans, lowest_energies = find_lowest_energies(plan_energies)
-
-    lowest_energy: float = min(lowest_energies.values())
-    lowest_plan: str = [
-        lowest_plans[key]
-        for key in lowest_energies
-        if lowest_energies[key] == lowest_energy
-    ][0]
-
-    # Load the lowest energy map
-
-    lowest_plan_csv: str = full_path(
-        [intermediate_dir, xx], [lowest_plan, "vtd", "assignments"]
+    best_plan_name: str = find_best_plan(plan_energies)
+    best_plan_csv: str = full_path(
+        [intermediate_dir, xx], [best_plan_name, "vtd", "assignments"]
     )
-    baseline: Plan = Plan(lowest_plan_csv, pop_by_geoid)
+    best_plan: dict = read_plan(best_plan_name, best_plan_csv)
 
-    # Compare each candidate map
+    # Compare each candidate map to it
 
     plans: list[dict] = list()
 
     for i, seed in enumerate(range(start, start + iterations)):
-        map_name: str = map_label + "_" + label_iteration(i, K, N)
+        compare_plan_name: str = map_label + "_" + label_iteration(i, K, N)
 
         # Make sure the map exists
 
-        if map_name not in plan_energies:
+        if compare_plan_name not in plan_energies:
             # This baseline iteration failed. Skip it.
             continue
 
         # Load the plan
 
         iter_label: str = label_iteration(i, K, N)
-        alt_plan_csv: str = full_path(
+        compare_plan_csv: str = full_path(
             [intermediate_dir, xx], [map_label, iter_label, "vtd", "assignments"]
         )
-        alt_plan: Plan = Plan(alt_plan_csv, pop_by_geoid)
+        compare_plan: dict = read_plan(compare_plan_name, compare_plan_csv)
 
         # Compare the two plans
 
-        diff: PlanDiff = PlanDiff(baseline, alt_plan)
-        avg_shared: float = statistics.fmean(diff.shared_by_district)
-        avg_uncertainty: float = statistics.fmean(diff.uom_by_district)
-        avg_splits: float = statistics.fmean(diff.es_by_district)
+        edit_distance: float = calc_edit_distance(
+            best_plan, compare_plan, populations, total_pop
+        )
 
         # Add a row to the list of plans
 
-        plan: dict = plan_energies[map_name]
-
-        name: str = plan["MAP"]
-        energy: float = plan["ENERGY"]
-        delta: float = (energy - lowest_energy) / lowest_energy
-        plan["DELTA"] = delta
-
-        # Don't identify the lowest energy (only) plan -- consider contiguity & population deviation
-        # note: str = " "
-        # if name in lowest_plans.values():
-        #     buckets: list[str] = list()
-        #     for k, v in lowest_plans.items():
-        #         if v == name:
-        #             buckets.append(k)
-        #     note = "Lowest: " + ", ".join(buckets)
-        # plan["NOTE"] = note
-
-        plan["SHARED"] = avg_shared
-        plan["UOM"] = avg_uncertainty
-        plan["ES"] = avg_splits
-
+        plan: dict = plan_energies[compare_plan_name]
+        plan["EDIT_DISTANCE"] = edit_distance
         plan["#"] = i + 1
 
         plans.append(plan)
@@ -201,13 +233,9 @@ def main() -> None:
             "#",
             "MAP",
             "CONTIGUOUS",
-            "ENERGY",
             "POPDEV",
-            "DELTA",
-            "SHARED",
-            "UOM",
-            "ES",
-            # "NOTE",
+            "ENERGY",
+            "EDIT_DISTANCE",
         ],
         precision="{:.6f}",
     )
