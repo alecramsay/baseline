@@ -6,11 +6,7 @@ COMPARE CANDIDATE BASELINE MAPS
 
 from pyutils import FileSpec
 
-from .datatypes import Plan
-from .coi import uncertainty_of_membership, effective_splits
 
-
-# def cull_energies(log_txt: str, xx: str, plan_type: str) -> list[dict]:
 def cull_energies(log_txt: str, xx: str, plan_type: str) -> dict[str, dict]:
     """Cull plan (map) energies from a log file."""
 
@@ -76,85 +72,24 @@ def cull_energies(log_txt: str, xx: str, plan_type: str) -> dict[str, dict]:
     return plans
 
 
-def find_lowest_energies(
+def find_best_plan(
     plans: dict[str, dict],
-) -> tuple[dict[str, str], dict[str, float]]:
-    """Find the lowest energy plans for 1-10 and 1-100 runs."""
+) -> str:
+    """Find the lowest energy contiguous plan with 'roughly equal' populations."""
 
-    lowest_energy: dict[str, float] = {"1-10": 1e9, "1-100": 1e9, "1-1000": 1e9}
-    lowest_plans: dict[str, str] = {
-        "1-10": "TBD",
-        "1-100": "TBD",
-        "1-1000": "TBD",
-    }
+    best_plan_name: str = "TBD"
+    lowest_energy: float = 1e9
 
-    i: int = 0
     for k, v in plans.items():
-        if i < 10 and v["ENERGY"] < lowest_energy["1-10"]:
-            lowest_energy["1-10"] = v["ENERGY"]
-            lowest_plans["1-10"] = v["MAP"]
+        if (
+            (v["ENERGY"] < lowest_energy)
+            and (v["CONTIGUOUS"] is True)
+            and (v["POPDEV"] <= 0.02)
+        ):
+            lowest_energy = v["ENERGY"]
+            best_plan_name = v["MAP"]
 
-        if i < 100 and v["ENERGY"] < lowest_energy["1-100"]:
-            lowest_energy["1-100"] = v["ENERGY"]
-            lowest_plans["1-100"] = v["MAP"]
-
-        # if i < 1000 and v["ENERGY"] < lowest_energy["1-1000"]:
-        #     lowest_energy["1-1000"] = v["ENERGY"]
-        #     lowest_plans["1-1000"] = v["MAP"]
-
-        i += 1
-
-    return lowest_plans, lowest_energy
-
-
-class PlanDiff:
-    """Compute 'splits' for the districts of two plans."""
-
-    splits: list[list[float]]
-    shared_by_district: list[float]
-    uom_by_district: list[float]
-    es_by_district: list[float]
-
-    def __init__(self, base: Plan, compare: Plan) -> None:
-        self._compute_splits(base, compare)
-        self._compute_metrics()
-
-    def _compute_splits(self, base: Plan, compare: Plan) -> None:
-        plan_splits: list[list[float]] = list()
-
-        for i in base.district_ids:
-            district_splits: list[float] = list()
-            base_geoids: set[str] = base.geoids_for_district(i)
-            base_total: int = base.population_for_district(i)
-
-            for j in compare.district_ids:
-                compare_geoids: set[str] = compare.geoids_for_district(j)
-                intersection: set[str] = base_geoids.intersection(compare_geoids)
-
-                if intersection:
-                    split_pop: int = base.population_for_split(intersection)
-                    pct: float = (
-                        split_pop / base_total if split_pop < base_total else 1.0
-                    )
-                    district_splits.append(pct)
-
-            plan_splits.append(district_splits)
-
-        self.splits = plan_splits
-
-    def _compute_metrics(self) -> None:
-        self.shared_by_district = list()
-        self.uom_by_district = list()
-        self.es_by_district = list()
-
-        for d in self.splits:
-            shared: float = max(d)
-            uom: float = uncertainty_of_membership(d)
-            es: float = effective_splits(d)
-
-            self.shared_by_district.append(shared)
-            self.uom_by_district.append(uom)
-            self.es_by_district.append(es)
+    return best_plan_name
 
 
 ### END ###
