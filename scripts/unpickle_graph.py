@@ -54,7 +54,7 @@ def main() -> None:
     ### LOAD DATA ###
 
     rel_path: str = path_to_file([temp_dir]) + file_name(
-        [xx, cycle, "vtd", "graph"], "_", "pickle"
+        [xx, cycle, study_unit(xx), "graph"], "_", "pickle"
     )
     g: dict = read_pickle(rel_path)
 

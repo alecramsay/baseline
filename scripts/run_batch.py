@@ -12,5 +12,17 @@ import os
 
 from baseline import *
 
+# for xx in study_states:
+#     if xx in ["NJ", "NC"]:
+#         continue  # Already done
+
+#     command: str = f"scripts/unpickle_graph.py -s {xx}"
+#     print(command)
+#     os.system(command)
+
+for xx in ["CA", "OR", "WV"]:
+    command: str = f"scripts/unpickle_graph.py -s {xx}"
+    print(command)
+    os.system(command)
 
 pass

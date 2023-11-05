@@ -218,54 +218,6 @@ class Graph:
 
 ### HELPERS ###
 
-# TODO - DELETE
-# def border_shapes(
-#     district_ix: int,
-#     precincts: list[str],
-#     precinct_graph: Graph,
-#     districts_by_precinct: dict[str, set],  # Handles split precincts
-# ) -> list[str]:
-#     """Return a list of *interior* border shapes for a district, i.e., not including those on the state boundary."""
-
-#     border: list[str] = list()
-
-#     for geoid in precincts:
-#         for neighbor in precinct_graph._data[geoid]:
-#             if neighbor == OUT_OF_STATE:
-#                 border.append(geoid)
-#                 break
-#             if len(districts_by_precinct[str(neighbor)]) > 1:
-#                 continue  # Skip split precincts
-#             if district_ix != next(iter(districts_by_precinct[str(neighbor)])):
-#                 border.append(geoid)
-#                 break
-
-#     return border
-
-# TODO - DELETE
-# def on_border_with(
-#     from_d: int,
-#     to_d: int,
-#     border: list[str],
-#     precinct_graph: Graph,
-#     districts_by_precinct: dict[str, set],  # Handles split precincts
-# ) -> list:
-#     """Find precincts on the border of one district with another."""
-
-#     candidates: list[str] = list()
-
-#     for geoid in border:
-#         for neighbor in precinct_graph._data[geoid]:
-#             if neighbor == OUT_OF_STATE:
-#                 continue
-#             if len(districts_by_precinct[str(neighbor)]) > 1:
-#                 continue  # Skip split precincts
-#             if to_d == next(iter(districts_by_precinct[str(neighbor)])):
-#                 candidates.append(geoid)
-#                 break
-
-#     return candidates
-
 
 def is_connected(geos: list[Any], adjacency: dict[Any, list[Any]]) -> bool:
     """Make sure a graph is fully connected *internally*, i.e., w/o regard to the virtual state boundary "shapes".
