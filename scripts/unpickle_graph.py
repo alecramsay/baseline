@@ -61,7 +61,7 @@ def main() -> None:
     ### WRITE DATA AS A JSON FILE ###
 
     rel_path: str = path_to_file([data_dir, xx]) + file_name(
-        [xx, cycle, "vtd", "graph"], "_", "json"
+        [xx, cycle, study_unit(xx), "graph"], "_", "json"
     )
     write_json(rel_path, g)
 

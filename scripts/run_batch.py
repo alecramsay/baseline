@@ -12,17 +12,11 @@ import os
 
 from baseline import *
 
-# for xx in study_states:
-#     if xx in ["NJ", "NC"]:
-#         continue  # Already done
-
-#     command: str = f"scripts/unpickle_graph.py -s {xx}"
-#     print(command)
-#     os.system(command)
-
 for xx in ["CA", "OR", "WV"]:
-    command: str = f"scripts/unpickle_graph.py -s {xx}"
+    name: str = f"{xx}_2020_{study_unit(xx)}_graph.json"
+    command: str = f"cp data/{xx}/{name} ../rdafn/data/{xx}/{name}"
     print(command)
     os.system(command)
+
 
 pass
