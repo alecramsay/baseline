@@ -77,9 +77,11 @@ def main() -> None:
 
     unit: str = study_unit(xx)
 
-    assert create_sh
-
     # DEBUG
+
+    # END DEBUG
+
+    assert create_sh
 
     # Add dccvt to the path
 
