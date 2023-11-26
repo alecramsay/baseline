@@ -5,7 +5,8 @@ Score all the candidate baseline maps.
 
 For example:
 
-$ scripts/rebaseline_score_maps.py
+$ scripts/rebaseline_score_maps.py -s NC
+$ scripts/rebaseline_score_maps.py -s NC -o
 
 For documentation, type:
 
@@ -16,24 +17,98 @@ import argparse
 from argparse import ArgumentParser, Namespace
 
 import os
-from typing import Any
+import csv
+from collections import defaultdict
+from typing import Any, List, NamedTuple, Dict
 
 import rdadata as rdautils
 import rdafn as rdafn
 
 from baseline.constants import (
     cycle,
-    # data_dir,
-    # intermediate_dir,
-    # maps_dir,
     districts_by_state,
     STATE_FIPS,
     study_unit,
 )
-
-# from baseline.readwrite import file_name, path_to_file, read_csv, write_csv
-# from baseline.compare import cull_energies, find_best_plan
 from baseline.baseline import label_map, label_iteration
+
+
+### HELPERS - Cloned from `rootmap` & lightly edited ###
+
+
+class LatLong(NamedTuple):
+    lat: float
+    long: float
+
+
+class Point(NamedTuple):
+    geoid: str
+    pop: float
+    ll: LatLong
+
+
+class Assignment(NamedTuple):
+    geoid: str
+    district: int
+
+
+def read_redistricting_points(input: str) -> List[Point]:
+    # read GEOID, POP, X, Y from CSV
+    red_points: List[Point] = []
+    with open(input, "r") as f:
+        reader = csv.DictReader(f)
+        geoid = ""
+        for row in reader:
+            if not geoid:
+                geoid = "GEOID"
+            red_point: Point = Point(
+                geoid=row[geoid],
+                pop=float(row["POP"]),
+                ll=LatLong(
+                    long=float(row["X"]),
+                    lat=float(row["Y"]),
+                ),
+            )
+            red_points.append(red_point)
+    return red_points
+
+
+def squared_distance(a: LatLong, b: LatLong) -> float:
+    return (a.lat - b.lat) * (a.lat - b.lat) + (a.long - b.long) * (a.long - b.long)
+
+
+def get_centroids(assigns: List[Assignment], points: Dict[str, Point]) -> list[LatLong]:
+    bysite: defaultdict[int, List[Assignment]] = defaultdict(list)
+    for a in assigns:
+        bysite[a.district].append(a)
+    cs: List[LatLong] = []
+    top: int = max(s for s in bysite.keys())
+    for site in range(1, top + 1):
+        persite: List[Assignment] = bysite[site]
+        total: float = sum(points[a.geoid].pop for a in persite)
+        lat: float = (
+            sum(points[a.geoid].ll.lat * points[a.geoid].pop for a in persite) / total
+        )
+        long: float = (
+            sum(points[a.geoid].ll.long * points[a.geoid].pop for a in persite) / total
+        )
+        cs.append(LatLong(lat, long))
+    return cs
+
+
+def calc_energy(assignments: List[Assignment], points: Dict[str, Point]) -> float:
+    """Calculate the energy of a map."""
+
+    sites: List[LatLong] = get_centroids(assignments, points)
+    total: float = sum(
+        points[a.geoid].pop
+        * squared_distance(
+            sites[a.district - 1], points[a.geoid].ll
+        )  # not sqrt!!! moment of inertia!
+        for a in assignments
+    )
+
+    return total
 
 
 def main() -> None:
@@ -51,7 +126,7 @@ def main() -> None:
 
     #
 
-    plan_dir: str = f"data/{xx}" if original else "rebaseline"
+    plan_dir: str = f"intermediate/{xx}" if original else "rebaseline"
     maps_dir: str = f"maps/{xx}" if original else "rebaseline"
     qualifier: str = "_original" if original else "_rebaseline"
 
@@ -74,6 +149,12 @@ def main() -> None:
 
     scores: list[dict] = list()
 
+    # For calculating energy
+
+    points_csv: str = f"data/{xx}/{xx}_2020_vtd_data.csv"
+    points_list: List[Point] = read_redistricting_points(points_csv)
+    points: Dict[str, Point] = {p.geoid: p for p in points_list}
+
     ### SCORE EACH CANDIDATE MAP ###
 
     for i, seed in enumerate(range(start, start + iterations)):
@@ -91,11 +172,16 @@ def main() -> None:
 
         record: dict[str, Any] = dict()
         record["map"] = iter_label
-        # record["energy"] = energy # TODO
 
-        assignments: list[dict[str, str | int]] = rdafn.load_plan(plan_path)
+        plan: list[dict[str, str | int]] = rdafn.load_plan(plan_path)
+        assignments: List[Assignment] = [
+            Assignment(str(a["GEOID"]), int(a["DISTRICT"])) for a in plan
+        ]
+        energy: float = calc_energy(assignments, points)
+        record["energy"] = energy
+
         scorecard: dict[str, Any] = rdafn.analyze_plan(
-            assignments,
+            plan,
             data,
             shapes,
             graph,
